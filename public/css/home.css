@@ -29,7 +29,7 @@ h2 {
   height: 70px;
   width: 70px;
   border-radius: 10px;
-  background: radial-gradient(#ffffff 30%, #b92151 99%);
+  /* background: radial-gradient(#ffffff 30%, #fff 99%); */
 }
 
 .navbar-brand div {
@@ -136,16 +136,16 @@ h2 {
 
 .navbar-toggler {
     border: none; /* Add a border to make it visible */
-  
+
     padding: 0.5rem; /* Add some padding */
     color: #000; /* Ensure the icon is visible */
   }
-  
+
   /* Adjust the toggler icon */
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='%23000'%3E%3Cpath d='M0 7h30v3H0zm0 7h30v3H0zm0 7h30v3H0z'/%3E%3C/svg%3E");
   }
-  
+
 
 
 .hero {
@@ -165,7 +165,7 @@ h2 {
     text-align: center;
     margin-top: -180px;
 }
-/* 
+/*
 .navbar-brand div {
     font-size: 27px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -213,8 +213,7 @@ h2 {
     font-size: large;
 }
 
-.tab-content h1,
-p {
+.tab-content h1 {
     color: black;
     max-width: 402px;
 }
@@ -252,10 +251,10 @@ p {
     flex: 1;
     position: relative;
     max-width: 400px;
-    height: 300px;
+    /* height: 300px; */
 }
 
-/*   
+/*
   .image-stack {
     position: relative;
     width: 100%;
@@ -395,14 +394,14 @@ body {
     border: 2px solid black;
     margin-top: 10px;
     display: inline-block;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .btn3:hover {
-    border-color: white; 
-    color: white; 
+    border-color: white;
+    color: white;
     background-color: transparent;
-    transform: scale(1.03); 
+    transform: scale(1.03);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 
 }
@@ -414,8 +413,8 @@ body {
 
 .btn3 .anchr {
     text-decoration: none;
-    color: inherit; 
-    
+    color: inherit;
+
 }
 
 
@@ -470,7 +469,7 @@ body {
 
 .content2 h2 {
     color: black;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: -150px;
@@ -543,7 +542,7 @@ body {
 }
 
 .content5 h2 {
-    font-size: 30px;
+    font-size: 26px;
     color: black;
     max-width: 50%;
     font-weight: bold;
@@ -557,13 +556,13 @@ body {
 *,
 :after,
 :before {
-    border: 0 solid #e5e7eb;
+    /* border: 0 solid #e5e7eb; */
     box-sizing: border-box;
 }
 :after,
 :before {
     --tw-content: "";
-} 
+}
 :host,
 html {
     line-height: 1.5;
@@ -869,9 +868,9 @@ video {
       /*  --tw-contain-paint: ;*/
       /*  --tw-contain-style: ;*/
       /*}*/
-     
-      
-      
+
+
+
       #webcrumbs h4 {
     font-size: 16px;
     font-family: Segoe UI;
@@ -1177,7 +1176,7 @@ video {
     margin:auto;
     margin-bottom:20px;
   }
-  
+
   .custom-footer-copy p{
      color:white;
      text-align:center;
@@ -1288,7 +1287,7 @@ video {
 }
 
 /* Initially enable the first button */
-.active {
+.active-student {
     background-color: #b92151;
     color: white;
 }
@@ -1370,7 +1369,7 @@ video {
     font-stretch: expanded;
     color: black;
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .content3 {
@@ -1429,7 +1428,7 @@ video {
 }
 
 .card {
-    height: 600px;
+    height: 550px;
     width: 350px;
     vertical-align: middle;
     margin-right: 50px;
@@ -1804,12 +1803,21 @@ video {
         text-align: center;
     }
 
-   
-    .btn4 {
-        margin-left: 50%;
-    }
-       
+.content2{
+    margin-bottom: 0;
+}
 
+    .btn4 {
+        margin-left: 55%;
+    }
+
+#card-col{
+     margin-top: 110%;
+}
+
+.card{
+        margin: 0 200px;
+}
 
     .content4 {
         margin-top: -389px;
@@ -1901,7 +1909,7 @@ video {
 
     .content5 h2 {
         display:none;
-        font-size: 25px;
+        font-size: 26px;
         max-width: 300px;
         margin-top: -20px;
     }
@@ -1982,9 +1990,9 @@ video {
 
     /*.video1 .card-body video
    {
-    width: 100%; 
+    width: 100%;
     height: auto;
-    margin: 0 auto 10px; 
+    margin: 0 auto 10px;
   }*/
 
     .row {
@@ -2122,7 +2130,7 @@ video {
         margin-left: 70%; /* Remove unnecessary margin */
         width: 100%; /* Button should be full width */
     }
-    
+
 
     /* Fix visibility of images */
     .card1 img {
@@ -2154,10 +2162,10 @@ video {
         margin-top: 10px;
     }
 
-    #card2 {
+       #card2 {
         margin-left: -190px;
-        transform: translateY(180px);
-        margin-bottom: 220px;
+        transform: translateY(450px);
+        margin-bottom: 480px;
     }
 
     .content4 h2 {
@@ -2245,7 +2253,7 @@ video {
         width: 600px;
         margin-left: -236px;
         /*margin-top: -200px;*/
-        margin-top: -60px;
+        margin-top: 120px;
         margin-bottom: 80px;
 
     }
@@ -2255,6 +2263,7 @@ video {
 
     .leff {
         margin-left: -202px;
+        display: none;
     }
 
     /* Services section */
@@ -2321,7 +2330,7 @@ video {
     }
 
     .content5 h2 {
-        font-size: 28px;
+        font-size: 26px;
         max-width: 400px;
         margin-top: -10px;
         text-align: center;
@@ -2335,7 +2344,7 @@ video {
 
     .row {
         /* margin-left: 200px; */
-        
+
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -2428,9 +2437,9 @@ video {
       .btn3{
           padding: 7px 15px;
       }
-       
+
            .card {
-    height: 600px;
+    height: 550px;
     width: 320px;
     vertical-align: middle;
     margin-right: 50px;
@@ -2445,18 +2454,94 @@ video {
   padding:10;
   padding-right:5px;
 }
-           
+
        }
 
-/* 
+/*
 .global img{
     margin-left: 300px;
   }
   .global .score{
     margin-left: -780px;
     transform: translateY(-480px);
-    
+
   }
   .global .score h3{
     color: #007bff;
   } */
+
+
+            .country-section {
+                padding: 40px 20px;
+                text-align: center;
+                /* background: #f9f9f9; */
+            }
+
+            .country-section h1 {
+                font-size: 26px;
+                font-weight: 750;
+                margin-bottom: 20px;
+                color: black
+            }
+
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                margin-bottom: 30px;
+                border-radius: 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .country-btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 18px;
+                background-color: #f0f0f0;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-weight: 500;
+            }
+
+            .country-btn img {
+                width: 24px;
+                height: auto;
+            }
+
+            .country-btn.active,
+            .country-btn:hover {
+                background-color: #b92151;
+                color: white;
+            }
+
+            .content-institution {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+            }
+
+            .images {
+                display: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                opacity: 0;
+                transition: opacity 0.4s ease-in-out;
+            }
+
+            .images.active {
+                display: flex;
+                opacity: 1;
+            }
+
+            .images img {
+                width: 180px;
+                height: 70px;
+                ;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
