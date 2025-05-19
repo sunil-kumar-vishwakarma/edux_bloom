@@ -429,7 +429,7 @@
 
 
         .benefits-section {
-            /* background-color: #0066e0; */
+            background: linear-gradient(135deg, #0644a6, #3b7ded);
             color: #292E3E;
             padding: 50px 20px;
             text-align: center;
@@ -441,12 +441,12 @@
             font-size: 26px;
             font-weight: 700;
             margin-bottom: 10px;
-            color: #292E3E;
+            color: #fff;
         }
 
         .pargraphhhh {
             text-align: center;
-            color: #292E3E;
+            color: #efeded;
             white-space: nowrap;
             /* margin-left: 420px; */
         }
@@ -799,7 +799,7 @@
         }
 
         .buttons button:hover {
-            background-color: #007bff;
+            background-color: #b92151;
             color: white;
         }
 
@@ -2202,35 +2202,6 @@
                     <h3>Stay up to date</h3>
                     <p>Follow us on <a href="#">Instagram</a>, <a href="#">TikTok</a>, and <a
                             href="#">YouTube</a> for scholarship</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br>
-    <section class="benefits-section">
-        <div class="benefits-content">
-            <h1>Access More Institutions, Perks, and Faster Commissions</h1>
-
-            <p class="pargraphhhh">
-                Here to help you grow your business by offering the best opportunities and support.</p>
-            <div class="cards">
-                <div class="card-institutions">
-                    <img src="images/4.webp" alt="Best Commissions" class="card-icon">
-                    <h2>1,000,000+</h2>
-                    <p>Students<br> Helped</p>
-                </div>
-
-                <div class="card-institutions">
-                    <img src="images/Student_Countries.webp" alt="Perks and Rewards" class="card-icon">
-                    <h2>150+</h2>
-                    <p>Student Source <br>Countries</p>
-                </div>
-
-                <div class="card-institutions">
-                    <img src="images/4-1.webp" alt="1,500+ Institutions" class="card-icon">
-                    <h2>95%</h2>
-                    <p>Offer of <br>Admission Rate</p>
                 </div>
             </div>
         </div>

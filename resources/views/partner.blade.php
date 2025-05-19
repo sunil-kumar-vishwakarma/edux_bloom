@@ -182,7 +182,7 @@
 
         /* .form-group button{
 
-            }*/
+                }*/
 
         p {
             margin-top: 30px;
@@ -207,10 +207,10 @@
         }
 
         /* .form-group #password {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }*/
+            position: relative;
+            display: flex;
+            align-items: center;
+        }*/
 
         .password-wrapper input {
             width: 100%;
@@ -340,9 +340,9 @@
 
             /* Shift password eye icon to the right */
             /* .form-group .password-field {
-        width: 100px;
+            width: 100px;
 
-        } */
+            } */
 
             .form-group .toggle-password {
                 position: absolute;
@@ -632,10 +632,10 @@
         }
 
         /* .footer-column {
-      width: 100%;
-      max-width: 270px;
-      margin-bottom: 30px;
-    } */
+          width: 100%;
+          max-width: 270px;
+          margin-bottom: 30px;
+        } */
 
         .footer-column h3 {
             font-size: 18px;
@@ -645,10 +645,10 @@
         }
 
         /* .line-h3
-    {
-       text-decoration: none;
-       color: #fff;
-    } */
+        {
+           text-decoration: none;
+           color: #fff;
+        } */
 
         .footer-column p,
         .footer-column ul {
@@ -863,7 +863,8 @@
 
 
         .benefits-section {
-            background-color: #0066e0;
+            /* background-color: #0066e0; */
+            /* background: linear-gradient(135deg, #0644a6, #3b7ded); */
             color: white;
             padding: 50px 20px;
             text-align: center;
@@ -872,6 +873,7 @@
         }
 
         .benefits-content h1 {
+            color: #333;
             font-size: 2em;
             font-weight: 700;
             margin-bottom: 10px;
@@ -890,7 +892,8 @@
         }
 
         .card-partner {
-            background-color: white;
+            /* background-color: white; */
+            background: linear-gradient(135deg, #0644a6, #3b7ded);
             color: black;
             width: 250px;
             padding: 20px;
@@ -909,15 +912,16 @@
         }
 
         .card-partner h2 {
-            font-size: 1.5em;
+            font-size: 20px;
             font-weight: 500;
             margin-bottom: 10px;
+            color: #fff;
         }
 
         .card-partner p {
             font-size: 1em;
             font-weight: 400;
-            color: #555;
+            color: #ffffffb9;
         }
 
         .success-Story {
@@ -972,7 +976,8 @@
         }
 
         .card-container .card-partner {
-            background-color: #fff;
+            /* background-color: #fff; */
+            background: linear-gradient(135deg, #0644a6, #3b7ded);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -993,13 +998,15 @@
 
         .card-container h3 {
             font-size: 1.2em;
-            color: #333;
+            /* color: #333; */
+            color: #fff;
             margin-bottom: 10px;
         }
 
         .card-container p {
             font-size: 0.9em;
-            color: #666;
+            /* color: #666; */
+            color: #dedada;
         }
 
         .card-container .cta {
@@ -1053,7 +1060,8 @@
 
         .testimonial-section {
             padding: 82px 15px;
-            background-color: #3972e3;
+            /* background-color: #3972e3; */
+           background: linear-gradient(135deg, #0644a6, #3b7ded);
             margin-top: 50px;
         }
 
@@ -1081,8 +1089,8 @@
 
         /* .swiper-slide {
 
-      height: 30%!important;
-    } */
+          height: 30%!important;
+        } */
 
         .testimonial-items .testimonial-text {
             font-size: 16px;
@@ -1115,11 +1123,11 @@
 
         /* Add this to avoid any extra margin/padding for the second testimonial */
         /* .testimonial-items {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    } */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        } */
 
         .testimonial-img.tm-img-1 {
             background-image: url(https://w7.pngwing.com/pngs/646/829/png-transparent-avatar-man-ico-icon-cartoon-little-boy-avatar-cartoon-character-png-material-child-thumbnail.png);
@@ -1518,8 +1526,8 @@
             }
 
             /* .details {
-        padding: 10px;
-      } */
+            padding: 10px;
+          } */
 
             .details {
                 padding: 10px;
@@ -2089,7 +2097,7 @@
             <h1>Access More Institutions, Perks, and Faster Commissions</h1>
 
 
-            <p style="text-align: center; color: white; white-space: nowrap; margin-left: 296px;">
+            <p style="text-align: center; white-space: nowrap;">
                 Here to help you grow your business by offering the best opportunities and support.
             </p>
             <div class="cards">
@@ -2117,7 +2125,7 @@
 
 
     <section class="success-Story">
-        <h1>Success Stories From Our Partners</h1>
+        {{-- <h1>Success Stories From Our Partners</h1>
         <br>
         <div class="video2">
             <!-- First video -->
@@ -2130,7 +2138,7 @@
                 <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
             </video>
 
-        </div>
+        </div> --}}
 
         <section class="programs">
             <h1>An Easy-to-Use Platform that <br>Connects You to the Right Programs</h1>
@@ -2259,11 +2267,9 @@
 
 
 
-    <section class="global">
+    {{-- <section class="global">
         <h1>Global Presence for Global Recruitment</h1>
-
         <div class="gmap">
-
             <div class="score">
                 <p>
                 <h3 style="font-size:30px;">1,000+</h3>Globally</p><br>
@@ -2281,7 +2287,7 @@
 
 
         </div>
-    </section>
+    </section> --}}
 
 
     {{-- <section class="recruit">
@@ -2616,8 +2622,8 @@
 
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
-         -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+             -->
     <script>
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
@@ -2830,10 +2836,10 @@
                 if (check.shouldFail) {
                     if (check.regex.test(password)) {
                         check.element.style.color =
-                        'red'; // Invalid, password should not contain first or last name
+                            'red'; // Invalid, password should not contain first or last name
                     } else {
                         check.element.style.color =
-                        'green'; // Valid, password does not contain first or last name
+                            'green'; // Valid, password does not contain first or last name
                     }
                 } else {
                     if (check.regex.test(password)) {

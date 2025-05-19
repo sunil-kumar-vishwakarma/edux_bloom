@@ -224,6 +224,7 @@ h2 {
 
 .hero-content p {
     font-size: 16px;
+    max-width: 450px;
 }
 
 .tab-content h1 {
@@ -2257,6 +2258,9 @@ video {
         margin-bottom: 80px;
 
     }
+    .country-section{
+        margin-top: -40px !important;
+    }
     .headin{
         margin-bottom:-23%;
     }
@@ -2472,6 +2476,7 @@ video {
 
 
             .country-section {
+                /* margin-top: 30px; */
                 padding: 40px 20px;
                 text-align: center;
                 /* background: #f9f9f9; */
@@ -2502,6 +2507,7 @@ video {
                 gap: 8px;
                 padding: 10px 18px;
                 background-color: #f0f0f0;
+                border: none;
                 border-radius: 20px;
                 cursor: pointer;
                 transition: all 0.3s ease;
@@ -2545,3 +2551,302 @@ video {
                 ;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
+
+
+
+     .study-search-section {
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .study-search-box {
+        /* background-color: white; */
+        background: linear-gradient(90deg, #0644a6, #2764c5);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .study-search-heading {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        /* color: #0644a6; */
+        color: white;
+    }
+
+    .study-search-form-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    /* .study-search-input {
+        flex: 1;
+        min-width: 200px;
+        padding: 10px 14px;
+        font-size: 14px;
+        border: 1px solid #747474;
+        border-radius: 8px;
+    } */
+
+    .study-input-wrapper {
+  position: relative;
+  width: 50%;
+}
+
+.study-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.study-search-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+    /* Custom Dropdown */
+    .country-dropdown {
+        position: relative;
+        min-width: 180px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .country-selected {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px 12px;
+        background-color: #fff;
+    }
+
+    .country-selected img {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+        object-fit: cover;
+    }
+
+    .country-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 4px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        list-style: none;
+        padding: 8px 0;
+        max-height: 200px;
+        overflow-y: auto;
+        display: none;
+    }
+
+    .country-options li {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        transition: background 0.2s ease;
+    }
+
+    .country-options li:hover {
+        background-color: #f0f0f0;
+    }
+
+    .country-options img {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+    }
+
+    .dropdown-arrow {
+        width: 14px;
+        height: 14px;
+        fill: #666;
+        margin-left: auto;
+        pointer-events: none;
+    }
+
+    .study-search-button {
+        padding: 10px 20px;
+        color: #0644a6;
+        background-color: white;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+
+    /* .study-search-button:hover {
+        background-color: #033074;
+    } */
+
+    @media (max-width: 600px) {
+.country-section{
+    margin-top: -60px;
+}
+
+        .study-search-form-row {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .study-search-input,
+        .country-dropdown,
+        .study-input-wrapper,
+        .study-search-button {
+            width: 100%;
+        }
+    }
+
+      .support-journey-section {
+        padding: 20px 20px;
+        /* background: #f9f9f9; */
+        text-align: center;
+    }
+
+    .support-journey-header h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        font-weight: 750;
+        color: black;
+    }
+
+    .support-journey-header p {
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 40px;
+    }
+
+    .support-journey-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .support-journey-card {
+        background: linear-gradient(90deg, #0644a6, #2764c5);
+        padding: 20px 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: left;
+        transition: transform 0.3s ease;
+        color: #fff;
+    }
+
+    .support-journey-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .support-journey-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+
+    .support-journey-card ul {
+        padding-left: 16px;
+    }
+
+    .support-journey-card ul li {
+        margin-bottom: 6px;
+        color: #ffffff;
+        list-style-type: disc;
+        font-size: 15px;
+    }
+
+    /* global map section */
+       .global {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* margin-bottom: 310px; */
+            margin-top: 40px;
+        }
+
+         .global h1 {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .gmap {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .global .score h3 {
+            color: #1e6deb;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+     /* why choose edux section */
+       .why-edux-simple {
+            /* background-color: #f9f9f9; */
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .why-edux-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-edux-title {
+            font-size: 26px;
+            font-weight: 750;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .why-edux-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 15px;
+        }
+
+        .why-edux-list li {
+            background-color: #0644a6;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .why-edux-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }

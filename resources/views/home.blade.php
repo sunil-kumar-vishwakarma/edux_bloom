@@ -23,9 +23,179 @@
     </div>
 
 
+    <div class="study-search-section">
+        <div class="study-search-box">
+            <h2 class="study-search-heading">10 million searches and counting</h2>
 
+            <div class="study-search-form-row">
+                <!-- Input Field -->
+<div class="study-input-wrapper">
+  <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+    <path d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+  </svg>
+  <input type="text" class="study-search-input" placeholder="What would you like to study?">
+</div>
 
-    <div class="box2">
+                <!-- Custom Dropdown -->
+                <div class="country-dropdown">
+                    <div class="country-selected" onclick="countrytoggleDropdown()">
+                        <img src="https://flagcdn.com/ca.svg" alt="Canada">
+                        <span id="selected-country">Canada</span>
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </div>
+                    <ul class="country-options" id="country-options">
+                        <li onclick="selectCountry('Canada', 'https://flagcdn.com/ca.svg')">
+                            <img src="https://flagcdn.com/ca.svg" alt="Canada"> Canada
+                        </li>
+                        <li onclick="selectCountry('United States', 'https://flagcdn.com/us.svg')">
+                            <img src="https://flagcdn.com/us.svg" alt="USA"> United States
+                        </li>
+                        <li onclick="selectCountry('United Kingdom', 'https://flagcdn.com/gb.svg')">
+                            <img src="https://flagcdn.com/gb.svg" alt="UK"> United Kingdom
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Search Button -->
+                <button class="study-search-button">Search</button>
+            </div>
+        </div>
+    </div>
+  <section class="why-edux-simple">
+        <div class="why-edux-wrapper">
+            <h2 class="why-edux-title">Why Choose Edu-X Services?</h2>
+            <ul class="why-edux-list">
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Clock/Calendar Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 1a11 11 0 1 0 11 11A11.012 11.012 0 0 0 12 1zm1 12H7v-2h4V5h2z" />
+                        </svg>
+                    </span>
+                    7+ Years of Experience
+                </li>
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Globe Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path
+                                d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 17.93A8 8 0 114 12a8.009 8.009 0 019 7.93z" />
+                            <path d="M12.5 7l-1.5 1v1l-1 .5L9 10v2l1 1 1 .5V15l1.5 1L14 14l-1-1v-1l1-1 1-.5V9l-1-2z" />
+                        </svg>
+                    </span>
+                    African-Led, Globally Informed
+                </li>
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Shield Check Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 2l9 4v6c0 6-5 11-9 11s-9-5-9-11V6l9-4z" />
+                            <path d="M10 12l2 2 4-4" stroke="#fff" stroke-width="2" fill="none" />
+                        </svg>
+                    </span>
+                    Proven Track Record: 98% student visa success rate
+                </li>
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Graduation Cap Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 3L2 8l10 5 10-5-10-5z" />
+                            <path d="M4 10v6c0 2 4 4 8 4s8-2 8-4v-6" />
+                        </svg>
+                    </span>
+                    Partnered with Accredited Schools in North America
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="support-journey-section">
+        <div class="support-journey-header">
+            <h2>Our 360° Student Support Journey</h2>
+            <p>From 9th Grade to Graduation—We’re With You Every Step of the Way</p>
+        </div>
+
+        <div class="support-journey-grid">
+            <!-- Step 1 -->
+            <div class="support-journey-card">
+                <h3>1. Early Academic Preparation</h3>
+                <ul>
+                    <li>Enroll from 9th grade</li>
+                    <li>Tailored academic counseling</li>
+                    <li>Access to top prep resources</li>
+                </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="support-journey-card">
+                <h3>2. English Language Training</h3>
+                <ul>
+                    <li>Online & in-person English courses</li>
+                    <li>IELTS/TOEFL preparation</li>
+                    <li>Conversation clubs with native speakers</li>
+                </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="support-journey-card">
+                <h3>3. College Application Support</h3>
+                <ul>
+                    <li>School selection strategy</li>
+                    <li>Essay & document assistance</li>
+                    <li>Scholarship & financial aid guidance</li>
+                </ul>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="support-journey-card">
+                <h3>4. Visa & Travel Planning</h3>
+                <ul>
+                    <li>Visa interview coaching</li>
+                    <li>Flight planning & travel checklist</li>
+                    <li>Parent support & updates</li>
+                </ul>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="support-journey-card">
+                <h3>5. Arrival & Installation</h3>
+                <ul>
+                    <li>Airport pickup coordination</li>
+                    <li>Housing setup assistance</li>
+                    <li>Essential document setup (bank, phone, ID)</li>
+                </ul>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="support-journey-card">
+                <h3>6. Life & Career Development</h3>
+                <ul>
+                    <li>Campus involvement guidance</li>
+                    <li>Internship & career coaching</li>
+                    <li>Alumni network access</li>
+                </ul>
+            </div>
+
+            <!-- Step 7 -->
+            {{-- <div class="support-journey-card">
+            <h3>7. Mentorship Program</h3>
+            <ul>
+                <li>Personalized mentorship from African graduates</li>
+                <li>Integration guidance</li>
+                <li>Academic and emotional support</li>
+            </ul>
+        </div> --}}
+        </div>
+    </section>
+
+    {{-- <div class="box2">
         <div class="content2">
             <h2 class="elementor-heading-title elementor-size-default">A Platform That Assists You Through Every Step of the
                 Journey</h2>
@@ -97,67 +267,9 @@
     <br>
     <br>
     <br>
+    --}}
 
-    <section class="country-section">
-        <h1>Trusted by Leading Institutions</h1>
-        <br>
-        <div class="buttons">
-            <button class="country-btn active" data-country="country1">
-                <img src="https://flagcdn.com/w320/ca.png" alt="Country 1 Flag"> CANADA
-            </button>
-            <button class="country-btn" data-country="country2">
-                <img src="https://flagcdn.com/w320/us.png" alt="Country 2 Flag"> UNITED STATES
-            </button>
-            <button class="country-btn" data-country="country3">
-                <img src="https://flagcdn.com/w320/gb.png" a lt="Country 3 Flag"> UNITED KINGDOM
-            </button>
-            <button class="country-btn" data-country="country4">
-                <img src="https://flagcdn.com/w320/au.png" alt="Country 4 Flag"> AUSTRALIA
-            </button>
-            <button class="country-btn" data-country="country5">
-                <img src="https://flagcdn.com/w320/ie.png" alt="Country 5 Flag"> IRELAND
-            </button>
-        </div>
 
-        <div class="content-institution">
-            <div class="images" id="country1">
-                <img src="images/Carleton-University.webp" alt="Country 1 Image 1">
-                <img src="images/Conestoga.webp" alt="Country 1 Image 2">
-                <img src="images/George_Brown.webp" alt="Country 1 Image 3">
-                <img src="images/YorkvilleU.webp" alt="Country 1 Image 4">
-                <img src="images/UWaterloo.webp" alt="Country 1 Image 5">
-            </div>
-            <div class="images" id="country2" style="display: none;">
-                <img src="images/UWaterloo.webp" alt="Country 2 Image 1">
-                <img src="images/YorkvilleU.webp" alt="Country 2 Image 2">
-                <img src="images/George_Brown.webp" alt="Country 2 Image 3">
-                <img src="images/Conestoga.webp" alt="Country 2 Image 4">
-                <img src="images/Carleton-University.webp" alt="Country 2 Image 5">
-            </div>
-            <div class="images" id="country3" style="display: none;">
-                <img src="images/Conestoga.webp" alt="Country 3 Image 1">
-                <img src="images/Carleton-University.webp" alt="Country 3 Image 2">
-                <img src="images/George_Brown.webp" alt="Country 3 Image 3">
-                <img src="images/YorkvilleU.webp" alt="Country 3 Image 4">
-                <img src="images/UWaterloo.webp" alt="Country 3 Image 5">
-            </div>
-            <div class="images" id="country4" style="display: none;">
-                <img src="images/UWaterloo.webp" alt="Country 4 Image 1">
-                <img src="images/Carleton-University.webp" alt="Country 4 Image 2">
-                <img src="images/YorkvilleU.webp" alt="Country 4 Image 3">
-                <img src="images/George_Brown.webp" alt="Country 4 Image 4">
-                <img src="images/Conestoga.webp" alt="Country 4 Image 5">
-            </div>
-            <div class="images" id="country5" style="display: none;">
-                <img src="images/George_Brown.webp" alt="Country 5 Image 1">
-                <img src="images/UWaterloo.webp" alt="Country 5 Image 2">
-                <img src="images/Carleton-University.webp" alt="Country 5 Image 3">
-                <img src="images/Conestoga.webp" alt="Country 5 Image 4">
-                <img src="images/YorkvilleU.webp" alt="Country 5 Image 5">
-            </div>
-        </div>
-
-    </section>
 
     <center>
         <div class="content5">
@@ -296,7 +408,7 @@
             </div>
 
 
-            <div class="content2">
+            {{-- <div class="content2">
                 <h2>Begin Your Journey with Edu-X</h2>
             </div>
             <br><br><br><br>
@@ -339,7 +451,90 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
+            <section class="country-section">
+                <h1>Trusted by Leading Institutions</h1>
+                <br>
+                <div class="buttons">
+                    <button class="country-btn active" data-country="country1">
+                        <img src="https://flagcdn.com/w320/ca.png" alt="Country 1 Flag"> CANADA
+                    </button>
+                    <button class="country-btn" data-country="country2">
+                        <img src="https://flagcdn.com/w320/us.png" alt="Country 2 Flag"> UNITED STATES
+                    </button>
+                    <button class="country-btn" data-country="country3">
+                        <img src="https://flagcdn.com/w320/gb.png" a lt="Country 3 Flag"> UNITED KINGDOM
+                    </button>
+                    <button class="country-btn" data-country="country4">
+                        <img src="https://flagcdn.com/w320/au.png" alt="Country 4 Flag"> AUSTRALIA
+                    </button>
+                    <button class="country-btn" data-country="country5">
+                        <img src="https://flagcdn.com/w320/ie.png" alt="Country 5 Flag"> IRELAND
+                    </button>
+                </div>
+
+                <div class="content-institution">
+                    <div class="images" id="country1">
+                        <img src="images/Carleton-University.webp" alt="Country 1 Image 1">
+                        <img src="images/Conestoga.webp" alt="Country 1 Image 2">
+                        <img src="images/George_Brown.webp" alt="Country 1 Image 3">
+                        <img src="images/YorkvilleU.webp" alt="Country 1 Image 4">
+                        <img src="images/UWaterloo.webp" alt="Country 1 Image 5">
+                    </div>
+                    <div class="images" id="country2" style="display: none;">
+                        <img src="images/UWaterloo.webp" alt="Country 2 Image 1">
+                        <img src="images/YorkvilleU.webp" alt="Country 2 Image 2">
+                        <img src="images/George_Brown.webp" alt="Country 2 Image 3">
+                        <img src="images/Conestoga.webp" alt="Country 2 Image 4">
+                        <img src="images/Carleton-University.webp" alt="Country 2 Image 5">
+                    </div>
+                    <div class="images" id="country3" style="display: none;">
+                        <img src="images/Conestoga.webp" alt="Country 3 Image 1">
+                        <img src="images/Carleton-University.webp" alt="Country 3 Image 2">
+                        <img src="images/George_Brown.webp" alt="Country 3 Image 3">
+                        <img src="images/YorkvilleU.webp" alt="Country 3 Image 4">
+                        <img src="images/UWaterloo.webp" alt="Country 3 Image 5">
+                    </div>
+                    <div class="images" id="country4" style="display: none;">
+                        <img src="images/UWaterloo.webp" alt="Country 4 Image 1">
+                        <img src="images/Carleton-University.webp" alt="Country 4 Image 2">
+                        <img src="images/YorkvilleU.webp" alt="Country 4 Image 3">
+                        <img src="images/George_Brown.webp" alt="Country 4 Image 4">
+                        <img src="images/Conestoga.webp" alt="Country 4 Image 5">
+                    </div>
+                    <div class="images" id="country5" style="display: none;">
+                        <img src="images/George_Brown.webp" alt="Country 5 Image 1">
+                        <img src="images/UWaterloo.webp" alt="Country 5 Image 2">
+                        <img src="images/Carleton-University.webp" alt="Country 5 Image 3">
+                        <img src="images/Conestoga.webp" alt="Country 5 Image 4">
+                        <img src="images/YorkvilleU.webp" alt="Country 5 Image 5">
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="global">
+                <h1>Global Presence for Global Recruitment</h1>
+                <div class="gmap">
+                    <div class="score">
+                        <p>
+                        <h3 style="font-size:30px;">1,000+</h3>Globally</p><br>
+                        <p>
+                        <h3>200+ </h3>South Asia</p><br>
+                        <p>
+                        <h3>25+ </h3>South and East Asia,<br>African and Letin<br>America</p>
+                    </div>
+
+                    <div>
+
+                        <img src="images/Map.webp" height="500px" width="700px">
+                    </div>
+
+
+
+                </div>
+            </section>
         </div>
         </div>
         </div>
@@ -448,10 +643,10 @@
                 buttons.forEach((button) => {
                     button.addEventListener("click", () => {
                         // Remove active class from all buttons
-                        buttons.forEach((btn) => btn.classList.remove("active"));
+                        buttons.forEach((btn) => btn.classList.remove("active-student"));
 
                         // Add active class to the clicked button
-                        button.classList.add("active");
+                        button.classList.add("active-student");
 
                         // Hide all tab contents
                         tabContents.forEach((content) => (content.style.display = "none"));
@@ -476,7 +671,7 @@
                 });
 
                 // Trigger click on the default active button to load its images
-                document.querySelector(".tab-btn.active").click();
+                document.querySelector(".tab-btn.active-student").click();
             });
 
 
@@ -535,13 +730,7 @@
         </script>
 
 
-        <script>
-            document.querySelector('.navbar-toggler').addEventListener('click', function() {
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                const isExpanded = navbarCollapse.style.display === 'flex';
-                navbarCollapse.style.display = isExpanded ? 'none' : 'flex';
-            });
-        </script>
+
 
 
 
@@ -581,5 +770,25 @@
                         showImages(countryId);
                     });
                 });
+            });
+        </script>
+        <script>
+            function countrytoggleDropdown() {
+                const options = document.getElementById('country-options');
+                options.style.display = options.style.display === 'block' ? 'none' : 'block';
+            }
+
+            function selectCountry(name, flagUrl) {
+                document.getElementById('selected-country').textContent = name;
+                document.querySelector('.country-selected img').src = flagUrl;
+                document.getElementById('country-options').style.display = 'none';
+            }
+
+            // Close dropdown if clicked outside
+            document.addEventListener('click', function(e) {
+                const dropdown = document.querySelector('.country-dropdown');
+                if (!dropdown.contains(e.target)) {
+                    document.getElementById('country-options').style.display = 'none';
+                }
             });
         </script>
