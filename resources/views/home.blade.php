@@ -29,41 +29,36 @@
 
             <div class="study-search-form-row">
                 <!-- Input Field -->
-<div class="study-input-wrapper">
-  <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
-    <path d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
-  </svg>
-  <input type="text" class="study-search-input" placeholder="What would you like to study?">
-</div>
+                <div class="study-input-wrapper">
+                    <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+                        <path
+                            d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                    </svg>
+                    <input type="text" class="study-search-input" placeholder="What would you like to study?">
+                </div>
 
                 <!-- Custom Dropdown -->
-                <div class="country-dropdown">
-                    <div class="country-selected" onclick="countrytoggleDropdown()">
-                        <img src="https://flagcdn.com/ca.svg" alt="Canada">
-                        <span id="selected-country">Canada</span>
-                        <svg class="dropdown-arrow" viewBox="0 0 24 24">
-                            <path d="M7 10l5 5 5-5z" />
-                        </svg>
-                    </div>
-                    <ul class="country-options" id="country-options">
-                        <li onclick="selectCountry('Canada', 'https://flagcdn.com/ca.svg')">
-                            <img src="https://flagcdn.com/ca.svg" alt="Canada"> Canada
-                        </li>
-                        <li onclick="selectCountry('United States', 'https://flagcdn.com/us.svg')">
-                            <img src="https://flagcdn.com/us.svg" alt="USA"> United States
-                        </li>
-                        <li onclick="selectCountry('United Kingdom', 'https://flagcdn.com/gb.svg')">
-                            <img src="https://flagcdn.com/gb.svg" alt="UK"> United Kingdom
-                        </li>
-                    </ul>
+                <div class="country-checkboxes">
+                    <label>
+                        <input type="checkbox" name="countries[]" value="Canada">
+                        <img src="https://flagcdn.com/ca.svg" alt="Canada" style="width: 20px; vertical-align: middle;">
+                        Canada
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="countries[]" value="United States">
+                        <img src="https://flagcdn.com/us.svg" alt="USA" style="width: 20px; vertical-align: middle;">
+                        United States
+                    </label>
                 </div>
+
 
                 <!-- Search Button -->
                 <button class="study-search-button">Search</button>
             </div>
         </div>
     </div>
-  <section class="why-edux-simple">
+    <section class="why-edux-simple">
         <div class="why-edux-wrapper">
             <h2 class="why-edux-title">Why Choose Edu-X Services?</h2>
             <ul class="why-edux-list">
@@ -770,25 +765,5 @@
                         showImages(countryId);
                     });
                 });
-            });
-        </script>
-        <script>
-            function countrytoggleDropdown() {
-                const options = document.getElementById('country-options');
-                options.style.display = options.style.display === 'block' ? 'none' : 'block';
-            }
-
-            function selectCountry(name, flagUrl) {
-                document.getElementById('selected-country').textContent = name;
-                document.querySelector('.country-selected img').src = flagUrl;
-                document.getElementById('country-options').style.display = 'none';
-            }
-
-            // Close dropdown if clicked outside
-            document.addEventListener('click', function(e) {
-                const dropdown = document.querySelector('.country-dropdown');
-                if (!dropdown.contains(e.target)) {
-                    document.getElementById('country-options').style.display = 'none';
-                }
             });
         </script>

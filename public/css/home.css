@@ -1710,11 +1710,11 @@ video {
 
     .dropdown-menu{
         display: flex;
-            flex-direction: column;
-            margin: auto;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 90px;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 90px;
     }
 
     .navbar-toggler {
@@ -1813,7 +1813,7 @@ video {
     }
 
 #card-col{
-     margin-top: 110%;
+     margin-top: 130%;
 }
 
 .card{
@@ -2215,7 +2215,7 @@ video {
     }
 
     .dropdown-menu{
-        margin: 0px 89px;
+        /* margin: 0px 89px; */
     }
 
     button.btn2 {
@@ -2237,6 +2237,7 @@ video {
         display: flex;
         margin-bottom: 89px;
     }
+
 
     .hero-images {
         display: none;
@@ -2275,7 +2276,7 @@ video {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: -300px;
+        margin-top: -110px;
     }
 
     .services .one,
@@ -2597,7 +2598,7 @@ video {
 
     .study-input-wrapper {
   position: relative;
-  width: 50%;
+  width: 45%;
 }
 
 .study-search-icon {
@@ -2618,70 +2619,33 @@ video {
 }
 
 
-    /* Custom Dropdown */
-    .country-dropdown {
-        position: relative;
-        min-width: 180px;
-        cursor: pointer;
-        z-index: 100;
-    }
+ .country-checkboxes {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-    .country-selected {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 10px 12px;
-        background-color: #fff;
-    }
+.country-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: aliceblue;
+}
 
-    .country-selected img {
-        width: 20px;
-        height: 14px;
-        margin-right: 8px;
-        object-fit: cover;
-    }
+.country-checkboxes img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+}
 
-    .country-options {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        margin-top: 4px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        list-style: none;
-        padding: 8px 0;
-        max-height: 200px;
-        overflow-y: auto;
-        display: none;
-    }
 
-    .country-options li {
-        display: flex;
-        align-items: center;
-        padding: 8px 12px;
-        transition: background 0.2s ease;
-    }
+.country-checkboxes input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+}
 
-    .country-options li:hover {
-        background-color: #f0f0f0;
-    }
-
-    .country-options img {
-        width: 20px;
-        height: 14px;
-        margin-right: 8px;
-    }
-
-    .dropdown-arrow {
-        width: 14px;
-        height: 14px;
-        fill: #666;
-        margin-left: auto;
-        pointer-events: none;
-    }
 
     .study-search-button {
         padding: 10px 20px;
@@ -2708,6 +2672,7 @@ video {
         .study-search-form-row {
             flex-direction: column;
             align-items: stretch;
+            gap: 20px;
         }
 
         .study-search-input,
@@ -2739,7 +2704,7 @@ video {
 
     .support-journey-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(3, minmax(280px, 1fr));
         gap: 24px;
         max-width: 1200px;
         margin: 0 auto;
@@ -2775,6 +2740,96 @@ video {
         list-style-type: disc;
         font-size: 15px;
     }
+    .support-journey-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.support-journey-header h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 750;
+    color: black;
+}
+
+.support-journey-header p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.support-journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.support-journey-card {
+    background: linear-gradient(90deg, #0644a6, #2764c5);
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.support-journey-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-journey-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.support-journey-card ul {
+    padding-left: 16px;
+}
+
+.support-journey-card ul li {
+    margin-bottom: 6px;
+    color: #ffffff;
+    list-style-type: disc;
+    font-size: 15px;
+}
+
+/* ✅ Responsive Media Queries */
+@media (max-width: 992px) {
+    .support-journey-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .support-journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-journey-header h2 {
+        font-size: 22px;
+    }
+
+    .support-journey-header p {
+        font-size: 16px;
+    }
+
+    .support-journey-card {
+        padding: 16px;
+    }
+
+    .support-journey-card h3 {
+        font-size: 16px;
+    }
+
+    .support-journey-card ul li {
+        font-size: 14px;
+    }
+}
+
 
     /* global map section */
        .global {

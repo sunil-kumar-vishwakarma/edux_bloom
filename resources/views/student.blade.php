@@ -80,7 +80,7 @@
                 <p>We'll help you find and get into the perfect<br>
                     program in your dream destination.</p>
             </div>
-            <button type="button" class="btn btn-light"><a href="program1.html">Start your journey</a></button>
+            <button type="button" class="btn btn-light"><a href="/search">Start your journey</a></button>
         </div>
     </div>
 
@@ -104,7 +104,7 @@
     </div>
 
     <div class="dropdwn">
-        <img src="{{ asset('images/student_card.webp') }}" style="height: 500px; width: 400px;">
+        <img src="{{ asset('images/happy-student-girl_.avif') }}" style="height: 500px; width: 400px;">
 
 
         <div class="dropdown-container">
@@ -197,7 +197,7 @@
             Get Matched With Your<br>
             Personalized Programs Today
         </div>
-        <button class="hero-button"><a href="program1.html">Start your journey</a></button>
+        <button class="hero-button"><a href="/search">Start your journey</a></button>
     </div>
 
     <!-- Dream Destination Section -->
@@ -209,22 +209,22 @@
             <div class="destination-card">
                 <img src="{{ asset('images/study_in_canada_a597130e72.webp') }}" alt="Canada">
                 <div class="destination-title">Study in Canada</div>
-                <button><a href="studycanada.html">Explore →</a></button>
+                <button><a href="/search">Explore →</a></button>
             </div>
             <div class="destination-card">
                 <img src="{{ asset('images/study_in_united_kingdom_9f95e16c5a.webp') }}" alt="UK">
                 <div class="destination-title">Study in UK</div>
-                <button><a href="studyinuk.html">Explore →</a></button>
+                <button><a href="/search">Explore →</a></button>
             </div>
             <div class="destination-card">
                 <img src="{{ asset('images/study_in_united_states_e03dac4af2.webp') }}" alt="US">
                 <div class="destination-title">Study in the US</div>
-                <button> <a href="studyinus.html">Explore →</a></button>
+                <button> <a href="/search">Explore →</a></button>
             </div>
             <div class="destination-card">
                 <img src="{{ asset('images/study_in_australia_eaced99bc7.webp') }}" alt="Australia">
                 <div class="destination-title">Study in Australia</div>
-                <button> <a href="studyinaus.html">Explore →</a></button>
+                <button> <a href="/search">Explore →</a></button>
             </div>
         </div>
     </section>
@@ -264,7 +264,7 @@
                 <h5 class="card-title">Bachelors Degrees</h5>
                 <p class="card-text-student">This is a longer card with supporting text below as a natural lead-in to
                     additional content. This content is a little bit longer.</p>
-                <a href="{{ route('explr_school_Programs') }}" class="btn btn-primary">Find a Bachelor degree</a>
+                <a href="/search" class="btn btn-primary">Find a Bachelor degree</a>
             </div>
         </div>
         <div class="card-students">
@@ -273,7 +273,7 @@
                 <h5 class="card-title">Master's Degrees</h5>
                 <p class="card-text-student">This card has supporting text below as a natural lead-in to additional
                     content.This content is a little bit longer.</p>
-                <a href="{{ route('explr_school_Programs') }}" class="btn btn-primary">Find a Master's degree</a>
+                <a href="/search" class="btn btn-primary">Find a Master's degree</a>
             </div>
         </div>
         <div class="card-students">
@@ -282,7 +282,7 @@
                 <h5 class="card-title">Online Programs & Degrees</h5>
                 <p class="card-text-student">This is a wider card with supporting text below as a natural lead-in to
                     additional content. This card has even longer content than the first .</p>
-                <a href="{{ route('explr_school_Programs') }}" class="btn btn-primary">Find an online degree</a>
+                <a href="/search" class="btn btn-primary">Find an online degree</a>
             </div>
         </div>
 
@@ -292,7 +292,7 @@
                 <h5 class="card-title">PhD Research Degrees</h5>
                 <p class="card-text-student">This is a wider card with supporting text below as a natural lead-in to
                     additional content. This card has even longer content than the first .</p>
-                <a href="{{ route('explr_school_Programs') }}" class="btn btn-primary">Find a PhD program</a>
+                <a href="/search" class="btn btn-primary">Find a PhD program</a>
             </div>
         </div>
     </div>

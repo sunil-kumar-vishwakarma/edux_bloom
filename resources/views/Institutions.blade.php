@@ -539,7 +539,8 @@
         }
 
         .card-container .card-institutions {
-            background-color: #fff;
+            /* background-color: #fff; */
+            background: linear-gradient(90deg, #0644a6, #2764c5);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -556,14 +557,14 @@
 
         .card-container h3 {
             font-size: 1.2em;
-            color: #333;
+            color: white;
             margin-bottom: 10px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .card-container p {
             font-size: 0.9em;
-            color: #666;
+            color: #fffcfcd1;
         }
 
         .card-container .cta {
@@ -625,7 +626,8 @@
 .step-card {
     display: flex;
     flex: 1 1 300px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: linear-gradient(90deg, #0644a6, #2764c5);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -642,7 +644,7 @@
 }
 
 .step-number {
-    color: #007bff;
+    color: white;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -651,13 +653,13 @@
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .step-description {
     font-size: 0.98em;
-    color: #151515;
+    color: #fffcfcd1;
     line-height: 1.5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -914,13 +916,13 @@
 
         .card-container h3 {
             font-size: 1.2em;
-            color: #333;
+            color: white;
             margin-bottom: 10px;
         }
 
         .card-container p {
             font-size: 0.9em;
-            color: #666;
+            color: #fffcfcd1;
         }
 
         .card-container .cta {
@@ -2206,6 +2208,8 @@
             </div>
         </div>
     </section>
+
+
     </div>
 
 
