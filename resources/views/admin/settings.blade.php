@@ -15,6 +15,15 @@
                 <label for="logo-upload">Upload Logo:</label>
                 <input type="file" id="logo-upload" name="logo">
 
+                    <div class="mb-3">
+                        @if (!empty($settings->logo))
+                            <div class="mt-3">
+                                <p class="mb-1">Current Logo:</p>
+                                <img src="{{ asset('/storage/' . $settings->logo) }}" alt="Site Logo" style="max-height: 80px;">
+                            </div>
+                        @endif
+                    </div>
+
                 {{-- <label for="favicon-upload">Upload Favicon:</label>
                 <input type="file" id="favicon-upload" name="favicon"> --}}
             </div>

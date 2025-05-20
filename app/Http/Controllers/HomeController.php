@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Home;
 use App\Models\Blog;
+use App\Models\Page;
 
 
 class HomeController extends Controller
@@ -92,7 +93,9 @@ class HomeController extends Controller
             return view('webinar_readmore', compact('webinar_readmore'));
         }
     public function privacyPolicy(){
-        $privacy_policy = Home::all();
+        // $privacy_policy = Home::all();
+        $privacy_policy = Page::where('type','privacy')->first();
+        
             return view('privacy_policy', compact('privacy_policy'));
         }
     public function eduxFees(){
@@ -101,7 +104,9 @@ class HomeController extends Controller
         }
 
     public function termAndCondition(){
-        $terms_and_condition = Home::all();
+        // $terms_and_condition = Home::all();
+        $terms_and_condition = Page::where('type','privacy')->first();
+        
             return view('terms_and _condition', compact('terms_and_condition'));
         }
 

@@ -7,20 +7,20 @@
         </header>
         <br><br>
 
-        <form action="#" method="POST">
+        <form action="{{route('pages.edit_term.storey')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            @method('PUT')
-
+           
             <!-- Title Field -->
             <div class="section-form">
                 <label for="Title">Title*</label>
-                <input type="text" id="Title" name="title"  placeholder="Enter Title" required>
+                <input type="text" id="Title" name="title"  value="{{$PageList->title ?? '' }}" required>
+                <input type="hidden" id="type" name="type"  value="term">
             </div>
 
             <!-- Description Field -->
             <div class="input-textarea">
                 <label for="description">Description*</label>
-                <textarea id="description" name="content" cols="10" rows="5"></textarea>
+                <textarea id="description" name="description" cols="10" rows="5">{{$PageList->description ?? '' }}</textarea>
             </div>
             <br><br>
 

@@ -49,7 +49,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Terms and Conditions</h1>
+        <!-- <h1>Terms and Conditions</h1>
         <p><strong>Effective Date:</strong>20-11-2024</p>
 
         <p>Welcome to <strong>Edu-X</strong> ("Website"), owned and operated by [Your Company Name] ("we," "us," "our"). These Terms and Conditions govern your access to and use of the Website and its services. By accessing or using the Website, you agree to comply with these terms. If you do not agree, you may not use the Website.</p>
@@ -120,7 +120,11 @@
             <li><strong>Address:</strong> [Insert Address]</li>
         </ul>
 
-        <p><strong>© [Insert Year] Edu-X. All Rights Reserved.</strong></p>
+        <p><strong>© [Insert Year] Edu-X. All Rights Reserved.</strong></p> -->
+
+        <p>{{$terms_and_condition->title}}</p>
+         {!! $terms_and_condition->description !!}
+
     </div>
 </body>
 </html>

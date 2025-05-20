@@ -20,26 +20,25 @@ class StudentController extends Controller
         return view('students.create');
     }
 
-    // Store a newly created student in the database
-    public function store(Request $request)
-    {
-        
-        $validatedData = $request->validate([
-            'full_name' => 'required|string|max:255',
-            'email' => 'required|email|unique:students,email',
-            'contact' => 'required|string|max:15',
-            'country' => 'required|string|max:100',
-            'joined_date' => 'required|date',
-        ]);
 
-        
-        // Ensure the 'status' is either 'Active' or 'Inactive'
-        $validatedData['status'] = $request->status; // Get the status from the form
+public function store(Request $request)
+{
+    // Validate the request data
+    $validatedData = $request->validate([
+        'full_name'   => 'required|string|max:255',
+        'email'       => 'required|email|unique:students,email',
+        'contact'     => 'required|string|max:15',
+        'country'     => 'required|string|max:100',
+        'joined_date' => 'required|date',
+        'status'      => 'required|in:Active,Inactive', // Validate status directly
+    ]);
 
-        Student::create($validatedData);
+    // Create the student record
+    Student::create($validatedData);
 
-        return redirect()->route('students.index')->with('success', 'Student created successfully!');
-    }
+    // Redirect back with success message
+    return redirect()->route('students.index')->with('success', 'Student created successfully!');
+}
 
 
     public function show($id)
