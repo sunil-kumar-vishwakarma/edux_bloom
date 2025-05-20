@@ -1,7 +1,8 @@
   /* Global Styles */
   body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
+      /* font-family: 'Roboto', sans-serif; */
+      font-family: "Open Sans", Sans-serif;
       background: radial-gradient(circle, #141E30, #243B55);
       display: flex;
       height: 100vh;
@@ -156,7 +157,7 @@
   /* .sidebar-menu .menu-item .active { */
       /* background-color: #e74c3c; */
       /* background-color: yellowgreen;
-    color: #ffffff; 
+    color: #ffffff;
   }
 */
   /* Active link text and icon */
@@ -321,8 +322,8 @@
       z-index: 10;
   }
 
-  
- 
+
+
   .dropdown-menu .dropdown-item {
       padding: 10px;
       font-size: 14px;
@@ -973,7 +974,7 @@
       text-align: center;
       border-bottom: 1px solid #ddd;
   }
- 
+
   .user-list-table th {
       background-color: #007bff;
       color: white;
@@ -1218,7 +1219,7 @@
       margin-top: 0;
       background-color: white;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      
+
 
   }
 
@@ -1689,4 +1690,3 @@
   }
 
 
- 

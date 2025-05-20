@@ -123,7 +123,7 @@
         }
 
 
-      
+
         .dropdown-Menu a {
             text-decoration: none;
         }
@@ -289,6 +289,10 @@
             transition: color 0.3s;
         }
 
+        .country-section h1 {
+            color: #212529 !important;
+        }
+
 
         .social-icons a {
             color: white;
@@ -363,12 +367,13 @@
             background-color: #b92151;
             color: white;
             font-weight: bold;
-            border:none;
+            border: none;
             border-radius: 8px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-top: 20px;
         }
-        .text button:hover{
+
+        .text button:hover {
             background-color: #b92151 !important;
         }
 
@@ -406,7 +411,7 @@
         }
 
         .step h3 {
-            font-size: 18px;
+            font-size: 17px;
             color: #333;
             margin: 10px 0;
         }
@@ -424,8 +429,8 @@
 
 
         .benefits-section {
-            background-color: #0066e0;
-            color: white;
+            background: linear-gradient(135deg, #0644a6, #3b7ded);
+            color: #292E3E;
             padding: 50px 20px;
             text-align: center;
             justify-content: center;
@@ -433,22 +438,24 @@
         }
 
         .benefits-content h1 {
-            font-size: 2em;
+            font-size: 26px;
             font-weight: 700;
             margin-bottom: 10px;
+            color: #fff;
         }
-        .pargraphhhh{
-            text-align: center; 
-            color: white; 
-            white-space: nowrap; 
-            margin-left: 420px;
+
+        .pargraphhhh {
+            text-align: center;
+            color: #efeded;
+            white-space: nowrap;
+            /* margin-left: 420px; */
         }
 
         .benefits-content p {
             font-size: 1.2em;
             font-weight: 400;
             margin-bottom: 30px;
-            
+
         }
 
         .cards {
@@ -477,13 +484,13 @@
         }
 
         .card-institutions h2 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .card-institutions p {
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 550;
             color: #555;
@@ -520,7 +527,7 @@
         }
 
         .container1 h1 {
-            font-size: 35px;
+            font-size: 26px;
         }
 
         .card-container {
@@ -532,7 +539,8 @@
         }
 
         .card-container .card-institutions {
-            background-color: #fff;
+            /* background-color: #fff; */
+            background: linear-gradient(90deg, #0644a6, #2764c5);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -549,14 +557,14 @@
 
         .card-container h3 {
             font-size: 1.2em;
-            color: #333;
+            color: white;
             margin-bottom: 10px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .card-container p {
             font-size: 0.9em;
-            color: #666;
+            color: #fffcfcd1;
         }
 
         .card-container .cta {
@@ -588,92 +596,192 @@
             background-color: #004bbd;
         }
 
-        .working {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* min-height: 100vh; */
-            /*background-color: #f5f5f5;*/
-            padding:20px;
-            box-sizing: border-box;
-        }
+    .working {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /*background-color: #f5f5f5;*/
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-        .work h1 {
-            margin-top: 80px;
-            font-size: 35px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 35px;
-        }
+.work h1 {
+    margin-top: 80px;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+}
+
+.steps-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.step-card {
+    display: flex;
+    flex: 1 1 300px;
+    /* background-color: #ffffff; */
+    background: linear-gradient(90deg, #0644a6, #2764c5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #000000c2;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.step-number {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step-description {
+    font-size: 0.98em;
+    color: #fffcfcd1;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Base styles for large screens (already in place) */
+
+/* Responsive styles for small laptops (1025px to 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .steps-container {
+        max-width: 85%;
+        gap: 30px;
+        justify-content: center;
+    }
+    .step-card {
+        flex: 1 1 30%; /* roughly two cards per row with some margin */
+        padding: 18px;
+        border-radius: 25px;
+    }
+    .step-icon img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 13px;
+    }
+    .step-title {
+        font-size: 1.15em;
+    }
+    .step-description {
+        font-size: 0.95em;
+    }
+    .work h1 {
+        font-size: 32px;
+        margin-top: 70px;
+    }
+
+     .card-container {
+        max-width: 70%;
+        gap: 16px;
+    }
+
+    .card-container .card-institutions {
+        padding: 18px;
+    }
+
+    .card-container .icon img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-container h3 {
+        font-size: 1.1em;
+    }
+
+    .card-container p {
+        font-size: 0.85em;
+    }
+     .card-container {
+        max-width: 60%;
+        gap: 16px;
+    }
+
+    .card-container .card-institutions {
+        padding: 18px;
+    }
+
+    .card-container .icon img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-container h3 {
+        font-size: 1.1em;
+    }
+
+    .card-container p {
+        font-size: 0.85em;
+    }
 
 
-        .steps-container {
-            max-width: 1200px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            text-align: center;
-        }
-
-        .step-card {
-            display: flex;
-            flex: 1 1 300px;
-            background-color: #ffffff;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            border: 2px solid #000000c2;
-            border-radius: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-icon img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-        }
-
-        .step-number {
-            color: #007bff;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .step-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .step-description {
-            font-size: 0.98em;
-            color: #151515;
-            line-height: 1.5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-        }
-
-        .country-section {
-            display: flex;
-            flex-direction: column;
-            margin-top: 150px;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 35px;
+}
 
 
-        }
+/* Responsive for small laptops and below */
+@media (max-width: 1024px) {
+    .steps-container {
+        gap: 25px;
+        max-width: 90%; /* slightly smaller width */
+        justify-content: center; /* center the items */
+    }
+    .step-card {
+        flex: 1 1 45%; /* two cards per row */
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .step-icon img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 12px;
+    }
+    .step-title {
+        font-size: 1.1em;
+    }
+    .step-description {
+        font-size: 0.9em;
+    }
+    .work h1 {
+        font-size: 28px;
+        margin-top: 60px;
+    }
+}
 
-        .country-section h1 {
-            /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-            font-size: 35px;
-            font-weight: bold;
-        }
+/* Optional: further adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+    .steps-container {
+        gap: 20px;
+    }
+    .step-card {
+        flex: 1 1 100%; /* stack cards vertically */
+    }
+}
+
+
+
 
 
         .buttons {
@@ -688,83 +796,33 @@
             border-radius: 20px;
             border: none;
             font-size: 15px;
-                font-weight: 500;
+            font-weight: 500;
 
         }
 
         .buttons button:hover {
-            background-color: #007bff;
+            background-color: #b92151;
             color: white;
         }
-
-        .country-btn {
-            background-color: #f0f0f0;
-
-            padding: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .country-btn img {
-            margin-right: 10px;
-            width: 30px;
-            height: 25px;
-            border-radius: 40%;
-
-        }
-
-        .country-btn.active {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .content-institution .images {
-            display: none;
-        }
-
-        .content-institution .images img {
-             margin: 30px;
-    width: 200px;
-    height: 100px;
-    border: 1px solid #a39999;
-    border-radius: 10px;
-    padding: 20px;
-        }
-
-        .content-institution {
-            margin: 40px;
-            justify-content: space-evenly;
-
-        }
-
-        .country-section .btn-primary a {
-            color: white;
-            text-decoration: none;
-            font-size: smaller;
-        }
-
-
 
         .application {
-            text-align: center; 
+            text-align: center;
             /*margin-top: 80px;*/
         }
 
-       .application img {
-         height: 400px;
-         width: 1420px;
-         margin: 0px 60px;
-         border-radius:15px;
+        .application img {
+            height: 400px;
+            width: 1420px;
+            margin: 0px 60px;
+            border-radius: 15px;
         }
 
         .application h1,
         .work h1 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: bold;
-            font-size: xx-large;
-            margin-bottom:30px;
+            font-size: 26px;
+            margin-bottom: 30px;
         }
 
 
@@ -858,13 +916,13 @@
 
         .card-container h3 {
             font-size: 1.2em;
-            color: #333;
+            color: white;
             margin-bottom: 10px;
         }
 
         .card-container p {
             font-size: 0.9em;
-            color: #666;
+            color: #fffcfcd1;
         }
 
         .card-container .cta {
@@ -904,7 +962,7 @@
 
         .global h1 {
             font-weight: bold;
-            font-size: 30px;
+            font-size: 26px;
         }
 
         .gmap {
@@ -1331,26 +1389,27 @@
             outline: none;
         }
 
-     #contactForm  .checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* space between checkbox and label */
-    margin-bottom: 20px;
-}
+        #contactForm .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* space between checkbox and label */
+            margin-bottom: 20px;
+        }
 
-   #contactForm .checkbox-group input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #007BFF;
-}
+        #contactForm .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #007BFF;
+        }
 
-   #contactForm .checkbox-group label {
-    margin: 0;
-    color: #444;
-    font-weight: normal;
-    font-size: 15px;  
-    cursor: pointer;
-}
+        #contactForm .checkbox-group label {
+            margin: 0;
+            color: #444;
+            font-weight: normal;
+            font-size: 15px;
+            cursor: pointer;
+        }
 
 
         /* Error messages */
@@ -1514,9 +1573,9 @@
                 padding: 20px;
             }
 
-            .gmap img{
+            .gmap img {
 
-            display:none;
+                display: none;
             }
 
             /* Benefits Section */
@@ -1529,7 +1588,7 @@
             .benefits-content h1 {
                 font-size: 1.5em;
             }
-           
+
 
             .cards {
                 display: block;
@@ -1620,43 +1679,12 @@
                 font-size: 13px;
             }
 
-            /* Country Section */
-            .country-section {
-                display: none;
-            }
-
-            /* .buttons {
-            margin-left: 0;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .buttons button {
-            font-size: 14px;
-        }
-
-        .country-btn {
-            padding: 10px;
-            font-size: 14px;
-            justify-content: center;
-        }
-
-        .country-btn img {
-            width: 25px;
-            height: 20px;
-        }
-
-        .country-btn.active {
-            background-color: #0065ff;
-            color: white;
-        } */
-
             /* Application Section */
             .application img {
-               width: 100%;
-              height: auto;
-              display: flex;
-               margin: auto;
+                width: 100%;
+                height: auto;
+                display: flex;
+                margin: auto;
             }
 
             .application h1 {
@@ -1708,19 +1736,19 @@
 
             .global img {
                 /* width: 60%;
-            margin-left: 0; */
+                                    margin-left: 0; */
                 display: none;
             }
 
             .global .score {
-                      display: flex;
-        flex-direction: column;
-        margin-left: 57px;
-        gap: -13px;
-        /* margin-top: 550px; */
-        align-items: center;
-        justify-content: center;
-        /*margin-bottom: -135px;*/
+                display: flex;
+                flex-direction: column;
+                margin-left: 57px;
+                gap: -13px;
+                /* margin-top: 550px; */
+                align-items: center;
+                justify-content: center;
+                /*margin-bottom: -135px;*/
 
             }
 
@@ -1776,9 +1804,9 @@
                 width: 246px;
             }
 
-            .contactForm{
-                 padding: 20px;
-    width: 100%;
+            .contactForm {
+                padding: 20px;
+                width: 100%;
             }
 
 
@@ -1798,14 +1826,11 @@
         /* For Large Desktop/Laptop (1200px and above) */
         @media (min-width: 1200px) {
             .application img {
-    height: 400px;
-    width: 1140px;
-    margin: 0px 60px;
+                height: 400px;
+                width: 1140px;
+                margin: 0px 60px;
             }
-            
-            .content-institution .images img{
-                width:170;
-            }
+
 
 
             .text p {
@@ -1813,7 +1838,7 @@
             }
 
             .journey h2 {
-                font-size: 35px;
+                font-size: 26px;
                 /* max-width: 354px; */
                 font-weight: 550;
             }
@@ -1823,13 +1848,13 @@
             }
 
             .step h3 {
-                font-size: 1.4rem;
+                font-size: 16px;
             }
 
             .step p {
-                font-size: 1rem;
+                font-size: 13px;
             }
-           
+
         }
 
         /* For Large Laptop / Tablet Landscape (1024px to 1199px) */
@@ -1993,14 +2018,15 @@
                     gap: 15px;
                 }
 
-            .pargraphhhh{
-                margin-left: 30px;
-            }
-            .application img {
-   
-    margin: 30px;
-}
-             
+                .pargraphhhh {
+                    margin-left: 30px;
+                }
+
+                .application img {
+
+                    margin: 30px;
+                }
+
             }
 
             @media (max-width: 767px) {
@@ -2117,6 +2143,8 @@
             #firstcol li a:hover {
                 text-decoration: none;
             }
+
+
     </style>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -2143,7 +2171,7 @@
             more than 1,500 institutions worldwide.</p>
         <button type="button" class="btn btn-primary" id="workWithUsBtn">Work With US</button>
     </div>
-<br><br>
+    <br><br>
 
     <section class="journey">
         <div class="journey-section">
@@ -2181,95 +2209,7 @@
         </div>
     </section>
 
-<br>
-    <section class="benefits-section">
-        <div class="benefits-content">
-            <h1>Access More Institutions, Perks, and Faster Commissions</h1>
 
-            <p class="pargraphhhh">
-                Here to help you grow your business by offering the best opportunities and support.</p>
-            <div class="cards">
-                <div class="card-institutions">
-                    <img src="images/4.webp" alt="Best Commissions" class="card-icon">
-                    <h2>1,000,000+</h2>
-                    <p>Students<br> Helped</p>
-                </div>
-
-                <div class="card-institutions">
-                    <img src="images/Student_Countries.webp" alt="Perks and Rewards" class="card-icon">
-                    <h2>150+</h2>
-                    <p>Student Source <br>Countries</p>
-                </div>
-
-                <div class="card-institutions">
-                    <img src="images/4-1.webp" alt="1,500+ Institutions" class="card-icon">
-                    <h2>95%</h2>
-                    <p>Offer of <br>Admission Rate</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!--    <section class="success-Story">-->
-<!--        <h1>Success Stories From Our Partners</h1>-->
-
-
-<!--        <div class="video1" style="margin-top:10px;">-->
-<!--  <video controls style="width: 50%; margin:0px 370px" > <!-- or any fixed width like 600px -->-->
-<!--    <source src="{{ asset('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') }}" type="video/mp4">-->
-<!--    Your browser does not support the video tag.-->
-<!--  </video>-->
-<!--</div>-->
-
-
-<!--        <div class="container1">-->
-<!--            <h1>Expanding Our International Reach</h1>-->
-<!--            <p style="text-align: center; white-space: nowrap; margin-left: 371px; font-size: larger;">Attract the best-->
-<!--                students from around the world with Edux.</p>-->
-<!--            <br>-->
-<!--            <div class="card-container">-->
-<!--                <div class="card-institutions">-->
-<!--                    <div class="icon"><img src="images/Student_Diversity.webp" alt="Local Support Icon"></div>-->
-<!--                    <h3>Increase Student Diversity</h3>-->
-
-<!--                </div>-->
-
-<!--                <div class="card-institutions">-->
-<!--                    <div class="icon"><img src="images/Receive_Quality_Applications.webp" alt="Education Icon"></div>-->
-<!--                    <h3>Receive Quality Applications</h3>-->
-
-<!--                </div>-->
-
-<!--                <div class="card-institutions">-->
-<!--                    <div class="icon"><img src="images/Approved_Recruiter_Network2.webp" alt="Education Icon"></div>-->
-<!--                    <h3>Approved Recruiter Network</h3>-->
-
-<!--                </div>-->
-
-<!--                <div class="card-institutions">-->
-<!--                    <div class="icon"><img src="images/Document_Verification.webp" alt="Events Icon"></div>-->
-<!--                    <h3>Document Verification</h3>-->
-
-<!--                </div>-->
-
-<!--                <div class="card-institutions">-->
-<!--                    <div class="icon"><img src="images/Promotional_Channels.webp" alt="Data Icon"></div>-->
-<!--                    <h3>Promotional <br>Channels</h3>-->
-
-<!--                </div>-->
-
-<!--                <div class="card-institutions">-->
-<!--                    <div class="icon"><img src="images/Applicant_Matching.webp" alt="Education Icon"></div>-->
-<!--                    <h3>Applicant <br>Matching </h3>-->
-
-<!--                </div>-->
-<!--            </div>-->
-<!--            <br>-->
-<!--            <div class="cta">-->
-<!--                <button id="letsgetstartedbtn"> <a href="#">Let's Get Started</a></button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
     </div>
 
 
@@ -2398,9 +2338,9 @@
             </div>
         </div>
 
-        <!--<button style="height:80px; width:300px; font-size:35px; font-weight:bold;" class="btn btn-primary"><a-->
-        <!--        href="#">Work With Us</a></button>-->
     </section>
+    <br>
+    <br>
 
     <section class="application">
         <h1>An Easy-to-Use Platform Built to<br> Deliver Quality Applications and More</h1>
@@ -2408,50 +2348,6 @@
         <img src="images/RP_Laptop-1536x864.png">
     </section>
 
-
-    <!--<section class="program">-->
-    <!--    <div class="program-logo">-->
-    <!--        <div class="plogo">-->
-    <!--            <div class="plogo-icon">-->
-    <!--                <img src="images/Application-50x50.png" alt="Application Icon">-->
-    <!--            </div>-->
-    <!--            <div class="plogo-content">-->
-    <!--                <h3>Vetted, Offer-Ready Applications, Delivered</h3>-->
-    <!--                <p>Reduce your workload on application processing and follow-ups.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-
-    <!--        <div class="plogo">-->
-    <!--            <div class="plogo-icon">-->
-    <!--                <img src="images/Acceptance-Rate-50x50.png" alt="Acceptance Rate Icon">-->
-    <!--            </div>-->
-    <!--            <div class="plogo-content">-->
-    <!--                <h3>Putting Students First</h3>-->
-    <!--                <p>Founded by students for students - we care about every aspect of the student journey.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-
-    <!--        <div class="plogo">-->
-    <!--            <div class="plogo-icon">-->
-    <!--                <img src="images/Platform-50x50.png" alt="Platform Icon">-->
-    <!--            </div>-->
-    <!--            <div class="plogo-content">-->
-    <!--                <h3>Flexible Delivery</h3>-->
-    <!--                <p>We match your processes and requirements—there is no need for integration.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-
-    <!--        <div class="plogo">-->
-    <!--            <div class="plogo-icon">-->
-    <!--                <img src="images/6.webp" alt="Work Icon">-->
-    <!--            </div>-->
-    <!--            <div class="plogo-content">-->
-    <!--                <h3>Work With You, For You</h3>-->
-    <!--                <p>Our aim is to free up your time and resources. We help you recruit efficiently and effectively.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</section>-->
 
 
     <div class="container1">
@@ -2489,11 +2385,11 @@
         </div>
     </div>
     </section>
-<br>
+    <br>
 
     <section class="global">
         <h1>Global Presence for Global Recruitment</h1>
-<br>
+        <br>
         <div class="gmap">
 
             <div class="score">
@@ -2516,56 +2412,13 @@
     </section>
 
 
-    <!--<section class="testimonial-section" id="testimonials">-->
-    <!--    <div class="container3">-->
-    <!--        <h2 class="section-title">A Relationship Built on Trust and Credibility</h2>-->
-    <!--        <div class="swiper testimonial-wrapper">-->
-    <!--            <div class="swiper-wrapper">-->
-    <!--                <div class="swiper-slide testimonial-items">-->
-    <!--                    <div class="testimonial-img tm-img-1"></div>-->
-    <!--                    <p class="testimonial-text">Discovering Be Better was a game-changer! Their unmatched expertise-->
-    <!--                        skyrocketed my online presence and credibility. Highly recommended.</p>-->
-    <!--                    <h3 class="testimonial-title">Amy</h3>-->
-    <!--                </div>-->
-
-    <!--                <div class="swiper-slide testimonial-items">-->
-    <!--                    <div class="testimonial-img tm-img-2"></div>-->
-    <!--                    <p class="testimonial-text">Thanks to Be Better, I've unlocked my true potential and transformed-->
-    <!--                        how others perceive me. </p>-->
-    <!--                    <h3 class="testimonial-title">John</h3>-->
-    <!--                </div>-->
-    <!--                <div class="swiper-slide testimonial-items">-->
-    <!--                    <div class="testimonial-img tm-img-3"></div>-->
-    <!--                    <p class="testimonial-text">Discovering Be Better was a game-changer! Their unmatched expertise-->
-    <!--                        skyrocketed my online presence and credibility. Highly recommended.</p>-->
-    <!--                    <h3 class="testimonial-title">Amy</h3>-->
-    <!--                </div>-->
-    <!--                <div class="swiper-slide testimonial-items">-->
-    <!--                    <div class="testimonial-img tm-img-4"></div>-->
-    <!--                    <p class="testimonial-text">Discovering Be Better was a game-changer! Their unmatched expertise-->
-    <!--                        skyrocketed my online presence and credibility. Highly recommended.</p>-->
-    <!--                    <h3 class="testimonial-title">Amy</h3>-->
-    <!--                </div>-->
-    <!--                <div class="swiper-slide testimonial-items">-->
-    <!--                    <div class="testimonial-img tm-img-5"></div>-->
-    <!--                    <p class="testimonial-text">Discovering Be Better was a game-changer! Their unmatched expertise-->
-    <!--                        skyrocketed my online presence and credibility. Highly recommended.</p>-->
-    <!--                    <h3 class="testimonial-title">Amy</h3>-->
-    <!--                </div>-->
-
-
-    <!--            </div>-->
-    <!--            <div class="swiper-pagination"></div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-
 
 
     <!--</section>-->
 
     <!--<div id="workWithUsForm" class="form">-->
     <!--    <div class="box-container">-->
-            <!-- Left Side: Form -->
+    <!-- Left Side: Form -->
     <!--        <div class="form-container">-->
     <!--            <h2>Connect with EduX</h2>-->
     <!--            <form id="contactForm">-->
@@ -2744,13 +2597,13 @@
     <!--            </form>-->
     <!--        </div>-->
 
-            <!-- Right Side: Image -->
+    <!-- Right Side: Image -->
     <!--        <div class="image-container-institution">-->
     <!--            <img src="images/School-Footer_Illustration.webp" alt="EduX">-->
     <!--        </div>-->
     <!--    </div>-->
 
-        <!-- Thank You Modal -->
+    <!-- Thank You Modal -->
     <!--    <div id="thankYouModal" class="modal">-->
     <!--        <div class="modal-content">-->
     <!--            <span class="close-btn" onclick="closeModal()">&times;</span>-->
@@ -2763,152 +2616,54 @@
     </div>
 
 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
-        const buttons = document.querySelectorAll('.country-btn');
-        const imagesDivs = document.querySelectorAll('.images');
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll('.country-btn');
+            const imageSets = document.querySelectorAll('.images');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                buttons.forEach(btn => btn.classList.remove('active'));
+            function showImages(countryId) {
+                imageSets.forEach(images => {
+                    images.classList.remove('active');
+                    images.style.display = 'none';
+                });
 
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                // Hide all images
-                imagesDivs.forEach(div => div.style.display = 'none');
-
-                // Get the country related to the clicked button
-                const country = button.getAttribute('data-country');
-
-                // Show the related images
-                const countryImages = document.getElementById(country);
-                countryImages.style.display = 'block';
-                countryImages.style.display = 'flex';
-            });
-        });
-
-        // Set the first button and content as active by default
-        document.querySelector('.country-btn').click();
-
-
-
-        var swiper = new Swiper(".testimonial-wrapper", {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 30,
-            loop: true,
-            speed: 1300,
-            autoplay: {
-                delay: 2000, // 2 seconds
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-
-
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Fetch country data
-            fetch('https://restcountries.com/v3.1/all')
-                .then(response => response.json())
-                .then(countries => {
-                    // Select the dropdown element
-                    const countrySelect = document.getElementById('country-select');
-
-                    // Loop through the countries and create options
-                    countries.forEach(country => {
-                        const option = document.createElement('option');
-                        option.value = country.name.common; // Use the common country name as value
-                        option.textContent = country.name.common; // Display the country name
-                        countrySelect.appendChild(option);
-                    });
-
-                    // Initialize Choices.js for the dropdown
-                    new Choices('#country-select', {
-                        searchEnabled: true, // enables search functionality
-                        itemSelectText: 'Press to select', // placeholder for the dropdown
-                    });
-                })
-                .catch(error => console.error('Error fetching countries:', error));
-        });
-
-
-
-
-
-
-
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            let isValid = true;
-            let fields = ["country", "school", "firstName", "lastName", "email", "title", "phone"];
-
-            fields.forEach(field => {
-                let input = document.getElementById(field);
-                let error = document.getElementById(field + "Error");
-                if (!input.value.trim()) {
-                    error.style.display = "block";
-                    isValid = false;
-                } else {
-                    error.style.display = "none";
+                const selectedImages = document.getElementById(countryId);
+                if (selectedImages) {
+                    selectedImages.style.display = 'flex';
+                    setTimeout(() => selectedImages.classList.add('active'), 10);
                 }
-            });
-
-            let checkbox1 = document.getElementById("checkbox1");
-            let checkboxError1 = document.getElementById("checkboxError1");
-            if (!checkbox1.checked) {
-                checkboxError1.style.display = "block";
-                isValid = false;
-            } else {
-                checkboxError1.style.display = "none";
             }
 
-            if (isValid) {
-                document.getElementById("thankYouModal").style.display = "block";
+            // Set initial view based on active button
+            const initialButton = document.querySelector('.country-btn.active');
+            if (initialButton) {
+                const initialCountryId = initialButton.getAttribute('data-country');
+                showImages(initialCountryId);
             }
-        });
 
-        function closeModal() {
-            document.getElementById("thankYouModal").style.display = "none";
-        }
+            // Handle button clicks
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
 
-
-
-        document.getElementById("workWithUsBtn").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default behavior (if it's a link)
-
-            // Scroll to the form smoothly
-            document.getElementById("workWithUsForm").scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-
-
-        document.getElementById("letsgetstartedbtn").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default behavior (if it's a link)
-
-            // Scroll to the form smoothly
-            document.getElementById("letsgetstartedc").scrollIntoView({
-                behavior: "smooth"
+                    const countryId = button.getAttribute('data-country');
+                    showImages(countryId);
+                });
             });
         });
     </script>
-
-
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
