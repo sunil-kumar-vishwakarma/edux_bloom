@@ -731,7 +731,7 @@
                 @foreach($programs as $value)
                 <div class="program-card">
                     <div class="program-header">
-                        <img src="{{ asset('storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
+                        <img src="{{ asset('../storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
                                 alt="University Logo" class="program-logo" />
                         <!-- <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" /> -->
                         <a href="#">

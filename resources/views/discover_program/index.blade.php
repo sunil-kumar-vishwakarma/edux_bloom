@@ -41,7 +41,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>
-                            <img src="{{ asset('storage/' . $program->image) }}?v={{ $program->updated_at->timestamp }}"
+                            <img src="{{ asset('../storage/' . $program->image) }}?v={{ $program->updated_at->timestamp }}"
                                 alt="University Logo" width="50">
                         </td>
                         <td>{{ $program->university_name }}</td>
