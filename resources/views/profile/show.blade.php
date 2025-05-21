@@ -7,7 +7,7 @@
     <p>Phone: {{ $user->phone }}</p>
     <p>Address: {{ $user->address }}</p>
     <p>Birthday: {{ $user->birthday }}</p>
-    <img src="{{ asset('storage/' . $user->profile_photo) }}" alt="Profile Picture" width="100">
+    <img src="{{ asset('/public/storage/' . $user->profile_photo) }}" alt="Profile Picture" width="100">
     <a href="{{ route('profile.edit', $user->id) }}">Edit Profile</a>
 </div>
 @endsection
