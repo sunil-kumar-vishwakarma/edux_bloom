@@ -728,7 +728,61 @@
 
             <!-- Program Cards -->
             <div class="programs-container">
+                @foreach($programs as $value)
                 <div class="program-card">
+                    <div class="program-header">
+                        <img src="{{ asset('storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
+                                alt="University Logo" class="program-logo" />
+                        <!-- <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" /> -->
+                        <a href="#">
+                            <h3>{{$value->university_name}}</h3>
+                        </a>
+                    </div>
+
+                    <div class="program-badges">
+                        <span class="badge">High Job Demand</span>
+                        <span class="badge">Popular</span>
+                    </div>
+
+                    <div class="program-details">
+                        <small>{{$value->certificate}}</small>
+                        <a href="#">
+                            <p>{{$value->college_name}}</p>
+                        </a>
+                        <hr />
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Location</td>
+                                    <td>{{$value->college_name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Campus city</td>
+                                    <td>{{$value->location}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuition (1st year)</td>
+                                    <td> ${{$value->tuition}}CAD</td>
+                                </tr>
+                                <tr>
+                                    <td>Application fee</td>
+                                    <td>${{$value->application_fee}}CAD</td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td> {{$value->duration}} months</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="program-footer">
+                        <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
+                        <button class="apply-btn">Create Application</button>
+                    </div>
+                </div>
+                @endforeach
+                <!-- <div class="program-card">
                     <div class="program-header">
                         <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" />
                         <a href="#">
@@ -927,57 +981,7 @@
                         <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
                         <button class="apply-btn">Create Application</button>
                     </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-header">
-                        <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" />
-                        <a href="#">
-                            <h3>Justice Institute of British Columbia - New Westminster Campus</h3>
-                        </a>
-                    </div>
-
-                    <div class="program-badges">
-                        <span class="badge">High Job Demand</span>
-                        <span class="badge">Popular</span>
-                    </div>
-
-                    <div class="program-details">
-                        <small>Postgraduate Diploma</small>
-                        <a href="#">
-                            <p>Post-Baccalaureate Diploma - Disaster Management</p>
-                        </a>
-                        <hr />
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Location</td>
-                                    <td>British Columbia, CAN</td>
-                                </tr>
-                                <tr>
-                                    <td>Campus city</td>
-                                    <td>New Westminster</td>
-                                </tr>
-                                <tr>
-                                    <td>Tuition (1st year)</td>
-                                    <td>$18,050 CAD</td>
-                                </tr>
-                                <tr>
-                                    <td>Application fee</td>
-                                    <td>$150 CAD</td>
-                                </tr>
-                                <tr>
-                                    <td>Duration</td>
-                                    <td>24 months</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="program-footer">
-                        <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
-                        <button class="apply-btn">Create Application</button>
-                    </div>
-                </div>
+                </div> -->
 
                 <!-- You can duplicate this .program-card for more cards -->
             </div>
