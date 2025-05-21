@@ -182,7 +182,7 @@
 
         /* .form-group button{
 
-                }*/
+                    }*/
 
         p {
             margin-top: 30px;
@@ -207,10 +207,10 @@
         }
 
         /* .form-group #password {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }*/
+                position: relative;
+                display: flex;
+                align-items: center;
+            }*/
 
         .password-wrapper input {
             width: 100%;
@@ -340,9 +340,9 @@
 
             /* Shift password eye icon to the right */
             /* .form-group .password-field {
-            width: 100px;
+                width: 100px;
 
-            } */
+                } */
 
             .form-group .toggle-password {
                 position: absolute;
@@ -445,15 +445,6 @@
         .btn-custom:hover {
             background-color: white;
             color: black;
-        }
-
-
-
-        .d-flex a {
-            background-color: blue;
-            color: white;
-            font-weight: 550;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
 
@@ -632,10 +623,10 @@
         }
 
         /* .footer-column {
-          width: 100%;
-          max-width: 270px;
-          margin-bottom: 30px;
-        } */
+              width: 100%;
+              max-width: 270px;
+              margin-bottom: 30px;
+            } */
 
         .footer-column h3 {
             font-size: 18px;
@@ -645,10 +636,10 @@
         }
 
         /* .line-h3
-        {
-           text-decoration: none;
-           color: #fff;
-        } */
+            {
+               text-decoration: none;
+               color: #fff;
+            } */
 
         .footer-column p,
         .footer-column ul {
@@ -716,7 +707,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            background-color: #0b3268;
+            background: linear-gradient(to bottom right, #061e52, #0c347a);
             color: #fff;
             padding: 20px;
             width: 100%;
@@ -820,7 +811,8 @@
         }
 
         .btn-primary {
-            background-color: #b92151 !important;
+            /* background-color: #b92151 !important; */
+            background: linear-gradient(135deg, #bb0e45, #ad0039) !important;
             color: #fff;
             padding: 10px 20px;
             border: none !important;
@@ -1061,7 +1053,7 @@
         .testimonial-section {
             padding: 82px 15px;
             /* background-color: #3972e3; */
-           background: linear-gradient(135deg, #0644a6, #3b7ded);
+            background: linear-gradient(135deg, #0644a6, #3b7ded);
             margin-top: 50px;
         }
 
@@ -1089,8 +1081,8 @@
 
         /* .swiper-slide {
 
-          height: 30%!important;
-        } */
+              height: 30%!important;
+            } */
 
         .testimonial-items .testimonial-text {
             font-size: 16px;
@@ -1123,11 +1115,11 @@
 
         /* Add this to avoid any extra margin/padding for the second testimonial */
         /* .testimonial-items {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
-        } */
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+            } */
 
         .testimonial-img.tm-img-1 {
             background-image: url(https://w7.pngwing.com/pngs/646/829/png-transparent-avatar-man-ico-icon-cartoon-little-boy-avatar-cartoon-character-png-material-child-thumbnail.png);
@@ -1526,8 +1518,8 @@
             }
 
             /* .details {
-            padding: 10px;
-          } */
+                padding: 10px;
+              } */
 
             .details {
                 padding: 10px;
@@ -2622,8 +2614,8 @@
 
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
-             -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+                 -->
     <script>
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {

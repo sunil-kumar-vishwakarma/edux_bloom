@@ -1,9 +1,10 @@
 <style>
-    #navbarNav{
-        margin-top:8.5px;
+    #navbarNav {
+        margin-top: 8.5px;
     }
-    .nav-link i{
-        font-size:medium;
+
+    .nav-link i {
+        font-size: medium;
     }
 </style>
 
@@ -34,16 +35,16 @@
                     <a class="nav-link" href="{{ route('institutions') }}">Institutions</a>
                 </li>
                 <!-- Hover Dropdown -->
-              <li class="nav-item dropdown-hover">
-    <a class="nav-link" href="#">
-        Discover <i class="fas fa-chevron-down"></i>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="{{ route('student') }}">Discover Programs</a></li>
-        <li><a class="dropdown-item" href="{{ route('events') }}">Events</a></li>
-        <li><a class="dropdown-item" href="{{ route('blogs-pages') }}">Blog</a></li>
-    </ul>
-</li>
+                <li class="nav-item dropdown-hover">
+                    <a class="nav-link" href="#">
+                        Discover <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/search">Discover Programs</a></li>
+                        <li><a class="dropdown-item" href="{{ route('events') }}">Events</a></li>
+                        <li><a class="dropdown-item" href="{{ route('blogs-pages') }}">Blog</a></li>
+                    </ul>
+                </li>
 
             </ul>
             <div class="d-flex">
@@ -56,11 +57,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-  <script>
-            document.querySelector('.navbar-toggler').addEventListener('click', function() {
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                const isExpanded = navbarCollapse.style.display === 'flex';
-                navbarCollapse.style.display = isExpanded ? 'none' : 'flex';
-            });
-        </script>
+<link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+<script>
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const isExpanded = navbarCollapse.style.display === 'flex';
+        navbarCollapse.style.display = isExpanded ? 'none' : 'flex';
+    });
+</script>

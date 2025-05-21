@@ -330,7 +330,8 @@ body {
 }
 
 .d-flex a {
-    background-color: #b92151;
+    /* background-color: #b92151; */
+    background-color: linear-gradient(135deg, #bb0e45, #ad0039);
     color: white;
     font-weight: 550;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -358,7 +359,8 @@ body {
     margin-right: 55%;
 }
 .btn-second {
-    background-color: #b92151;
+    /* background-color: #b92151; */
+    background: linear-gradient(135deg, #bb0e45, #ad0039);
     border-radius: 6px;
     padding: 7px 15px;
     border: 2px solid #b92151;
@@ -1078,8 +1080,9 @@ video {
 
 .card-body .btn{
     color:white;
-    background-color: #b92151;
-    border: 1px solid black;
+    background: linear-gradient(135deg, #bb0e45, #ad0039);
+    /* background-color: #b92151; */
+    /* border: 1px solid black; */
 }
 
 .row {
@@ -2522,7 +2525,8 @@ video {
 
             .country-btn.active,
             .country-btn:hover {
-                background-color: #b92151;
+                /* background-color: #b92151; */
+                background: linear-gradient(135deg, #bb0e45, #ad0039);
                 color: white;
             }
 

@@ -157,14 +157,13 @@ color: #524da8;
 
 
 .dropdwn{
-
     display: flex;
     align-items: center;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     justify-content: space-evenly;
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
 .dropdown {
   border: 1px solid #ccc;
