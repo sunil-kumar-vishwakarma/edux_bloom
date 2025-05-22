@@ -604,7 +604,31 @@
         </div>
     </div>
 
+ <section class="get-started-section">
+                <div class="get-started-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Get Started Today</h2>
 
+                <p>
+                    Join hundreds of African students already preparing for a <strong>brighter future</strong>. Whether
+                    you're
+                    applying,
+                    connecting, or learning—your journey begins here.
+                </p>
+
+                <div class="action-buttons">
+                    <a href="/search" class="btn-get-started">
+                        <i class="fas fa-rocket"></i> Apply Now
+                    </a>
+                    <a href="/contactus" class="btn-get-started">
+                        <i class="fas fa-headset"></i> Contact Us
+                    </a>
+                    <a href="/contactus" class="btn-get-started">
+                        <i class="fas fa-video"></i> Attend Info Session
+                    </a>
+                </div>
+            </section>
 
     {{-- new sections --}}
     <section class="offer-section">

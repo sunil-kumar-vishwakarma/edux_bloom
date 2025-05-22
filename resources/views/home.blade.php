@@ -190,79 +190,7 @@
         </div>
     </section>
 
-    {{-- <div class="box2">
-        <div class="content2">
-            <h2 class="elementor-heading-title elementor-size-default">A Platform That Assists You Through Every Step of the
-                Journey</h2>
-        </div>
 
-
-        <div class="box3">
-
-
-            <main class="hero">
-                <div class="tab-nav">
-                    <button class="tab-btn active-student" data-target="students">STUDENTS</button>
-                    <button class="tab-btn" data-target="recruitment-partners">RECRUITMENT PARTNERS</button>
-                    <button class="tab-btn" data-target="partner-institutions">PARTNER INSTITUTIONS</button>
-                </div>
-
-
-
-                <div class="hero-content">
-                    <div class="text-and-images">
-
-                        <div class="tab-content active" id="students">
-                            <div id="img1"><img src="{{ asset('images/student.jpg') }}"></div>
-                            <h1>Students</h1>
-                            <p style="margin-top:10px;">We believe in your dreams and work hard to make them a reality. Get
-                                matched with and apply to programs and institutions that align with your background, skills,
-                                and interests.</p>
-                            <a href="Student.html"><button class="btn" style="margin-top:15px;">Learn More</button></a>
-                        </div>
-                        <div class="tab-content" id="recruitment-partners" style="display: none;">
-                            <div id="img2"><img src="{{ asset('images/partner_img.webp') }}"></div>
-                            <h1>Recruitment Partners</h1>
-                            <p style="margin-top:10px;">edux is more than a platform. We're your trusted partner, here to
-                                help you guide students around the world to fulfill their international education dreams.
-                            </p>
-                            <a href="partner.html"><button class="btn" style="margin-top:15px;">Learn More</button></a>
-                        </div>
-                        <div class="tab-content" id="partner-institutions" style="display: none;">
-                            <div id="img3"><img src="{{ asset('images/institutions.jpg') }}"></div>
-                            <h1>Partner Institutions</h1>
-                            <p style="margin-top:10px;">Increase your global presence and the number of qualified student
-                                applicants from a single, easy-to-use platform trusted by more than 1,500 institutions
-                                worldwide.</p>
-                            <a href="Institutions.html"><button class="btn" style="margin-top:15px;">Learn
-                                    More</button></a>
-                        </div>
-
-
-                        <div class="hero-images">
-                            <div class="image-stack">
-                                <div class="image-card">
-                                    <img src="{{ asset('images/student.jpg') }}" alt="Image1">
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ asset('images/partner_img.webp') }}" alt="Image 2" id="Image2">
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ asset('images/institutions.jpg') }}" alt="Image 3" id="Image3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    --}}
 
 
 
@@ -271,19 +199,6 @@
             <h2>An Easy-to-Use Platform Built to Deliver Quality Applications and More</h2>
         </div>
 
-        <!--  <main class="hero2">-->
-        <!--    <div class="tab-navigation2">-->
-        <!--        <button class="tab-button2 active2" data-target="students-video">STUDENTS</button>-->
-        <!--        <button class="tab-button2" data-target="recruitment-partners-video">RECRUITMENT PARTNERS</button>-->
-        <!--    </div>-->
-
-        <!--    <div class="video-display2">-->
-        <!--        <video id="video-player2" controls>-->
-        <!--            <source id="video-source2" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">-->
-        <!--            Your browser does not support the video tag.-->
-        <!--        </video>-->
-        <!--    </div>-->
-        <!--</main>-->
 
 
         <div class="info-section">
@@ -397,50 +312,7 @@
             </div>
 
 
-            {{-- <div class="content2">
-                <h2>Begin Your Journey with Edu-X</h2>
-            </div>
-            <br><br><br><br>
-            <div class="row row-cols-1 row-cols-md-3 g-4" id="card2">
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('images/student_section.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Students</h5>
-                            <p class="card-text">Are you a student looking to study abroad in Canada, the United States,
-                                the United Kingdom, Australia, or Ireland? Let our team of experts guide you through your
-                                journey.</p>
-                            <a href="student_register.html"><button type="button" class="btn">Student
-                                    Registration</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('images/partner.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Partner Institutions</h5>
-                            <p class="card-text">Become an edux partner institution to diversify your campus by attracting
-                                qualified students from around the world. Connect with our Partner Relations team here.</p>
-                            <a href="Institutions.html"><button type="button" class="btn"
-                                    style="margin-top:60px; margin-bottom:-2px;">Partner Inquiry</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('images/recruiter_partner.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Recruitment Partners</h5>
-                            <p class="card-text">Do you recruit prospective students who want to study in Canada, the
-                                United States, the United Kingdom, Australia, or Ireland? Become an edux recruitment
-                                partner.</p>
-                            <a href="partner_registration.html"><button type="button" class="btn">Recruiter
-                                    Registration</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+           
 
             <section class="country-section">
                 <h1>Trusted by Leading Institutions</h1>
