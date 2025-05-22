@@ -27,8 +27,8 @@
         <div class="study-search-box">
             <h2 class="study-search-heading">10 million searches and counting</h2>
 
-            <div class="study-search-form-row">
-                <!-- Input Field -->
+            <!-- <div class="study-search-form-row">
+                
                 <div class="study-input-wrapper">
                     <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
                         <path
@@ -37,7 +37,7 @@
                     <input type="text" class="study-search-input" placeholder="What would you like to study?">
                 </div>
 
-                <!-- Custom Dropdown -->
+               
                 <div class="country-checkboxes">
                     <label>
                         <input type="checkbox" name="countries[]" value="Canada">
@@ -53,9 +53,39 @@
                 </div>
 
 
-                <!-- Search Button -->
+               
                 <button class="study-search-button">Search</button>
-            </div>
+            </div> -->
+
+            <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
+    <!-- Input Field -->
+    <div class="study-input-wrapper">
+        <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+            <path d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+        </svg>
+        <input type="text" name="keyword" class="study-search-input" placeholder="What would you like to study?">
+    </div>
+
+    <!-- Custom Dropdown -->
+    <div class="country-checkboxes">
+        <label>
+            <input type="checkbox" name="countries[]" value="Canada">
+            <img src="https://flagcdn.com/ca.svg" alt="Canada" style="width: 20px; vertical-align: middle;">
+            Canada
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="countries[]" value="United States">
+            <img src="https://flagcdn.com/us.svg" alt="USA" style="width: 20px; vertical-align: middle;">
+            United States
+        </label>
+    </div>
+
+    <!-- Search Button -->
+    <button type="submit" class="study-search-button">Search</button>
+</form>
+
+
         </div>
     </div>
     <section class="why-edux-simple">
@@ -613,9 +643,9 @@
             });
         </script>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
-<script>
+<!-- <script>
 $(document).ready(function () {
     $('.study-search-button').on('click', function (e) {
         e.preventDefault();
@@ -642,8 +672,8 @@ $(document).ready(function () {
         });
     });
 });
-</script>
+</script> -->
 
 <!-- Result container -->
-<div id="search-results"></div>
+<!-- <div id="search-results"></div> -->
 

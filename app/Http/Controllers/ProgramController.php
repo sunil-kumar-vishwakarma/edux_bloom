@@ -44,9 +44,9 @@ class ProgramController extends Controller
         $query->where('university_name', 'like', '%' . $keyword . '%');
     }
 
-    if (!empty($countries)) {
-        $query->whereIn('country', $countries);
-    }
+    // if (!empty($countries)) {
+    //     $query->whereIn('country', $countries);
+    // }
 
     $programs = $query->get();
 
