@@ -47,8 +47,9 @@ class ProgramController extends Controller
     // if (!empty($countries)) {
     //     $query->whereIn('country', $countries);
     // }
-
-    $programs = $query->get();
+    // $programs = $query->paginate(8);
+    // $programs = $query->get();
+$programs = $query->paginate(8)->withQueryString(); // 'withQueryString()' keeps filters in URL
 
     return view('search', compact('programs'));
 }
