@@ -266,7 +266,9 @@ color: #524da8;
   }
 
   .btn-light a {
-    color: #007bff;
+    /* color: #007bff; */
+    font-weight: bold;
+    color: #b92151;
     text-decoration: none;
   }
 
@@ -626,7 +628,8 @@ color: #524da8;
     }
     .dropdown-container h2 {
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 15%;
+      margin-top: 10%;
     }
 
 
@@ -723,7 +726,7 @@ color: #524da8;
 
     .cont p {
         font-size: 16px;
-        margin-left: 34%;
+        /* margin-left: 34%; */
     }
 
     .cont button {
@@ -1443,6 +1446,6 @@ input[type="password"] {
 
 @media screen and (max-width: 1025px) {
    .destinations-section h2 {
-      margin-left: 15%;
+      margin-left: 0;
     }
 }

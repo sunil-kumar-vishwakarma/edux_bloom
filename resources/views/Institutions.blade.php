@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
-    <br><br>
 
     <style>
         .navbar {
@@ -181,155 +180,6 @@
         #dropdownMenu a {
             text-decoration: none;
         }
-
-
-
-
-        .d-flex a {
-            background-color: blue;
-            color: white;
-            font-weight: 550;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-
-
-        .footer {
-            background-color: #1652b4;
-            color: white;
-            padding: 40px 0;
-        }
-
-        .footer ul li a {
-            display: inline-block;
-        }
-
-        .footer-column h2 {
-            font-weight: 550;
-            margin-left: 32px;
-            font-size: larger;
-        }
-
-        .footer p {
-            color: white;
-        }
-
-
-        .footer-column .line ul li a {
-            font-weight: 550;
-            font-size: larger;
-        }
-
-        .footer-column .line h3:hover,
-        .footer-column .line ul li a:hover {
-            text-decoration: underline;
-
-        }
-
-
-        #firstcol li a {
-            text-decoration: none;
-        }
-
-        .footer-column .line h3:hover,
-        .footer-column .line ul li a:hover::after {
-
-            position: absolute;
-            left: 0;
-            bottom: -20px;
-            /* Distance between text and underline */
-            width: 100%;
-            height: 10px;
-            background-color: #000;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        .footer-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .footer-column {
-            width: 100%;
-            max-width: 270px;
-            margin-bottom: 30px;
-        }
-
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            margin-left: 30px;
-        }
-
-        .line-h3 {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .footer-column p,
-        .footer-column ul {
-            margin-bottom: 15px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .country-section h1 {
-            color: #212529 !important;
-        }
-
-
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            transition: color 0.3s color 0.3s;
-            padding: 0px 6px;
-
-        }
-
-        .line2 ul li a:hover {
-            text-decoration: underline;
-            color: #fff;
-        }
-
-        .li .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-
-        .social-icons a:hover {
-
-            background-color: #fff;
-            /* Background color on hover */
-            color: #003399;
-
-        }
-
-
-        .copyright {
-            padding: 2px;
-            margin-top: 50px;
-            margin-left: 43%;
-
-        }
-
 
 
         .head {
@@ -596,189 +446,206 @@
             background-color: #004bbd;
         }
 
-    .working {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-height: 100vh; */
-    /*background-color: #f5f5f5;*/
-    padding: 20px;
-    box-sizing: border-box;
-}
+        .working {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* min-height: 100vh; */
+            /*background-color: #f5f5f5;*/
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-.work h1 {
-    margin-top: 80px;
-    font-size: 35px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 35px;
-}
+        .work h1 {
+            margin-top: 80px;
+            font-size: 35px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 35px;
+        }
 
-.steps-container {
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    text-align: center;
-}
+        .steps-container {
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: center;
+        }
 
-.step-card {
-    display: flex;
-    flex: 1 1 300px;
-    /* background-color: #ffffff; */
-    background: linear-gradient(90deg, #0644a6, #2764c5);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border: 2px solid #000000c2;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .step-card {
+            display: flex;
+            flex: 1 1 300px;
+            /* background-color: #ffffff; */
+            background: linear-gradient(90deg, #0644a6, #2764c5);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #000000c2;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.step-icon img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-}
+        .step-icon img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
 
-.step-number {
-    color: white;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        .step-number {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.step-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+        .step-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-.step-description {
-    font-size: 0.98em;
-    color: #fffcfcd1;
-    line-height: 1.5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+        .step-description {
+            font-size: 0.98em;
+            color: #fffcfcd1;
+            line-height: 1.5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-/* Base styles for large screens (already in place) */
+        /* Base styles for large screens (already in place) */
 
-/* Responsive styles for small laptops (1025px to 1366px) */
-@media (min-width: 1025px) and (max-width: 1366px) {
-    .steps-container {
-        max-width: 85%;
-        gap: 30px;
-        justify-content: center;
-    }
-    .step-card {
-        flex: 1 1 30%; /* roughly two cards per row with some margin */
-        padding: 18px;
-        border-radius: 25px;
-    }
-    .step-icon img {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 13px;
-    }
-    .step-title {
-        font-size: 1.15em;
-    }
-    .step-description {
-        font-size: 0.95em;
-    }
-    .work h1 {
-        font-size: 32px;
-        margin-top: 70px;
-    }
+        /* Responsive styles for small laptops (1025px to 1366px) */
+        @media (min-width: 1025px) and (max-width: 1366px) {
+            .steps-container {
+                max-width: 85%;
+                gap: 30px;
+                justify-content: center;
+            }
 
-     .card-container {
-        max-width: 70%;
-        gap: 16px;
-    }
+            .step-card {
+                flex: 1 1 30%;
+                /* roughly two cards per row with some margin */
+                padding: 18px;
+                border-radius: 25px;
+            }
 
-    .card-container .card-institutions {
-        padding: 18px;
-    }
+            .step-icon img {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 13px;
+            }
 
-    .card-container .icon img {
-        width: 120px;
-        height: 120px;
-    }
+            .step-title {
+                font-size: 1.15em;
+            }
 
-    .card-container h3 {
-        font-size: 1.1em;
-    }
+            .step-description {
+                font-size: 0.95em;
+            }
 
-    .card-container p {
-        font-size: 0.85em;
-    }
-     .card-container {
-        max-width: 60%;
-        gap: 16px;
-    }
+            .work h1 {
+                font-size: 32px;
+                margin-top: 70px;
+            }
 
-    .card-container .card-institutions {
-        padding: 18px;
-    }
+            .card-container {
+                max-width: 70%;
+                gap: 16px;
+            }
 
-    .card-container .icon img {
-        width: 120px;
-        height: 120px;
-    }
+            .card-container .card-institutions {
+                padding: 18px;
+            }
 
-    .card-container h3 {
-        font-size: 1.1em;
-    }
+            .card-container .icon img {
+                width: 120px;
+                height: 120px;
+            }
 
-    .card-container p {
-        font-size: 0.85em;
-    }
+            .card-container h3 {
+                font-size: 1.1em;
+            }
+
+            .card-container p {
+                font-size: 0.85em;
+            }
+
+            .card-container {
+                max-width: 60%;
+                gap: 16px;
+            }
+
+            .card-container .card-institutions {
+                padding: 18px;
+            }
+
+            .card-container .icon img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .card-container h3 {
+                font-size: 1.1em;
+            }
+
+            .card-container p {
+                font-size: 0.85em;
+            }
 
 
-}
+        }
 
 
-/* Responsive for small laptops and below */
-@media (max-width: 1024px) {
-    .steps-container {
-        gap: 25px;
-        max-width: 90%; /* slightly smaller width */
-        justify-content: center; /* center the items */
-    }
-    .step-card {
-        flex: 1 1 45%; /* two cards per row */
-        padding: 15px;
-        border-radius: 20px;
-    }
-    .step-icon img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 12px;
-    }
-    .step-title {
-        font-size: 1.1em;
-    }
-    .step-description {
-        font-size: 0.9em;
-    }
-    .work h1 {
-        font-size: 28px;
-        margin-top: 60px;
-    }
-}
+        /* Responsive for small laptops and below */
+        @media (max-width: 1024px) {
+            .steps-container {
+                gap: 25px;
+                max-width: 90%;
+                /* slightly smaller width */
+                justify-content: center;
+                /* center the items */
+            }
 
-/* Optional: further adjustments for tablets and smaller devices */
-@media (max-width: 768px) {
-    .steps-container {
-        gap: 20px;
-    }
-    .step-card {
-        flex: 1 1 100%; /* stack cards vertically */
-    }
-}
+            .step-card {
+                flex: 1 1 45%;
+                /* two cards per row */
+                padding: 15px;
+                border-radius: 20px;
+            }
+
+            .step-icon img {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 12px;
+            }
+
+            .step-title {
+                font-size: 1.1em;
+            }
+
+            .step-description {
+                font-size: 0.9em;
+            }
+
+            .work h1 {
+                font-size: 28px;
+                margin-top: 60px;
+            }
+        }
+
+        /* Optional: further adjustments for tablets and smaller devices */
+        @media (max-width: 768px) {
+            .steps-container {
+                gap: 20px;
+            }
+
+            .step-card {
+                flex: 1 1 100%;
+                /* stack cards vertically */
+            }
+        }
 
 
 
@@ -1736,7 +1603,7 @@
 
             .global img {
                 /* width: 60%;
-                                    margin-left: 0; */
+                                        margin-left: 0; */
                 display: none;
             }
 
@@ -2143,8 +2010,6 @@
             #firstcol li a:hover {
                 text-decoration: none;
             }
-
-
     </style>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -2289,15 +2154,7 @@
             <button class="country-btn" data-country="country2">
                 <img src="https://flagcdn.com/w320/us.png" alt="Country 2 Flag"> UNITED STATES
             </button>
-            <button class="country-btn" data-country="country3">
-                <img src="https://flagcdn.com/w320/gb.png" a lt="Country 3 Flag"> UNITED KINGDOM
-            </button>
-            <button class="country-btn" data-country="country4">
-                <img src="https://flagcdn.com/w320/au.png" alt="Country 4 Flag"> AUSTRALIA
-            </button>
-            <button class="country-btn" data-country="country5">
-                <img src="https://flagcdn.com/w320/ie.png" alt="Country 5 Flag"> IRELAND
-            </button>
+
         </div>
 
         <div class="content-institution">
@@ -2315,38 +2172,17 @@
                 <img src="images/Conestoga.webp" alt="Country 2 Image 4">
                 <img src="images/Carleton-University.webp" alt="Country 2 Image 5">
             </div>
-            <div class="images" id="country3" style="display: none;">
-                <img src="images/Conestoga.webp" alt="Country 3 Image 1">
-                <img src="images/Carleton-University.webp" alt="Country 3 Image 2">
-                <img src="images/George_Brown.webp" alt="Country 3 Image 3">
-                <img src="images/YorkvilleU.webp" alt="Country 3 Image 4">
-                <img src="images/UWaterloo.webp" alt="Country 3 Image 5">
-            </div>
-            <div class="images" id="country4" style="display: none;">
-                <img src="images/UWaterloo.webp" alt="Country 4 Image 1">
-                <img src="images/Carleton-University.webp" alt="Country 4 Image 2">
-                <img src="images/YorkvilleU.webp" alt="Country 4 Image 3">
-                <img src="images/George_Brown.webp" alt="Country 4 Image 4">
-                <img src="images/Conestoga.webp" alt="Country 4 Image 5">
-            </div>
-            <div class="images" id="country5" style="display: none;">
-                <img src="images/George_Brown.webp" alt="Country 5 Image 1">
-                <img src="images/UWaterloo.webp" alt="Country 5 Image 2">
-                <img src="images/Carleton-University.webp" alt="Country 5 Image 3">
-                <img src="images/Conestoga.webp" alt="Country 5 Image 4">
-                <img src="images/YorkvilleU.webp" alt="Country 5 Image 5">
-            </div>
+
         </div>
 
     </section>
-    <br>
-    <br>
+   
 
-    <section class="application">
+  <!--  <section class="application">
         <h1>An Easy-to-Use Platform Built to<br> Deliver Quality Applications and More</h1>
 
         <img src="images/RP_Laptop-1536x864.png">
-    </section>
+    </section> -->
 
 
 
@@ -2387,6 +2223,7 @@
     </section>
     <br>
 
+<!--
     <section class="global">
         <h1>Global Presence for Global Recruitment</h1>
         <br>
@@ -2409,7 +2246,7 @@
 
 
         </div>
-    </section>
+    </section> -->
 
 
 

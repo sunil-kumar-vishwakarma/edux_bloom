@@ -14,11 +14,11 @@
         <!--<button class="btn2"> <a href="Student.html" class="anchr">I am a student who wants to study abroad</a></button>-->
         <div class="btn4">
             <button class="btn-second">
-                <a href="partner.html" class="anchr">
+                <a href="/search" class="anchr">
                     <i class="fas fa-user-plus"></i> Join Our Program
                 </a>
             </button>
-            <button class="btn3"><a href="Institutions.html" class="anchr">Book a Free Consultation</a></button>
+            <button class="btn3"><a href="/contactus" class="anchr">Book a Free Consultation</a></button>
         </div>
     </div>
 
@@ -93,7 +93,7 @@
                             <path d="M10 12l2 2 4-4" stroke="#fff" stroke-width="2" fill="none" />
                         </svg>
                     </span>
-                    Proven Track Record: 98% student visa success rate
+                    Proven Track Record: 98% student success rate
                 </li>
 
                 <li>
@@ -378,25 +378,19 @@
 
                     </div>
                     <div class="row row-cols-1 row-cols-md-2 g-4" id="card-col">
-                        <div class="col">
+                        {{-- <div class="col">
                             <video controls autoplay muted loop playsinline>
                                 <source src="{{ asset('images/how we help.mp4') }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-
-                            <!--<p style="text-align: justify;">-->
-                            <!--  edux believes that education should be accessible to all. We delivered 1,000 backpacks and school supplies to empower children in India to dream big and work hard to achieve their dreams.-->
-                            <!--</p>-->
-                        </div>
+                        </div> --}}
 
                         <div class="col">
-                            <video controls autoplay muted loop playsinline>
+                            <video class="w-100" controls autoplay muted loop playsinline>
                                 <source src="{{ asset('images/how we help2.mp4') }}" type="video/mp4">
                             </video>
-                            <!--<p style="text-align: justify;">-->
-                            <!--  edux believes that education should be accessible to all. We delivered 1,000 backpacks and school supplies to empower children in India to dream big and work hard to achieve their dreams.-->
-                            <!--</p>-->
                         </div>
+
                     </div>
                     <br>
                 </div>
@@ -458,7 +452,7 @@
                     <button class="country-btn" data-country="country2">
                         <img src="https://flagcdn.com/w320/us.png" alt="Country 2 Flag"> UNITED STATES
                     </button>
-                    <button class="country-btn" data-country="country3">
+                    {{-- <button class="country-btn" data-country="country3">
                         <img src="https://flagcdn.com/w320/gb.png" a lt="Country 3 Flag"> UNITED KINGDOM
                     </button>
                     <button class="country-btn" data-country="country4">
@@ -466,7 +460,7 @@
                     </button>
                     <button class="country-btn" data-country="country5">
                         <img src="https://flagcdn.com/w320/ie.png" alt="Country 5 Flag"> IRELAND
-                    </button>
+                    </button> --}}
                 </div>
 
                 <div class="content-institution">
@@ -509,27 +503,6 @@
 
             </section>
 
-            <section class="global">
-                <h1>Global Presence for Global Recruitment</h1>
-                <div class="gmap">
-                    <div class="score">
-                        <p>
-                        <h3 style="font-size:30px;">1,000+</h3>Globally</p><br>
-                        <p>
-                        <h3>200+ </h3>South Asia</p><br>
-                        <p>
-                        <h3>25+ </h3>South and East Asia,<br>African and Letin<br>America</p>
-                    </div>
-
-                    <div>
-
-                        <img src="images/Map.webp" height="500px" width="700px">
-                    </div>
-
-
-
-                </div>
-            </section>
         </div>
         </div>
         </div>

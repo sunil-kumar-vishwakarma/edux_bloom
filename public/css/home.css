@@ -1707,7 +1707,7 @@ video {
 
     .navbar-collapse.show {
         display: block;
-        background: #1652b4;
+        /* background: #1652b4; */
 
     }
 
@@ -1717,7 +1717,7 @@ video {
         margin: auto;
         justify-content: center;
         align-items: center;
-        margin: 0px 90px;
+        /* margin: 0px 20px; */
     }
 
     .navbar-toggler {
@@ -2218,7 +2218,7 @@ video {
     }
 
     .dropdown-menu{
-        /* margin: 0px 89px; */
+        /* margin: 0px 40px; */
     }
 
     button.btn2 {
@@ -2653,7 +2653,8 @@ video {
 
     .study-search-button {
         padding: 10px 20px;
-        color: #0644a6;
+        /* color: #0644a6; */
+        color: #b92151;
         background-color: white;
         font-size: 14px;
         font-weight: bold;
@@ -2889,7 +2890,8 @@ video {
         }
 
         .why-edux-list li {
-            background-color: #0644a6;
+            /* background-color: #0644a6; */
+            background: linear-gradient(90deg, #0644a6, #2764c5);
             color: #fff;
             padding: 15px 20px;
             border-radius: 8px;

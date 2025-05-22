@@ -208,7 +208,7 @@
 
             .programs-container {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(3, minmax(300px, 1fr));
                 gap: 24px;
                 padding: 40px 20px;
             }

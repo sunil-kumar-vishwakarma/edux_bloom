@@ -28,21 +28,23 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('student') }}">Students</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('partner') }}">Recruitment</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('institutions') }}">Institutions</a>
                 </li>
                 <!-- Hover Dropdown -->
                 <li class="nav-item dropdown-hover">
                     <a class="nav-link" href="#">
-                        Discover <i class="fas fa-chevron-down"></i>
+                        Resource Center <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/search">Discover Programs</a></li>
-                        <li><a class="dropdown-item" href="{{ route('events') }}">Events</a></li>
-                        <li><a class="dropdown-item" href="{{ route('blogs-pages') }}">Blog</a></li>
+                        <li><a class="dropdown-item" href="/blogs-pages">Edu-X Blog</a></li>
+                        <li><a class="dropdown-item" href="/institutions">Edu-X Young Leaders</a></li>
+                        <li><a class="dropdown-item" href="/events">Parent Resources</a></li>
+                        {{-- <li><a class="dropdown-item" href="/events">Visa & Travel Support</a></li> --}}
+                        <li><a class="dropdown-item" href="/contactus">Contact us</a></li>
                     </ul>
                 </li>
 

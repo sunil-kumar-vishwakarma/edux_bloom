@@ -1,4 +1,29 @@
 
+.mainnn{
+    /* margin-top: 10%; */
+}
+
+.btn-second1 {
+    /* background-color: #b92151; */
+    background: linear-gradient(135deg, #bb0e45, #ad0039);
+    border-radius: 6px;
+    padding: 7px 15px;
+    border: 2px solid #b92151;
+    margin-top: 10px;
+    display: inline-block;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* includes color, background, and scale */
+}
+
+.btn-second1:hover {
+    color: white;
+    background-color: #b92151;
+    transform: scale(1.03); /* scales the button up by 5% */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
 .custom-footer-col img {
   max-height: 70px;
   margin:auto;
@@ -229,15 +254,15 @@
       [hidden] {
         display: none;
       }
-     
-      
-      
+
+
+
       #webcrumbs h4{
           font-size:16px;
           font-family:Segoe UI;
       }
-      
-      
+
+
       #webcrumbs .mt-4 {
         margin-top: 16px;
       }
@@ -300,7 +325,7 @@
         --tw-text-opacity: 1;
         color: rgb(115 65 255 / var(--tw-text-opacity));
       }
-    
+
       #webcrumbs {
         font-family: Open Sans !important;
         font-size: 16px !important;
@@ -343,7 +368,7 @@ color: white;
 
 .footer-column .line h3:hover,
 .footer-column .line ul li a:hover::after{
-      
+
           position: absolute;
           left: 0;
           width: 100%;
@@ -366,7 +391,7 @@ width: 100%;
 max-width: 270px;
 margin-bottom: 30px;
 
-} 
+}
 
 .footer-column h3 {
 font-size: 18px;
@@ -378,9 +403,9 @@ color: white;
 
 .line-h3
 {
- text-decoration: none; 
+ text-decoration: none;
  color: #fff;
-} 
+}
 
 .footer-column p, .footer-column ul {
 margin-bottom: 15px;
@@ -414,7 +439,7 @@ color: white;
 font-size: 24px;
 text-decoration: none;
 transition: color 0.3s color 0.3s;
-padding:  0px 6px;  
+padding:  0px 6px;
 /* background-color: #1652b4; */
 }
 
@@ -426,14 +451,14 @@ color:white;
 
 .social-icons a:hover {
 
-background-color: #fff; 
+background-color: #fff;
 }
 
 
 .copyright{
  padding: 2px ;
 margin-top: 50px;
-margin-left: 42%; 
+margin-left: 42%;
 
 }
 
@@ -459,54 +484,55 @@ margin-left: 42px;
 
   #c3{
  margin-left: 41px;
-  }   
+  }
 
 .container{
-   
-    flex-direction: column; 
-    text-align: center; 
+
+    flex-direction: column;
+    text-align: center;
     font-family: sans-serif;
-    height: 100%; 
+    height: 100%;
 }
 
 .background {
     margin-top: 100px;
-    background-image: url(images/blue3.jpg);
-    width: 100%; 
+    background-image: url('https://i.ibb.co/B5GhHrbS/Untitled-design-5.png');
+    width: 100%;
     height: 600px;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     display: flex; /* Flex enable */
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     color: black;
     font-family: sans-serif;
     box-sizing: border-box;
 }
 
 .background-content {
-    padding: 50px 20px; /* Responsive padding */
+    padding: 50px 20px;
     text-align: left;
     margin-left:-40%;
 
 }
 
 .background p {
-    color: white;
-    max-width: 700px;
+    color: black;
+    max-width: 660px;
     font-size: 20px;
     font-weight: 400;
     line-height: 2;
-    text-align: center; 
-    margin: 0; 
+    text-align: center;
+    margin: 0;
 }
 
 .background h1 {
     font-size: 40px;
-    text-align: center; /* Left की जगह center */
+    text-align: center;
     margin-bottom: 20px;
+    color: black;
 }
 
 
@@ -570,7 +596,7 @@ margin-left: 42px;
   color: white;
   padding: 90px 10px;
   align-items: center;
-  text-align: justify;  
+  text-align: justify;
   line-height: 1.5;
   font-family: sans-serif;
 }
@@ -631,11 +657,11 @@ margin-left: 42px;
 
 .why-edux{
   margin-top: 20px;
-  background-color: #385889;
+  background: linear-gradient(90deg, #0644a6, #2764c5);
   width: 70%;
-  padding:70px 120px ;
+  padding:0px 30px ;
   margin-left: 15.7%;
-  height: 350px;
+  height: 250px;
   border-radius: 20px;
   color: white;
   line-height: 1.5;
@@ -656,8 +682,8 @@ margin-left: 42px;
 .why-edux p
 {
   font-size: 20px;
-  max-width: 500px;
-  color: white; 
+  max-width: 800px;
+  color: white;
 }
 
 .imge img{
@@ -674,37 +700,37 @@ margin-left: 42px;
 
 .card-img-top{
   display: flex;
-  
-  
-      width: 250px; 
+
+
+      width: 250px;
       height: 230px;
-      object-fit:cover; 
-      border-radius: 50%; 
-      margin: 10px auto; 
-      border: 5px solid #fff; 
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+      object-fit:cover;
+      border-radius: 50%;
+      margin: 10px auto;
+      border: 5px solid #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  
+
+
   .card-body {
       text-align: center;
   }
-  
-  
+
+
   .row{
     justify-content: center;
     margin-left: -15px;
     margin-right: 320px;
     margin-top: -80px;
   }
-  
+
   .card-event h5{
   margin-bottom: 90px;
   font-weight: bold;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
-  
-  
+
+
   .card1 {
   border-color: #fff;
   margin-left: 254px;
@@ -718,7 +744,7 @@ margin-left: 42px;
     gap: 30px;
   }
 
-  
+
   /* Card styling */
   .card1 .card-event {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -729,8 +755,8 @@ margin-left: 42px;
   width: 350px;
   padding-right:10px;
   }
-  
-  
+
+
   .card1 img {
   overflow: hidden;
   width: 85%;
@@ -741,14 +767,14 @@ margin-left: 42px;
   box-shadow: none;
   height: 100px;
   }
-  
+
   .card1 img:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   width: 88%;
   object-fit: contain;
   }
-  
+
   /* Text styling */
   .card1 p a {
   font-size: 16px;
@@ -758,7 +784,7 @@ margin-left: 42px;
   color: #323847;
   margin-top: 30px;
   }
-  
+
   .card1 h6 {
   font-family: "Open Sans", Sans-serif;
   font-size: 14px;
@@ -769,7 +795,7 @@ margin-left: 42px;
   text-align: left;
   color: #57585b;
   }
-  
+
   /* Button styling */
   .card1 button {
   color: #0064e1;
@@ -780,18 +806,18 @@ margin-left: 42px;
   margin-right: 150px;
   margin-bottom: 55px;
   }
-  
+
   .card1 button a {
   text-decoration: none;
   }
-  
+
   /* Card image dimensions */
   .card1 .card-event img {
   width: 260px;
   height: 130px;
   }
 
-  
+
 #card2{
   margin-top: -400px;
 }
@@ -854,7 +880,7 @@ margin-top: 50px;
         font-size: 14px;
     }
 
-  
+
 
     .content1, .why-edux {
         flex-direction: column;
@@ -883,12 +909,12 @@ margin-top: 50px;
         width: 250px;
     }
 
- 
+
 
     #txt {
         font-size: 16px;
     }
-    
+
        .background {
         background-size: cover;
         background-position: center;
@@ -951,7 +977,7 @@ margin-top: 50px;
         height: 400px;
     }
 
-  
+
 }
 
 /* Tablet (portrait) */
@@ -967,15 +993,15 @@ margin-top: 50px;
     .navbar-nav .nav-link {
         font-size: 15px;
     }
-    
-    
+
+
     .container1{
             margin-left: 143px;
             text-align:center;
     }
 
-  
-    
+
+
     .blue4, .why-edux{
                margin: -42px 21px;
         width: 100vw;
@@ -989,8 +1015,8 @@ margin-top: 50px;
         display: flex;
         gap: 20px;
     }
-    
-    
+
+
      .background {
         background-size: cover;
         background-position: center bottom; /* Ensure the person stays at the bottom */
@@ -1005,7 +1031,7 @@ margin-top: 50px;
 
     /* Center content for "Why Choose Edu-X?" and "Webinars by Edu-X" */
     .background-content {
-       
+
         text-align:center;
         position: relative;
         z-index: 1; /* Ensure the content stays above the background */
@@ -1025,20 +1051,20 @@ margin-top: 50px;
     .imge img {
         display: none;
     }
-    
+
      .card1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px; 
+    gap: 40px;
     margin: 94px 0px;
     margin-left: 332px;
     }
-  
+
   /*#c1{*/
   /*    margin-left:0px;*/
   /*}*/
-  
+
   #c3{
            transform: translateX(-81px);
 
@@ -1099,7 +1125,7 @@ margin-top: 50px;
         font-size: 18px;
     }
 
-   
+
     #txt {
         font-size: 18px;
     }
@@ -1118,12 +1144,12 @@ margin-top: 50px;
     }
 
        .blog {
-       
+
               font-size: 31px;
         margin-left: 103px;
     }
-    
-    
+
+
     .copyright {
         margin-left: -167px;
     }
@@ -1145,35 +1171,35 @@ margin-top: 50px;
     .navbar-nav .nav-link {
         font-size: 15px;
     }
-    
-    
+
+
     .container1{
             margin-left: 143px;
             text-align:center;
     }
 
- 
-    
+
+
     .blue4, .why-edux{
-        margin: -42px 25px;
+        margin: 0px 0px;
         width: 100vw;
     }
 
     .content1, .why-edux{
-        padding: 20px;
+        padding: 40px;
         flex-direction: column;
         width: 100vw;
         text-align: center;
         display: flex;
         gap: 20px;
     }
-    
-    
+
+
      .background {
         background-size: cover;
         background-position: center bottom; /* Ensure the person stays at the bottom */
         align-items: center;
-        justify-content: flex-start; /* Text stays at the top */
+        justify-content:center;
     }
 
     /* Center content for "Why Choose Edu-X?" and "Webinars by Edu-X" */
@@ -1198,20 +1224,20 @@ margin-top: 50px;
     .imge img {
         display: none;
     }
-    
+
      .card1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px; 
+    gap: 40px;
     margin: 94px 0px;
     margin-left: 332px;
     }
-  
+
   /*#c1{*/
   /*    margin-left:0px;*/
   /*}*/
-  
+
   #c3{
            transform: translateX(-81px);
 
@@ -1272,7 +1298,7 @@ margin-top: 50px;
         font-size: 18px;
     }
 
-    
+
 
 
 
@@ -1294,12 +1320,12 @@ margin-top: 50px;
     }
 
        .blog {
-       
+
        font-size: 34px;
         margin-left: 89px;
     }
-    
-    
+
+
     .copyright {
         margin-left: -167px;
     }
@@ -1325,7 +1351,7 @@ margin-top: 50px;
         font-size: 18px;
     }
 
-  
+
     .content1 {
         display: flex;
         justify-content: space-around;
@@ -1333,15 +1359,14 @@ margin-top: 50px;
     }
 
     .background {
-        background-image: url(/images/blue3.jpg);
+        /* background-image: url(/images/blue3.jpg); */
         height: 600px;
-        
+
     }
 
     .background h1 {
       font-size: 40px;
       font-weight: bold;
-      color: white;
     }
 
     .carousel img {
@@ -1352,7 +1377,7 @@ margin-top: 50px;
     /*    width: 350px;*/
     /*    margin: -104px;*/
     /*}*/
-    
+
        #c2 {
         margin-left: 0px;
     }
@@ -1386,4 +1411,3 @@ margin-top: 50px;
     }
 }
 
-  

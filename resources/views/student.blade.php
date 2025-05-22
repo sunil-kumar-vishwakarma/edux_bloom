@@ -193,29 +193,30 @@
         }
 
         .stepbtn {
-            display: inline-flex ;
+            display: inline-flex;
             /* Use flex to center content */
-            align-items: center ;
+            align-items: center;
             /* Vertically center */
-            justify-content: center ;
+            justify-content: center;
             /* Horizontally center */
-            padding: 12px 24px ;
-            border: none ;
-            border-radius: 50px ;
-            text-decoration: none ;
-            font-weight: 600 ;
-            transition: all 0.3s ease ;
-            font-size: 1rem ;
-            text-align: center ;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: center;
             /* Ensure multiline text is centered */
-            cursor: pointer ;
+            cursor: pointer;
             /* Optional: adds hand cursor */
         }
 
 
         .primary-btn {
             background-color: #fff !important;
-            color: #0644a6 !important;
+            /* color: #0644a6 !important; */
+            color: #b92151 !important;
         }
 
         .primary-btn:hover {
@@ -376,7 +377,8 @@
         .testimonial-section {
             padding: 3rem 1rem;
             text-align: center;
-            background: linear-gradient(to bottom right, #061e52, #0c347a);
+            /* background: linear-gradient(to bottom right, #061e52, #0c347a); */
+            background: linear-gradient(90deg, #0644a6, #2764c5);
             color: white;
         }
 
@@ -475,6 +477,72 @@
                 font-size: 2rem;
             }
         }
+
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center-align on all screens */
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            width: 300px;
+            height: 100px;
+            padding: 15px 20px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex: 1 1 calc(25% - 40px);
+            /* Four cards per row with spacing */
+            box-sizing: border-box;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card img {
+            height: 60px;
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .stat-info h3 {
+            margin: 0;
+            font-size: 22px;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        .stat-info p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #000;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 992px) {
+            .stat-card {
+                flex: 1 1 calc(50% - 40px);
+                /* Two per row on tablets */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stat-card {
+                flex: 1 1 100%;
+                /* Full width on mobile */
+            }
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/student.css') }}">
 
@@ -502,24 +570,40 @@
         </div>
     </div>
 
-    <div class="work">
-        <span><img src="{{ asset('images/girl.png') }}" style="height: 60px; width: 50px;">
-            <h3>800,000+</h3><br>
-            <p>Students Helped</p>
-        </span>
-        <span><img src="{{ asset('images/envolope.png') }}"style="height: 60px; width: 50px;">
-            <h3>140,000+</h3><br>
-            <p>Programs Offered</p>
-        </span>
-        <span><img src="{{ asset('images/home.png') }}" style="height: 60px; width: 50px;">
-            <h3>1500+</h3><br>
-            <p>Institutions</p>
-        </span>
-        <span><img src="{{ asset('images/earth.png') }}" style="height: 60px; width: 50px;">
-            <h3>05</h3><br>
-            <p>Destination Countries</p>
-        </span>
+    <div class="stats-container">
+        <div class="stat-card">
+            <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
+            <div class="stat-info">
+                <h3>800,000+</h3>
+                <p>Students Helped</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <img src="{{ asset('images/envolope.png') }}" alt="Programs Offered">
+            <div class="stat-info">
+                <h3>140,000+</h3>
+                <p>Programs Offered</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <img src="{{ asset('images/home.png') }}" alt="Institutions">
+            <div class="stat-info">
+                <h3>50+</h3>
+                <p>Institutions</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <img src="{{ asset('images/earth.png') }}" alt="Destination Countries">
+            <div class="stat-info">
+                <h3>01</h3>
+                <p>Destination Country</p>
+            </div>
+        </div>
     </div>
+
 
 
     {{-- new sections --}}
@@ -789,6 +873,37 @@
     </div> --}}
 
 
+    <!-- testimonial -->
+    <div class="testimonial-section">
+        <h2 class="testimonials-heading">What Our Students & Mentors Say</h2>
+
+        <div class="testimonial-slider-wrapper">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide">
+                    <i class="fas fa-hand-holding-heart icon"></i>
+                    <p class="testimonial-text">“My mentor helped me find housing, prepare for my first class, and even
+                        navigate campus jobs. It made my transition so much smoother.”</p>
+                    <p class="testimonial-author">— Fatou, student in Ottawa</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <i class="fas fa-user-graduate icon"></i>
+                    <p class="testimonial-text">“Being a mentor is the most fulfilling thing I do. I feel like I’m
+                        giving back and building the Africa of tomorrow.”</p>
+                    <p class="testimonial-author">— Ismael, MBA graduate in Texas</p>
+                </div>
+
+                <!-- Add more slides if needed -->
+            </div>
+        </div>
+
+        <!-- Dot navigation -->
+        <div class="swiper-dots" id="swiperDots"></div>
+
+    </div>
+
     <!-- Dream Destination Section -->
     <section class="destinations-section">
         <h2>Find Your Study Program Here!</h2>
@@ -835,36 +950,7 @@
             </div>
         </div>
     </div>
-     <!-- testimonial -->
-    <div class="testimonial-section">
-        <h2 class="testimonials-heading">What Our Students & Mentors Say</h2>
 
-        <div class="testimonial-slider-wrapper">
-            <div class="slider-track" id="sliderTrack">
-                <!-- Slide 1 -->
-                <div class="testimonial-slide">
-                    <i class="fas fa-hand-holding-heart icon"></i>
-                    <p class="testimonial-text">“My mentor helped me find housing, prepare for my first class, and even
-                        navigate campus jobs. It made my transition so much smoother.”</p>
-                    <p class="testimonial-author">— Fatou, student in Ottawa</p>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="testimonial-slide">
-                    <i class="fas fa-user-graduate icon"></i>
-                    <p class="testimonial-text">“Being a mentor is the most fulfilling thing I do. I feel like I’m
-                        giving back and building the Africa of tomorrow.”</p>
-                    <p class="testimonial-author">— Ismael, MBA graduate in Texas</p>
-                </div>
-
-                <!-- Add more slides if needed -->
-            </div>
-        </div>
-
-        <!-- Dot navigation -->
-        <div class="swiper-dots" id="swiperDots"></div>
-
-    </div>
 
 
     <style>

@@ -15,31 +15,19 @@
                         Rue du Governeurr, Bamako, Mali
                     </a>
                 </p>
-                <ul class="footer-social-icons">
-                    <li>
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-                                alt="Facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
-                                alt="Twitter">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-                                alt="Instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-                                alt="LinkedIn">
-                        </a>
-                    </li>
+                <ul class="edu-footer-social">
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
+                                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img
+                                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
+                                alt="Twitter"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
+                                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img
+                                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                                alt="LinkedIn"></a></li>
                 </ul>
             </div>
 
@@ -73,9 +61,9 @@
             <div class="custom-footer-col">
                 <h3>Study In:</h3>
                 <ul>
-                    <li><a href="{{ route('webinar.readmore') }}">United State</a></li>
-                    <li><a href="{{ route('webinar.readmore') }}">United Kingdom</a></li>
-                    <li><a href="{{ route('webinar.readmore') }}">Canada</a></li>
+                    <li>United State</li>
+                    <li>United Kingdom</li>
+                    <li>Canada</li>
                 </ul>
             </div>
 
@@ -100,7 +88,7 @@
 <style>
     .custom-footer {
         /*background-color:#1652b4;*/
-        background-color: black;
+        background: linear-gradient(90deg, #0644a6, #2764c5);
         color: #fff;
         /*padding: 60px 20px 30px;*/
         padding-top: 40px;
@@ -150,7 +138,7 @@
     .custom-footer-col a,
     .custom-footer-col li {
         font-size: 15px;
-        color: #ccc;
+        color: white !important;
         text-decoration: none;
         line-height: 1.8;
     }
@@ -178,33 +166,29 @@
         justify-content: center;
     }
 
-    .footer-social-icons {
-        list-style: none;
-        padding: 0;
-        margin: 10px 0 0;
+    .edu-footer-social {
         display: flex;
-        gap: 12px;
+        gap: 10px;
+        margin-top: 15px;
     }
 
-    .footer-social-icons li a {
-        display: inline-block;
+    .edu-footer-social img {
         width: 24px;
         height: 24px;
+        filter: invert(1);
+        transition: transform 0.3s;
     }
 
-    .footer-social-icons li a img {
-        width: 100%;
-        background: white;
-        height: auto;
-        filter: grayscale(100%) brightness(1.2);
-        transition: filter 0.3s ease;
-    }
-
-    .footer-social-icons li a:hover img {
-        filter: none;
+    .edu-footer-social img:hover {
+        transform: scale(1.1);
     }
 
     @media (max-width: 600px) {
+         .edu-footer-social {
+        justify-content: center;
+
+    }
+
         .footer-social-icons {
             list-style: none;
             padding: 0;
@@ -247,7 +231,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-         gap: 8px;
+        gap: 8px;
         font-size: 14px;
     }
 
