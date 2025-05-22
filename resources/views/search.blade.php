@@ -727,7 +727,19 @@
             </div>
 
             <!-- Program Cards -->
+
+                 <!-- @if($programs->count())
+                    <ul>
+                        @foreach($programs as $program)
+                            <li>{{ $program->name }} - {{ $program->country }}</li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p>No programs found.</p>
+                @endif -->
+
             <div class="programs-container">
+                 @if($programs->count())
                 @foreach($programs as $value)
                 <div class="program-card">
                     <div class="program-header">
@@ -782,6 +794,9 @@
                     </div>
                 </div>
                 @endforeach
+                 @else
+                    <p>No programs found.</p>
+                @endif
                 <!-- <div class="program-card">
                     <div class="program-header">
                         <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" />
@@ -985,6 +1000,7 @@
 
                 <!-- You can duplicate this .program-card for more cards -->
             </div>
+
         </div>
 
         <!-- Success Prediction Modal -->

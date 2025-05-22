@@ -68,6 +68,7 @@ Route::post('/admin/login', [AuthController::class, 'login'])->name('login.submi
 // Route::post('reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 
+
 Route::get('/home', [HomeController::class, 'homePage'])->name('home');
 Route::get('/', [HomeController::class, 'homePage']);
 Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus');

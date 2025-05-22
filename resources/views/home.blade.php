@@ -740,3 +740,38 @@
                 });
             });
         </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    $('.study-search-button').on('click', function (e) {
+        e.preventDefault();
+
+        let keyword = $('.study-search-input').val();
+        let countries = [];
+        $("input[name='countries[]']:checked").each(function () {
+            countries.push($(this).val());
+        });
+
+        $.ajax({
+            url: '{{ route("search") }}',
+            method: 'GET',
+            data: {
+                keyword: keyword,
+                countries: countries
+            },
+            success: function (response) {
+                $('#search-results').html(response); // Output goes here
+            },
+            error: function () {
+                alert('Something went wrong.');
+            }
+        });
+    });
+});
+</script>
+
+<!-- Result container -->
+<div id="search-results"></div>
+

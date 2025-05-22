@@ -23,14 +23,36 @@ class ProgramController extends Controller
         return view('discover_program.index', compact('programs'));
     }
 
+    // public function search(Request $request)
+    // {
+    //     // print_r($request->all());die;
+    //     $programs = Program::all();
+    //     $programs = Program::paginate(10); // Adjust per-page count as needed
+
+
+    //     return view('search', compact('programs'));
+    // }
+
     public function search(Request $request)
-    {
-        $programs = Program::all();
-        $programs = Program::paginate(10); // Adjust per-page count as needed
+{
+    $keyword = $request->input('keyword');
+    $countries = $request->input('countries');
 
+    $query = Program::query();
 
-        return view('search', compact('programs'));
+    if ($keyword) {
+        $query->where('university_name', 'like', '%' . $keyword . '%');
     }
+
+    if (!empty($countries)) {
+        $query->whereIn('country', $countries);
+    }
+
+    $programs = $query->get();
+
+    return view('search', compact('programs'));
+}
+
 
 
     // Show the form for creating a new program
