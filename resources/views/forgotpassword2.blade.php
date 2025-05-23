@@ -189,13 +189,9 @@
             <div class="card1-login">
                 <div class="login-container">
                     <div class="card-login">
-                        <img src="{{ asset('images/edu-x white.png') }}" alt="Edu-x Logo"
-                            style="height: 70px; width: 75px; margin-left: -13px;" />
-                        <h2>Log In</h2>
+                      <h2>Reset Your Password</h2>
 
                         <form id="loginForm">
-                            <input type="email" id="email" placeholder="Email" required />
-                            <div id="emailError" style="color: red; font-size: 12px;"></div>
 
                             <div class="password-wrapper">
                                 <input type="password" id="password" placeholder="Password" required />
@@ -203,36 +199,14 @@
                                     <i class="fa-solid fa-eye" id="eyeIcon"></i>
                                 </span>
                             </div>
-                            <div id="passwordError" style="color: red; font-size: 12px;"></div>
 
-                            <button class="buttn" type="button" id="loginButton">Log In</button>
+                            <button class="buttn" type="button">Reset Password</button>
                         </form>
 
-                        <div class="anchr">
-                            <small><a href="/forgotpassword">Forgot password?</a></small><br>
-                        </div>
 
-                        <div style="text-align: center; margin: 20px 0;">
-                            <span style="background: white; padding: 0 10px;">OR</span>
-                        </div>
-
-                        <div class="social-buttons">
-                            <button class="btnnn"><i class="fab fa-google"></i> Log In with Google</button>
-                            <button class="btnnn"><i class="fab fa-apple"></i> Log In with Apple</button>
-                            <button class="btnnn"><i class="fab fa-facebook"></i> Log In with Facebook</button>
-                        </div>
-
-
-
-                        {{-- <div class="register">
-                            <a href="partner_registration.html">Register as a Student</a>
-                        </div>
                         <div class="register">
-                            <a href="/privacy/policy">Privacy & Cookies Policy</a>
+                            <a href="/forgotpassword"><i class="fas fa-arrow-left"></i>Back one step</a>
                         </div>
-                        <div class="register">
-                            <a href="/term-and-condition">Terms & Conditions</a>
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -244,51 +218,6 @@
         </div>
 
 
-        <script>
-            document.getElementById('loginButton').addEventListener('click', async function() {
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-
-                // Clear previous errors
-                document.getElementById('emailError').textContent = '';
-                document.getElementById('passwordError').textContent = '';
-
-                try {
-                    const response = await fetch('/api/student/login', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            email,
-                            password
-                        })
-                    });
-
-                    const data = await response.json();
-
-                    if (response.ok && data.status) {
-                        alert(data.message);
-                        window.location.href = '/'; // Redirect to home page
-                    } else {
-                        if (data.errors) {
-                            if (data.errors.email) {
-                                document.getElementById('emailError').textContent = data.errors.email[0];
-                            }
-                            if (data.errors.password) {
-                                document.getElementById('passwordError').textContent = data.errors.password[0];
-                            }
-                        } else {
-                            alert(data.message || 'Login failed');
-                        }
-                    }
-                } catch (error) {
-                    alert("Something went wrong!");
-                    console.error(error);
-                }
-            });
-        </script>
 
 
         <script>
