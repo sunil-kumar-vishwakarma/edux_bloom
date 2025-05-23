@@ -1603,7 +1603,7 @@
 
             .global img {
                 /* width: 60%;
-                                        margin-left: 0; */
+                    margin-left: 0; */
                 display: none;
             }
 
@@ -2034,7 +2034,7 @@
         <h1>Be Seen by 100,000+ Students Every Month</h1>
         <p>Increase your global presence and the number of qualified students from a single, easy-to-use platform trusted by
             more than 1,500 institutions worldwide.</p>
-        <button type="button" class="btn btn-primary" id="workWithUsBtn">Work With US</button>
+       <a href="/contactus"> <button type="button" class="btn btn-primary" id="workWithUsBtn">Work With US</button></a>
     </div>
     <br><br>
 
@@ -2045,7 +2045,7 @@
                 <div class="step">
                     <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></i></div>
                     <h3>Find a program</h3>
-                    <p>Use our search to <a href="#">browse 81,000+ degrees</a> worldwide</p>
+                    <p>Use our search to <a href="/search">browse 81,000+ degrees</a> worldwide</p>
                 </div>
 
 
@@ -2053,7 +2053,7 @@
                 <div class="step">
                     <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <h3>Get a scholarship</h3>
-                    <p>We give out <a href="#">$32,000 in scholarships</a> every year - apply for one today!</p>
+                    <p>We give out <a href="/search">$32,000 in scholarships</a> every year - apply for one today!</p>
                 </div>
 
                 <i class="fa-solid fa-arrow-right-long"></i>
@@ -2061,7 +2061,7 @@
                 <div class="step">
                     <div class="icon"><i class="fa-solid fa-phone"></i></div>
                     <h3>Talk to universities</h3>
-                    <p>Sign up for our <a href="#">FREE virtual events</a> to speak to universities</p>
+                    <p>Sign up for our <a href="/events">FREE virtual events</a> to speak to universities</p>
                 </div>
                 <div class="connector"><i class="fa-solid fa-arrow-right-long"></i></div>
                 <div class="step">
@@ -2176,13 +2176,13 @@
         </div>
 
     </section>
-   
 
-  <!--  <section class="application">
-        <h1>An Easy-to-Use Platform Built to<br> Deliver Quality Applications and More</h1>
 
-        <img src="images/RP_Laptop-1536x864.png">
-    </section> -->
+    <!--  <section class="application">
+                <h1>An Easy-to-Use Platform Built to<br> Deliver Quality Applications and More</h1>
+
+                <img src="images/RP_Laptop-1536x864.png">
+            </section> -->
 
 
 
@@ -2223,30 +2223,30 @@
     </section>
     <br>
 
-<!--
-    <section class="global">
-        <h1>Global Presence for Global Recruitment</h1>
-        <br>
-        <div class="gmap">
+    <!--
+            <section class="global">
+                <h1>Global Presence for Global Recruitment</h1>
+                <br>
+                <div class="gmap">
 
-            <div class="score">
-                <p>
-                <h3 style="font-size:30px;">1,000+</h3>Globally</p><br>
-                <p>
-                <h3>200+ </h3>South Asia</p><br>
-                <p>
-                <h3>25+ </h3>South and East Asia,<br>African and Letin<br>America</p>
-            </div>
+                    <div class="score">
+                        <p>
+                        <h3 style="font-size:30px;">1,000+</h3>Globally</p><br>
+                        <p>
+                        <h3>200+ </h3>South Asia</p><br>
+                        <p>
+                        <h3>25+ </h3>South and East Asia,<br>African and Letin<br>America</p>
+                    </div>
 
-            <div>
+                    <div>
 
-                <img src="images/Map.webp" height="500px" width="700px">
-            </div>
+                        <img src="images/Map.webp" height="500px" width="700px">
+                    </div>
 
 
 
-        </div>
-    </section> -->
+                </div>
+            </section> -->
 
 
 

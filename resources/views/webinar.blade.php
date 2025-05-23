@@ -74,7 +74,7 @@
         .background-content h1 {
             font-size: 40px;
             font-weight: bold;
-            color: white;
+            /* color: white; */
             transform: translateX(316px);
 
         }
@@ -226,6 +226,7 @@
 
             .background-content h1 {
                 font-size: 36px;
+                transform: translateX(5%);
             }
 
             .background-content p {
@@ -379,7 +380,7 @@
 
     <div class="webinar">
         <div class="background-content">
-            <h1><span style="color: yellow;">Webinars</span> by Edu-X</h1>
+            <h1><span style="color: #b92151;">Webinars</span> by Edu-X</h1>
             <br />
             <p>
                 Receive expert advice, data insights, application tips, and more in Edu-X’s live webinars.
