@@ -23,10 +23,21 @@
 
             <label for="college_name">College Name:</label>
             <input type="text" id="college_name" name="college_name" placeholder="Enter college name" required>
+            <label for="college_course">College Course:</label>
+            <input type="text" id="college_course" name="college_course" placeholder="Enter college Cource" required>
 
             <label for="location">Location:</label>
             <input type="text" id="location" name="location" placeholder="Enter location" required>
 
+            <label for="campus_country">Campus Country:</label>
+            <select name="campus_country" id="campus_country" required>
+                <option value="">Please Select</option>
+                @foreach($country as $value)
+                <option value="{{$value->name}}">{{$value->name}}</option>
+                @endforeach
+                
+            </select>
+            <!-- <input type="text" id="campus_country" name="campus_country" placeholder="Enter campus city" required> -->
             <label for="campus_city">Campus City:</label>
             <input type="text" id="campus_city" name="campus_city" placeholder="Enter campus city" required>
 

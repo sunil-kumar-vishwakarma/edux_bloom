@@ -38,16 +38,31 @@
             <label for="college_name">College Name:</label>
             <input type="text" id="college_name" name="college_name" value="{{ old('college_name', $program->college_name) }}" required>
         </div>
+        <div class="form-group">
+            <label for="college_course">College Course:</label>
+            <input type="text" id="college_course" name="college_course" value="{{ old('college_course', $program->college_course) }}" required>
+        </div>
 
         <div class="form-group">
             <label for="location">Location:</label>
             <input type="text" id="location" name="location" value="{{ old('location', $program->location) }}" required>
         </div>
-
+        <div class="form-group">
+            <label for="campus_country">Campus Country:</label>
+           <select name="campus_country" id="campus_country" required>
+                <option value="">Please Select</option>
+                @foreach($country as $value)
+                <option value="{{$value->name}}">{{$value->name}}</option>
+                @endforeach
+                
+            </select>
+        </div>
+        
         <div class="form-group">
             <label for="campus_city">Campus City:</label>
             <input type="text" id="campus_city" name="campus_city" value="{{ old('campus_city', $program->campus_city) }}" required>
         </div>
+        
 
         <div class="form-group">
             <label for="tuition">Tuition (1st year):</label>

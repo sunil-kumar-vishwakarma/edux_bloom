@@ -25,7 +25,9 @@
                     <th>University Name</th>
                     <th>Certificate</th>
                     <th>College Name</th>
+                    <th>College Course</th>
                     <th>Location</th>
+                    <th>Campus Country</th>
                     <th>Campus City</th>
                     <th>Tuition (1st year)</th>
                     <th>Application Fee</th>
@@ -47,7 +49,9 @@
                         <td>{{ $program->university_name }}</td>
                         <td>{{ $program->certificate }}</td>
                         <td>{{ $program->college_name }}</td>
+                        <td>{{ $program->college_course }}</td>
                         <td>{{ $program->location }}</td>
+                        <td>{{ $program->campus_country }}</td>
                         <td>{{ $program->campus_city }}</td>
                         <td>₹ {{ number_format($program->tuition) }}</td>
                         <td>₹ {{ number_format($program->application_fee) }}</td>
@@ -140,6 +144,7 @@
                     <p><strong>Certificate:</strong> ${program.certificate}</p>
                     <p><strong>College Name:</strong> ${program.college_name}</p>
                     <p><strong>Location:</strong> ${program.location}</p>
+                    <p><strong>Campus Country:</strong> ${program.campus_country}</p>
                     <p><strong>Campus City:</strong> ${program.campus_city}</p>
                     <p><strong>Tuition (1st year):</strong> $${parseFloat(program.tuition).toLocaleString()} CAD</p>
                     <p><strong>Application Fee:</strong> $${parseFloat(program.application_fee).toLocaleString()} CAD</p>
