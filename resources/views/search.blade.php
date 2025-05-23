@@ -329,7 +329,8 @@
             }
 
             .apply-btn {
-                background: #2764c5;
+                /* background: #2764c5; */
+                background: linear-gradient(90deg, #0644a6, #2764c5);
                 color: #fff;
                 border: none;
                 padding: 10px 16px;
@@ -535,7 +536,8 @@
             }
 
             .sort-btn {
-                background-color: #007bff;
+                /* background-color: #007bff; */
+                background: linear-gradient(90deg, #0644a6, #2764c5);
                 color: #fff;
                 border: none;
                 padding: 10px 16px;
@@ -589,101 +591,44 @@
                 color: #0056b3;
             }
 
-            /* pagination */
             .pagination {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                gap: 10px;
+                margin: 30px 0;
             }
 
-            .page-btn {
-                padding: 8px 12px;
-                border: 1px solid #ddd;
-                background-color: #f9f9f9;
-                cursor: pointer;
-                font-size: 17px;
-                border-radius: 5px;
-                transition: background-color 0.3s, color 0.3s;
+            .pagination .page-item {
+                margin: 0 4px;
             }
 
-            .page-btn.active {
+            .pagination .page-link {
+                color: #007bff;
+                border: 1px solid #dee2e6;
+                padding: 6px 12px;
+                border-radius: 4px;
+                background-color: #fff;
+                transition: all 0.2s ease-in-out;
+                text-decoration: none;
+            }
+
+            .pagination .page-link:hover {
                 background-color: #007bff;
-                color: white;
+                color: #fff;
                 border-color: #007bff;
             }
 
-            .page-btn:hover:not(.active) {
-                background-color: #eaeaea;
+            .pagination .active .page-link {
+                background: linear-gradient(90deg, #0644a6, #2764c5);
+                color: white;
+                border-color: #007bff;
+                font-weight: bold;
             }
 
-            .page-btn:disabled {
-                background-color: #ddd;
-                cursor: not-allowed;
+            .pagination .disabled .page-link {
+                color: #aaa;
+                pointer-events: none;
+                background-color: #f5f5f5;
             }
-
-            /* Pagination Container */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Laravel default ul element */
-.pagination nav > div:first-child {
-    display: none; /* hides text like "Showing 1 to 10 of 30 results" */
-}
-
-.pagination nav ul {
-    display: flex;
-    gap: 8px;
-    padding: 0;
-    list-style: none;
-}
-
-/* Pagination Buttons */
-.pagination nav ul li {
-    display: inline-block;
-}
-
-.pagination nav ul li a,
-.pagination nav ul li span {
-    display: block;
-    padding: 8px 14px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-.pagination nav ul li a:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-}
-
-/* Active Page */
-.pagination nav ul li.active span {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-    font-weight: bold;
-}
-
-/* Disabled links */
-.pagination nav ul li.disabled span {
-    color: #aaa;
-    background-color: #eaeaea;
-    cursor: not-allowed;
-}
-
-
         </style>
     </head>
 
@@ -792,105 +737,103 @@
 
             <!-- Program Cards -->
 
-                 <!-- @if($programs->count())
-                    <ul>
-                        @foreach($programs as $program)
-                            <li>{{ $program->name }} - {{ $program->country }}</li>
-                        @endforeach
-                    </ul>
-                @else
-                    <p>No programs found.</p>
-                @endif -->
+            <!-- @if ($programs->count())
+                            <ul>
+                                @foreach ($programs as $program)
+    <li>{{ $program->name }} - {{ $program->country }}</li>
+    @endforeach
+                            </ul>
+@else
+    <p>No programs found.</p>
+                        @endif -->
 
-                @if($programs->count())
+            @if ($programs->count())
                 <div class="programs-container">
-                @foreach($programs as $value)
-                <div class="program-card">
-                    <div class="program-header">
-                        <img src="{{ asset('/public/storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
-                                alt="University Logo" class="program-logo" />
-                            <!-- <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" /> -->
-                            <a href="#">
-                                <h3>{{ $value->university_name }}</h3>
-                            </a>
-                        </div>
+                    @foreach ($programs as $value)
+                        <div class="program-card">
+                            <div class="program-header">
+                                <img src="{{ asset('/public/storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
+                                    alt="University Logo" class="program-logo" />
+                                <!-- <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" /> -->
+                                <a href="#">
+                                    <h3>{{ $value->university_name }}</h3>
+                                </a>
+                            </div>
 
-                        <div class="program-badges">
-                            <span class="badge">{{$value->success_prediction}} Job Demand</span>
-                            <span class="badge">Popular</span>
-                        </div>
+                            <div class="program-badges">
+                                <span class="badge">{{ $value->success_prediction }} Job Demand</span>
+                                <span class="badge">Popular</span>
+                            </div>
 
-                        <div class="program-details">
-                            <small>{{ $value->certificate }}</small>
-                            <a href="#">
-                                <p>{{ $value->college_name }}</p>
-                            </a>
-                            <hr />
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>Course</td>
-                                        <td>{{ $value->college_course }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Location</td>
-                                        <td>{{ $value->location }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Campus Country</td>
-                                        <td>{{ $value->campus_country }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Campus city</td>
-                                        <td>{{ $value->location }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tuition (1st year)</td>
-                                        <td> ${{ $value->tuition }}CAD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Application fee</td>
-                                        <td>${{ $value->application_fee }}CAD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Duration</td>
-                                        <td> {{ $value->duration }} months</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            <div class="program-details">
+                                <small>{{ $value->certificate }}</small>
+                                <a href="#">
+                                    <p>{{ $value->college_name }}</p>
+                                </a>
+                                <hr />
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Course</td>
+                                            <td>{{ $value->college_course }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location</td>
+                                            <td>{{ $value->location }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Campus Country</td>
+                                            <td>{{ $value->campus_country }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Campus city</td>
+                                            <td>{{ $value->location }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tuition (1st year)</td>
+                                            <td> ${{ $value->tuition }}CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Application fee</td>
+                                            <td>${{ $value->application_fee }}CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Duration</td>
+                                            <td> {{ $value->duration }} months</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <div class="program-footer">
-                            <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
-                            <button class="apply-btn">Create Application</button>
+                            <div class="program-footer">
+                                <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
+                                <button class="apply-btn">Create Application</button>
+                            </div>
                         </div>
-                    </div>
-                <!-- <div class="pagination">
-                    <button class="page-btn prev-btn" disabled>Previous</button>
-                    <div class="page-numbers">
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn">4</button>
-                        <button class="page-btn">5</button>
-                    </div>
-                    <button class="page-btn next-btn">Next</button>
-                </div> -->
-                
-
-                @endforeach
+                        <!-- <div class="pagination">
+                            <button class="page-btn prev-btn" disabled>Previous</button>
+                            <div class="page-numbers">
+                                <button class="page-btn active">1</button>
+                                <button class="page-btn">2</button>
+                                <button class="page-btn">3</button>
+                                <button class="page-btn">4</button>
+                                <button class="page-btn">5</button>
+                            </div>
+                            <button class="page-btn next-btn">Next</button>
+                        </div> -->
+                    @endforeach
                 </div>
-                 </div>
-                <div class="pagination">
-                {{ $programs->appends(request()->input())->links() }}
-                </div>
-                 @else
-                    <p>No programs found.</p>
-                @endif
-                
-            
+        </div>
+        <div class="pagination">
+            {{ $programs->appends(request()->input())->links() }}
+        </div>
+    @else
+        <p>No programs found.</p>
+        @endif
 
-       
+
+
+
 
         <!-- Success Prediction Modal -->
         <div id="successModal" class="modal">
@@ -941,22 +884,22 @@
             </div>
         </div>
         <!-- <div class="pagination">
-            <button class="page-btn prev-btn" disabled>Previous</button>
-            <div class="page-numbers">
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn">4</button>
-                <button class="page-btn">5</button>
-            </div>
-            <button class="page-btn next-btn">Next</button>
-        </div> -->
+                    <button class="page-btn prev-btn" disabled>Previous</button>
+                    <div class="page-numbers">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn">5</button>
+                    </div>
+                    <button class="page-btn next-btn">Next</button>
+                </div> -->
 
 
         <script src="{{ asset('js/programs.js') }}" defer></script>
 
     </body>
-    
+
 
     </html>
 @endsection

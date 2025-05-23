@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,12 +24,13 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-   
-    
-     public function boot()
-     {
-         // Sharing the authenticated user globally with all views
-         View::share('user', Auth::user());
-     }
-    
+
+
+    public function boot()
+    {
+        // Sharing the authenticated user globally with all views
+        View::share('user', Auth::user());
+        Paginator::useBootstrap(); 
+
+    }
 }
