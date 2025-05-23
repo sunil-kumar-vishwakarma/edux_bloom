@@ -127,14 +127,16 @@ $programs = $query->paginate(8)->withQueryString();
     public function show($id)
     {
         $program = Program::findOrFail($id);
+         $country= Country::all();
         return response()->json($program);
     }
 
     // Show the form for editing a program
     public function edit($id)
     {
+         $country= Country::all();
         $program = Program::findOrFail($id);
-        return view('discover_program.edit', compact('program'));
+        return view('discover_program.edit', compact('program','country'));
     }
 
     // Update a specific program
