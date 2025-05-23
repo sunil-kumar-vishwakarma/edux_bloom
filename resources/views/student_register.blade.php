@@ -324,14 +324,9 @@
 
                             <div class="input-icon password">
                                 <i class="fas fa-lock lock-icon"></i>
-                                <input type="password" id="password-input" placeholder="Your Password" required>
+                                <input type="password" name="password" id="password-input" placeholder="Your Password" required>
                                 <i class="fas fa-eye eye-icon" id="toggle-password"></i>
                             </div>
-
-
-
-
-
                             <div class="checkbox">
                                 <input type="checkbox" name="tc" id="tc" required>
                                 <label for="tc">I agree to the <a href="/term-and-condition">Terms and
