@@ -816,7 +816,7 @@
                         </div>
 
                         <div class="program-badges">
-                            <span class="badge">High Job Demand</span>
+                            <span class="badge">{{$value->success_prediction}} Job Demand</span>
                             <span class="badge">Popular</span>
                         </div>
 
@@ -829,8 +829,16 @@
                             <table>
                                 <tbody>
                                     <tr>
+                                        <td>Course</td>
+                                        <td>{{ $value->college_course }}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Location</td>
-                                        <td>{{ $value->college_name }}</td>
+                                        <td>{{ $value->location }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campus Country</td>
+                                        <td>{{ $value->campus_country }}</td>
                                     </tr>
                                     <tr>
                                         <td>Campus city</td>

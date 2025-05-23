@@ -12,7 +12,9 @@ return new class extends Migration {
             $table->string('university_name');
             $table->string('certificate');
             $table->string('college_name');
+            $table->string('college_course');
             $table->string('location');
+            $table->string('campus_country');
             $table->string('campus_city');
             $table->decimal('tuition', 8, 2);
             $table->decimal('application_fee', 8, 2);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,13 +14,18 @@ class ProgramController extends Controller
     {
         // Get sorting params
         $sortField = $request->get('sort_field', 'university_name');
-        $sortOrder = $request->get('sort_order', 'asc');
+        $sortOrder = $request->get('sort_order', 'desc');
 
         // Paginate programs with sorting
+        if(!empty($request->all())){
         $programs = Program::orderBy($sortField, $sortOrder)->paginate(10);
+        }else{
+        $programs = Program::orderBy('id','desc')->paginate(10);
+        }
+        
 
 
-        $programs = Program::all();
+        // $programs = Program::all();
         return view('discover_program.index', compact('programs'));
     }
 
@@ -41,15 +47,16 @@ class ProgramController extends Controller
     $query = Program::query();
 
     if ($keyword) {
-        $query->where('university_name', 'like', '%' . $keyword . '%');
+        $query->where('college_course', 'like', '%' . $keyword . '%');
     }
 
-    // if (!empty($countries)) {
-    //     $query->whereIn('country', $countries);
-    // }
+    if (!empty($countries)) {
+        $query->whereIn('campus_country', $countries);
+    }
     // $programs = $query->paginate(8);
     // $programs = $query->get();
-$programs = $query->paginate(8)->withQueryString(); // 'withQueryString()' keeps filters in URL
+    $query->orderBy('id','desc');
+$programs = $query->paginate(8)->withQueryString();
 
     return view('search', compact('programs'));
 }
@@ -59,7 +66,8 @@ $programs = $query->paginate(8)->withQueryString(); // 'withQueryString()' keeps
     // Show the form for creating a new program
     public function create()
     {
-        return view('discover_program.create');
+       $country= Country::all();
+        return view('discover_program.create', compact('country'));
     }
 
     // Store a newly created program
@@ -71,7 +79,9 @@ $programs = $query->paginate(8)->withQueryString(); // 'withQueryString()' keeps
             'university_name' => 'required|string|max:255',
             'certificate' => 'required|string|max:255',
             'college_name' => 'required|string|max:255',
+            'college_course' => 'required|string|max:255',
             'location' => 'required|string|max:255',
+            'campus_country' => 'required|string|max:255',
             'campus_city' => 'required|string|max:255',
             'tuition' => 'required|numeric',
             'application_fee' => 'required|numeric',
@@ -92,7 +102,9 @@ $programs = $query->paginate(8)->withQueryString(); // 'withQueryString()' keeps
         $program->university_name = $validated['university_name'];
         $program->certificate = $validated['certificate'];
         $program->college_name = $validated['college_name'];
+        $program->college_course = $validated['college_course'];
         $program->location = $validated['location'];
+        $program->campus_country = $validated['campus_country'];
         $program->campus_city = $validated['campus_city'];
         $program->tuition = $validated['tuition'];
         $program->application_fee = $validated['application_fee'];
