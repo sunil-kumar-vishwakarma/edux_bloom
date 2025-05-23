@@ -123,6 +123,10 @@
 
         /* Responsive Adjustments for Tablets */
         @media (max-width: 768px) {
+            .containerrrr {
+                margin-top: 15%;
+            }
+
             .abroad h1 {
                 font-size: 2.2rem;
             }
@@ -148,8 +152,15 @@
             }
         }
 
+        @media (max-width: 1024px) {
+            .containerrrr {
+                margin-top: 15%;
+            }
+        }
+
         /* Smaller font and card size for screens under 1600px */
         @media (max-width: 1599px) {
+
             .abroad h1 {
                 font-size: 2.5rem;
             }
