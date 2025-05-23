@@ -126,6 +126,35 @@
                 display: inline-block;
                 margin-top: 10px;
             }
+         .password-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 43%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
 
             @media screen and (max-width: 991px) {
                 .main-container {
@@ -161,15 +190,21 @@
                             style="height: 70px; width: 75px; margin-left: -13px;" />
                         <h2>Log In</h2>
 
-                        <form id="loginForm">
-                            <input type="email" id="email" placeholder="Email" required />
-                            <div id="emailError" style="color: red; font-size: 12px;"></div>
+                      <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required />
+    <div id="emailError" style="color: red; font-size: 12px;"></div>
 
-                            <input type="password" id="password" placeholder="Password" required />
-                            <div id="passwordError" style="color: red; font-size: 12px;"></div>
+    <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Password" required />
+        <span class="toggle-password" onclick="togglePassword()">
+            <i class="fa-solid fa-eye" id="eyeIcon"></i>
+        </span>
+    </div>
+    <div id="passwordError" style="color: red; font-size: 12px;"></div>
 
-                            <button class="buttn" type="button" id="loginButton">Log In</button>
-                        </form>
+    <button class="buttn" type="button" id="loginButton">Log In</button>
+</form>
+
                          <div class="anchr">
                             <small><a href="forgotpassword.html">Forgot password?</a></small><br>
                         </div>
@@ -186,13 +221,10 @@
 
 
 
-                        <div class="register">
-                            <a href="partner_registration.html">Register as a Recruitment Partner</a>
-                        </div>
-                        <div class="register">
+                        {{-- <div class="register">
                             <a href="partner_registration.html">Register as a Student</a>
                         </div>
-                        {{-- <div class="register">
+                        <div class="register">
                             <a href="/privacy/policy">Privacy & Cookies Policy</a>
                         </div>
                         <div class="register">
@@ -342,6 +374,24 @@
                 }
             });
         </script>
+       <script>
+function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
+}
+</script>
+
+
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>

@@ -36,11 +36,11 @@
                 <h3>About</h3>
                 <ul>
                     <li><a href="{{ route('student') }}">Services</a></li>
-                    <li><a href="{{ route('partner') }}">Partners</a></li>
+                    {{-- <li><a href="{{ route('partner') }}">Partners</a></li> --}}
                     <li><a href="{{ route('partner') }}">Resources</a></li>
                     <li><a href="{{ route('web') }}">FAQ</a></li>
                     <li><a href="{{ route('contactus') }}">Contact</a></li>
-                    {{-- <li><a href="{{ route('blogs-pages') }}">Blog & Press</a></li> --}}
+                    <li><a href="{{ route('blogs-pages') }}">Blogs</a></li>
                 </ul>
             </div>
 

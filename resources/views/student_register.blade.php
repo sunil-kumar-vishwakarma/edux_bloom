@@ -1,6 +1,7 @@
 @extends('frontent.layouts.app')
 @section('title', 'EduX | Student Registration')
 @section('content')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
         body,
@@ -117,10 +118,26 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 12px;
             color: #999;
-            font-size: 14px;
+            font-size: 15px;
         }
+
+        /* Lock icon on left */
+        .lock-icon,
+        .fa-user,
+        .fa-envelope {
+            left: 12px;
+        }
+
+        /* Eye icon on right */
+        .eye-icon {
+            right: 12px;
+            left: auto;
+            /* reset left */
+            cursor: pointer;
+            font-size: 16px;
+        }
+
 
         .input-icon input {
             width: 100%;
@@ -186,6 +203,50 @@
             font-size: 12px;
             color: #555;
         }
+
+        .input-icon {
+            position: relative;
+            margin-bottom: 18px;
+            width: 100%;
+            /* full width */
+            max-width: none;
+            /* remove any max-width limitation */
+        }
+
+        .input-icon input {
+            width: 100%;
+            padding: 12px 45px 12px 40px;
+            /* left padding for lock icon, right padding for eye icon */
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .input-icon.password {
+            position: relative;
+            width: 100%;
+            /* full width */
+        }
+
+        .input-icon.password input {
+            width: 100%;
+            padding-left: 40px;
+            /* space for lock icon */
+            padding-right: 40px;
+            /* space for eye icon */
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            height: 40px;
+        }
+
+
+        .eye-icon:hover {
+            color: #333;
+        }
+
 
         /* ========== RESPONSIVE STYLES ========== */
         @media (max-width: 991px) {
@@ -262,11 +323,14 @@
                             </div>
 
                             <div class="input-icon password">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" name="password" id="password-input" placeholder="Your Password"
-                                    required>
+                                <i class="fas fa-lock lock-icon"></i>
+                                <input type="password" id="password-input" placeholder="Your Password" required>
                                 <i class="fas fa-eye eye-icon" id="toggle-password"></i>
                             </div>
+
+
+
+
 
                             <div class="checkbox">
                                 <input type="checkbox" name="tc" id="tc" required>
@@ -286,9 +350,6 @@
                             above
                             terms.</small><br>
 
-                        <div class="register">
-                            <a href="partner_registration.html">Register as a Recruitment Partner</a>
-                        </div>
                         <div class="register">
                             <a href="/privacy/policy">Privacy & Cookies Policy</a>
                         </div>
@@ -337,6 +398,25 @@
             }
         });
     </script>
+
+    <script>
+        document.getElementById("toggle-password").addEventListener("click", function() {
+            const passwordInput = document.getElementById("password-input");
+            const icon = this;
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        });
+    </script>
+
+
 
 @endsection
 

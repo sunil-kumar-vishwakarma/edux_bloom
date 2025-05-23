@@ -763,114 +763,6 @@ video {
 [hidden] {
     display: none;
 }
-*,
-      /*:after,*/
-      /*:before {*/
-      /*  --tw-border-spacing-x: 0;*/
-      /*  --tw-border-spacing-y: 0;*/
-      /*  --tw-translate-x: 0;*/
-      /*  --tw-translate-y: 0;*/
-      /*  --tw-rotate: 0;*/
-      /*  --tw-skew-x: 0;*/
-      /*  --tw-skew-y: 0;*/
-      /*  --tw-scale-x: 1;*/
-      /*  --tw-scale-y: 1;*/
-      /*  --tw-pan-x: ;*/
-      /*  --tw-pan-y: ;*/
-      /*  --tw-pinch-zoom: ;*/
-      /*  --tw-scroll-snap-strictness: proximity;*/
-      /*  --tw-gradient-from-position: ;*/
-      /*  --tw-gradient-via-position: ;*/
-      /*  --tw-gradient-to-position: ;*/
-      /*  --tw-ordinal: ;*/
-      /*  --tw-slashed-zero: ;*/
-      /*  --tw-numeric-figure: ;*/
-      /*  --tw-numeric-spacing: ;*/
-      /*  --tw-numeric-fraction: ;*/
-      /*  --tw-ring-inset: ;*/
-      /*  --tw-ring-offset-width: 0px;*/
-      /*  --tw-ring-offset-color: #fff;*/
-      /*  --tw-ring-color: rgba(59, 130, 246, 0.5);*/
-      /*  --tw-ring-offset-shadow: 0 0 #0000;*/
-      /*  --tw-ring-shadow: 0 0 #0000;*/
-      /*  --tw-shadow: 0 0 #0000;*/
-      /*  --tw-shadow-colored: 0 0 #0000;*/
-      /*  --tw-blur: ;*/
-      /*  --tw-brightness: ;*/
-      /*  --tw-contrast: ;*/
-      /*  --tw-grayscale: ;*/
-      /*  --tw-hue-rotate: ;*/
-      /*  --tw-invert: ;*/
-      /*  --tw-saturate: ;*/
-      /*  --tw-sepia: ;*/
-      /*  --tw-drop-shadow: ;*/
-      /*  --tw-backdrop-blur: ;*/
-      /*  --tw-backdrop-brightness: ;*/
-      /*  --tw-backdrop-contrast: ;*/
-      /*  --tw-backdrop-grayscale: ;*/
-      /*  --tw-backdrop-hue-rotate: ;*/
-      /*  --tw-backdrop-invert: ;*/
-      /*  --tw-backdrop-opacity: ;*/
-      /*  --tw-backdrop-saturate: ;*/
-      /*  --tw-backdrop-sepia: ;*/
-      /*  --tw-contain-size: ;*/
-      /*  --tw-contain-layout: ;*/
-      /*  --tw-contain-paint: ;*/
-      /*  --tw-contain-style: ;*/
-      /*}*/
-      /*::backdrop {*/
-      /*  --tw-border-spacing-x: 0;*/
-      /*  --tw-border-spacing-y: 0;*/
-      /*  --tw-translate-x: 0;*/
-      /*  --tw-translate-y: 0;*/
-      /*  --tw-rotate: 0;*/
-      /*  --tw-skew-x: 0;*/
-      /*  --tw-skew-y: 0;*/
-      /*  --tw-scale-x: 1;*/
-      /*  --tw-scale-y: 1;*/
-      /*  --tw-pan-x: ;*/
-      /*  --tw-pan-y: ;*/
-      /*  --tw-pinch-zoom: ;*/
-      /*  --tw-scroll-snap-strictness: proximity;*/
-      /*  --tw-gradient-from-position: ;*/
-      /*  --tw-gradient-via-position: ;*/
-      /*  --tw-gradient-to-position: ;*/
-      /*  --tw-ordinal: ;*/
-      /*  --tw-slashed-zero: ;*/
-      /*  --tw-numeric-figure: ;*/
-      /*  --tw-numeric-spacing: ;*/
-      /*  --tw-numeric-fraction: ;*/
-      /*  --tw-ring-inset: ;*/
-      /*  --tw-ring-offset-width: 0px;*/
-      /*  --tw-ring-offset-color: #fff;*/
-      /*  --tw-ring-color: rgba(59, 130, 246, 0.5);*/
-      /*  --tw-ring-offset-shadow: 0 0 #0000;*/
-      /*  --tw-ring-shadow: 0 0 #0000;*/
-      /*  --tw-shadow: 0 0 #0000;*/
-      /*  --tw-shadow-colored: 0 0 #0000;*/
-      /*  --tw-blur: ;*/
-      /*  --tw-brightness: ;*/
-      /*  --tw-contrast: ;*/
-      /*  --tw-grayscale: ;*/
-      /*  --tw-hue-rotate: ;*/
-      /*  --tw-invert: ;*/
-      /*  --tw-saturate: ;*/
-      /*  --tw-sepia: ;*/
-      /*  --tw-drop-shadow: ;*/
-      /*  --tw-backdrop-blur: ;*/
-      /*  --tw-backdrop-brightness: ;*/
-      /*  --tw-backdrop-contrast: ;*/
-      /*  --tw-backdrop-grayscale: ;*/
-      /*  --tw-backdrop-hue-rotate: ;*/
-      /*  --tw-backdrop-invert: ;*/
-      /*  --tw-backdrop-opacity: ;*/
-      /*  --tw-backdrop-saturate: ;*/
-      /*  --tw-backdrop-sepia: ;*/
-      /*  --tw-contain-size: ;*/
-      /*  --tw-contain-layout: ;*/
-      /*  --tw-contain-paint: ;*/
-      /*  --tw-contain-style: ;*/
-      /*}*/
 
 
 
@@ -1006,47 +898,11 @@ video {
     background-color: #b92151;
 }
 
-/*.services div img{*/
-/*height: 150px;*/
-/*width: 300px;*/
-/*}*/
 
 #feedb {
     margin-top: 50px;
 }
 
-/*.services{*/
-/*  display: flex;*/
-/*flex-wrap: wrap;*/
-/*justify-content: center;*/
-/*gap: 20px;  Adjusts the gap between each feature box */
-/*margin: 20px;*/
-/*}*/
-
-/*.services img {*/
-/*width: calc(33.33% - 10px); /* Width of each image with space */
-/*height: auto;*/
-/*}*/
-
-/*.services .one{*/
-/*float: left;*/
-/*width: 32.33%;*/
-/*padding: 5px;*/
-
-/*}*/
-
-/*.services .two{*/
-/*  float: left;*/
-/*  width: 30.33%;*/
-/*  padding-left: 27px;*/
-/*  padding-right: 27px;*/
-
-/*}*/
-
-/*.services .second{*/
-/*     margin-left: 50px;*/
-
-/*}*/
 
 .button2 button {
     margin-bottom: 20px;
@@ -1061,16 +917,7 @@ video {
 }
 
 
-.card-img-top {
-    display: flex;
-    width: 250px;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 10px auto;
-    border: 5px solid #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 .card-body {
     /*text-align: center;*/

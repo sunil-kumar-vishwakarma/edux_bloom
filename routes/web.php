@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SMSController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UserDashController;
 
 
 
@@ -90,6 +91,14 @@ Route::get('/webinar/readmore', [HomeController::class, 'webinarReadmore'])->nam
 Route::get('/privacy/policy', [HomeController::class, 'privacyPolicy'])->name('privacy.policy');
 Route::get('/edux-Fees', [HomeController::class, 'eduxFees'])->name('eduxfees');
 Route::get('/term-and-condition', [HomeController::class, 'termAndCondition'])->name('term.and.condition');
+
+Route::get('/userdashboard', [UserDashController::class, 'userdashboard'])->name('userdashboard');
+Route::get('/usersearchProgram', [UserDashController::class, 'usersearchProgram'])->name('usersearchProgram');
+Route::get('/userprofile', [UserDashController::class, 'userprofile'])->name('userprofile');
+Route::get('/user_myapplication', [UserDashController::class, 'user_myapplication'])->name('user_myapplication');
+Route::get('/userpayments', [UserDashController::class, 'userpayments'])->name('userpayments');
+Route::get('/education_history', [UserDashController::class, 'education_history'])->name('education_history');
+Route::get('/user_testScore', [UserDashController::class, 'user_testScore'])->name('user_testScore');
 
 
 Route::middleware(['auth'])->group(function () {
