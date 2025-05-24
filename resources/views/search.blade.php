@@ -778,7 +778,7 @@
                             </div>
 
                             <div class="program-badges">
-                                <span class="badge">{{ $value->success_prediction }} Job Demand</span>
+                                <span class="badge">{{ $value->success_prediction }} Demand</span>
                                 <span class="badge">Popular</span>
                             </div>
 
