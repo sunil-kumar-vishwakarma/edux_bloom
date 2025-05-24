@@ -56,7 +56,7 @@ class ProgramController extends Controller
     // $programs = $query->paginate(8);
     // $programs = $query->get();
     $query->orderBy('id','desc');
-$programs = $query->paginate(8)->withQueryString();
+$programs = $query->paginate(9)->withQueryString();
 
     return view('search', compact('programs'));
 }
