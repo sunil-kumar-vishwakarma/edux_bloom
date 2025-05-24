@@ -665,7 +665,7 @@ input,
 optgroup,
 select,
 textarea {
-    color: inherit;
+    /* color: inherit; */
     font-family: inherit;
     font-feature-settings: inherit;
     font-size: 100%;
