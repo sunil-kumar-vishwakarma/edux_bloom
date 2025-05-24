@@ -18,7 +18,7 @@ html, body {
 .imag-background ul,
 .imag-background h2,
 .imag-background p,
-.imag-background button {
+.imag-background {
     margin-left: 0; /* Prevent unwanted left margin */
 }
 
@@ -105,7 +105,7 @@ color: #524da8;
   padding: 20px;
   display: flex;
   gap: 20px;
-  background-color:#007bff ;
+  /* background-color:#007bff ; */
 }
 
 .cont{
@@ -256,21 +256,28 @@ color: #524da8;
     padding: 8px 16px;
     font-size: 14px;
     font-weight: bold;
-    color: #007bff;
-    background-color: #e2e6ea;
+    color: #fff !important;
+    background: linear-gradient(135deg, #bb0e45, #ad0039);
     border: none;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
-     transform: translateX(124px);
+    margin-left: 10%;
+    transition: all 0.3s ease;
+  }
+
+   .btn-light:hover {
+    transform: translateY(-4px);
   }
 
   .btn-light a {
     /* color: #007bff; */
     font-weight: bold;
-    color: #b92151;
+    color: #fff;
     text-decoration: none;
+
   }
+
 
  #botton4{
     top:200px;
@@ -508,7 +515,6 @@ color: #524da8;
       align-items: center; /* Center the text and dot vertically */
       margin: 5px 10px; /* Space between list items */
       font-size: 10px;
-      color: blue; /* Blue text color */
       border: 1px solid white; /* White border around the list item */
       padding: 10px; /* Padding for spacing inside the list item */
       border-radius: 50px; /* Rounded corners for the list item */
@@ -555,7 +561,7 @@ color: #524da8;
       width: auto; /* Allow button to size dynamically */
       padding: 10px 20px; /* Add padding for better touch usability */
       font-size: 14px; /* Adjust font size */
-      margin-left: -400px;
+      margin-left: -140px;
     }
 
     .work {
@@ -698,7 +704,7 @@ color: #524da8;
         padding: -2px 10px;
     }
     .text-content{
-        padding-top: 100px;
+        padding-top: 200px;
     }
 
     .dot ul{
@@ -711,9 +717,9 @@ color: #524da8;
     }
 
 
-    .btn-light{
+    /* .btn-light{
  transform: translateX(10px);
-    }
+    } */
 
 
     /*.imag-background .btn a {*/
@@ -798,7 +804,7 @@ color: #524da8;
      .destinations-section h2{
         font-size: 34px;
         margin-left: 0;
-        margin-bottom: 15%;
+        /* margin-bottom: 15%; */
      }
 
     /* Destination Cards */
@@ -897,10 +903,6 @@ color: white;
     height:50px;
   margin-left: 88px;
   margin-top: 20px;
-}
-
-p a:hover {
-  text-decoration: none;
 }
 
 .register a {

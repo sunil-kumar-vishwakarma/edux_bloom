@@ -2,16 +2,148 @@
 @section('title', 'EduX | Home ')
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <style>
+        /* Main Content Container */
+        /* .content {
+                max-width: 1600px;
+                margin: 0 auto;
+                padding: 40px 20px;
+                text-align: left;
+            } */
 
+        /* Heading */
+        .content h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* Buttons Row */
+        .btn4 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .anchr {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Study Search Section aligned to the left */
+        .study-search-section {
+            width: 100%;
+            display: block;
+            /* Remove flexbox */
+            margin-top: 0;
+        }
+
+        /* Search Box aligned left */
+        .study-search-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+            color: #fff;
+            /* Light text on dark backgrounds */
+        }
+
+
+        /* Heading inside the box */
+        .study-search-heading {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Form Structure */
+        .study-search-form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Input Box */
+        .study-input-wrapper {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 10px 12px;
+            border-radius: 5px;
+        }
+
+        .study-search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            margin-left: 8px;
+            outline: none;
+        }
+
+        /* Icon */
+        .study-search-icon {
+            flex-shrink: 0;
+        }
+
+        /* Flex row for checkboxes + button */
+        .search-options-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Checkbox styling */
+        .country-checkboxes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .country-checkboxes label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            margin-bottom: 0;
+            /* remove space if any */
+        }
+
+
+        .country-checkboxes img {
+            width: 20px;
+        }
+
+        /* Search Button */
+        .study-search-button {
+            /* background-color: #007bff; */
+            background: linear-gradient(135deg, #bb0e45, #ad0039);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .study-search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 
     <div class="content">
         <h1>Start Early, Dream Big, <br />Succeed Globally</h1>
-        <!--     <p id="subheadding">-->
-        <!--    Edu-X Services supports you from your first step in Africa to your first class in North America.-->
-        <!--</p>-->
-
-
-        <!--<button class="btn2"> <a href="Student.html" class="anchr">I am a student who wants to study abroad</a></button>-->
         <div class="btn4">
             <button class="btn-second">
                 <a href="/search" class="anchr">
@@ -20,74 +152,51 @@
             </button>
             <button class="btn3"><a href="/contactus" class="anchr">Book a Free Consultation</a></button>
         </div>
-    </div>
+        <div class="study-search-section">
+            <div class="study-search-box">
+                {{-- <h2 class="study-search-heading">10 million searches and counting</h2> --}}
+                <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
+                    <!-- Input Field -->
+                    <div class="study-input-wrapper">
+                        <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+                            <path
+                                d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                        </svg>
+                        <input type="text" name="keyword" class="study-search-input"
+                            placeholder="What would you like to study?">
+                    </div>
+
+                    <!-- Row for checkboxes and button -->
+                    <div class="search-options-row">
+                        <!-- Country Checkboxes -->
+                        <div class="country-checkboxes">
+                            <label>
+                                <input type="checkbox" name="countries[]" value="Canada">
+                                <img src="https://flagcdn.com/ca.svg" alt="Canada"
+                                    style="width: 20px; vertical-align: middle;">
+                                Canada
+                            </label>
+                            <label>
+                                <input type="checkbox" name="countries[]" value="United States">
+                                <img src="https://flagcdn.com/us.svg" alt="USA"
+                                    style="width: 20px; vertical-align: middle;">
+                                United States
+                            </label>
+                        </div>
+
+                        <!-- Search Button -->
+                        <button type="submit" class="study-search-button">Search</button>
+                    </div>
+
+                </form>
 
 
-    <div class="study-search-section">
-        <div class="study-search-box">
-            <h2 class="study-search-heading">10 million searches and counting</h2>
-
-            <!-- <div class="study-search-form-row">
-                
-                <div class="study-input-wrapper">
-                    <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
-                        <path
-                            d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                    <input type="text" class="study-search-input" placeholder="What would you like to study?">
-                </div>
-
-               
-                <div class="country-checkboxes">
-                    <label>
-                        <input type="checkbox" name="countries[]" value="Canada">
-                        <img src="https://flagcdn.com/ca.svg" alt="Canada" style="width: 20px; vertical-align: middle;">
-                        Canada
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" name="countries[]" value="United States">
-                        <img src="https://flagcdn.com/us.svg" alt="USA" style="width: 20px; vertical-align: middle;">
-                        United States
-                    </label>
-                </div>
-
-
-               
-                <button class="study-search-button">Search</button>
-            </div> -->
-
-            <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
-    <!-- Input Field -->
-    <div class="study-input-wrapper">
-        <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
-            <path d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-        </svg>
-        <input type="text" name="keyword" class="study-search-input" placeholder="What would you like to study?">
-    </div>
-
-    <!-- Custom Dropdown -->
-    <div class="country-checkboxes">
-        <label>
-            <input type="checkbox" name="countries[]" value="Canada">
-            <img src="https://flagcdn.com/ca.svg" alt="Canada" style="width: 20px; vertical-align: middle;">
-            Canada
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="countries[]" value="United States">
-            <img src="https://flagcdn.com/us.svg" alt="USA" style="width: 20px; vertical-align: middle;">
-            United States
-        </label>
-    </div>
-
-    <!-- Search Button -->
-    <button type="submit" class="study-search-button">Search</button>
-</form>
-
-
+            </div>
         </div>
     </div>
+
+
+
     <section class="why-edux-simple">
         <div class="why-edux-wrapper">
             <h2 class="why-edux-title">Why Choose Edu-X Services?</h2>
@@ -144,7 +253,7 @@
     <section class="support-journey-section">
         <div class="support-journey-header">
             <h2>Our 360° Student Support Journey</h2>
-            <p>From 9th Grade to Graduation—We’re With You Every Step of the Way</p>
+            <p>From high school and to university graduates- we are with you every steps of the way</p>
         </div>
 
         <div class="support-journey-grid">
@@ -152,7 +261,7 @@
             <div class="support-journey-card">
                 <h3>1. Early Academic Preparation</h3>
                 <ul>
-                    <li>Enroll from 9th grade</li>
+                    <li>Enroll from high schools</li>
                     <li>Tailored academic counseling</li>
                     <li>Access to top prep resources</li>
                 </ul>
@@ -208,15 +317,7 @@
                 </ul>
             </div>
 
-            <!-- Step 7 -->
-            {{-- <div class="support-journey-card">
-            <h3>7. Mentorship Program</h3>
-            <ul>
-                <li>Personalized mentorship from African graduates</li>
-                <li>Integration guidance</li>
-                <li>Academic and emotional support</li>
-            </ul>
-        </div> --}}
+
         </div>
     </section>
 
@@ -228,7 +329,8 @@
         <div class="content5">
             <h2>An Easy-to-Use Platform Built to Deliver Quality Applications and More</h2>
         </div>
-
+<br>
+<br>
 
 
         <div class="info-section">
@@ -237,9 +339,6 @@
 
 
             <div class="services">
-                <br><br>
-
-
                 <div id="webcrumbs">
                     <div class="w-[1000px] bg-white rounded-lg ">
                         <div class="grid grid-cols-3 gap-10">
@@ -282,40 +381,10 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
+
 
                 <div class="leff">
-                    <!--<div class="d-grid gap-2">-->
-                    <!--  <a href="student_register.html"><button class="btn btn-primary" type="button">Try It Today</button></a>-->
-                    <!--</div><br><br>-->
-
-                    <!--  <div class="video2">-->
-                    <!--        <video controls>-->
-                    <!--          <source src="{{ asset('images/how we help.mp4') }}" type="video/mp4">-->
-
-                    <!--        Your browser does not support the video tag.-->
-                    <!--        </video>-->
-                    <!--</div>-->
-
                     <div class="box2">
-
-                        <!--<h2 id="feedb">Feedback from Our Trusted Partners</h2>-->
-
-                        <!--<main class="hero1">-->
-                        <!--  <div class="tab-navigation1">-->
-                        <!--    <button class="tab-button active1" data-target="students-video">STUDENTS</button>-->
-                        <!--    <button class="tab-button" data-target="recruitment-partners-video">RECRUITMENT PARTNERS</button>-->
-                        <!--    <button class="tab-button" data-target="partner-institutions-video">PARTNER INSTITUTIONS</button>-->
-                        <!--  </div>-->
-
-                        <!--  <div class="video-display">-->
-                        <!--    <video id="video-player" controls>-->
-                        <!--      <source id="video-source" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">-->
-                        <!--      Your browser does not support the video tag.-->
-                        <!--    </video>-->
-                        <!--  </div>-->
-                        <!--</main>-->
-
                         <div class="tag">
                             <h2 class="elementor-heading-title elementor-size-default">We’re Passionate About Making
                                 Education <br>Accessible for Everyone</h2>
@@ -323,13 +392,6 @@
 
                     </div>
                     <div class="row row-cols-1 row-cols-md-2 g-4" id="card-col">
-                        {{-- <div class="col">
-                            <video controls autoplay muted loop playsinline>
-                                <source src="{{ asset('images/how we help.mp4') }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div> --}}
-
                         <div class="col">
                             <video class="w-100" controls autoplay muted loop playsinline>
                                 <source src="{{ asset('images/how we help2.mp4') }}" type="video/mp4">
@@ -340,10 +402,6 @@
                     <br>
                 </div>
             </div>
-
-
-           
-
             <section class="country-section">
                 <h1>Trusted by Leading Institutions</h1>
                 <br>
@@ -405,8 +463,6 @@
 
             </section>
 
-        </div>
-        </div>
         </div>
 
         <script>
@@ -645,35 +701,34 @@
 
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
-<!-- <script>
-$(document).ready(function () {
-    $('.study-search-button').on('click', function (e) {
-        e.preventDefault();
+        <!-- <script>
+            $(document).ready(function() {
+                $('.study-search-button').on('click', function(e) {
+                    e.preventDefault();
 
-        let keyword = $('.study-search-input').val();
-        let countries = [];
-        $("input[name='countries[]']:checked").each(function () {
-            countries.push($(this).val());
-        });
+                    let keyword = $('.study-search-input').val();
+                    let countries = [];
+                    $("input[name='countries[]']:checked").each(function() {
+                        countries.push($(this).val());
+                    });
 
-        $.ajax({
-            url: '{{ route("search") }}',
-            method: 'GET',
-            data: {
-                keyword: keyword,
-                countries: countries
-            },
-            success: function (response) {
-                $('#search-results').html(response); // Output goes here
-            },
-            error: function () {
-                alert('Something went wrong.');
-            }
-        });
-    });
-});
-</script> -->
+                    $.ajax({
+                        url: '{{ route('search') }}',
+                        method: 'GET',
+                        data: {
+                            keyword: keyword,
+                            countries: countries
+                        },
+                        success: function(response) {
+                            $('#search-results').html(response); // Output goes here
+                        },
+                        error: function() {
+                            alert('Something went wrong.');
+                        }
+                    });
+                });
+            });
+        </script> -->
 
-<!-- Result container -->
-<!-- <div id="search-results"></div> -->
-
+        <!-- Result container -->
+        <!-- <div id="search-results"></div> -->

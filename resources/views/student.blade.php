@@ -111,15 +111,20 @@
             z-index: 1;
         }
 
-        .offer-card h3,
-        .offer-card h3 span,
+
+        .offer-card span,
         .offer-card ul li {
             color: #fff;
         }
 
-        .offer-card ul li i,
-        .offer-card h3 i {
+        .offer-card ul li i {
             color: #dbeafe;
+        }
+
+        .offer-card h3,
+        .offer-card h3 i {
+            color: #b92151;
+            font-weight: bold;
         }
 
 
@@ -201,7 +206,7 @@
             /* Horizontally center */
             padding: 12px 24px;
             border: none;
-            border-radius: 50px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -214,25 +219,30 @@
 
 
         .primary-btn {
-            background-color: #fff !important;
+            /* background-color: #fff !important; */
+            border: 2px solid #292E3E !important;
             /* color: #0644a6 !important; */
             color: #b92151 !important;
+            transition: all 0.3s ease;
         }
 
         .primary-btn:hover {
-            background-color: #f0f0f0 !important;
+            transform: translateY(-4px);
             text-decoration: none;
         }
 
         .secondary-btn {
-            background-color: transparent !important;
+            /* background-color: transparent !important; */
+            background: linear-gradient(135deg, #bb0e45, #ad0039) !important;
             color: #fff !important;
-            border: 2px solid #fff !important;
+            /* border: 2px solid #fff !important; */
+            transition: all 0.3s ease;
         }
 
         .secondary-btn:hover {
             background-color: rgba(255, 255, 255, 0.1) !important;
             text-decoration: none;
+            transform: translateY(-4px);
         }
 
 
@@ -318,7 +328,8 @@
         .mv-icon-circle {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+            background: linear-gradient(135deg, #bb0e45, #ad0039);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -418,7 +429,8 @@
         .testimonial-slide .icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+            background: linear-gradient(135deg, #bb0e45, #ad0039) !important;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -566,7 +578,7 @@
                 <p>We'll help you find and get into the perfect<br>
                     program in your dream destination.</p>
             </div>
-            <button type="button" class="btn btn-light"><a href="/search">Start your journey</a></button>
+            <button type="button" class="btn-light"><a href="/search">Start your journey</a></button>
         </div>
     </div>
 
@@ -604,31 +616,31 @@
         </div>
     </div>
 
- <section class="get-started-section">
-                <div class="get-started-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h2>Get Started Today</h2>
+    <section class="get-started-section">
+        <div class="get-started-icon">
+            <i class="fas fa-rocket"></i>
+        </div>
+        <h2>Get Started Today</h2>
 
-                <p>
-                    Join hundreds of African students already preparing for a <strong>brighter future</strong>. Whether
-                    you're
-                    applying,
-                    connecting, or learning—your journey begins here.
-                </p>
+        <p>
+            Join hundreds of African students already preparing for a <strong>brighter future</strong>. Whether
+            you're
+            applying,
+            connecting, or learning—your journey begins here.
+        </p>
 
-                <div class="action-buttons">
-                    <a href="/search" class="btn-get-started">
-                        <i class="fas fa-rocket"></i> Apply Now
-                    </a>
-                    <a href="/contactus" class="btn-get-started">
-                        <i class="fas fa-headset"></i> Contact Us
-                    </a>
-                    <a href="/contactus" class="btn-get-started">
-                        <i class="fas fa-video"></i> Attend Info Session
-                    </a>
-                </div>
-            </section>
+        <div class="action-buttons">
+            <a href="/search" class="btn-get-started">
+                <i class="fas fa-rocket"></i> Apply Now
+            </a>
+            <a href="/contactus" class="btn-get-started">
+                <i class="fas fa-headset"></i> Contact Us
+            </a>
+            <a href="/contactus" class="btn-get-started">
+                <i class="fas fa-video"></i> Attend Info Session
+            </a>
+        </div>
+    </section>
 
     {{-- new sections --}}
     <section class="offer-section">
@@ -939,27 +951,35 @@
         <div class="card-students">
             <img class="card-img-tops" src="{{ asset('images/institutions.jpg') }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Bachelors Degrees</h5>
-                <p class="card-text-student">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Bachelor’s Degree Programs</h5>
+                <p class="card-text-student">
+                    Explore undergraduate courses that provide strong academic skills and prepare you for future success in
+                    various fields.
+                </p>
                 <a href="/search" class="btn">Find a Bachelor degree</a>
             </div>
         </div>
+
         <div class="card-students">
             <img class="card-img-tops" src="{{ asset('images/partner.jpg') }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Master's Degrees</h5>
-                <p class="card-text-student">This card has supporting text below as a natural lead-in to additional
-                    content.This content is a little bit longer.</p>
+                <h5 class="card-title">Master’s Degree Programs</h5>
+                <p class="card-text-student">
+                    Enhance your career with graduate-level programs designed to develop expertise and leadership in your
+                    field of interest.
+                </p>
                 <a href="/search" class="btn">Find a Master's degree</a>
             </div>
         </div>
+
         <div class="card-students">
             <img class="card-img-tops" src="{{ asset('images/student.jpg') }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Online Programs & Degrees</h5>
-                <p class="card-text-student">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first .</p>
+                <h5 class="card-title">Online Study Opportunities</h5>
+                <p class="card-text-student">
+                    Discover flexible and accredited programs that let you learn from home while gaining valuable knowledge
+                    and credentials.
+                </p>
                 <a href="/search" class="btn">Find an online degree</a>
             </div>
         </div>
@@ -967,9 +987,11 @@
         <div class="card-students">
             <img class="card-img-tops" src="{{ asset('images/partner1.jpg') }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">PhD Research Degrees</h5>
-                <p class="card-text-student">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first .</p>
+                <h5 class="card-title">PhD Research Programs</h5>
+                <p class="card-text-student">
+                    Engage in rigorous doctoral research supported by faculty experts and resources to contribute to
+                    innovation and progress.
+                </p>
                 <a href="/search" class="btn">Find a PhD program</a>
             </div>
         </div>
@@ -977,33 +999,77 @@
 
 
 
+
     <style>
-        .card-text-student {
-            /* margin-top: 14px; */
+        /* Container holding all cards */
+        .card-bottom {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            /* width: 250px; */
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-
+        /* Each individual card */
         .card-students {
-            border: 1px solid #afacac;
-            padding: 10px;
-            width: 300px;
-            /* Adjust width as needed */
+            display: flex;
+            flex-direction: column;
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-            text-align: center;
-            padding-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            transition: all 0.3s ease;
+            /* Adjust for layout */
+            /* height: 100%; */
         }
 
         .card-students:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
+
+        /* Image on top of card */
+        .card-img-tops {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* Card body to hold content */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            padding: 20px !important;
+        }
+
+        /* Card content grows to fill space */
+        .card-text-student {
+            flex-grow: 1;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Button aligned at bottom */
+        .card-body .btn {
+            margin-top: auto;
+            /* align-self: flex-start;  */
+            background: linear-gradient(135deg, #bb0e45, #ad0039);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+
+        }
+
+        .card-body .btn:hover {
+            background: linear-gradient(135deg, #ad0039, #bb0e45);
+            color: white;
+        }
+
 
         .card-img-tops {
             width: 100%;
@@ -1013,9 +1079,7 @@
             border-top-right-radius: 10px;
         }
 
-        .card-body {
-            padding: 15px;
-        }
+
 
         .card-title {
             font-size: 18px;
@@ -1067,18 +1131,6 @@
             navbarCollapse.style.display = isExpanded ? 'none' : 'flex';
         });
     </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
         const slides = document.querySelectorAll(".testimonial-slide");

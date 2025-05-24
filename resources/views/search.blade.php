@@ -346,6 +346,16 @@
                 background: #1f4fa1;
             }
 
+            @media (max-width: 1024px) {
+                 .filter-search-wrapper {
+                    margin-top: 20%;
+                }
+
+
+                .programs-container {
+                    grid-template-columns: repeat(2, minmax(300px, 1fr));
+                }
+            }
             @media (max-width: 768px) {
                 .programs-container {
                     grid-template-columns: 1fr;
@@ -474,6 +484,10 @@
 
             /* Tablets and below */
             @media (max-width: 768px) {
+                .filter-search-wrapper {
+                    margin-top: 20%;
+                }
+
                 .modal-content {
                     padding: 24px 20px;
                     width: 95%;
@@ -497,6 +511,10 @@
 
             /* Small phones */
             @media (max-width: 480px) {
+                .filter-search-wrapper {
+                    margin-top: 20%;
+                }
+
                 .modal-content {
                     padding: 20px 16px;
                     width: 100%;
@@ -649,7 +667,6 @@
                     <select class="dropdown">
                         <option>Destination</option>
                         <option>USA</option>
-                        <option>UK</option>
                         <option>Canada</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
@@ -687,9 +704,9 @@
 
                 <div class="filter-item custom-dropdown">
                     <select>
-                        <option>Intakes</option>
-                        <option>Spring</option>
-                        <option>Fall</option>
+                        <option>Language</option>
+                        <option>English</option>
+                        <option>French</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
@@ -701,7 +718,7 @@
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
 
-                <div class="filter-btn-wrapper">
+                {{-- <div class="filter-btn-wrapper">
                     <button class="filter-btn">
                         <svg aria-hidden="true" viewBox="0 0 24 24" class="filter-icon" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -713,7 +730,7 @@
                         </svg>
                         All Filters
                     </button>
-                </div>
+                </div> --}}
             </div>
         </div>
         <hr>
@@ -738,14 +755,14 @@
             <!-- Program Cards -->
 
             <!-- @if ($programs->count())
-                            <ul>
-                                @foreach ($programs as $program)
+                                <ul>
+                                    @foreach ($programs as $program)
     <li>{{ $program->name }} - {{ $program->country }}</li>
     @endforeach
-                            </ul>
+                                </ul>
 @else
     <p>No programs found.</p>
-                        @endif -->
+                            @endif -->
 
             @if ($programs->count())
                 <div class="programs-container">
@@ -811,16 +828,16 @@
                             </div>
                         </div>
                         <!-- <div class="pagination">
-                            <button class="page-btn prev-btn" disabled>Previous</button>
-                            <div class="page-numbers">
-                                <button class="page-btn active">1</button>
-                                <button class="page-btn">2</button>
-                                <button class="page-btn">3</button>
-                                <button class="page-btn">4</button>
-                                <button class="page-btn">5</button>
-                            </div>
-                            <button class="page-btn next-btn">Next</button>
-                        </div> -->
+                                <button class="page-btn prev-btn" disabled>Previous</button>
+                                <div class="page-numbers">
+                                    <button class="page-btn active">1</button>
+                                    <button class="page-btn">2</button>
+                                    <button class="page-btn">3</button>
+                                    <button class="page-btn">4</button>
+                                    <button class="page-btn">5</button>
+                                </div>
+                                <button class="page-btn next-btn">Next</button>
+                            </div> -->
                     @endforeach
                 </div>
         </div>
@@ -884,16 +901,16 @@
             </div>
         </div>
         <!-- <div class="pagination">
-                    <button class="page-btn prev-btn" disabled>Previous</button>
-                    <div class="page-numbers">
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn">4</button>
-                        <button class="page-btn">5</button>
-                    </div>
-                    <button class="page-btn next-btn">Next</button>
-                </div> -->
+                        <button class="page-btn prev-btn" disabled>Previous</button>
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">4</button>
+                            <button class="page-btn">5</button>
+                        </div>
+                        <button class="page-btn next-btn">Next</button>
+                    </div> -->
 
 
         <script src="{{ asset('js/programs.js') }}" defer></script>

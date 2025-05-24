@@ -37,8 +37,8 @@
                 <ul>
                     <li><a href="{{ route('student') }}">Services</a></li>
                     {{-- <li><a href="{{ route('partner') }}">Partners</a></li> --}}
-                    <li><a href="{{ route('partner') }}">Resources</a></li>
-                    <li><a href="{{ route('web') }}">FAQ</a></li>
+                    <li><a href="{{ route('search') }}">Resources</a></li>
+                    <li><a href="{{ route('webinar') }}">FAQ</a></li>
                     <li><a href="{{ route('contactus') }}">Contact</a></li>
                     <li><a href="{{ route('blogs-pages') }}">Blogs</a></li>
                 </ul>
@@ -144,8 +144,8 @@
     }
 
     .custom-footer-col a:hover {
-        color: #fff;
-        text-decoration: underline;
+        color: #fff !important;
+        text-decoration: underline !important;
     }
 
     .custom-footer-col ul {

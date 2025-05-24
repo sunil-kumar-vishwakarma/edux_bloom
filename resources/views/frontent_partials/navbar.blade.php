@@ -6,6 +6,10 @@
     .nav-link i {
         font-size: medium;
     }
+
+    .d-flex {
+        gap: 5px;
+    }
 </style>
 
 <nav class="navbar navbar-expand-lg">
@@ -28,14 +32,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('student') }}">Students</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="{{ route('partner') }}">Recruitment</a>
-                </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('institutions') }}">Institutions</a>
+                    <a class="nav-link" href="{{ route('institutions') }}">Parents</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('search') }}">Program & Pathways</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contactus') }}">Resource Center</a>
+                </li>
+                {{-- <li class="nav-item">
+                    <a class="nav-link" href="{{ route('institutions') }}">Institutions</a>
+                </li> --}}
+
                 <!-- Hover Dropdown -->
-                <li class="nav-item dropdown-hover">
+                {{-- <li class="nav-item dropdown-hover">
                     <a class="nav-link" href="#">
                         Resource Center <i class="fas fa-chevron-down"></i>
                     </a>
@@ -43,14 +54,13 @@
                         <li><a class="dropdown-item" href="/blogs-pages">Edu-X Blog</a></li>
                         <li><a class="dropdown-item" href="/institutions">Edu-X Young Leaders</a></li>
                         <li><a class="dropdown-item" href="/events">Parent Resources</a></li>
-                        {{-- <li><a class="dropdown-item" href="/events">Visa & Travel Support</a></li> --}}
                         <li><a class="dropdown-item" href="/contactus">Contact us</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul>
             <div class="d-flex">
-                <a href="{{ route('student-login') }}" id="loginn" class="btn btn-custom me-2">Login</a>
+                <a href="{{ route('student-login') }}" id="loginn">Login</a>
                 <a href="{{ route('student-register') }}" class="btn btn-custom">Register</a>
             </div>
         </div>

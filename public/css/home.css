@@ -26,7 +26,8 @@ h2 {
 }
 
 .navbar-brand img {
-  height: 70px;
+  /* height: 70px; */
+  height: 60px;
   width: 70px;
   border-radius: 10px;
   /* background: radial-gradient(#ffffff 30%, #fff 99%); */
@@ -111,28 +112,42 @@ h2 {
 
 /* BUTTON STYLES */
 .btn-custom {
-  color: white;
-  background-color: #b92151;
-  font-weight: bold;
-  border: 0.5px solid white;
-  padding: 8px 20px;
-  margin: 5px;
-  border-radius: 7px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-#loginn{
-  color: #b92151;
-  background-color: white;
-  font-weight: bold;
-  border: 0.5px solid #292E3E;
+   background: linear-gradient(135deg, #bb0e45, #ad0039);
+    border-radius: 6px;
+    padding: 7px 15px;
+    border: 2px solid #b92151;
+    margin-top: 10px;
+    display: inline-block;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: white;
-  color: #b92151;
-  border-color:black;
+    .btn-custom:hover {
+    color: white;
+    background-color: #b92151;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+#loginn{
+    background-color: white !important;
+    border-radius: 6px;
+    padding: 7px 15px;
+    border: 0.5px solid #292E3E;
+    color: #b92151 !important;
+    font-weight: bold;
+     margin-top: 10px;
+    display: inline-block;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#loginn:hover {
+    transform: translateY(-4px);
+}
+
 
 .navbar-toggler {
     border: none; /* Add a border to make it visible */
@@ -315,6 +330,7 @@ body {
 
 .content {
     margin-top:6.9%;
+     padding: 40px 20px;
     background-image: url("https://i.ibb.co/7ttz7hH7/group-young-black-female.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -333,7 +349,7 @@ body {
     /* background-color: #b92151; */
     background-color: linear-gradient(135deg, #bb0e45, #ad0039);
     color: white;
-    font-weight: 550;
+    /* font-weight: 550; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -374,13 +390,13 @@ body {
 .btn-second:hover {
     color: white;
     background-color: #b92151;
-    transform: scale(1.03); /* scales the button up by 5% */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
 }
 .anchr {
     text-decoration: none;
-    color: inherit; /* inherits button text color */
+    /* color: inherit;  */
     display: flex;
     align-items: center;
     /*gap: 5px; */
@@ -393,18 +409,18 @@ body {
     background-color: transparent;
     color: black;
     border-radius: 6px;
+    border: 1px solid #292E3E;
     padding: 15px 30px;
-    border: 2px solid black;
     margin-top: 10px;
     display: inline-block;
     transition: all 0.3s ease;
 }
 
 .btn3:hover {
-    border-color: white;
+    border-color: #292E3E !important;
     color: white;
     background-color: transparent;
-    transform: scale(1.03);
+    transform: translateY(-4px);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 
 }
@@ -416,7 +432,9 @@ body {
 
 .btn3 .anchr {
     text-decoration: none;
-    color: inherit;
+    color: #b92151;
+    font-weight: bold;
+
 
 }
 
@@ -917,21 +935,6 @@ video {
 }
 
 
-
-
-.card-body {
-    /*text-align: center;*/
-    text-align: left;
-
-}
-
-.card-body .btn{
-    color:white;
-    background: linear-gradient(135deg, #bb0e45, #ad0039);
-    /* background-color: #b92151; */
-    /* border: 1px solid black; */
-}
-
 .row {
     justify-content: center;
     margin-left: -108px;
@@ -1429,9 +1432,7 @@ video {
     transition: background-color 0.3s ease;
 }
 
-.content2 .card-footer button:hover {
-    background-color: #004bb5;
-}
+
 
 .hero1 {
     padding: 0 5% 0;
@@ -1514,15 +1515,7 @@ video {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tab-button2:hover {
-    background-color: rgb(39, 39, 223);
-    color: white;
-}
 
-.tab-button2.active2 {
-    background-color: rgb(39, 39, 223);
-    color: white;
-}
 
 .video-display2 {
     margin-top: 30px;
@@ -1642,8 +1635,12 @@ video {
     }
 
     .content {
+        margin-top: 22%;
         height: 650px;
         background-position:left;
+    }
+    .study-search-section{
+        padding-bottom: 5%;
     }
 
     .content h1 {
@@ -2060,7 +2057,7 @@ video {
     }
 
     .content h1 {
-       width: 103%;
+       /* width: 103%; */
         margin-left: -75%;
     }
 
@@ -2072,6 +2069,9 @@ video {
         margin-left: -200px;
     }
 
+    .study-search-section{
+        margin-left: -80%;
+    }
     .btn4 {
         display: flex;
         width: 561px;
@@ -2406,28 +2406,27 @@ video {
 
 
 
-     .study-search-section {
+     /* .study-search-section {
         padding: 40px 20px;
         display: flex;
         justify-content: center;
-    }
+    } */
 
     .study-search-box {
         /* background-color: white; */
-        background: linear-gradient(90deg, #0644a6, #2764c5);
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        max-width: 800px;
-        width: 100%;
-        text-align: center;
+        /* background: linear-gradient(90deg, #0644a6, #2764c5); */
+        /* padding: 40px 20px; */
+        /* border-radius: 16px; */
+        /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+        /* max-width: 800px; */
+        /* width: 100%; */
+        /* text-align: center; */
     }
 
-    .study-search-heading {
+    /* .study-search-heading {
         margin-bottom: 20px;
         font-size: 24px;
         font-weight: 700;
-        /* color: #0644a6; */
         color: white;
     }
 
@@ -2436,7 +2435,7 @@ video {
         flex-wrap: wrap;
         gap: 12px;
         justify-content: center;
-    }
+    } */
 
     /* .study-search-input {
         flex: 1;
@@ -2447,9 +2446,9 @@ video {
         border-radius: 8px;
     } */
 
-    .study-input-wrapper {
+    /* .study-input-wrapper {
   position: relative;
-  width: 45%;
+  width: 80%;
 }
 
 .study-search-icon {
@@ -2472,7 +2471,7 @@ video {
 
  .country-checkboxes {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -2500,7 +2499,6 @@ video {
 
     .study-search-button {
         padding: 10px 20px;
-        /* color: #0644a6; */
         color: #b92151;
         background-color: white;
         font-size: 14px;
@@ -2509,7 +2507,7 @@ video {
         border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-    }
+    } */
 
 
     /* .study-search-button:hover {
@@ -2517,9 +2515,7 @@ video {
     } */
 
     @media (max-width: 600px) {
-.country-section{
-    margin-top: -60px;
-}
+
 
         .study-search-form-row {
             flex-direction: column;
@@ -2537,7 +2533,6 @@ video {
 
       .support-journey-section {
         padding: 20px 20px;
-        /* background: #f9f9f9; */
         text-align: center;
     }
 
@@ -2787,7 +2782,8 @@ video {
     .get-started-icon {
       width: 80px;
       height: 80px;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+      background: linear-gradient(135deg, #bb0e45, #ad0039);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -2833,7 +2829,8 @@ video {
     }
 
     .btn-get-started {
-      background: rgba(255, 255, 255, 0.1);
+      /* background: rgba(255, 255, 255, 0.1); */
+      background: linear-gradient(135deg, #bb0e45, #ad0039);
       border: 1px solid rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -2852,10 +2849,11 @@ video {
 
     .btn-get-started:hover {
       transform: translateY(-4px);
-      color: #ffffff;
+      color: #ffffff !important;
       text-decoration: none;
-      background: rgba(255, 255, 255, 0.2) !important;
-      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+      /* background: rgba(255, 255, 255, 0.2) !important; */
+      background: linear-gradient(135deg, #bb0e45, #ad0039) !important;
+      /* box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2); */
     }
 
     .btn-get-started i {

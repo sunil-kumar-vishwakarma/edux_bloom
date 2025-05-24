@@ -64,8 +64,8 @@
             .mv-icon-circle {
                 width: 70px;
                 height: 70px;
-                /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
-                background: linear-gradient(90deg, #0644a6, #2764c5);
+                background: linear-gradient(135deg, #bb0e45, #ad0039);
+                /* background: linear-gradient(90deg, #0644a6, #2764c5); */
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -73,7 +73,7 @@
                 margin: 0 auto 1.5rem auto;
                 font-size: 28px;
                 color: white;
-                box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+                box-shadow: 0 5px 15px #f13775;
                 line-height: 0;
                 /* ADD THIS LINE */
             }
@@ -123,7 +123,7 @@
             }
 
             .social-icons a:hover {
-                color: #b92151;
+                color: #ad0039;
             }
 
             iframe {
