@@ -70,9 +70,15 @@
             <div class="custom-footer-col">
                 <h3>Language:</h3>
                 <div class="footer-language-switcher">
-                    <a href="?lang=en" class="lang-option active">EN</a>
+                    <!-- <a href="#" onclick="doGTranslate('fr|en'); return false;">EN</a> -->
+                    <!-- <a class="VIpgJd-ZVi9od-vH1Gmf-ibnC6b" href="#"><div style="white-space: nowrap;"><span class="indicator">›</span><span class="text">English</span></div></a> -->
+                    <!-- <a href="?lang=en" class="lang-option active">EN</a> -->
+                    <a href="{{ route('change.lang', 'en') }}" class="lang-option active">EN</a>  
                     <span class="divider">|</span>
-                    <a href="?lang=fr" class="lang-option">FR</a>
+                    <!-- <a class="VIpgJd-ZVi9od-vH1Gmf-ibnC6b-gk6SMd" href="#"><div style="white-space: nowrap;"><span class="indicator">›</span><span class="text">French</span></div></a> -->
+                    <!-- <a href="#" onclick="doGTranslate('en|fr'); return false;">FR</a> -->
+                    <a href="{{ route('change.lang', 'fr') }}" class="lang-option">FR</a>
+                    <!-- <a href="?lang=fr" class="lang-option">FR</a> -->
                 </div>
             </div>
 
@@ -85,6 +91,45 @@
         </div>
     </div>
 </footer>
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,fr',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<!-- 
+<script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script> -->
+
+<!-- <script>
+function doGTranslate(langPair) {
+    if (langPair.value) langPair = langPair.value;
+    if (langPair == '') return;
+    var lang = langPair.split('|')[1];
+    var teCombo;
+
+    var attemptSetLang = function() {
+        teCombo = document.querySelector('.goog-te-combo');
+        if (teCombo) {
+            teCombo.value = lang;
+            teCombo.dispatchEvent(new Event('change'));
+        } else {
+            setTimeout(attemptSetLang, 500);
+        }
+    };
+
+    attemptSetLang();
+}
+</script> -->
+
+
 <style>
     .custom-footer {
         /*background-color:#1652b4;*/

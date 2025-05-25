@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Program;
 use App\Models\Country;
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class ProgramController extends Controller
 {
@@ -39,27 +43,76 @@ class ProgramController extends Controller
     //     return view('search', compact('programs'));
     // }
 
-    public function search(Request $request)
-{
-    $keyword = $request->input('keyword');
-    $countries = $request->input('countries');
+    // public function search(Request $request)
+    // {
+    //     $keyword = $request->input('keyword');
+    //     $countries = $request->input('countries');
 
-    $query = Program::query();
+    //     $query = Program::query();
 
-    if ($keyword) {
-        $query->where('college_course', 'like', '%' . $keyword . '%');
-    }
+    //     if ($keyword) {
+    //         $query->where('college_course', 'like', '%' . $keyword . '%');
+    //     }
 
-    if (!empty($countries)) {
-        $query->whereIn('campus_country', $countries);
-    }
-    // $programs = $query->paginate(8);
-    // $programs = $query->get();
-    $query->orderBy('id','desc');
-$programs = $query->paginate(9)->withQueryString();
+    //     if (!empty($countries)) {
+    //         $query->whereIn('campus_country', $countries);
+    //     }
+       
+    //     $query->orderBy('id','desc');
+    //     $programs = $query->paginate(9)->withQueryString();
 
-    return view('search', compact('programs'));
-}
+    //     return view('search', compact('programs'));
+    // }
+
+        public function search(Request $request)
+        {
+            $schools = School::all();
+
+            $keyword = $request->input('keyword');
+            $countries = $request->input('countries');
+
+            $query = Program::query();
+
+            if ($keyword) {
+                $query->where('college_course', 'like', '%' . $keyword . '%');
+            }
+
+            // if (!empty($countries)) {
+            //     $query->where('campus_country', $countries);
+            // }
+            if ($request->filled('countries') && $request->countries != 'Destination') {
+                $query->where('campus_country', $request->countries);
+            }
+
+            if ($request->filled('institute') && $request->institute != 'Institute') {
+                $query->where('college_name', 'like', '%' . $request->institute . '%');
+            }
+
+            if ($request->filled('program_level') && $request->program_level != 'Program') {
+                $query->where('program_level', $request->program_level);
+            }
+
+            if ($request->filled('field_of_study') && $request->field_of_study != 'Study') {
+                $query->where('college_course', $request->field_of_study);
+            }
+
+            if ($request->filled('language') && $request->language != 'Language') {
+                $query->where('language', $request->language);
+            }
+
+            // if ($request->filled('program_tag')) {
+            //     $query->where('program_tag', $request->program_tag);
+            // }
+
+            $programs = $query->orderBy('id', 'desc')->paginate(9)->withQueryString();
+
+            // Return only program cards in AJAX
+            if ($request->ajax()) {
+                return view('partials.programs', compact('programs','schools'))->render();
+            }
+
+            return view('search', compact('programs','schools'));
+        }
 
 
 
@@ -88,6 +141,8 @@ $programs = $query->paginate(9)->withQueryString();
             'duration' => 'required|string',
             'success_prediction' => 'required|string',
             'details' => 'required|string',
+            'program_level' => 'required|string',
+            'language' => 'required|string',
             // 'status' => 'required|string|in:Active,Inactive',
         ]);
 
@@ -111,7 +166,8 @@ $programs = $query->paginate(9)->withQueryString();
         $program->duration = $validated['duration'];
         $program->success_prediction = $validated['success_prediction'];
         $program->details = $validated['details'];
-        // $program->status = $validated['status'];
+        $program->program_level = $validated['program_level'];
+        $program->language = $validated['language'];
 
         // Store the image path
         if ($imagePath) {
@@ -193,4 +249,16 @@ $programs = $query->paginate(9)->withQueryString();
 
     //     return response()->json(['status' => $program->status]);
     // }
+
+     public function changeLanguage($locale)
+    {
+        if (!in_array($locale, ['en', 'fr'])) {
+            abort(400);
+        }
+
+        Session::put('locale', $locale);
+        App::setLocale($locale);
+
+        return Redirect::back(); // or redirect()->route('home')
+    }
 }

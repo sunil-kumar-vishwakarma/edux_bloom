@@ -37,6 +37,26 @@
                 @endforeach
                 
             </select>
+
+                
+                <label for="program_level">Campus Program Level:</label>
+            
+
+                <select id="program_level" name="program_level">
+                        <option value="Program Level">Program Level</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="Postgraduate">Postgraduate</option>
+                    </select>
+        
+           
+                <label for="language">Campus Language:</label>
+                <select id="language" name="language">
+                        <option value="Language">Language</option>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                    </select>
+            <!-- </div> -->
+
             <!-- <input type="text" id="campus_country" name="campus_country" placeholder="Enter campus city" required> -->
             <label for="campus_city">Campus City:</label>
             <input type="text" id="campus_city" name="campus_city" placeholder="Enter campus city" required>

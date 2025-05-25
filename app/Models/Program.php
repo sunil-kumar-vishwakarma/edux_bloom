@@ -24,6 +24,8 @@ class Program extends Model
         'success_prediction',
         'details',
         'image',
+        'language',
+        'program_level',
         // 'status'
     ];
 

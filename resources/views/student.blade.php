@@ -574,9 +574,8 @@
             </span>
 
             <div class="cont">
-                <h2 class="study-pro">Find Your Perfect Program</h2><br>
-                <p>We'll help you find and get into the perfect<br>
-                    program in your dream destination.</p>
+                <h2 class="study-pro">{{ __('messages.PerfectProgram') }}</h2><br>
+                <p>{{ __('messages.well_help_home') }} </p>
             </div>
             <button type="button" class="btn-light"><a href="/search">Start your journey</a></button>
         </div>

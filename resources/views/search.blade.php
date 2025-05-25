@@ -2,10 +2,6 @@
 @section('title', 'EduX | Student')
 @section('content')
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -648,9 +644,9 @@
                 background-color: #f5f5f5;
             }
         </style>
-    </head>
+    <!-- </head>
 
-    <body>
+    <body> -->
 
         <div class="filter-search-wrapper">
             <div class="search-container">
@@ -660,24 +656,26 @@
                             d="M16.386 18.211C14.885 19.335 13.02 20 11 20 6.03 20 2 15.971 2 11 2 6.03 6.03 2 11 2c4.971 0 9 4.03 9 9 0 2.228-.81 4.267-2.151 5.839l4.827 4.424-1.351 1.474-4.938-4.526ZM18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z">
                         </path>
                     </svg>
-                    <input type="text" class="search-bar" placeholder="What would you like to study?" />
+                    <input type="text" id="keyword" class="search-bar" placeholder="What would you like to study?" />
                 </div>
 
                 <div class="custom-dropdown">
-                    <select class="dropdown">
-                        <option>Destination</option>
-                        <option>USA</option>
-                        <option>Canada</option>
+                    <select class="dropdown" id="countries">
+                        <option value="Destination">Destination</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
 
                 <div class="custom-dropdown">
-                    <select class="dropdown">
-                        <option>Institute (School)</option>
-                        <option>Harvard</option>
-                        <option>MIT</option>
-                        <option>Stanford</option>
+                    <select class="dropdown" id="institute">
+                        <option value="Institute">Institute (School)</option>
+                        <!-- @foreach($schools as $value)
+                        <option value="{{$value->name}}">{{$value->name}}</option>
+                        @endforeach -->
+                        <option value="MIT">MIT</option>
+                        <option value="Stanford">Stanford</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
@@ -685,34 +683,34 @@
 
             <div class="filters">
                 <div class="filter-item custom-dropdown">
-                    <select>
-                        <option>Program Level</option>
-                        <option>Undergraduate</option>
-                        <option>Postgraduate</option>
+                    <select id="program_level">
+                        <option value="Program">Program Level</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="Postgraduate">Postgraduate</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
 
                 <div class="filter-item custom-dropdown">
-                    <select>
-                        <option>Field of Study</option>
-                        <option>Engineering</option>
-                        <option>Business</option>
+                    <select id="field_of_study">
+                        <option value="Study">Field of Study</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Business">Business</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
 
                 <div class="filter-item custom-dropdown">
-                    <select>
-                        <option>Language</option>
-                        <option>English</option>
-                        <option>French</option>
+                    <select id="language">
+                        <option value="Language">Language</option>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </div>
 
                 <div class="filter-item custom-dropdown">
-                    <select>
+                    <select id="program_tag">
                         <option>Program Tag</option>
                     </select>
                     <i class="fas fa-chevron-down dropdown-icon"></i>
@@ -752,27 +750,15 @@
                 </div>
             </div>
 
-            <!-- Program Cards -->
 
-            <!-- @if ($programs->count())
-                                <ul>
-                                    @foreach ($programs as $program)
-    <li>{{ $program->name }} - {{ $program->country }}</li>
-    @endforeach
-                                </ul>
-@else
-    <p>No programs found.</p>
-                            @endif -->
-
-            @if ($programs->count())
-                <div class="programs-container">
+        <!-- @if ($programs->count())
+                <div class="programs-container" id="program-results">
                     @foreach ($programs as $value)
                         <div class="program-card">
                             <div class="program-header">
                                 <img src="{{ asset('/public/storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
                                     alt="University Logo" class="program-logo" />
-                                <!-- <img src="{{ asset('Dashboard/dp.webp') }}" alt="Program Image" class="program-logo" /> -->
-                                <a href="#">
+                                  <a href="#">
                                     <h3>{{ $value->university_name }}</h3>
                                 </a>
                             </div>
@@ -827,96 +813,151 @@
                                 <button class="apply-btn">Create Application</button>
                             </div>
                         </div>
-                        <!-- <div class="pagination">
-                                <button class="page-btn prev-btn" disabled>Previous</button>
-                                <div class="page-numbers">
-                                    <button class="page-btn active">1</button>
-                                    <button class="page-btn">2</button>
-                                    <button class="page-btn">3</button>
-                                    <button class="page-btn">4</button>
-                                    <button class="page-btn">5</button>
-                                </div>
-                                <button class="page-btn next-btn">Next</button>
-                            </div> -->
+                        
                     @endforeach
                 </div>
+            @else
+            <p>No programs found.</p>
+            @endif
         </div>
         <div class="pagination">
             {{ $programs->appends(request()->input())->links() }}
         </div>
-    @else
-        <p>No programs found.</p>
-        @endif
+        -->
 
-
-
-
-
-        <!-- Success Prediction Modal -->
-        <div id="successModal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal()">&times;</span>
-                <h3>Success Prediction by Intake</h3>
-                <p class="note">
-                    Estimated based on ApplyBoard's historical data. We make no representations, warranties, or guarantees
-                    as to the
-                    information's accuracy.
-                </p>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-btn" onclick="toggleAccordion(this)">Sep 2025 </button>
-                        <div class="accordion-panel">
-                            <p><strong>Seat Availability:</strong> Very High</p>
-                            <p><strong>Turn Around Time:</strong> Very Fast</p>
-                            <p><strong>Conversion:</strong> Very High</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-btn" onclick="toggleAccordion(this)">Sep 2026</button>
-                        <div class="accordion-panel">
-                            <p><strong>Seat Availability:</strong> Very High</p>
-                            <p><strong>Turn Around Time:</strong> Very Fast</p>
-                            <p><strong>Conversion:</strong> Very High</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-btn" onclick="toggleAccordion(this)">Sep 2027</button>
-                        <div class="accordion-panel">
-                            <p><strong>Seat Availability:</strong> Very High</p>
-                            <p><strong>Turn Around Time:</strong> Slow</p>
-                            <p><strong>Conversion:</strong> Very High</p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr />
-                <div class="info-note">
-                    <p><strong>Conversion:</strong> Historical ratio of accepted to submitted applications.</p>
-                    <p><strong>Turn Around Time:</strong> Expected time to receive a letter of acceptance.</p>
-                    <p><strong>Seat Availability:</strong> Predicted likelihood of a seat being available.</p>
-                </div>
-            </div>
+        <div id="program-results">
+        @include('partials.programs', ['programs' => $programs])
         </div>
-        <!-- <div class="pagination">
-                        <button class="page-btn prev-btn" disabled>Previous</button>
-                        <div class="page-numbers">
-                            <button class="page-btn active">1</button>
-                            <button class="page-btn">2</button>
-                            <button class="page-btn">3</button>
-                            <button class="page-btn">4</button>
-                            <button class="page-btn">5</button>
-                        </div>
-                        <button class="page-btn next-btn">Next</button>
-                    </div> -->
+        <!-- <script src="{{ asset('js/programs.js') }}" defer></script> -->
 
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function fetchPrograms() {
+            let countries = $('#countries').val();
+            $.ajax({
+                url: "{{ route('search') }}",
+                type: "GET",
+                data: {
+                    countries: countries
+                },
+                success: function(response) {
+                    $('#program-results').html(response);
+                }
+            });
+        }
 
-        <script src="{{ asset('js/programs.js') }}" defer></script>
+        $('#keyword').on('keyup', function () {
+            fetchPrograms();
+        });
 
-    </body>
+        $('#countries').on('change', function () {
+            fetchPrograms();
+        });
+    </script> -->
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    </html>
+<script>
+    function fetchPrograms(url = "{{ route('search') }}") {
+        let keyword = $('#keyword').val();
+        
+        $.ajax({
+            url: url,
+            type: 'GET',
+            data: {
+                keyword: keyword,
+                // countries: countries
+            },
+            success: function(response) {
+                $('#program-results').html(response);
+            }
+        });
+    }
+
+    $('#keyword').on('keyup', function () {
+        fetchPrograms();
+    });
+
+    // $('#countries').on('change', function () {
+    //     fetchPrograms();
+    // });
+
+    $(document).on('click', '.pagination a', function (e) {
+        e.preventDefault();
+        fetchPrograms($(this).attr('href'));
+    });
+</script>
+<script>
+    function fetchProgramsCountry(url = "{{ route('search') }}") {
+        let countries = $('#countries').val();
+
+        $.ajax({
+            url: url,
+            type: "GET",
+            data: {
+                countries: countries
+            },
+            success: function(response) {
+                $('#program-results').html(response);
+            },
+            error: function(xhr) {
+                console.log('AJAX error:', xhr);
+            }
+        });
+    }
+
+    // When dropdown changes
+    $('#countries').on('change', function () {
+        fetchProgramsCountry();
+    });
+
+    // Handle AJAX pagination
+    $(document).on('click', '.pagination a', function (e) {
+        e.preventDefault();
+        let pageUrl = $(this).attr('href');
+        fetchProgramsCountry(pageUrl);
+    });
+</script>
+
+<script>
+    function fetchPrograms() {
+        $.ajax({
+            url: "{{ route('search') }}",
+            type: "GET",
+            data: {
+                keyword: $('#keyword').val(),
+                countries: $('#countries').val(),
+                institute: $('#institute').val(),
+                program_level: $('#program_level').val(),
+                field_of_study: $('#field_of_study').val(),
+                language: $('#language').val(),
+                program_tag: $('#program_tag').val()
+            },
+            success: function(response) {
+                $('#program-results').html(response); // Just update program list
+            }
+        });
+    }
+
+    $('#keyword, #countries, #institute, #program_level, #field_of_study, #language, #program_tag').on('change keyup', function () {
+        fetchPrograms();
+    });
+
+    $(document).on('click', '.pagination a', function (e) {
+        e.preventDefault();
+        let url = $(this).attr('href');
+        $.get(url, {
+            keyword: $('#keyword').val(),
+            countries: $('#countries').val(),
+            institute: $('#institute').val(),
+            program_level: $('#program_level').val(),
+            field_of_study: $('#field_of_study').val(),
+            language: $('#language').val(),
+            program_tag: $('#program_tag').val()
+        }, function (response) {
+            $('#program-results').html(response);
+        });
+    });
+</script>
+
 @endsection

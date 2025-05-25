@@ -101,6 +101,7 @@ Route::get('/user_myapplication', [UserDashController::class, 'user_myapplicatio
 Route::get('/userpayments', [UserDashController::class, 'userpayments'])->name('userpayments');
 Route::get('/education_history', [UserDashController::class, 'education_history'])->name('education_history');
 Route::get('/user_testScore', [UserDashController::class, 'user_testScore'])->name('user_testScore');
+Route::get('lang/{locale}', [ProgramController::class, 'changeLanguage'])->name('change.lang');
 
 
 Route::middleware(['auth'])->group(function () {

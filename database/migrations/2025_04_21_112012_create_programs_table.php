@@ -22,6 +22,8 @@ return new class extends Migration {
             $table->string('success_prediction');
             $table->text('details');
             $table->string('image');
+            $table->string('language');
+            $table->string('program_level');
             // $table->enum('status', ['Active', 'Inactive'])->default('Active');
             $table->timestamps();
         });
