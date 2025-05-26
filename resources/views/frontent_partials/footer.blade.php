@@ -73,7 +73,7 @@
                     <!-- <a href="#" onclick="doGTranslate('fr|en'); return false;">EN</a> -->
                     <!-- <a class="VIpgJd-ZVi9od-vH1Gmf-ibnC6b" href="#"><div style="white-space: nowrap;"><span class="indicator">›</span><span class="text">English</span></div></a> -->
                     <!-- <a href="?lang=en" class="lang-option active">EN</a> -->
-                    <a href="{{ route('change.lang', 'en') }}" class="lang-option active">EN</a>  
+                    <a href="{{ route('change.lang', 'en') }}" class="lang-option">EN</a>  
                     <span class="divider">|</span>
                     <!-- <a class="VIpgJd-ZVi9od-vH1Gmf-ibnC6b-gk6SMd" href="#"><div style="white-space: nowrap;"><span class="indicator">›</span><span class="text">French</span></div></a> -->
                     <!-- <a href="#" onclick="doGTranslate('en|fr'); return false;">FR</a> -->

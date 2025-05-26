@@ -191,7 +191,7 @@
                     <div class="card-login">
                       <h2>Reset Your Password</h2>
 
-                        <form id="loginForm">
+                        <!-- <form id="loginForm">
 
                             <div class="password-wrapper">
                                 <input type="password" id="password" placeholder="Password" required />
@@ -201,6 +201,23 @@
                             </div>
 
                             <button class="buttn" type="button">Reset Password</button>
+                        </form> -->
+
+
+                        <form action="{{ route('password.update') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="token" value="{{ $token }}">
+                            <input type="hidden" name="email" value="{{ $email }}">
+                            <label>New Password:</label>
+                            <div class="password-wrapper">
+                            <input type="password" name="password" id="password" required>
+                            <span class="toggle-password" onclick="togglePassword()">
+                                    <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                                </span>
+                            </div>
+                            <label>Confirm Password:</label>
+                            <input type="password" name="password_confirmation" required>
+                            <button type="submit" class="buttn">Reset Password</button>
                         </form>
 
 

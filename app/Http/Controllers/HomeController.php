@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Home;
 use App\Models\Blog;
 use App\Models\Page;
-
-
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Hash;
 class HomeController extends Controller
 {
     //
@@ -47,8 +47,51 @@ class HomeController extends Controller
     }
     public function forgotpassword2()
     {
+
         return view('forgotpassword2');
     }
+    public function sendResetLink(Request $request)
+{
+    
+    $request->validate([
+        'email' => 'required|email|exists:users,email',
+    ]);
+
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+// print_r($status);die;
+    return $status === Password::RESET_LINK_SENT
+        ? back()->with(['status' => __($status)])
+        : back()->withErrors(['email' => __($status)]);
+}
+
+public function showResetForm(Request $request, $token)
+    {
+        return view('forgotpassword2', ['token' => $token, 'email' => $request->email]);
+    }
+
+    public function reset(Request $request)
+    {
+        $request->validate([
+            'token' => 'required',
+            'email' => 'required|email|exists:users,email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->password = Hash::make($password);
+                $user->save();
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+            ? redirect()->route('student-login')->with('status', __($status))
+            : back()->withErrors(['email' => [__($status)]]);
+    }
+
     public function student()
     {
         $home = Home::all();

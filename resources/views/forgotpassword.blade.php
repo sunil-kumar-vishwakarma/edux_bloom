@@ -190,12 +190,21 @@
                 <div class="login-container">
                     <div class="card-login">
                         <h2>Send Email</h2>
-                        <form id="loginForm">
-                            <input type="email" id="email" placeholder="Email" required />
+                        <!-- <form id="loginForm" action="{{route('forgotpassword2')}}">
 
-                           <a href="/forgotpassword2"> <button class="buttn" type="button">Send</button></a>
+                            <input type="email" id="email" name="email" placeholder="Email" required />
+
+                           
+                             <button class="buttn" type="submit">Send</button>
+                           
+                        </form> -->
+
+                        <form action="{{ route('forgotpassword.send') }}" method="POST">
+                            @csrf
+                            <label for="email">Enter your email:</label>
+                            <input type="email" name="email" required>
+                            <button type="submit" class="buttn">Send Password Reset Link</button>
                         </form>
-
 
                         <div class="register">
                             <a href="/student-login"><i class="fas fa-arrow-left"></i>

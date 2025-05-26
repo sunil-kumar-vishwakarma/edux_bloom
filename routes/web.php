@@ -76,7 +76,12 @@ Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus'
 Route::get('/student-register', [HomeController::class, 'studentRegister'])->name('student-register');
 Route::get('/student-login', [HomeController::class, 'studentLogin'])->name('student-login');
 Route::get('/forgotpassword', [HomeController::class, 'forgotpassword'])->name('forgotpassword');
-Route::get('/forgotpassword2', [HomeController::class, 'forgotpassword2'])->name('forgotpassword2');
+Route::post('/forgotpassword2', [HomeController::class, 'forgotpassword2'])->name('forgotpassword2');
+Route::post('/sendResetLink', [HomeController::class, 'sendResetLink'])->name('forgotpassword.send');
+
+Route::get('/reset-password/{token}', [HomeController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [HomeController::class, 'reset'])->name('password.update');
+
 Route::get('/student', [HomeController::class, 'student'])->name('student');
 Route::get('/explr/school/programs', [HomeController::class, 'explrSchoolPrograms'])->name('explr_school_Programs');
 Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
