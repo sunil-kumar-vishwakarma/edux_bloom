@@ -61,7 +61,7 @@
             </ul>
             <div class="d-flex">
                 <a href="{{ route('student-login') }}" id="loginn">Login</a>
-                <a href="{{ route('student-register') }}" class="btn btn-custom">Register</a>
+                <a href="{{ route('student-register') }}" class="btn-custom">Register</a>
             </div>
         </div>
     </div>

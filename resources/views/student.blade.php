@@ -3,11 +3,6 @@
 @section('content')
 
     <style>
-        .navbar-brand img {
-            height: 70px !important;
-            width: auto;
-            margin-left: 17.5px;
-        }
 
         .login-signup a {
             background-color: blue;

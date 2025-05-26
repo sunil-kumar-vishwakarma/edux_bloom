@@ -125,6 +125,7 @@ h2 {
 
     .btn-custom:hover {
     color: white;
+    text-decoration: none !important;
     background-color: #b92151;
     transform: translateY(-4px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -146,6 +147,7 @@ h2 {
 
 #loginn:hover {
     transform: translateY(-4px);
+    text-decoration: none !important;
 }
 
 
@@ -328,7 +330,7 @@ body {
 }
 
 
-.content {
+/* .content {
     margin-top:6.9%;
      padding: 40px 20px;
     background-image: url("https://i.ibb.co/7ttz7hH7/group-young-black-female.jpg");
@@ -341,9 +343,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*text-align: center;*/
+    text-align: center;
     overflow: hidden;
-}
+} */
 
 .d-flex a {
     /* background-color: #b92151; */
@@ -353,14 +355,14 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.content .anchr {
+/* .content .anchr {
     text-decoration: none;
-}
+} */
 
-.btn2,
+/* .btn2,
 .btn3 {
     transition: background-color 0.3s ease;
-}
+} */
 
 .btn2 {
     font-family: Sans-serif;
@@ -374,8 +376,7 @@ body {
     height: max-content;
     margin-right: 55%;
 }
-.btn-second {
-    /* background-color: #b92151; */
+/* .btn-second {
     background: linear-gradient(135deg, #bb0e45, #ad0039);
     border-radius: 6px;
     padding: 7px 15px;
@@ -384,26 +385,20 @@ body {
     display: inline-block;
     color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease; /* includes color, background, and scale */
+    transition: all 0.3s ease;
 }
 
 .btn-second:hover {
-    color: white;
-    background-color: #b92151;
     transform: translateY(-4px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
 }
 .anchr {
     text-decoration: none;
-    /* color: inherit;  */
     display: flex;
     align-items: center;
-    /*gap: 5px; */
+
 }
-
-
-
 
 .btn3 {
     background-color: transparent;
@@ -436,13 +431,13 @@ body {
     font-weight: bold;
 
 
-}
+} */
 
 
 
-.btn4 {
+/* .btn4 {
     margin-right: 58%;
-}
+} */
 
 .underline ul li a:hover {
     text-decoration: underline;
@@ -452,7 +447,7 @@ body {
     text-underline-offset: 15px;
 }
 
-.content {
+/* .content {
     animation: fadeInUp 1.5s ease-out forwards;
 }
 
@@ -462,10 +457,10 @@ body {
     font-family: Montserrat, sans-serif !important;
     font-size: 3.5em;
     margin-left: -55%;
-    /*transform: scale(1.5, 1.5);   */
+    transform: scale(1.5, 1.5);
     animation: fadeInUp 1.5s ease-out forwards;
     margin-top: 30px;
-}
+} */
 
 .box2 {
     color: black;
@@ -541,10 +536,10 @@ body {
     margin-left: 80px;
 }
 
-.btn3:hover {
+/* .btn3:hover {
     border-color: white;
     color: white;
-}
+} */
 
 .content4 {
     margin-top: 60px;
@@ -1634,7 +1629,7 @@ video {
         justify-content: center;
     }
 
-    .content {
+    /* .content {
         margin-top: 22%;
         height: 650px;
         background-position:left;
@@ -1649,15 +1644,15 @@ video {
         color: black;
         width: 200px;
         text-align: center;
-    }
+    } */
 
 .content2{
     margin-bottom: 0;
 }
 
-    .btn4 {
+    /* .btn4 {
         margin-left: 55%;
-    }
+    } */
 
 #card-col{
      margin-top: 130%;
@@ -2056,10 +2051,10 @@ video {
         padding: 10px;
     }
 
-    .content h1 {
-       /* width: 103%; */
+    /* .content h1 {
+       width: 103%;
         margin-left: -75%;
-    }
+    } */
 
     .dropdown-menu{
         /* margin: 0px 40px; */
@@ -2072,16 +2067,16 @@ video {
     .study-search-section{
         margin-left: -80%;
     }
-    .btn4 {
+    /* .btn4 {
         display: flex;
         width: 561px;
         margin-left: -140px;
         gap: 10px;
-    }
+    } */
 
-    .content {
+    /* .content {
         padding-left: 234px;
-    }
+    } */
 
     .tab-nav {
         display: flex;
@@ -2285,13 +2280,13 @@ video {
 }
 
   @media (min-width: 1200px) {
-      .content h1 {
+      /* .content h1 {
     font-size: 2.6em;
     margin-top:-80px;
-      }
-      .btn3{
+      } */
+      /* .btn3{
           padding: 7px 15px;
-      }
+      } */
 
            .card {
     height: 550px;
@@ -2410,20 +2405,20 @@ video {
         padding: 40px 20px;
         display: flex;
         justify-content: center;
-    } */
-
-    .study-search-box {
-        /* background-color: white; */
-        /* background: linear-gradient(90deg, #0644a6, #2764c5); */
-        /* padding: 40px 20px; */
-        /* border-radius: 16px; */
-        /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
-        /* max-width: 800px; */
-        /* width: 100%; */
-        /* text-align: center; */
     }
 
-    /* .study-search-heading {
+    .study-search-box {
+        background-color: white;
+        background: linear-gradient(90deg, #0644a6, #2764c5);
+        padding: 40px 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+    }
+
+     .study-search-heading {
         margin-bottom: 20px;
         font-size: 24px;
         font-weight: 700;
@@ -2435,18 +2430,18 @@ video {
         flex-wrap: wrap;
         gap: 12px;
         justify-content: center;
-    } */
+    }
 
-    /* .study-search-input {
+     .study-search-input {
         flex: 1;
         min-width: 200px;
         padding: 10px 14px;
         font-size: 14px;
         border: 1px solid #747474;
         border-radius: 8px;
-    } */
+    }
 
-    /* .study-input-wrapper {
+    .study-input-wrapper {
   position: relative;
   width: 80%;
 }
@@ -2507,14 +2502,14 @@ video {
         border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-    } */
+    }
 
 
-    /* .study-search-button:hover {
+    .study-search-button:hover {
         background-color: #033074;
     } */
 
-    @media (max-width: 600px) {
+    /* @media (max-width: 600px) {
 
 
         .study-search-form-row {
@@ -2529,7 +2524,7 @@ video {
         .study-search-button {
             width: 100%;
         }
-    }
+    } */
 
       .support-journey-section {
         padding: 20px 20px;

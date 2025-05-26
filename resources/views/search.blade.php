@@ -813,7 +813,7 @@
                                 <button class="apply-btn">Create Application</button>
                             </div>
                         </div>
-                        
+
                     @endforeach
                 </div>
             @else
@@ -828,7 +828,7 @@
         <div id="program-results">
         @include('partials.programs', ['programs' => $programs])
         </div>
-        <!-- <script src="{{ asset('js/programs.js') }}" defer></script> -->
+        <script src="{{ asset('js/programs.js') }}" defer></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -860,7 +860,7 @@
 <script>
     function fetchPrograms(url = "{{ route('search') }}") {
         let keyword = $('#keyword').val();
-        
+
         $.ajax({
             url: url,
             type: 'GET',

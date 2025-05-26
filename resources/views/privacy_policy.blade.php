@@ -1,79 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('frontent.layouts.app')
+@section('title', 'EduX | Student')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    <!DOCTYPE html>
+    <html lang="en">
 
-        h1,
-        h2 {
-            color: #333;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Privacy Policy</title>
+        <style>
+            /* Container */
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 40px 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #333;
+                background-color: #fff;
+                line-height: 1.7;
+            }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+            /* Headings */
+            .container h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+                color: black;
+                text-align: center;
+            }
 
-        h2 {
-            margin-top: 20px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
+            .container h2 {
+                font-size: 1.8rem;
+                margin-top: 30px;
+                color: black;
+                border-bottom: 2px solid black;
+                padding-bottom: 5px;
+            }
 
-        p {
-            margin: 10px 0;
-        }
+            .container h3 {
+                font-size: 1.3rem;
+                margin-top: 20px;
+                color: black;
+            }
 
-        ul {
-            margin: 10px 0 10px 20px;
-        }
+            /* Paragraphs */
+            .container p {
+                margin: 15px 0;
+                font-size: 1rem;
+            }
 
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #555;
-            text-align: center;
-        }
+            /* Unordered Lists */
+            .container ul {
+                margin: 10px 0 20px 25px;
+                padding: 0;
+                list-style-type: disc;
+            }
 
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
+            .container ul li {
+                margin-bottom: 10px;
+                font-size: 1rem;
+            }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
+            /* Footer */
+            .container footer {
+                margin-top: 40px;
+                border-top: 1px solid #ccc;
+                padding-top: 20px;
+                font-size: 0.95rem;
+                text-align: center;
+                color: #777;
+            }
 
-<body>
-    <div class="container">
-         <p>{{$privacy_policy->title}}</p>
-         {!! $privacy_policy->description !!}
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 30px 15px;
+                }
 
-        <footer>
-            <p>&copy; [Insert Year] [Institution Name]. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
+                .container h1 {
+                    font-size: 2rem;
+                }
 
-</html>
+                .container h2 {
+                    font-size: 1.5rem;
+                }
+
+                .container h3 {
+                    font-size: 1.15rem;
+                }
+
+                .container p,
+                .container ul li {
+                    font-size: 0.95rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .container {
+                    padding: 20px 10px;
+                }
+
+                .container h1 {
+                    font-size: 1.7rem;
+                }
+
+                .container h2 {
+                    font-size: 1.3rem;
+                }
+
+                .container h3 {
+                    font-size: 1rem;
+                }
+
+                .container p,
+                .container ul li {
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <p>{{ $privacy_policy->title }}</p>
+            {!! $privacy_policy->description !!}
+
+            <footer>
+                <p>&copy; [Insert Year] [Institution Name]. All rights reserved.</p>
+            </footer>
+        </div>
+    </body>
+
+    </html>
+@endsection

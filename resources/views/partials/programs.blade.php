@@ -68,13 +68,62 @@
                                 <button class="apply-btn">Create Application</button>
                             </div>
                         </div>
-                        
+
                     @endforeach
                 </div>
             @else
             <p>No programs found.</p>
             @endif
         </div>
+
+          <!-- Success Prediction Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>Success Prediction by Intake</h3>
+      <p class="note">
+        Estimated based on ApplyBoard's historical data. We make no representations, warranties, or guarantees as to the
+        information's accuracy.
+      </p>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">Sep 2025</button>
+          <div class="accordion-panel">
+            <p><strong>Seat Availability:</strong> Very High</p>
+            <p><strong>Turn Around Time:</strong> Very Fast</p>
+            <p><strong>Conversion:</strong> Very High</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">Sep 2026</button>
+          <div class="accordion-panel">
+            <p><strong>Seat Availability:</strong> Very High</p>
+            <p><strong>Turn Around Time:</strong> Very Fast</p>
+            <p><strong>Conversion:</strong> Very High</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">Sep 2027</button>
+          <div class="accordion-panel">
+            <p><strong>Seat Availability:</strong> Very High</p>
+            <p><strong>Turn Around Time:</strong> Slow</p>
+            <p><strong>Conversion:</strong> Very High</p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="info-note">
+        <p><strong>Conversion:</strong> Historical ratio of accepted to submitted applications.</p>
+        <p><strong>Turn Around Time:</strong> Expected time to receive a letter of acceptance.</p>
+        <p><strong>Seat Availability:</strong> Predicted likelihood of a seat being available.</p>
+      </div>
+    </div>
+  </div>
+
         <div class="pagination">
             {{ $programs->withQueryString()->links() }}
             <!-- {{ $programs->appends(request()->input())->links() }} -->
