@@ -1,200 +1,303 @@
 @extends('frontent.layouts.app')
 @section('title', 'EduX | Home ')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <style>
-        /* Main Content Container */
-        /* .content {
-                max-width: 1600px;
-                margin: 0 auto;
-                padding: 40px 20px;
-                text-align: left;
-            } */
-
-        /* Heading */
-        .content h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            line-height: 1.4;
+        .hero-section {
+            background: linear-gradient(90deg, #0644a6, #5795f8);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            margin-top: 5%;
         }
 
-        /* Buttons Row */
+        .content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
         .btn4 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .anchr {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Study Search Section aligned to the left */
-        .study-search-section {
-            width: 100%;
-            display: block;
-            /* Remove flexbox */
-            margin-top: 0;
-        }
-
-        /* Search Box aligned left */
-        .study-search-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            width: 100%;
-            max-width: 500px;
-            text-align: left;
-            color: #fff;
-            /* Light text on dark backgrounds */
-        }
-
-
-        /* Heading inside the box */
-        .study-search-heading {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        /* Form Structure */
-        .study-search-form-row {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        /* Input Box */
-        .study-input-wrapper {
-            display: flex;
-            align-items: center;
-            background: #f5f5f5;
-            padding: 10px 12px;
-            border-radius: 5px;
-        }
-
-        .study-search-input {
-            flex: 1;
-            border: none;
-            background: transparent;
-            font-size: 16px;
-            margin-left: 8px;
-            outline: none;
-        }
-
-        /* Icon */
-        .study-search-icon {
-            flex-shrink: 0;
-        }
-
-        /* Flex row for checkboxes + button */
-        .search-options-row {
-            display: flex;
-            align-items: center;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
+            margin-bottom: 50px;
         }
 
-        /* Checkbox styling */
+        .btn-second,
+        .study-search-button {
+            border: none;
+            color: #fff;
+            background: linear-gradient(135deg, #bb0e45, #ad0039);
+        }
+
+        .btn3 {
+            background-color: #ffffff;
+            color: #b92151;
+            border: 0.5px solid #292E3E;
+        }
+
+        .btn-second,
+        .btn3 {
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-second:hover,
+        .btn3:hover {
+            transform: translateY(-4px);
+        }
+
+        .anchr {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .study-search-box {
+            background: #fff;
+            padding: 30px 30px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .study-search-form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .study-input-wrapper {
+            position: relative;
+        }
+
+        .study-search-input {
+            padding: 8px 10px 8px 40px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .study-search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
         .country-checkboxes {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .country-checkboxes label {
             display: flex;
             align-items: center;
             gap: 6px;
+            color: black;
+            padding: 8px 12px;
+            border-radius: 6px;
             font-size: 14px;
-            margin-bottom: 0;
-            /* remove space if any */
-        }
-
-
-        .country-checkboxes img {
-            width: 20px;
-        }
-
-        /* Search Button */
-        .study-search-button {
-            /* background-color: #007bff; */
-            background: linear-gradient(135deg, #bb0e45, #ad0039);
-            color: white;
-            border: none;
-            padding: 10px 16px;
-            font-size: 16px;
-            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+        }
+
+        .flag-icon {
+            width: 20px;
+            height: 14px;
+            object-fit: cover;
+        }
+
+        .study-search-button {
+            /* background-color: #0644a6; */
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .study-search-button:hover {
-            background-color: #0056b3;
+            background-color: #022e7d;
+        }
+
+        /* Large laptop (below 1600px) */
+        @media (max-width: 1599px) {
+            .hero-section {
+                padding: 80px 20px;
+            }
+
+            .content h1 {
+                font-size: 2.5rem;
+            }
+
+            .study-search-box {
+                max-width: 700px;
+                padding: 25px 25px;
+            }
+
+            .btn-second,
+            .btn3 {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+
+            .study-search-button {
+                font-size: 14px;
+            }
+        }
+
+        /* Tablet (below 992px) */
+        @media (max-width: 991px) {
+            .hero-section {
+                padding: 200px 20px;
+            }
+
+            .content h1 {
+                font-size: 2.2rem;
+            }
+
+            .study-search-box {
+                max-width: 90%;
+                padding: 20px;
+            }
+
+            .btn-second,
+            .btn3 {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+
+            .study-search-input {
+                font-size: 14px;
+                padding: 10px 10px 10px 40px;
+            }
+
+            .study-search-button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        /* Mobile (below 768px) */
+        @media (max-width: 767px) {
+            .content h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn4 {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .study-search-box {
+                padding: 18px;
+            }
+
+            .country-checkboxes {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .study-search-input {
+                font-size: 13.5px;
+                padding: 6px 10px 6px 28px;
+            }
+
+            .study-search-button {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+
+        /* Extra small mobile (below 480px) */
+        @media (max-width: 479px) {
+            .hero-section {
+                padding: 100px 15px;
+            }
+
+            .content h1 {
+                font-size: 1.6rem;
+            }
+
+            .study-search-box {
+                padding: 16px;
+            }
+
+            .study-search-input {
+                font-size: 13px;
+                padding: 10px 8px 10px 40px;
+            }
+
+            .btn-second,
+            .btn3,
+            .study-search-button {
+                font-size: 14px;
+                padding: 14px 14px;
+            }
         }
     </style>
 
-    <div class="content">
-        <h1>Start Early, Dream Big, <br />Succeed Globally</h1>
-        <div class="btn4">
-            <button class="btn-second">
-                <a href="/search" class="anchr">
-                    <i class="fas fa-user-plus"></i> Join Our Program
-                </a>
-            </button>
-            <button class="btn3"><a href="/contactus" class="anchr">Book a Free Consultation</a></button>
-        </div>
-        <div class="study-search-section">
-            <div class="study-search-box">
-                {{-- <h2 class="study-search-heading">10 million searches and counting</h2> --}}
-                <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
-                    <!-- Input Field -->
-                    <div class="study-input-wrapper">
-                        <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
-                            <path
-                                d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                        </svg>
-                        <input type="text" name="keyword" class="study-search-input"
-                            placeholder="What would you like to study?">
-                    </div>
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
-                    <!-- Row for checkboxes and button -->
-                    <div class="search-options-row">
-                        <!-- Country Checkboxes -->
-                        <div class="country-checkboxes">
-                            <label>
-                                <input type="checkbox" name="countries[]" value="Canada">
-                                <img src="https://flagcdn.com/ca.svg" alt="Canada"
-                                    style="width: 20px; vertical-align: middle;">
-                                Canada
-                            </label>
-                            <label>
-                                <input type="checkbox" name="countries[]" value="United States">
-                                <img src="https://flagcdn.com/us.svg" alt="USA"
-                                    style="width: 20px; vertical-align: middle;">
-                                United States
-                            </label>
-                        </div>
-
-                        <!-- Search Button -->
-                        <button type="submit" class="study-search-button">Search</button>
-                    </div>
-
-                </form>
-
-
+    <div class="hero-section">
+        <div class="content">
+            <h1>Start Early, Dream Big,<br />Succeed Globally</h1>
+            <div class="btn4">
+                <button class="btn-second">
+                    <a href="/search" class="anchr">
+                        <i class="fas fa-user-plus"></i> Join Our Program
+                    </a>
+                </button>
+                <button class="btn3">
+                    <a href="/contactus" class="anchr">Book a Free Consultation</a>
+                </button>
             </div>
         </div>
-    </div>
 
+        <div class="study-search-box">
+            <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
+                <!-- Input Field -->
+                <div class="study-input-wrapper">
+                    <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+                        <path
+                            d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                    </svg>
+                    <input type="text" name="keyword" class="study-search-input"
+                        placeholder="What would you like to study?">
+                </div>
+
+                <!-- Country Checkboxes -->
+                <div class="country-checkboxes">
+                    <label>
+                        <input type="checkbox" name="countries[]" value="Canada">
+                        <img src="https://flagcdn.com/ca.svg" alt="Canada" class="flag-icon"> Canada
+                    </label>
+                    <label>
+                        <input type="checkbox" name="countries[]" value="United States">
+                        <img src="https://flagcdn.com/us.svg" alt="USA" class="flag-icon"> United States
+                    </label>
+                </div>
+
+                <!-- Search Button -->
+                <button type="submit" class="study-search-button">Search</button>
+            </form>
+        </div>
+    </div>
 
 
     <section class="why-edux-simple">
@@ -329,8 +432,8 @@
         <div class="content5">
             <h2>An Easy-to-Use Platform Built to Deliver Quality Applications and More</h2>
         </div>
-<br>
-<br>
+        <br>
+        <br>
 
 
         <div class="info-section">

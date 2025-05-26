@@ -1,3 +1,74 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.card-institutions {
+    background: linear-gradient(90deg, #0644a6, #2764c5);
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-institutions:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-institutions .icon {
+    margin-bottom: 16px;
+}
+
+.card-institutions .icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.card-institutions h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.card-institutions p {
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
+/* Responsive Grid */
+
+/* ≥576px: 2 columns */
+@media (min-width: 576px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ≥768px: 3 columns */
+@media (min-width: 768px) {
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ≥992px: 4 columns */
+@media (min-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 
         #loginn{
             margin-bottom: 6px !important;
@@ -28,10 +99,7 @@
             gap: 15px;
         }
 
-        .navbar-brand img {
-            height: 70px !important;
-            width: auto;
-        }
+
 
         /* Center navbar links on larger screens */
         .navbar-nav {
@@ -204,17 +272,19 @@
         .text button {
             height: 40px;
             width: 150px;
-            background-color: #b92151;
+            background: linear-gradient(135deg, #bb0e45, #ad0039);
             color: white;
             font-weight: bold;
             border: none;
             border-radius: 8px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-top: 20px;
+            transition: all 0.3s ease;
         }
 
         .text button:hover {
-            background-color: #b92151 !important;
+            background: linear-gradient(135deg, #bb0e45, #ad0039) !important;
+              transform: translateY(-4px);
         }
 
         .journey-section {
@@ -245,15 +315,21 @@
             max-width: 265px;
         }
 
-        .icon {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+       .icon {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
         .step h3 {
             font-size: 17px;
             color: #333;
             margin: 10px 0;
+        }
+         .country-section h1{
+            color: #333 !important;
         }
 
         .step p {
@@ -304,39 +380,7 @@
             gap: 100px;
         }
 
-        .card-institutions {
-            background-color: white;
-            color: black;
-            width: 250px;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
 
-        .card-icon {
-            width: 135px;
-            height: 130px;
-            margin-bottom: 15px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-left: 33px;
-        }
-
-        .card-institutions h2 {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .card-institutions p {
-            font-size: 1.1em;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 550;
-            color: #555;
-            min-width: 100px;
-
-        }
 
 
         .success-Story {
@@ -363,53 +407,16 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
-            margin-top: 60px;
+            /* margin-top: 60px; */
         }
+
+
 
         .container1 h1 {
             font-size: 26px;
         }
 
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-            max-width: 900px;
-            width: 100%;
-        }
 
-        .card-container .card-institutions {
-            /* background-color: #fff; */
-            background: linear-gradient(90deg, #0644a6, #2764c5);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            width: 200px;
-            margin-left: 170px;
-        }
-
-        .card-container .icon img {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 15px;
-        }
-
-        .card-container h3 {
-            font-size: 1.2em;
-            color: white;
-            margin-bottom: 10px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .card-container p {
-            font-size: 0.9em;
-            color: #fffcfcd1;
-        }
-
-        .card-container .cta {
-            margin-top: 20px;
-        }
 
         .cta button a {
             text-decoration: none;
@@ -472,9 +479,15 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            border: 2px solid #000000c2;
+            /* border: 2px solid #000000c2; */
             border-radius: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         .step-icon img {
@@ -540,49 +553,7 @@
                 margin-top: 70px;
             }
 
-            .card-container {
-                max-width: 70%;
-                gap: 16px;
-            }
 
-            .card-container .card-institutions {
-                padding: 18px;
-            }
-
-            .card-container .icon img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .card-container h3 {
-                font-size: 1.1em;
-            }
-
-            .card-container p {
-                font-size: 0.85em;
-            }
-
-            .card-container {
-                max-width: 60%;
-                gap: 16px;
-            }
-
-            .card-container .card-institutions {
-                padding: 18px;
-            }
-
-            .card-container .icon img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .card-container h3 {
-                font-size: 1.1em;
-            }
-
-            .card-container p {
-                font-size: 0.85em;
-            }
 
 
         }
@@ -742,49 +713,7 @@
             }
         }
 
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 700px;
-            width: 100%;
-        }
 
-        .card-container .card-institutions {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            width: 350px;
-            margin-left: 250px;
-            border: 0.5px solid black;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card-container .icon img {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 15px;
-        }
-
-        .card-container h3 {
-            font-size: 1.2em;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .card-container p {
-            font-size: 0.9em;
-            color: #fffcfcd1;
-        }
-
-        .card-container .cta {
-            margin-top: 20px;
-        }
 
         .cta button {
             background-color: #0065ff;
@@ -950,11 +879,7 @@
 
         }
 
-        .card1 .card-institutions {
-            width: 450px;
-            padding: 20px;
-            border: 1px solid black;
-        }
+
 
         .card1 button {
             color: white;
@@ -1452,11 +1377,7 @@
                 margin-left: 40px;
             }
 
-            .card-institutions {
-                width: 90%;
-                margin-bottom: 20px;
-                height: 200px;
-            }
+
 
             .card-icon {
                 width: 100px;
@@ -1464,13 +1385,7 @@
                 margin-left: 50px;
             }
 
-            .card-institutions h2 {
-                font-size: 1.3em;
-            }
 
-            .card-institutions p {
-                font-size: 1em;
-            }
 
             /* Success Story Section */
             .success-Story h1 {
@@ -1517,20 +1432,7 @@
             }
 
             /* Card container for Mobile */
-            .card-container {
-                display: block;
-                max-width: 100%;
-            }
 
-            .card-container .card-institutions {
-                width: 80%;
-                height: 300px;
-                margin-left: 30px;
-            }
-
-            .card-container .card-institutions p {
-                font-size: 13px;
-            }
 
             /* Application Section */
             .application img {
@@ -1647,10 +1549,6 @@
                 margin-top: 20px;
             }
 
-            .card1 .card-institutions {
-                width: 100%;
-                margin-left: 0;
-            }
 
 
             .form-group {
@@ -1748,6 +1646,10 @@
 
         /* For Tablet / Small Laptop (768px to 1023px) */
         @media (max-width: 1023px) and (min-width: 768px) {
+           .head{
+        width: 400px !important;
+    }
+
             .container1 {
                 padding: 30px;
             }
@@ -1760,22 +1662,9 @@
                 font-size: 1rem;
             }
 
-            .card-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
 
-            .card-institutions {
-                width: 45%;
-                /* Adjust width for smaller screens */
-                padding: 15px;
-            }
 
-            .card-institutions h3 {
-                font-size: 1.1rem;
-            }
+
 
 
             .text {
@@ -1951,9 +1840,7 @@
                 }
 
 
-                .card1 .card-institutions {
-                    height: 500px;
-                }
+
 
                 .nav-item {
                     width: 100%;
@@ -1996,3 +1883,6 @@
             #firstcol li a:hover {
                 text-decoration: none;
             }
+
+
+
