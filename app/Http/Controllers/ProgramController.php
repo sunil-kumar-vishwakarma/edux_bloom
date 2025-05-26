@@ -104,7 +104,7 @@ class ProgramController extends Controller
             //     $query->where('program_tag', $request->program_tag);
             // }
 
-            $programs = $query->orderBy('id', 'desc')->paginate(9)->withQueryString();
+            $programs = $query->orderBy('id', 'desc')->paginate(12)->withQueryString();
 
             // Return only program cards in AJAX
             if ($request->ajax()) {

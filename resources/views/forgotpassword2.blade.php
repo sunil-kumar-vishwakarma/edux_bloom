@@ -189,6 +189,20 @@
             <div class="card1-login">
                 <div class="login-container">
                     <div class="card-login">
+                        @if (session('success'))
+                            <div id="alert-success" class="alert alert-success">
+                                <i class="fas fa-check-circle"></i>
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if (session('error'))
+                            <div id="alert-error" class="alert alert-danger">
+                                <i class="fas fa-times-circle"></i>
+                                {{ session('error') }}
+                            </div>
+                        @endif
+                        
                       <h2>Reset Your Password</h2>
 
                         <!-- <form id="loginForm">

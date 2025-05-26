@@ -60,10 +60,10 @@ class HomeController extends Controller
     $status = Password::sendResetLink(
         $request->only('email')
     );
-// print_r($status);die;
+
     return $status === Password::RESET_LINK_SENT
-        ? back()->with(['status' => __($status)])
-        : back()->withErrors(['email' => __($status)]);
+        ? back()->with(['success' => __($status)])
+        : back()->withErrors(['error' => __($status)]);
 }
 
 public function showResetForm(Request $request, $token)
@@ -88,8 +88,8 @@ public function showResetForm(Request $request, $token)
         );
 
         return $status === Password::PASSWORD_RESET
-            ? redirect()->route('student-login')->with('status', __($status))
-            : back()->withErrors(['email' => [__($status)]]);
+            ? redirect()->route('student-login')->with('success', __($status))
+            : back()->withErrors(['error' => [__($status)]]);
     }
 
     public function student()
