@@ -38,15 +38,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('search') }}">Program & Pathways</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contactus') }}">Resource Center</a>
-                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('institutions') }}">Institutions</a>
                 </li> --}}
 
                 <!-- Hover Dropdown -->
-                {{-- <li class="nav-item dropdown-hover">
+                <li class="nav-item dropdown-hover">
                     <a class="nav-link" href="#">
                         Resource Center <i class="fas fa-chevron-down"></i>
                     </a>
@@ -56,7 +53,7 @@
                         <li><a class="dropdown-item" href="/events">Parent Resources</a></li>
                         <li><a class="dropdown-item" href="/contactus">Contact us</a></li>
                     </ul>
-                </li> --}}
+                </li>
 
             </ul>
             <div class="d-flex">

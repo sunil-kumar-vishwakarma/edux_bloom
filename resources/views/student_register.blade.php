@@ -293,7 +293,7 @@
         {{-- <br><br><br><br> --}}
         <!-- Left side image -->
         <div class="imag">
-            <img src="{{ asset('images/register.png') }}" alt="Register Image" />
+            <img src="https://i.ibb.co/9HR2LXNs/6310507.jpg" alt="Register Image" />
         </div>
 
         <!-- Right side card -->

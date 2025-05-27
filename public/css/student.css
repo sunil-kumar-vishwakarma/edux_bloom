@@ -8,6 +8,7 @@
 
 /* Ensure body and html take up full viewport */
 html, body {
+    font-family: "Open Sans", Sans-serif;
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     margin: 0;
@@ -891,7 +892,6 @@ color: white;
 .card1 button {
   color: white;
   border: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   margin-bottom: 40px;
 }
@@ -1010,7 +1010,6 @@ input[type="password"] {
 }
 
 .contents #bold{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 13px;
   font-weight: bold;
 }
@@ -1034,7 +1033,6 @@ input[type="password"] {
 
 #login p{
   font-size: 17px;
-  font-family: sans-serif;
   color: #827f7f;
 
 }

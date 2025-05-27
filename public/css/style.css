@@ -1,7 +1,6 @@
   /* Global Styles */
   body {
       margin: 0;
-      /* font-family: 'Roboto', sans-serif; */
       font-family: "Open Sans", Sans-serif;
       background: radial-gradient(circle, #141E30, #243B55);
       display: flex;
@@ -1348,7 +1347,6 @@
   .main-content1 {
       padding: 20px;
       background-color: #f8f9fa;
-      font-family: 'Arial', sans-serif;
   }
 
   /* Subscription Table */

@@ -3,9 +3,9 @@
         <div class="custom-footer-row">
             <!-- Column 1 -->
             <div class="custom-footer-col">
-                <a class="navbar-brand" href="/">
+                {{-- <a class="navbar-brand" href="/">
                     <img src="{{ asset('images/edu-x white.png') }}" alt="Edu-X Logo" height="70">
-                </a>
+                </a> --}}
                 <p>US Address: 3337 Salem Cove Drive SE,N2H 6R3</p>
                 <p>Africa Office Addresses: </p>
                 <p>Senegal: Cite de l'emergence, Immeuble 10,<br> unit 21, Dakar Plateau </p>
@@ -73,7 +73,7 @@
                     <!-- <a href="#" onclick="doGTranslate('fr|en'); return false;">EN</a> -->
                     <!-- <a class="VIpgJd-ZVi9od-vH1Gmf-ibnC6b" href="#"><div style="white-space: nowrap;"><span class="indicator">›</span><span class="text">English</span></div></a> -->
                     <!-- <a href="?lang=en" class="lang-option active">EN</a> -->
-                    <a href="{{ route('change.lang', 'en') }}" class="lang-option">EN</a>  
+                    <a href="{{ route('change.lang', 'en') }}" class="lang-option">EN</a>
                     <span class="divider">|</span>
                     <!-- <a class="VIpgJd-ZVi9od-vH1Gmf-ibnC6b-gk6SMd" href="#"><div style="white-space: nowrap;"><span class="indicator">›</span><span class="text">French</span></div></a> -->
                     <!-- <a href="#" onclick="doGTranslate('en|fr'); return false;">FR</a> -->
@@ -103,8 +103,8 @@
         }, 'google_translate_element');
     }
 </script>
-<!-- 
-<script type="text/javascript" 
+<!--
+<script type="text/javascript"
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script> -->
 

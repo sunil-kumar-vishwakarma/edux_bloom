@@ -13,6 +13,49 @@
         <a href="/contactus"> <button type="button" class="btn btn-primary" id="workWithUsBtn">Work With US</button></a>
     </div>
     <br><br>
+    <br><br>
+
+    {{-- empowering section --}}
+    <section class="mission-vision-modern">
+        <div class="mv-container">
+            <h2 class="mv-main-heading">
+                Empowering African Students Through<br />
+                <span class="accent">Connection, Guidance, and Inspiration</span>
+            </h2>
+
+            <div class="mv-section">
+                <div class="mv-flex-cards">
+                    <div class="mv-glass-card">
+                        <div class="mv-icon-circle">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="mv-subheading">Our Mission</h3>
+                        <p>
+                            To ensure that every African student studying in North America feels supported, understood,
+                            and
+                            guided—not just academically, but culturally, emotionally, and socially—through a strong
+                            mentorship
+                            network.
+                        </p>
+                    </div>
+
+                    <div class="mv-glass-card">
+                        <div class="mv-icon-circle">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="mv-subheading">Our Vision</h3>
+                        <p>
+                            A future where African students thrive in global classrooms—not only by earning diplomas,
+                            but by
+                            becoming confident leaders, engaged citizens, and empowered contributors to their
+                            communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <section class="journey">
         <div class="journey-section">
@@ -51,7 +94,7 @@
     </section>
 
 
-    </div>
+
 
 
     <div class="work" id="letsgetstartedc">
@@ -153,7 +196,38 @@
 
     </section>
 
+<!-- testimonial -->
+    <div class="testimonial-section">
+        <h2 class="testimonials-heading">What Our Students & Mentors Say</h2>
 
+        <div class="testimonial-slider-wrapper">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide">
+                    <i class="fas fa-hand-holding-heart icon"></i>
+                    <p class="testimonial-text">“My mentor helped me find housing, prepare for my first class, and even
+                        navigate campus jobs. It made my transition so much smoother.”</p>
+                    <p class="testimonial-author">— Fatou, student in Ottawa</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <i class="fas fa-user-graduate icon"></i>
+                    <p class="testimonial-text">“Being a mentor is the most fulfilling thing I do. I feel like I’m
+                        giving back and building the Africa of tomorrow.”</p>
+                    <p class="testimonial-author">— Ismael, MBA graduate in Texas</p>
+                </div>
+
+                <!-- Add more slides if needed -->
+            </div>
+        </div>
+
+        <!-- Dot navigation -->
+        <div class="swiper-dots" id="swiperDots"></div>
+
+    </div>
+    <br>
+    <br>
 
     <div class="container1">
         <h1>We're Invested in Caring for You and the<br> Ecosystem of International Education</h1>
@@ -189,7 +263,7 @@
             </div>
         </div>
     </div>
-    </section>
+
     <br>
 
     <script>
@@ -228,4 +302,42 @@
                 });
             });
         });
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll(".testimonial-slide");
+        const dotContainer = document.getElementById("swiperDots");
+        let currentSlide = 0;
+
+        // Create dots dynamically
+        slides.forEach((_, index) => {
+            const dot = document.createElement("span");
+            dot.dataset.index = index;
+            dotContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll("#swiperDots span");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+                dots[i].classList.toggle("active", i === index);
+            });
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener("click", () => {
+                currentSlide = parseInt(dot.dataset.index);
+                showSlide(currentSlide);
+            });
+        });
+
+        // Optional: Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+
+        // Initial load
+        showSlide(currentSlide);
     </script>

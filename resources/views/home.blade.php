@@ -3,14 +3,30 @@
 @section('content')
     <style>
         .hero-section {
-            background: linear-gradient(90deg, #0644a6, #5795f8);
+            /* background-color: linear-gradient(90deg, #0644a6, #5795f8); */
+            background:
+                url("https://i.ibb.co/ksdW2FpL/group-young-black-female-Photoroom.png"),
+                linear-gradient(90deg, #0644a6, #5795f8);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
             color: #fff;
             padding: 100px 20px;
             text-align: center;
             margin-top: 5%;
         }
 
+        .hero-content-wrapper {
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+            text-align: left;
+        }
+
+
+
         .content h1 {
+            /* text-transform: uppercase; */
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 30px;
@@ -19,8 +35,8 @@
 
         .btn4 {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            /* justify-content: center; */
+            gap: 10px;
             flex-wrap: wrap;
             margin-bottom: 50px;
         }
@@ -63,7 +79,7 @@
             padding: 30px 30px;
             border-radius: 12px;
             max-width: 800px;
-            margin: 0 auto;
+            /* margin: 0 auto; */
             text-align: left;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
         }
@@ -141,12 +157,12 @@
             }
 
             .content h1 {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
 
             .study-search-box {
-                max-width: 700px;
-                padding: 25px 25px;
+                max-width: 520px;
+                padding: 20px 25px;
             }
 
             .btn-second,
@@ -155,14 +171,24 @@
                 font-size: 15px;
             }
 
+            .study-search-input {
+                padding: 7px 10px 7px 40px;
+            }
+
             .study-search-button {
-                font-size: 14px;
+                padding: 8px;
+                font-size: 13px;
             }
         }
 
         /* Tablet (below 992px) */
         @media (max-width: 991px) {
+
+
             .hero-section {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
                 padding: 200px 20px;
             }
 
@@ -171,7 +197,7 @@
             }
 
             .study-search-box {
-                max-width: 90%;
+                max-width: 80%;
                 padding: 20px;
             }
 
@@ -194,8 +220,19 @@
 
         /* Mobile (below 768px) */
         @media (max-width: 767px) {
+            .hero-section {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
             .content h1 {
                 font-size: 1.8rem;
+            }
+
+            .study-search-box {
+                max-width: 100%;
+                padding: 20px;
             }
 
             .btn4 {
@@ -227,7 +264,15 @@
         /* Extra small mobile (below 480px) */
         @media (max-width: 479px) {
             .hero-section {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
                 padding: 100px 15px;
+            }
+
+            .study-search-box {
+                max-width: 100%;
+                padding: 20px;
             }
 
             .content h1 {
@@ -250,113 +295,168 @@
                 padding: 14px 14px;
             }
         }
+
+        /* testimonial */
+        .testimonial-section {
+            padding: 3rem 1rem;
+            text-align: center;
+            /* background: linear-gradient(to bottom right, #061e52, #0c347a); */
+            background: linear-gradient(90deg, #0644a6, #2764c5);
+            color: white;
+        }
+
+        .testimonials-heading {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .custom-swiper {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            margin: 3rem auto;
+            overflow: hidden;
+        }
+
+        .testimonial-slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .testimonial-slide .icon {
+            width: 70px;
+            height: 70px;
+            /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+            background: linear-gradient(135deg, #bb0e45, #ad0039) !important;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .swiper-dots {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .swiper-dots span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #aaa;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .swiper-dots span.active {
+            background-color: #2764c5;
+        }
+
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .testimonial-text {
+                font-size: 1rem;
+            }
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
     </style>
 
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
     <div class="hero-section">
-        <div class="content">
-            <h1>Start Early, Dream Big,<br />Succeed Globally</h1>
-            <div class="btn4">
-                <button class="btn-second">
-                    <a href="/search" class="anchr">
-                        <i class="fas fa-user-plus"></i> Join Our Program
-                    </a>
-                </button>
-                <button class="btn3">
-                    <a href="/contactus" class="anchr">Book a Free Consultation</a>
-                </button>
+        <div class="hero-content-wrapper">
+            <div class="content">
+                <h1>Turn your dream of studying in <br />The US or Canada into a reality</h1>
+                <div class="btn4">
+                    <button class="btn-second">
+                        <a href="/search" class="anchr">
+                            <i class="fas fa-user-plus"></i> Join Our Program
+                        </a>
+                    </button>
+                    <button class="btn3">
+                        <a href="/contactus" class="anchr">Book a Free Consultation</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="study-search-box">
+                <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
+                    <!-- Input Field -->
+                    <div class="study-input-wrapper">
+                        <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+                            <path
+                                d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                        </svg>
+                        <input type="text" name="keyword" class="study-search-input"
+                            placeholder="What would you like to study?">
+                    </div>
+
+                    <!-- Country Checkboxes -->
+                    <div class="country-checkboxes">
+                        <label>
+                            <input type="checkbox" name="countries[]" value="Canada">
+                            <img src="https://flagcdn.com/ca.svg" alt="Canada" class="flag-icon"> Canada
+                        </label>
+                        <label>
+                            <input type="checkbox" name="countries[]" value="United States">
+                            <img src="https://flagcdn.com/us.svg" alt="USA" class="flag-icon"> United States
+                        </label>
+                    </div>
+
+                    <!-- Search Button -->
+                    <button type="submit" class="study-search-button">Search</button>
+                </form>
             </div>
         </div>
-
-        <div class="study-search-box">
-            <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
-                <!-- Input Field -->
-                <div class="study-input-wrapper">
-                    <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
-                        <path
-                            d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                    <input type="text" name="keyword" class="study-search-input"
-                        placeholder="What would you like to study?">
-                </div>
-
-                <!-- Country Checkboxes -->
-                <div class="country-checkboxes">
-                    <label>
-                        <input type="checkbox" name="countries[]" value="Canada">
-                        <img src="https://flagcdn.com/ca.svg" alt="Canada" class="flag-icon"> Canada
-                    </label>
-                    <label>
-                        <input type="checkbox" name="countries[]" value="United States">
-                        <img src="https://flagcdn.com/us.svg" alt="USA" class="flag-icon"> United States
-                    </label>
-                </div>
-
-                <!-- Search Button -->
-                <button type="submit" class="study-search-button">Search</button>
-            </form>
-        </div>
     </div>
-
-
-    <section class="why-edux-simple">
-        <div class="why-edux-wrapper">
-            <h2 class="why-edux-title">Why Choose Edu-X Services?</h2>
-            <ul class="why-edux-list">
-
-                <li>
-                    <span class="why-edux-icon">
-                        <!-- Clock/Calendar Icon -->
-                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
-                            <path d="M12 1a11 11 0 1 0 11 11A11.012 11.012 0 0 0 12 1zm1 12H7v-2h4V5h2z" />
-                        </svg>
-                    </span>
-                    7+ Years of Experience
-                </li>
-
-                <li>
-                    <span class="why-edux-icon">
-                        <!-- Globe Icon -->
-                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
-                            <path
-                                d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 17.93A8 8 0 114 12a8.009 8.009 0 019 7.93z" />
-                            <path d="M12.5 7l-1.5 1v1l-1 .5L9 10v2l1 1 1 .5V15l1.5 1L14 14l-1-1v-1l1-1 1-.5V9l-1-2z" />
-                        </svg>
-                    </span>
-                    African-Led, Globally Informed
-                </li>
-
-                <li>
-                    <span class="why-edux-icon">
-                        <!-- Shield Check Icon -->
-                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
-                            <path d="M12 2l9 4v6c0 6-5 11-9 11s-9-5-9-11V6l9-4z" />
-                            <path d="M10 12l2 2 4-4" stroke="#fff" stroke-width="2" fill="none" />
-                        </svg>
-                    </span>
-                    Proven Track Record: 98% student success rate
-                </li>
-
-                <li>
-                    <span class="why-edux-icon">
-                        <!-- Graduation Cap Icon -->
-                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
-                            <path d="M12 3L2 8l10 5 10-5-10-5z" />
-                            <path d="M4 10v6c0 2 4 4 8 4s8-2 8-4v-6" />
-                        </svg>
-                    </span>
-                    Partnered with Accredited Schools in North America
-                </li>
-
-            </ul>
-        </div>
-    </section>
+    <br>
 
     <section class="support-journey-section">
         <div class="support-journey-header">
             <h2>Our 360° Student Support Journey</h2>
-            <p>From high school and to university graduates- we are with you every steps of the way</p>
+            <p>From high school to university, we prepare African students to thrive, not just survive, abroad.</p>
         </div>
 
         <div class="support-journey-grid">
@@ -424,87 +524,128 @@
         </div>
     </section>
 
+    <!-- testimonial -->
+    <div class="ts-section">
+        <!-- Left Content -->
+        <div class="ts-intro">
+            <h2>Your journey, our <span>guidance</span>.</h2>
+            <h2>Real mentors. Real <span>success</span>.</h2>
+            <button>
+                Book a Free Consultation
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Right Slider -->
+        <div class="ts-slider">
+            <div class="ts-slide active">
+                <div class="ts-card">
+                    <div class="ts-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <p class="ts-text">“Thanks to Edu-X, my daughter is now thriving at a university in Toronto. The
+                        mentorship made a big difference!”</p>
+                    <p class="ts-author">— Aïssata K., Parent from Bamako</p>
+                </div>
+            </div>
+
+            <div class="ts-slide">
+                <div class="ts-card">
+                    <div class="ts-icon"><i class="fas fa-user-graduate"></i></div>
+                    <p class="ts-text">“Being a mentor is the most fulfilling thing I do. I feel like I’m
+                        giving back and building the Africa of tomorrow.”</p>
+                    <p class="ts-author">— Ismael, MBA graduate in Texas</p>
+                </div>
+            </div>
+
+            <!-- Dot Indicators -->
+            <div class="ts-dots" id="swiperDots"></div>
+        </div>
+    </div>
+
+    <section class="why-edux-simple">
+        <div class="why-edux-wrapper">
+            <h2 class="why-edux-title">Trusted by Parents, Chosen by Students.</h2>
+            <ul class="why-edux-list">
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Clock/Calendar Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 1a11 11 0 1 0 11 11A11.012 11.012 0 0 0 12 1zm1 12H7v-2h4V5h2z" />
+                        </svg>
+                    </span>
+                    7+ Years of Experience
+                </li>
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Globe Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path
+                                d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 17.93A8 8 0 114 12a8.009 8.009 0 019 7.93z" />
+                            <path d="M12.5 7l-1.5 1v1l-1 .5L9 10v2l1 1 1 .5V15l1.5 1L14 14l-1-1v-1l1-1 1-.5V9l-1-2z" />
+                        </svg>
+                    </span>
+                    African-Led, Globally Informed
+                </li>
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Shield Check Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 2l9 4v6c0 6-5 11-9 11s-9-5-9-11V6l9-4z" />
+                            <path d="M10 12l2 2 4-4" stroke="#fff" stroke-width="2" fill="none" />
+                        </svg>
+                    </span>
+                    Proven Track Record: 98% student success rate
+                </li>
+
+                <li>
+                    <span class="why-edux-icon">
+                        <!-- Graduation Cap Icon -->
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 3L2 8l10 5 10-5-10-5z" />
+                            <path d="M4 10v6c0 2 4 4 8 4s8-2 8-4v-6" />
+                        </svg>
+                    </span>
+                    Partnered with Accredited Schools in North America
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="get-started-section">
+        <div class="get-started-icon">
+            <i class="fas fa-rocket"></i>
+        </div>
+        <h2>Get Started Today</h2>
+
+        <p>
+            Join hundreds of African students already preparing for a <strong>brighter future</strong>. Whether
+            you're
+            applying,
+            connecting, or learning—your journey begins here.
+        </p>
+
+        <div class="action-buttons">
+            <a href="/search" class="btn-get-started">
+                <i class="fas fa-rocket"></i> Apply Now
+            </a>
+            <a href="/contactus" class="btn-get-started">
+                <i class="fas fa-headset"></i> Contact Us
+            </a>
+            <a href="/contactus" class="btn-get-started">
+                <i class="fas fa-video"></i> Attend Info Session
+            </a>
+        </div>
+    </section>
+
 
 
 
 
     <center>
-        <div class="content5">
-            <h2>An Easy-to-Use Platform Built to Deliver Quality Applications and More</h2>
-        </div>
-        <br>
-        <br>
-
-
         <div class="info-section">
-
-            <!--if you want do set text-size give  style="font-size: 17px;" in this div service -->
-
-
-            <div class="services">
-                <div id="webcrumbs">
-                    <div class="w-[1000px] bg-white rounded-lg ">
-                        <div class="grid grid-cols-3 gap-10">
-                            <div class="flex flex-col items-center text-center">
-                                <img src="{{ asset('images/Platform.webp') }}" alt="Find Programs Faster" />
-                                <h4 class="text-neutral-900 font-medium mt-4">
-                                    Find Programs Faster
-                                </h4>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <img src="{{ asset('images/helpfull-team.png') }}" alt="Dedicated Support Team" />
-                                <h4 class="text-neutral-900 font-medium mt-4">
-                                    Helpful and Dedicated Support Team
-                                </h4>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <img src="{{ asset('images/Studen-Loan.webp') }}" alt="Exclusive Scholarships" />
-                                <h4 class="text-neutral-900 font-medium mt-4">
-                                    Access to Exclusive Scholarships
-                                </h4>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <img src="{{ asset('images/Platform-check.webp') }}" alt="Exclusive Scholarships" />
-                                <h4 class="text-neutral-900 font-medium mt-4">
-                                    One Easy Application Platform
-                                </h4>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <img src="{{ asset('images/Support.webp') }}" alt="Exclusive Scholarships" />
-                                <h4 class="text-neutral-900 font-medium mt-4">
-                                    Knowledgeable Support Team
-                                </h4>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <img src="{{ asset('images/Chart-3.webp') }}" alt="Exclusive Scholarships" />
-                                <h4 class="text-neutral-900 font-medium mt-4">
-                                    Data Driven Insights
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="leff">
-                    <div class="box2">
-                        <div class="tag">
-                            <h2 class="elementor-heading-title elementor-size-default">We’re Passionate About Making
-                                Education <br>Accessible for Everyone</h2>
-                        </div>
-
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-2 g-4" id="card-col">
-                        <div class="col">
-                            <video class="w-100" controls autoplay muted loop playsinline>
-                                <source src="{{ asset('images/how we help2.mp4') }}" type="video/mp4">
-                            </video>
-                        </div>
-
-                    </div>
-                    <br>
-                </div>
-            </div>
             <section class="country-section">
                 <h1>Trusted by Leading Institutions</h1>
                 <br>
@@ -566,8 +707,51 @@
 
             </section>
 
+
+
+
+
+
+
         </div>
 
+        {{-- tstimonial --}}
+        <script>
+            const slides = document.querySelectorAll(".ts-slide");
+            const dotContainer = document.getElementById("swiperDots");
+            let currentSlide = 0;
+
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement("span");
+                dot.dataset.index = index;
+                dotContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll("#swiperDots span");
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle("active", i === index);
+                    dots[i].classList.toggle("active", i === index);
+                });
+            }
+
+            dots.forEach(dot => {
+                dot.addEventListener("click", () => {
+                    currentSlide = parseInt(dot.dataset.index);
+                    showSlide(currentSlide);
+                });
+            });
+
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 5000);
+
+            // Initialize
+            showSlide(currentSlide);
+        </script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const buttons = document.querySelectorAll(".tab-button2");
@@ -800,6 +984,43 @@
                     });
                 });
             });
+        </script>
+        <script>
+            const slides = document.querySelectorAll(".testimonial-slide");
+            const dotContainer = document.getElementById("swiperDots");
+            let currentSlide = 0;
+
+            // Create dots dynamically
+            slides.forEach((_, index) => {
+                const dot = document.createElement("span");
+                dot.dataset.index = index;
+                dotContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll("#swiperDots span");
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle("active", i === index);
+                    dots[i].classList.toggle("active", i === index);
+                });
+            }
+
+            dots.forEach(dot => {
+                dot.addEventListener("click", () => {
+                    currentSlide = parseInt(dot.dataset.index);
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Optional: Auto slide
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 5000);
+
+            // Initial load
+            showSlide(currentSlide);
         </script>
 
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
