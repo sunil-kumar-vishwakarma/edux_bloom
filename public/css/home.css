@@ -1525,7 +1525,7 @@ video {
         margin: auto;
         justify-content: center;
         align-items: center;
-        /* margin: 0px 20px; */
+        margin: 0px 50px;
     }
 
     .navbar-toggler {

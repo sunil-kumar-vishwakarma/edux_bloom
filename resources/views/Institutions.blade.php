@@ -3,17 +3,23 @@
 @section('content')
 
     <link rel="stylesheet" href="{{ asset('css/institution.css') }}">
-    <section class="head">
+    <section class="student-hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1>Be Seen by 100,000+ <span>Students Every Month</span></h1>
+                <p class="description">
+                    Increase your global presence and the number of qualified students from a single, easy-to-use platform
+                    trusted by
+                    more than 1,500 institutions worldwide.
+                </p>
+                <a href="/contactus"> <button type="button" class="parents-btn" id="workWithUsBtn">Work With US</button></a>
 
+            </div>
+            <div class="hero-right">
+                <img src="{{ asset('images/parent-png.png') }}" alt="Parents Mockup" class="app-mockup">
+            </div>
+        </div>
     </section>
-    <div class="text">
-        <h1>Be Seen by 100,000+ Students Every Month</h1>
-        <p>Increase your global presence and the number of qualified students from a single, easy-to-use platform trusted by
-            more than 1,500 institutions worldwide.</p>
-        <a href="/contactus"> <button type="button" class="btn btn-primary" id="workWithUsBtn">Work With US</button></a>
-    </div>
-    <br><br>
-    <br><br>
 
     {{-- empowering section --}}
     <section class="mission-vision-modern">
@@ -57,146 +63,135 @@
         </div>
     </section>
 
-    <section class="journey">
-        <div class="journey-section">
-            <h2>Your journey at a glance <span><i class="fa-solid fa-hand-point-down"></i></span></h2><br>
-            <div class="journey-steps">
-                <div class="step">
-                    <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></i></div>
-                    <h3>Find a program</h3>
-                    <p>Use our search to <a href="/search">browse 81,000+ degrees</a> worldwide</p>
-                </div>
-
-
-                <div class="connector"><i class="fa-solid fa-arrow-right-long"></i></div>
-                <div class="step">
-                    <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3>Get a scholarship</h3>
-                    <p>We give out <a href="/search">$32,000 in scholarships</a> every year - apply for one today!</p>
-                </div>
-
-                <i class="fa-solid fa-arrow-right-long"></i>
-                <div class="connector"></div>
-                <div class="step">
-                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                    <h3>Talk to universities</h3>
-                    <p>Sign up for our <a href="/events">FREE virtual events</a> to speak to universities</p>
-                </div>
-                <div class="connector"><i class="fa-solid fa-arrow-right-long"></i></div>
-                <div class="step">
-                    <div class="icon"><i class="fa-solid fa-globe"></i></div>
-                    <h3>Stay up to date</h3>
-                    <p>Follow us on <a href="#">Instagram</a>, <a href="#">TikTok</a>, and <a
-                            href="#">YouTube</a> for scholarship</p>
-                </div>
+    <!-- Mentorship Section -->
+    <section class="mentorship-story">
+        <div class="story-container">
+            <h2>The Story Behind <br> <span>Our Mentorship Program</span></h2>
+            <div class="story-content">
+                <h3>Founded by <strong>Djenabou Diawara</strong></h3>
+                <p>
+                    When Djenabou Diawara arrived in the United States to study at Columbia University,
+                    she came with high hopes and big dreams—but also with questions, cultural adjustments,
+                    and no roadmap.
+                </p>
+                <p>
+                    Out of a group of 12 students from Mali, only two completed their degrees on time.
+                    That experience shaped her passion.
+                </p>
+                <p>
+                    She realized that many African students fail abroad—not because of intelligence or ambition—
+                    but because they lack guidance on how to navigate the unfamiliar systems, opportunities,
+                    and social expectations of their new environment.
+                </p>
+                <p class="highlight">
+                    That’s why Djenabou founded <strong>Edu-X Services</strong>—to bridge the gap for students
+                    and build a community of African graduates willing to walk alongside those just beginning
+                    their journey.
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="https://img.freepik.com/free-photo/studio-portrait-elegant-black-american-male-dressed-suit-grey-vignette-background_613910-9540.jpg"
+                    alt="Djenabou Diawara" />
             </div>
         </div>
     </section>
 
 
-
-
-
-    <div class="work" id="letsgetstartedc">
-        <h1>How It Works</h1><br>
-    </div>
-    <section class="working">
-
-        <div class="steps-container">
-
-            <div class="step-card">
-                <div class="step-icon">
-                    <img src="images/stuudents_check_eligibility_108.webp" alt="Step 1 Icon">
+    <!-- how it works section -->
+    <section class="how-it-works">
+        <h2>How <span>Our Mentorship Program Works</span></h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="mv-icon-circle">
+                    <i class="fas fa-user-friends"></i>
                 </div>
-                <div class="step-number">STEP 1</div>
-                <div class="step-title">Students Check Their Eligibility</div>
-                <div class="step-description">
-                    Students complete a short survey and get matched to best-fit programs and institutions.
+                <div class="step-title">Personalized Pairing</div>
+                <div class="step-desc">
+                    Each student is matched with a mentor who has studied in the same country or a similar program.
                 </div>
             </div>
-
-            <div class="step-card">
-                <div class="step-icon">
-                    <img src="images/students_apply_schools_108.webp" alt="Step 2 Icon">
+            <div class="step">
+                <div class="mv-icon-circle">
+                    <i class="fas fa-suitcase-rolling"></i>
                 </div>
-                <div class="step-number">STEP 2</div>
-                <div class="step-title">Students Apply</div>
-                <div class="step-description">
-                    Students select an institution and program, complete their profile, pay their fees, and submit the
-                    proper documentation.
+                <div class="step-title">Departure Guidance</div>
+                <div class="step-desc">
+                    Mentors share what to expect upon arrival, what to pack, and how to communicate with professors.
                 </div>
             </div>
-
-            <div class="step-card">
-                <div class="step-icon">
-                    <img src="images/students_get_accepted.webp" alt="Step 3 Icon">
+            <div class="step">
+                <div class="mv-icon-circle">
+                    <i class="fas fa-comments"></i>
                 </div>
-                <div class="step-number">STEP 3</div>
-                <div class="step-title">Students Get Accepted</div>
-                <div class="step-description">
-                    The application is reviewed by the institution, and a letter of acceptance is issued.
+                <div class="step-title">Ongoing Support</div>
+                <div class="step-desc">
+                    Regular virtual check-ins, WhatsApp chats, campus tips, and emotional support throughout your study.
                 </div>
             </div>
-
-            <div class="step-card">
-                <div class="step-icon">
-                    <img src="images/students_apply_to_visa.webp" alt="Step 4 Icon">
+            <div class="step">
+                <div class="mv-icon-circle">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="step-number">STEP 4</div>
-                <div class="step-title">Student Applies for Visa</div>
-                <div class="step-description">
-                    The student goes through the visa application process.
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-icon">
-                    <img src="images/students_start_journey_108.webp" alt="Step 5 Icon">
-                </div>
-                <div class="step-number">STEP 5</div>
-                <div class="step-title">Student Journey Begins</div>
-                <div class="step-description">
-                    The student sets off with bags packed ready to start their adventure on your campus.
+                <div class="step-title">Success Tracking</div>
+                <div class="step-desc">
+                    Mentors help students stay focused, solve challenges, and maximize academic and social
+                    opportunities.
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <section class="country-section">
-        <h1>Trusted by Leading Institutions</h1><br>
-        <div class="buttons">
-            <button class="country-btn active" data-country="country1">
-                <img src="https://flagcdn.com/w320/ca.png" alt="Country 1 Flag"> CANADA
-            </button>
-            <button class="country-btn" data-country="country2">
-                <img src="https://flagcdn.com/w320/us.png" alt="Country 2 Flag"> UNITED STATES
-            </button>
-
-        </div>
-
-        <div class="content-institution">
-            <div class="images" id="country1">
-                <img src="images/Carleton-University.webp" alt="Country 1 Image 1">
-                <img src="images/Conestoga.webp" alt="Country 1 Image 2">
-                <img src="images/George_Brown.webp" alt="Country 1 Image 3">
-                <img src="images/YorkvilleU.webp" alt="Country 1 Image 4">
-                <img src="images/UWaterloo.webp" alt="Country 1 Image 5">
+    <!-- Enhanced Become a Mentor Section -->
+    <section class="become-mentor-enhanced">
+        <div class="mentor-overlay"></div>
+        <div class="mentor-wrapper">
+            <div class="mentor-text">
+                <h2>Become a <span>Mentor</span></h2>
+                <div class="mentor-separator"></div>
+                <p>
+                    Have you studied in the <strong>U.S.</strong> or <strong>Canada</strong>? Do you want to give back
+                    and help
+                    the next generation of African students thrive abroad?
+                </p>
+                <p>
+                    Join our growing community of mentors and share the lessons you’ve learned. Your story could be the
+                    one that
+                    changes a life forever.
+                </p>
+                <a href="#" class="mentor-cta">Apply to Be a Mentor</a>
             </div>
-            <div class="images" id="country2" style="display: none;">
-                <img src="images/UWaterloo.webp" alt="Country 2 Image 1">
-                <img src="images/YorkvilleU.webp" alt="Country 2 Image 2">
-                <img src="images/George_Brown.webp" alt="Country 2 Image 3">
-                <img src="images/Conestoga.webp" alt="Country 2 Image 4">
-                <img src="images/Carleton-University.webp" alt="Country 2 Image 5">
+            <div class="mentor-image">
+                <img src="https://i.ibb.co/Xff2N15n/black-tutor-mentoring-schoolgirl-school-library-study-desk.jpg"
+                    alt="Mentorship">
             </div>
-
         </div>
-
     </section>
 
-<!-- testimonial -->
+    <!-- Enhanced Become a Mentee Section -->
+    <section class="become-mentee-enhanced">
+        <div class="mentee-overlay"></div>
+        <div class="mentee-wrapper">
+            <div class="mentee-image">
+                <img src="https://i.ibb.co/W4jM3HtH/woman-with-laptop-looking-camera.jpg" alt="Happy student mentee">
+            </div>
+            <div class="mentee-text">
+                <h2>Become a <span>Mentee</span></h2>
+                <div class="mentee-separator"></div>
+                <p>
+                    Want someone who understands your journey and can guide you step by step?
+                </p>
+                <p>
+                    Register to be matched with a mentor who’s been exactly where you’re going. You're not alone — and
+                    the path
+                    ahead just got clearer.
+                </p>
+                <a href="#" class="mentee-cta">Register as a Student</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- testimonial -->
     <div class="testimonial-section">
         <h2 class="testimonials-heading">What Our Students & Mentors Say</h2>
 
@@ -227,44 +222,7 @@
 
     </div>
     <br>
-    <br>
 
-    <div class="container1">
-        <h1>We're Invested in Caring for You and the<br> Ecosystem of International Education</h1>
-
-        <div class="card-container">
-            <div class="card-institutions">
-                <div class="icon"><img src="images/Machine_Learning-pdfy8jys8c4u5yl9xfc2xsl44csh106t79gbivp4w8.png"
-                        alt="Local Support Icon"></div>
-                <h3>Local Support</h3>
-                <p>Our international recruitment experts are there to support you every step of the way.</p>
-            </div>
-
-            <div class="card-institutions">
-                <div class="icon"><img src="images/Big-Data-Analytics-pdfy8cg2pnujl2w75c32duhfd9tjbfcyi88foo0aa0.png"
-                        alt="Education Icon"></div>
-                <h3>Industry Education</h3>
-                <p>Expand your knowledge and stay ahead of your competitors with guided online courses and certificates.</p>
-            </div>
-
-            <div class="card-institutions">
-                <div class="icon"><img src="images/Security_Privacy-pdfy84xd6zk90774d8u1twdqm6ulluj3t70jugbfns.png"
-                        alt="Events Icon"></div>
-                <h3>Events and Webinars</h3>
-                <p>Regular online webinars, training, and events to keep you updated on the latest trends and regulations.
-                </p>
-            </div>
-
-            <div class="card-institutions">
-                <div class="icon"><img src="images/Co-Created_Progras-pdfy7xenob9yfbi1l5l19ya1v3vnw9p945so08ml1k.png"
-                        alt="Data Icon"></div>
-                <h3>Data and Insights</h3>
-                <p>Industry-leading insights and knowledge to help you plan, expand, and achieve your goals.</p>
-            </div>
-        </div>
-    </div>
-
-    <br>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {

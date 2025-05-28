@@ -325,6 +325,7 @@
         </div>
     </section>
 
+    <br>
      {{-- ready to take first step section --}}
     <section class="cta-section">
         <div class="cta-card">
@@ -340,7 +341,7 @@
         </div>
     </section>
 
-  
+
 
     {{-- <div class="dropdwn">
         <img src="{{ asset('images/happy-student-girl_.avif') }}" style="height: 500px; width: 400px;">

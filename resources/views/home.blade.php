@@ -523,6 +523,8 @@
 
         </div>
     </section>
+<br>
+<br>
 
     <!-- testimonial -->
     <div class="ts-section">
@@ -530,10 +532,11 @@
         <div class="ts-intro">
             <h2>Your journey, our <span>guidance</span>.</h2>
             <h2>Real mentors. Real <span>success</span>.</h2>
-            <button>
+
+           <a href="/contactus"> <button>
                 Book a Free Consultation
                 <i class="fas fa-arrow-right"></i>
-            </button>
+            </button></a>
         </div>
 
         <!-- Right Slider -->
@@ -561,6 +564,7 @@
         </div>
     </div>
 
+    <br>
     <section class="why-edux-simple">
         <div class="why-edux-wrapper">
             <h2 class="why-edux-title">Trusted by Parents, Chosen by Students.</h2>
@@ -614,6 +618,7 @@
         </div>
     </section>
 
+    <br>
     <section class="get-started-section">
         <div class="get-started-icon">
             <i class="fas fa-rocket"></i>
