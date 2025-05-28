@@ -49,7 +49,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/blogs-pages">Edu-X Blog</a></li>
-                        <li><a class="dropdown-item" href="/institutions">Edu-X Young Leaders</a></li>
+                        <li><a class="dropdown-item" href="/student">Edu-X Young Leaders</a></li>
                         <li><a class="dropdown-item" href="/events">Parent Resources</a></li>
                         <li><a class="dropdown-item" href="/contactus">Contact us</a></li>
                     </ul>
