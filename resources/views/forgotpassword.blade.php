@@ -218,12 +218,12 @@
     }
 
     /* Error Alert */
-    .alert-danger {
+    .alert-error {
         background-color: #dc3545;
         color: white;
     }
 
-    .alert-danger i {
+    .alert-error i {
         color: #fff;
     }
 
@@ -267,9 +267,11 @@
         <div class="main-container">
             <!-- Left: Form -->
             <div class="card1-login">
+                    
+
                 <div class="login-container">
 
-                        @if (session('success'))
+                        <!-- @if (session('success'))
                             <div id="alert-success" class="alert alert-success">
                                 <i class="fas fa-check-circle"></i>
                                 {{ session('success') }}
@@ -281,7 +283,25 @@
                                 <i class="fas fa-times-circle"></i>
                                 {{ session('error') }}
                             </div>
-                        @endif
+                        @endif -->
+
+                        @php
+                    $success = session('success');
+                    $error = session('error');
+                @endphp
+
+                @if (!empty($success))
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i> {{ $success }}
+                    </div>
+                @endif
+
+                @if (!empty($error))
+                    <div class="alert alert-error">
+                        <i class="fas fa-times-circle"></i> {{ $error }}
+                    </div>
+                @endif
+
                     <div class="card-login">
                         <h2>Send Email</h2>
                         <!-- <form id="loginForm" action="{{route('forgotpassword2')}}">
@@ -317,7 +337,7 @@
         </div>
 
 
-
+<!-- 
 <script>
     // Function to hide alert messages after 3 seconds
     setTimeout(() => {
@@ -329,7 +349,7 @@
             successAlert.classList.add('fade-out');
             setTimeout(() => {
                 successAlert.style.display = 'none';
-            }, 16000); // Wait for fade-out to complete
+            }, 600); // Wait for fade-out to complete
         }
 
         // Fade out error alert
@@ -337,10 +357,35 @@
             errorAlert.classList.add('fade-out');
             setTimeout(() => {
                 errorAlert.style.display = 'none';
-            }, 6000); // Wait for fade-out to complete
+            }, 600); // Wait for fade-out to complete
         }
     }, 30000); // Keep messages visible for 3 seconds before starting fade-out
+</script> -->
+
+<script>
+    // Function to hide alert messages after 10 seconds
+    setTimeout(() => {
+        const successAlert = document.getElementById('alert-success');
+        const errorAlert = document.getElementById('alert-error');
+
+        // Fade out success alert
+        if (successAlert) {
+            successAlert.classList.add('fade-out');
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+            }, 600); // Wait for fade-out to complete
+        }
+
+        // Fade out error alert
+        if (errorAlert) {
+            errorAlert.classList.add('fade-out');
+            setTimeout(() => {
+                errorAlert.style.display = 'none';
+            }, 600); // Wait for fade-out to complete
+        }
+    }, 10000); // 10 seconds
 </script>
+
 
 
         <script>
