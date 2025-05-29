@@ -51,9 +51,14 @@ class HomeController extends Controller
 
         return view('forgotpassword2');
     }
+    public function youngleaders()
+    {
+
+        return view('youngleaders');
+    }
     // public function sendResetLink(Request $request)
     //     {
-            
+
     //         $request->validate([
     //             'email' => 'required|email|exists:users,email',
     //         ]);

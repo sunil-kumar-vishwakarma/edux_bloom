@@ -267,13 +267,10 @@
         }
 
 
-           body {
-            background: white;
-        }
-
-        .mentorship-story {
+           .mentorship-story {
             padding: 30px 30px;
             /* background: linear-gradient(135deg, #d1e1ff 0%, #ffffff 100%); */
+            background: linear-gradient(135deg, #d1e1ff 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
         }
@@ -285,64 +282,50 @@
             left: -5%;
             width: 300px;
             height: 300px;
-            /* background: radial-gradient(circle, #c1d5ff, transparent 70%); */
+            background: radial-gradient(circle, #c1d5ff, transparent 70%);
             z-index: 0;
             border-radius: 50%;
         }
 
-       .story-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centers flex items */
-    text-align: center;      /* centers text inside */
-    gap: 60px;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 1;
-    animation: fadeIn 1.2s ease-in-out both;
-}
-
-.story-container h2 span {
-    position: relative; /* Needed to position the ::after element */
-    display: inline-block;
-}
-
-.story-container h2 span::after {
-    content: '';
-    width: 50%;
-    height: 4px;
-    background: #bb0e45;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    border-radius: 2px;
-}
-
-
+        .story-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.2s ease-in-out both;
+        }
 
         .story-content {
             flex: 1 1 600px;
         }
 
-        .story-container h2 {
-            font-size: 2.2rem;
+        .story-content h2 {
+            font-size: 3rem;
             margin-bottom: 10px;
             font-weight: 700;
             color: #111;
-            line-height: 1.4 !important;
         }
 
-        .story-container h2 span {
+        .story-content h2 span {
             background: linear-gradient(to right, #bb0e45, #ad0039);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 2.3rem;
         }
 
+        .separator {
+            width: 80px;
+            height: 5px;
+            background: #bb0e45;
+            border-radius: 10px;
+            margin: 20px 0 30px;
+            animation: growLine 1.2s ease-out;
+        }
 
         .story-content h3 {
             font-size: 1.3rem;
@@ -430,7 +413,7 @@
                 text-align: center;
             }
 
-            .story-container h2 {
+            .story-content h2 {
                 font-size: 2.2rem;
             }
 
@@ -451,7 +434,6 @@
                 height: 200px;
             }
         }
-
         /* how it work */
         .how-it-works {
             padding: 30px 30px;
@@ -1033,111 +1015,6 @@
 
         #loginn{
             margin-bottom: 6px !important;
-        }
-
-      .navbar {
-            background-color: #1652b4;
-            padding: 10px 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-
-        .navbar-brand div {
-            font-size: 27px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            font-weight: bold;
-            margin-top: 17px;
-        }
-
-
-        .navbar-brand {
-            display: flex;
-            /* gap: 15px; */
-        }
-
-
-
-        /* Center navbar links on larger screens */
-        .navbar-nav {
-            gap: 15px;
-        }
-
-        .navbar-nav .nav-link {
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 5px 15px;
-            position: relative;
-            font-size: 17px;
-        }
-
-        .navbar-nav .nav-link:hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -8px;
-            height: 2px;
-            background-color: white;
-            border-radius: 1px;
-        }
-
-
-
-
-        .navbar-toggler {
-            border: none;
-            /* Add a border to make it visible */
-            background-color: blue;
-            /* Set a background color */
-            padding: 0.5rem;
-            /* Add some padding */
-            color: #000;
-            /* Ensure the icon is visible */
-        }
-
-        /* Adjust the toggler icon */
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='%23000'%3E%3Cpath d='M0 7h30v3H0zm0 7h30v3H0zm0 7h30v3H0z'/%3E%3C/svg%3E");
-        }
-
-        /* Buttons styling */
-        .btn-custom {
-            color: white;
-            background-color: blue;
-            font-weight: bold;
-            border: 0.5px solid white;
-            padding: 8px 20px;
-            margin: 5px 0px;
-            border-radius: 7px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: white;
-            color: black;
-        }
-
-
-        #down {
-            transform: translateY(23px);
-        }
-
-
-
-        .navbar .container-fluid a p {
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            margin: 5px;
-            font-weight: 550;
-            padding-left: 10px;
-
         }
 
 
@@ -2024,6 +1901,9 @@
             align-items: left;
             /* Center-aligns the checkbox and label */
             gap: 4px;
+        }
+        .btn-custom{
+            margin-bottom: 6px !important;
         }
 
         .checkbox-container input[type="checkbox"] {

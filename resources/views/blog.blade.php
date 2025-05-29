@@ -18,11 +18,11 @@
 
         /* Background Header Section */
         .background-img {
-            background-image: url('images/blog.webp');
+            background-image: url('images/blog-page.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 80px 40px;
+            padding: 150px 40px;
             text-align: center;
             color: white;
         }
@@ -201,7 +201,6 @@
         <div class="background-img">
             <div class="abroad">
                 <h1>Edu-X Blog</h1>
-                <br />
                 <p>
                     Tips, advice, and updates to help you across every step of the study abroad journey.
                 </p><br>

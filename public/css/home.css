@@ -48,24 +48,30 @@ h2 {
   align-items: center;
 }
 
-.navbar-nav .nav-link {
-  color: #292E3E;
-  font-weight: bold;
-  font-size: 17px;
-  position: relative;
-  text-decoration: none;
+ .navbar-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            position: relative;
+            padding: 6px 2px;
+            transition: color 0.3s ease;
+        }
+.navbar-nav a::after{
+            content: '';
+            position: absolute;
+            height: 2.5px;
+            width: 0;
+            background: linear-gradient(to right, #bb0e45, #ad0039);
+            left: 0;
+            bottom: 0;
+            transition: width 0.5s ease;
 }
 
-.navbar-nav .nav-link:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  height: 2px;
-  background-color: #b92151;
-  border-radius: 1px;
-}
+        .navbar-nav a:hover::after {
+            width: 100%;
+        }
+
+
 
 /* REMOVE UNDERLINE FOR DROPDOWN LINK */
 .navbar-nav .dropdown-toggle:hover::after {

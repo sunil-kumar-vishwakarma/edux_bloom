@@ -66,8 +66,9 @@
     <!-- Mentorship Section -->
     <section class="mentorship-story">
         <div class="story-container">
-            <h2>The Story Behind <br> <span>Our Mentorship Program</span></h2>
             <div class="story-content">
+                <h2>The Story Behind <span>Our Mentorship Program</span></h2>
+                <div class="separator"></div>
                 <h3>Founded by <strong>Djenabou Diawara</strong></h3>
                 <p>
                     When Djenabou Diawara arrived in the United States to study at Columbia University,

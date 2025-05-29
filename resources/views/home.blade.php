@@ -7,9 +7,9 @@
             background:
                 url("https://i.ibb.co/ksdW2FpL/group-young-black-female-Photoroom.png"),
                 linear-gradient(90deg, #0644a6, #5795f8);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: right;
+            background-position: center;
             color: #fff;
             padding: 100px 20px;
             text-align: center;

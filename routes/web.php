@@ -88,6 +88,7 @@ Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('/institutions', [HomeController::class, 'institutions'])->name('institutions');
 Route::get('/events', [HomeController::class, 'events'])->name('events');
 Route::get('/blogs-pages', [HomeController::class, 'blogs'])->name('blogs-pages');
+Route::get('/youngleaders', [HomeController::class, 'youngleaders'])->name('youngleaders');
 // Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/search', [ProgramController::class, 'search'])->name('search');
 

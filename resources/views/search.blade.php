@@ -649,117 +649,116 @@
 
                 <body> -->
 
-    <div class="filter-search-wrapper">
-        <div class="search-container">
-            <div class="search-box">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="search-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16.386 18.211C14.885 19.335 13.02 20 11 20 6.03 20 2 15.971 2 11 2 6.03 6.03 2 11 2c4.971 0 9 4.03 9 9 0 2.228-.81 4.267-2.151 5.839l4.827 4.424-1.351 1.474-4.938-4.526ZM18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z">
-                    </path>
-                </svg>
-                <input type="text" id="keyword" class="search-bar" placeholder="What would you like to study?" />
-            </div>
-
-            <div class="custom-dropdown">
-                <select class="dropdown" id="countries">
-                    <option value="Destination">Destination</option>
-                    <option value="USA">USA</option>
-                    <option value="Canada">Canada</option>
-                </select>
-                <i class="fas fa-chevron-down dropdown-icon"></i>
-            </div>
-
-            <div class="custom-dropdown">
-                <select class="dropdown" id="institute">
-                    <option value="Institute">Institute (School)</option>
-                    <!-- @foreach ($schools as $value)
-    <option value="{{ $value->name }}">{{ $value->name }}</option>
-    @endforeach -->
-                    <option value="MIT">MIT</option>
-                    <option value="Stanford">Stanford</option>
-                </select>
-                <i class="fas fa-chevron-down dropdown-icon"></i>
-            </div>
+  <div class="filter-search-wrapper">
+    {{-- Search and Top Filters --}}
+    <div class="search-container">
+        {{-- Keyword Search --}}
+        <div class="search-box">
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="search-icon" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.386 18.211C14.885 19.335 13.02 20 11 20 6.03 20 2 15.971 2 11 2 6.03 6.03 2 11 2c4.971 0 9 4.03 9 9 0 2.228-.81 4.267-2.151 5.839l4.827 4.424-1.351 1.474-4.938-4.526ZM18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z">
+                </path>
+            </svg>
+            <input type="text" id="keyword" class="search-bar" placeholder="What would you like to study?" />
         </div>
 
-        <div class="filters">
-            <div class="filter-item custom-dropdown">
-                <select id="program_level">
-                    <option value="Program">Program Level</option>
-                    <option value="Undergraduate">Undergraduate</option>
-                    <option value="Postgraduate">Postgraduate</option>
-                    <option value="9th-12th Grade">9th–12th Grade</option>
-                    <option value="Preparatory Courses">Preparatory Courses (English, SAT, etc.)</option>
-                    <option value="ESL">ESL + Bridging Programs</option>
-                    <option value="Gap Year">Gap Year Options</option>
-                </select>
-                <i class="fas fa-chevron-down dropdown-icon"></i>
-            </div>
+        {{-- Country Filter --}}
+        <div class="custom-dropdown">
+            <select class="dropdown" id="countries">
+                <option value="">Select Destination</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+            </select>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+        </div>
 
-            <div class="filter-item custom-dropdown">
-                <select id="field_of_study">
-                    <option value="Study">Field of Study</option>
-                    <option value="Engineering">Engineering</option>
-                    <option value="Business">Business</option>
-                    <option value="Health Sciences">Health Sciences</option>
-                    <option value="Arts & Humanities">Arts & Humanities</option>
-                    <option value="STEM">STEM</option>
-                </select>
-                <i class="fas fa-chevron-down dropdown-icon"></i>
-            </div>
-
-            <div class="filter-item custom-dropdown">
-                <select id="language">
-                    <option value="Language">Language</option>
-                    <option value="English">English</option>
-                    <option value="French">French</option>
-                </select>
-                <i class="fas fa-chevron-down dropdown-icon"></i>
-            </div>
-
-            <div class="filter-item custom-dropdown">
-                <select id="program_tag">
-                    <option>Program Tag</option>
-                    <option value="Online">Online</option>
-                    <option value="In-Person">In-Person</option>
-                    <option value="Hybrid">Hybrid</option>
-                </select>
-                <i class="fas fa-chevron-down dropdown-icon"></i>
-            </div>
-
-            {{-- <div class="filter-btn-wrapper">
-                    <button class="filter-btn">
-                        <svg aria-hidden="true" viewBox="0 0 24 24" class="filter-icon" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.12602 8C6.57006 9.72523 8.13616 11 10 11C11.8638 11 13.4299 9.72523 13.874 8L21 8V6L13.874 6C13.4299 4.27477 11.8638 3 10 3C8.13616 3 6.57006 4.27477 6.12602 6L3 6V8L6.12602 8ZM8 7C8 5.89543 8.89543 5 10 5C11.1046 5 12 5.89543 12 7C12 8.10457 11.1046 9 10 9C8.89543 9 8 8.10457 8 7Z">
-                            </path>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M16.874 18H21V16H16.874C16.4299 14.2748 14.8638 13 13 13C11.1362 13 9.57006 14.2748 9.12602 16H3V18H9.12602C9.57006 19.7252 11.1362 21 13 21C14.8638 21 16.4299 19.7252 16.874 18ZM15 17C15 15.8954 14.1046 15 13 15C11.8954 15 11 15.8954 11 17C11 18.1046 11.8954 19 13 19C14.1046 19 15 18.1046 15 17Z">
-                            </path>
-                        </svg>
-                        All Filters
-                    </button>
-                </div> --}}
+        {{-- Institute Filter --}}
+        <div class="custom-dropdown">
+            <select class="dropdown" id="institute">
+                <option value="">Select Institute</option>
+                {{-- Dynamic example --}}
+                {{-- @foreach ($schools as $value) --}}
+                {{-- <option value="{{ $value->name }}">{{ $value->name }}</option> --}}
+                {{-- @endforeach --}}
+                <option value="MIT">MIT</option>
+                <option value="Stanford">Stanford</option>
+            </select>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
         </div>
     </div>
-    <hr>
 
-    <div class="program-section">
-        <!-- Sort -->
-        <div class="sort-dropdown-wrapper">
-            <button class="sort-btn" onclick="toggleDropdown3()">
-                Sort <i class="fa-solid fa-arrow-down-short-wide"></i>
-            </button>
-
-            <div class="dropdown-content1" id="sortDropdown">
-                <p class="dropdown-header">Sort</p>
-                <a href="#" class="active"><i class="fa-solid fa-circle-check"></i> Best Match (Default)</a>
-                <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (Low to High)</a>
-                <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (High to Low)</a>
-                <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (Low to High)</a>
-                <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (High to Low)</a>
-            </div>
+    {{-- Advanced Filters --}}
+    <div class="filters">
+        {{-- Program Level --}}
+        <div class="filter-item custom-dropdown">
+            <select id="program_level">
+                <option value="">Program Level</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="9th-12th Grade">9th–12th Grade</option>
+                <option value="Preparatory Courses">Preparatory Courses</option>
+                <option value="ESL">ESL + Bridging</option>
+                <option value="Gap Year">Gap Year</option>
+            </select>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
         </div>
+
+        {{-- Field of Study --}}
+        <div class="filter-item custom-dropdown">
+            <select id="field_of_study">
+                <option value="">Field of Study</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Business">Business</option>
+                <option value="Health Sciences">Health Sciences</option>
+                <option value="Arts & Humanities">Arts & Humanities</option>
+                <option value="STEM">STEM</option>
+            </select>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+        </div>
+
+        {{-- Language --}}
+        <div class="filter-item custom-dropdown">
+            <select id="language">
+                <option value="">Language</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+            </select>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+        </div>
+
+        {{-- Program Tag / Delivery Mode --}}
+        <div class="filter-item custom-dropdown">
+            <select id="program_tag">
+                <option value="">Delivery Mode</option>
+                <option value="Online">Online</option>
+                <option value="In-Person">In-Person</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+{{-- Program Sort Dropdown --}}
+<div class="program-section">
+    <div class="sort-dropdown-wrapper">
+        <button class="sort-btn" onclick="toggleDropdown3()">
+            Sort <i class="fa-solid fa-arrow-down-short-wide"></i>
+        </button>
+
+        <div class="dropdown-content1" id="sortDropdown">
+            <p class="dropdown-header">Sort By</p>
+            <a href="#" class="active"><i class="fa-solid fa-circle-check"></i> Best Match (Default)</a>
+            <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (Low to High)</a>
+            <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (High to Low)</a>
+            <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (Low to High)</a>
+            <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (High to Low)</a>
+        </div>
+    </div>
+</div>
+
 
 
         <!-- @if ($programs->count())

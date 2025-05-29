@@ -38,20 +38,22 @@
 
         <div class="carousel">
             <div class="carousel-track">
-                <img src="images/webinar1.webp" alt="Image 1">
-                <img src="images/webinar2.webp" alt="Image 2">
-                <img src="images/webinar3.webp" alt="Image 3">
-                <img src="images/webinar4.webp" alt="Image 4">
-                <img src="images/webinar5.webp" alt="Image 5">
-                <img src="images/webinar6.webp" alt="Image 6">
-                <img src="images/webinar7.webp" alt="Image 7">
-                <img src="images/webinar1.webp" alt="Image 1">
-                <img src="images/webinar2.webp" alt="Image 2">
-                <img src="images/webinar3.webp" alt="Image 3">
-                <img src="images/webinar4.webp" alt="Image 4">
-                <img src="images/webinar5.webp" alt="Image 5">
-                <img src="images/webinar6.webp" alt="Image 6">
-                <img src="images/webinar7.webp" alt="Image 7">
+                <img src="images/gallary1.jpg" alt="Image 1">
+                <img src="images/gallary2.jpg" alt="Image 2">
+                <img src="images/gallary3.jpg" alt="Image 3">
+                <img src="images/gallary4.jpg" alt="Image 4">
+                <img src="images/gallary5.jpg" alt="Image 5">
+                <img src="images/gallary6.jpg" alt="Image 6">
+                <img src="images/gallary7.jpg" alt="Image 7">
+                <img src="images/gallary8.jpg" alt="Image 8">
+                <img src="images/gallary9.jpg" alt="Image 9">
+                <img src="images/gallary10.jpg" alt="Image 10">
+                <img src="images/gallary11.jpg" alt="Image 11">
+                <img src="images/gallary12.jpg" alt="Image 12">
+                <img src="images/gallary13.jpg" alt="Image 13">
+                <img src="images/gallary14.jpg" alt="Image 14">
+                <img src="images/gallary15.jpg" alt="Image 15">
+
             </div>
         </div><br>
 
