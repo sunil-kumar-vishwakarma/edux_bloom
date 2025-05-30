@@ -25,6 +25,8 @@ use App\Http\Controllers\SMSController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UserDashController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 
 
@@ -75,6 +77,10 @@ Route::get('/', [HomeController::class, 'homePage']);
 Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus');
 Route::get('/student-register', [HomeController::class, 'studentRegister'])->name('student-register');
 Route::get('/student-login', [HomeController::class, 'studentLogin'])->name('student-login');
+Route::post('/student/login', [LoginController::class, 'login']);
+
+Route::post('/student/register', [RegisterController::class, 'register']);
+
 Route::get('/forgotpassword', [HomeController::class, 'forgotpassword'])->name('forgotpassword');
 Route::post('/forgotpassword2', [HomeController::class, 'forgotpassword2'])->name('forgotpassword2');
 Route::post('/sendResetLink', [HomeController::class, 'sendResetLink'])->name('forgotpassword.send');

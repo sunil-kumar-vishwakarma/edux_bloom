@@ -25,7 +25,7 @@ class RegisterController extends Controller
                 'regex:/[0-9]/',
                 'regex:/[@$!%*#?&]/'
             ],
-            'tc' => 'required|accepted'
+            // 'tc' => 'required|accepted'
         ]);
 
         if ($validator->fails()) {

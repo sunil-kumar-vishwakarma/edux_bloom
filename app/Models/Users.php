@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
-class Users extends Authenticatable
+use Tymon\JWTAuth\Contracts\JWTSubject;
+class Users extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -26,4 +26,16 @@ class Users extends Authenticatable
         'password',
         'remember_token',
     ];
+   public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key-value array containing any custom claims.
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 }
