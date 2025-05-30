@@ -7,13 +7,13 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\api\ApiController;
 
-// Route::post('/student/login', [LoginController::class, 'login']);
+Route::post('/student/login', [LoginController::class, 'login']);
 
-// Route::post('/student/register', [RegisterController::class, 'register']);
-Route::post('/student/register', [ApiController::class, 'register']);
+Route::post('/student/register', [RegisterController::class, 'register']);
+Route::post('/user/register', [ApiController::class, 'register']);
 
-Route::post('/student/login', [ApiController::class, 'login']);
-Route::post('/student/logout', [ApiController::class, 'logout']);
+Route::post('/user/login', [ApiController::class, 'login']);
+Route::post('/user/logout', [ApiController::class, 'logout']);
 Route::post('forgot-password', [ApiController::class, 'forgotPassword']);
 Route::post('verify-otp', [ApiController::class, 'verifyOTP']);
 Route::post('reset', [ApiController::class, 'reset']);
