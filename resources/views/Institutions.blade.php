@@ -173,7 +173,8 @@
         <div class="mentee-overlay"></div>
         <div class="mentee-wrapper">
             <div class="mentee-image">
-                <img src="https://i.ibb.co/W4jM3HtH/woman-with-laptop-looking-camera.jpg" alt="Happy student mentee">
+                {{-- <img src="https://i.ibb.co/W4jM3HtH/woman-with-laptop-looking-camera.jpg" alt="Happy student mentee"> --}}
+                <img src="https://i.ibb.co/PZj0fXz5/young-adult-smiling-while-with-friends.jpg" alt="Happy student mentee">
             </div>
             <div class="mentee-text">
                 <h2>Become a <span>Mentee</span></h2>
