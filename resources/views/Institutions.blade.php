@@ -1,7 +1,6 @@
 @extends('frontent.layouts.app')
 @section('title', 'EduX | Student')
 @section('content')
-
     <link rel="stylesheet" href="{{ asset('css/institution.css') }}">
     <section class="student-hero">
         <div class="hero-container">
@@ -159,7 +158,7 @@
                     one that
                     changes a life forever.
                 </p>
-                <a href="#" class="mentor-cta">Apply to Be a Mentor</a>
+                <a href="#" class="mentor-cta" onclick="openMentorForm()">Apply to Be a Mentor</a>
             </div>
             <div class="mentor-image">
                 <img src="https://i.ibb.co/Xff2N15n/black-tutor-mentoring-schoolgirl-school-library-study-desk.jpg"
@@ -187,7 +186,7 @@
                     the path
                     ahead just got clearer.
                 </p>
-                <a href="#" class="mentee-cta">Register as a Student</a>
+                <a href="/student-register" class="mentee-cta">Register as a Student</a>
             </div>
         </div>
     </section>
@@ -225,6 +224,42 @@
     </div>
     <br>
 
+
+    <!-- Popup Form -->
+    <div id="mentorFormPopup" class="popup-overlay">
+        <div class="popup-form">
+            <span class="close-btn" onclick="closeMentorForm()">&times;</span>
+            <h2 class="popup-title">Mentor Application</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., +234XXXXXXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">Current/Graduated School</label>
+                    <input type="text" id="school" name="school" placeholder="Enter your school name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Enter your country" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -300,4 +335,21 @@
 
         // Initial load
         showSlide(currentSlide);
+    </script>
+    <script>
+        function openMentorForm() {
+            document.getElementById("mentorFormPopup").style.display = "flex";
+        }
+
+        function closeMentorForm() {
+            document.getElementById("mentorFormPopup").style.display = "none";
+        }
+
+        // Optional: Click outside to close
+        window.onclick = function(event) {
+            const popup = document.getElementById("mentorFormPopup");
+            if (event.target === popup) {
+                closeMentorForm();
+            }
+        }
     </script>

@@ -27,7 +27,7 @@
             flex-wrap: wrap;
             gap: 16px;
             width: 100%;
-            max-width: 1150px;
+            /* max-width: 1150px; */
             border-radius: 8px;
             padding: 16px 20px;
             align-items: center;
@@ -101,12 +101,13 @@
             }
 
             .custom-dropdown {
-                min-width: 390px;
+                min-width: 350px;
             }
 
             .dropdown,
             .search-box {
                 width: 100%;
+                max-width: 350px;
             }
         }
 
@@ -647,316 +648,293 @@
     </style>
     <!-- </head>
 
-                <body> -->
+                    <body> -->
 
-  <div class="filter-search-wrapper">
-    {{-- Search and Top Filters --}}
-    <div class="search-container">
-        {{-- Keyword Search --}}
-        <div class="search-box">
-            <svg aria-hidden="true" viewBox="0 0 24 24" class="search-icon" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M16.386 18.211C14.885 19.335 13.02 20 11 20 6.03 20 2 15.971 2 11 2 6.03 6.03 2 11 2c4.971 0 9 4.03 9 9 0 2.228-.81 4.267-2.151 5.839l4.827 4.424-1.351 1.474-4.938-4.526ZM18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z">
-                </path>
-            </svg>
-            <input type="text" id="keyword" class="search-bar" placeholder="What would you like to study?" />
+    <div class="filter-search-wrapper">
+        {{-- Search and Top Filters --}}
+        <div class="search-container">
+            {{-- Keyword Search --}}
+            <div class="search-box">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="search-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.386 18.211C14.885 19.335 13.02 20 11 20 6.03 20 2 15.971 2 11 2 6.03 6.03 2 11 2c4.971 0 9 4.03 9 9 0 2.228-.81 4.267-2.151 5.839l4.827 4.424-1.351 1.474-4.938-4.526ZM18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z">
+                    </path>
+                </svg>
+                <input type="text" id="keyword" class="search-bar" placeholder="What would you like to study?" />
+            </div>
+
+            {{-- Country Filter --}}
+            <div class="custom-dropdown">
+                <select class="dropdown" id="countries">
+                    <option value="">Select Destination</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
+
+            {{-- Institute Filter --}}
+            <div class="custom-dropdown">
+                <select class="dropdown" id="institute">
+                    <option value="">Select Institute</option>
+                    {{-- Dynamic example --}}
+                    {{-- @foreach ($schools as $value) --}}
+                    {{-- <option value="{{ $value->name }}">{{ $value->name }}</option> --}}
+                    {{-- @endforeach --}}
+                    <option value="MIT">MIT</option>
+                    <option value="Stanford">Stanford</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
         </div>
 
-        {{-- Country Filter --}}
-        <div class="custom-dropdown">
-            <select class="dropdown" id="countries">
-                <option value="">Select Destination</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
-            </select>
-            <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
+        {{-- Advanced Filters --}}
+        <div class="filters">
+            {{-- Program Level --}}
+            <div class="filter-item custom-dropdown">
+                <select id="program_level">
+                    <option value="">Program Level</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                    <option value="9th-12th Grade">9th–12th Grade</option>
+                    <option value="Preparatory Courses">Preparatory Courses</option>
+                    <option value="ESL">ESL + Bridging</option>
+                    <option value="Gap Year">Gap Year</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
 
-        {{-- Institute Filter --}}
-        <div class="custom-dropdown">
-            <select class="dropdown" id="institute">
-                <option value="">Select Institute</option>
-                {{-- Dynamic example --}}
-                {{-- @foreach ($schools as $value) --}}
-                {{-- <option value="{{ $value->name }}">{{ $value->name }}</option> --}}
-                {{-- @endforeach --}}
-                <option value="MIT">MIT</option>
-                <option value="Stanford">Stanford</option>
-            </select>
-            <i class="fas fa-chevron-down dropdown-icon"></i>
+            {{-- Field of Study --}}
+            <div class="filter-item custom-dropdown">
+                <select id="field_of_study">
+                    <option value="">Field of Study</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Business">Business</option>
+                    <option value="Health Sciences">Health Sciences</option>
+                    <option value="Arts & Humanities">Arts & Humanities</option>
+                    <option value="STEM">STEM</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
+
+            {{-- Language --}}
+            <div class="filter-item custom-dropdown">
+                <select id="language">
+                    <option value="">Language</option>
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
+
+            {{-- Program Tag / Delivery Mode --}}
+            <div class="filter-item custom-dropdown">
+                <select id="program_tag">
+                    <option value="">Delivery Mode</option>
+                    <option value="Online">Online</option>
+                    <option value="In-Person">In-Person</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    {{-- Program Sort Dropdown --}}
+    <div class="program-section">
+        <div class="sort-dropdown-wrapper">
+            <button class="sort-btn" onclick="toggleDropdown3()">
+                Sort <i class="fa-solid fa-arrow-down-short-wide"></i>
+            </button>
+
+            <div class="dropdown-content1" id="sortDropdown">
+                <p class="dropdown-header">Sort By</p>
+                <a href="#" class="active"><i class="fa-solid fa-circle-check"></i> Best Match (Default)</a>
+                <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (Low to High)</a>
+                <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (High to Low)</a>
+                <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (Low to High)</a>
+                <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (High to Low)</a>
+            </div>
         </div>
     </div>
 
-    {{-- Advanced Filters --}}
-    <div class="filters">
-        {{-- Program Level --}}
-        <div class="filter-item custom-dropdown">
-            <select id="program_level">
-                <option value="">Program Level</option>
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Postgraduate">Postgraduate</option>
-                <option value="9th-12th Grade">9th–12th Grade</option>
-                <option value="Preparatory Courses">Preparatory Courses</option>
-                <option value="ESL">ESL + Bridging</option>
-                <option value="Gap Year">Gap Year</option>
-            </select>
-            <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
-
-        {{-- Field of Study --}}
-        <div class="filter-item custom-dropdown">
-            <select id="field_of_study">
-                <option value="">Field of Study</option>
-                <option value="Engineering">Engineering</option>
-                <option value="Business">Business</option>
-                <option value="Health Sciences">Health Sciences</option>
-                <option value="Arts & Humanities">Arts & Humanities</option>
-                <option value="STEM">STEM</option>
-            </select>
-            <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
-
-        {{-- Language --}}
-        <div class="filter-item custom-dropdown">
-            <select id="language">
-                <option value="">Language</option>
-                <option value="English">English</option>
-                <option value="French">French</option>
-            </select>
-            <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
-
-        {{-- Program Tag / Delivery Mode --}}
-        <div class="filter-item custom-dropdown">
-            <select id="program_tag">
-                <option value="">Delivery Mode</option>
-                <option value="Online">Online</option>
-                <option value="In-Person">In-Person</option>
-                <option value="Hybrid">Hybrid</option>
-            </select>
-            <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
-    </div>
-</div>
-
-<hr>
-
-{{-- Program Sort Dropdown --}}
-<div class="program-section">
-    <div class="sort-dropdown-wrapper">
-        <button class="sort-btn" onclick="toggleDropdown3()">
-            Sort <i class="fa-solid fa-arrow-down-short-wide"></i>
-        </button>
-
-        <div class="dropdown-content1" id="sortDropdown">
-            <p class="dropdown-header">Sort By</p>
-            <a href="#" class="active"><i class="fa-solid fa-circle-check"></i> Best Match (Default)</a>
-            <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (Low to High)</a>
-            <a href="#"><i class="fa-solid fa-dollar-sign"></i> Tuition Cost (High to Low)</a>
-            <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (Low to High)</a>
-            <a href="#"><i class="fa-solid fa-file-invoice"></i> Application Fee (High to Low)</a>
-        </div>
-    </div>
-</div>
 
 
-
-        <!-- @if ($programs->count())
-                            <div class="programs-container" id="program-results">
-                                @foreach ($programs as $value)
+    <!-- @if ($programs->count())
+                                <div class="programs-container" id="program-results">
+                                    @foreach ($programs as $value)
     <div class="program-card">
-                                        <div class="program-header">
-                                            <img src="{{ asset('/public/storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
-                                                alt="University Logo" class="program-logo" />
-                                              <a href="#">
-                                                <h3>{{ $value->university_name }}</h3>
-                                            </a>
-                                        </div>
+                                            <div class="program-header">
+                                                <img src="{{ asset('/public/storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
+                                                    alt="University Logo" class="program-logo" />
+                                                  <a href="#">
+                                                    <h3>{{ $value->university_name }}</h3>
+                                                </a>
+                                            </div>
 
-                                        <div class="program-badges">
-                                            <span class="badge">{{ $value->success_prediction }} Demand</span>
-                                            <span class="badge">Popular</span>
-                                        </div>
+                                            <div class="program-badges">
+                                                <span class="badge">{{ $value->success_prediction }} Demand</span>
+                                                <span class="badge">Popular</span>
+                                            </div>
 
-                                        <div class="program-details">
-                                            <small>{{ $value->certificate }}</small>
-                                            <a href="#">
-                                                <p>{{ $value->college_name }}</p>
-                                            </a>
-                                            <hr />
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Course</td>
-                                                        <td>{{ $value->college_course }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Location</td>
-                                                        <td>{{ $value->location }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campus Country</td>
-                                                        <td>{{ $value->campus_country }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campus city</td>
-                                                        <td>{{ $value->location }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Tuition (1st year)</td>
-                                                        <td> ${{ $value->tuition }}CAD</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Application fee</td>
-                                                        <td>${{ $value->application_fee }}CAD</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Duration</td>
-                                                        <td> {{ $value->duration }} months</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                            <div class="program-details">
+                                                <small>{{ $value->certificate }}</small>
+                                                <a href="#">
+                                                    <p>{{ $value->college_name }}</p>
+                                                </a>
+                                                <hr />
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Course</td>
+                                                            <td>{{ $value->college_course }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Location</td>
+                                                            <td>{{ $value->location }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Campus Country</td>
+                                                            <td>{{ $value->campus_country }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Campus city</td>
+                                                            <td>{{ $value->location }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tuition (1st year)</td>
+                                                            <td> ${{ $value->tuition }}CAD</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Application fee</td>
+                                                            <td>${{ $value->application_fee }}CAD</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Duration</td>
+                                                            <td> {{ $value->duration }} months</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
 
-                                        <div class="program-footer">
-                                            <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
-                                            <button class="apply-btn">Create Application</button>
+                                            <div class="program-footer">
+                                                <p>Success prediction <button class="success-btn" onclick="openModal()">Details</button></p>
+                                                <button class="apply-btn">Create Application</button>
+                                            </div>
                                         </div>
-                                    </div>
     @endforeach
-                            </div>
+                                </div>
 @else
     <p>No programs found.</p>
-                        @endif
-                    </div>
-                    <div class="pagination">
-                        {{ $programs->appends(request()->input())->links() }}
-                    </div>
-                    -->
+                            @endif
+                        </div>
+                        <div class="pagination">
+                            {{ $programs->appends(request()->input())->links() }}
+                        </div>
+                        -->
 
-        <div id="program-results">
-            @include('partials.programs', ['programs' => $programs])
-        </div>
-        <script src="{{ asset('js/programs.js') }}" defer></script>
+    <div id="program-results">
+        @include('partials.programs', ['programs' => $programs])
+    </div>
+    <script src="{{ asset('js/programs.js') }}" defer></script>
 
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                <script>
-                    function fetchPrograms() {
-                        let countries = $('#countries').val();
-                        $.ajax({
-                            url: "{{ route('search') }}",
-                            type: "GET",
-                            data: {
-                                countries: countries
-                            },
-                            success: function(response) {
-                                $('#program-results').html(response);
-                            }
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script>
+                        function fetchPrograms() {
+                            let countries = $('#countries').val();
+                            $.ajax({
+                                url: "{{ route('search') }}",
+                                type: "GET",
+                                data: {
+                                    countries: countries
+                                },
+                                success: function(response) {
+                                    $('#program-results').html(response);
+                                }
+                            });
+                        }
+
+                        $('#keyword').on('keyup', function() {
+                            fetchPrograms();
                         });
-                    }
 
-                    $('#keyword').on('keyup', function() {
-                        fetchPrograms();
-                    });
+                        $('#countries').on('change', function() {
+                            fetchPrograms();
+                        });
+                    </script> -->
 
-                    $('#countries').on('change', function() {
-                        fetchPrograms();
-                    });
-                </script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function fetchPrograms(url = "{{ route('search') }}") {
+            let keyword = $('#keyword').val();
 
-        <script>
-            function fetchPrograms(url = "{{ route('search') }}") {
-                let keyword = $('#keyword').val();
-
-                $.ajax({
-                    url: url,
-                    type: 'GET',
-                    data: {
-                        keyword: keyword,
-                        // countries: countries
-                    },
-                    success: function(response) {
-                        $('#program-results').html(response);
-                    }
-                });
-            }
-
-            $('#keyword').on('keyup', function() {
-                fetchPrograms();
+            $.ajax({
+                url: url,
+                type: 'GET',
+                data: {
+                    keyword: keyword,
+                    // countries: countries
+                },
+                success: function(response) {
+                    $('#program-results').html(response);
+                }
             });
+        }
 
-            // $('#countries').on('change', function () {
-            //     fetchPrograms();
-            // });
+        $('#keyword').on('keyup', function() {
+            fetchPrograms();
+        });
 
-            $(document).on('click', '.pagination a', function(e) {
-                e.preventDefault();
-                fetchPrograms($(this).attr('href'));
+        // $('#countries').on('change', function () {
+        //     fetchPrograms();
+        // });
+
+        $(document).on('click', '.pagination a', function(e) {
+            e.preventDefault();
+            fetchPrograms($(this).attr('href'));
+        });
+    </script>
+    <script>
+        function fetchProgramsCountry(url = "{{ route('search') }}") {
+            let countries = $('#countries').val();
+
+            $.ajax({
+                url: url,
+                type: "GET",
+                data: {
+                    countries: countries
+                },
+                success: function(response) {
+                    $('#program-results').html(response);
+                },
+                error: function(xhr) {
+                    console.log('AJAX error:', xhr);
+                }
             });
-        </script>
-        <script>
-            function fetchProgramsCountry(url = "{{ route('search') }}") {
-                let countries = $('#countries').val();
+        }
 
-                $.ajax({
-                    url: url,
-                    type: "GET",
-                    data: {
-                        countries: countries
-                    },
-                    success: function(response) {
-                        $('#program-results').html(response);
-                    },
-                    error: function(xhr) {
-                        console.log('AJAX error:', xhr);
-                    }
-                });
-            }
+        // When dropdown changes
+        $('#countries').on('change', function() {
+            fetchProgramsCountry();
+        });
 
-            // When dropdown changes
-            $('#countries').on('change', function() {
-                fetchProgramsCountry();
-            });
+        // Handle AJAX pagination
+        $(document).on('click', '.pagination a', function(e) {
+            e.preventDefault();
+            let pageUrl = $(this).attr('href');
+            fetchProgramsCountry(pageUrl);
+        });
+    </script>
 
-            // Handle AJAX pagination
-            $(document).on('click', '.pagination a', function(e) {
-                e.preventDefault();
-                let pageUrl = $(this).attr('href');
-                fetchProgramsCountry(pageUrl);
-            });
-        </script>
-
-        <script>
-            function fetchPrograms() {
-                $.ajax({
-                    url: "{{ route('search') }}",
-                    type: "GET",
-                    data: {
-                        keyword: $('#keyword').val(),
-                        countries: $('#countries').val(),
-                        institute: $('#institute').val(),
-                        program_level: $('#program_level').val(),
-                        field_of_study: $('#field_of_study').val(),
-                        language: $('#language').val(),
-                        program_tag: $('#program_tag').val()
-                    },
-                    success: function(response) {
-                        $('#program-results').html(response); // Just update program list
-                    }
-                });
-            }
-
-            $('#keyword, #countries, #institute, #program_level, #field_of_study, #language, #program_tag').on('change keyup',
-                function() {
-                    fetchPrograms();
-                });
-
-            $(document).on('click', '.pagination a', function(e) {
-                e.preventDefault();
-                let url = $(this).attr('href');
-                $.get(url, {
+    <script>
+        function fetchPrograms() {
+            $.ajax({
+                url: "{{ route('search') }}",
+                type: "GET",
+                data: {
                     keyword: $('#keyword').val(),
                     countries: $('#countries').val(),
                     institute: $('#institute').val(),
@@ -964,10 +942,33 @@
                     field_of_study: $('#field_of_study').val(),
                     language: $('#language').val(),
                     program_tag: $('#program_tag').val()
-                }, function(response) {
-                    $('#program-results').html(response);
-                });
+                },
+                success: function(response) {
+                    $('#program-results').html(response); // Just update program list
+                }
             });
-        </script>
+        }
 
-    @endsection
+        $('#keyword, #countries, #institute, #program_level, #field_of_study, #language, #program_tag').on('change keyup',
+            function() {
+                fetchPrograms();
+            });
+
+        $(document).on('click', '.pagination a', function(e) {
+            e.preventDefault();
+            let url = $(this).attr('href');
+            $.get(url, {
+                keyword: $('#keyword').val(),
+                countries: $('#countries').val(),
+                institute: $('#institute').val(),
+                program_level: $('#program_level').val(),
+                field_of_study: $('#field_of_study').val(),
+                language: $('#language').val(),
+                program_tag: $('#program_tag').val()
+            }, function(response) {
+                $('#program-results').html(response);
+            });
+        });
+    </script>
+
+@endsection
