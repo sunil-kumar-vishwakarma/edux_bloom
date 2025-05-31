@@ -62,7 +62,6 @@
                 <h3>Study In:</h3>
                 <ul>
                     <li>United State</li>
-                    <li>United Kingdom</li>
                     <li>Canada</li>
                 </ul>
             </div>
