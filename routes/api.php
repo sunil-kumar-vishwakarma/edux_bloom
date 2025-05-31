@@ -18,8 +18,12 @@ Route::post('forgot-password', [ApiController::class, 'forgotPassword']);
 Route::post('verify-otp', [ApiController::class, 'verifyOTP']);
 Route::post('reset', [ApiController::class, 'reset']);
 Route::post('change-password', [ApiController::class, 'updatePassword']);
+Route::get('privacy-policy', [ApiController::class, 'privacyPolicy']);
+Route::get('/term-and-condition', [ApiController::class, 'termAndCondition']);
+Route::get('/blogs', [ApiController::class, 'blogs']);
 
-
+Route::get('/about', [ApiController::class, 'aboutus']);
+Route::get('/userprofile', [ApiController::class, 'userprofile']);
 // Login API
 Route::post('/login', [AuthController::class, 'login']);
 // Route::post('/login', [AuthController::class, 'login'])->withoutMiddleware('auth');

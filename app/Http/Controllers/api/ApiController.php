@@ -9,6 +9,8 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Users;
 use App\Models\User;
+use App\Models\Page;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -297,19 +299,68 @@ public function forgotPassword(Request $request)
         return response()->json(['email'=>$request->email, 'message'=>'Please enter correct current email.']);
     }
 
-
-    // return $status === Password::PASSWORD_RESET
-    //     ? response()->json(['message' => 'Password has been reset successfully.'])
-    //     : response()->json(['message' => 'Failed to reset password.'], 500);
 }
 
 
 
-        public function logout()
+    public function logout()
     {
         Auth::logout();
         return response()->json([
             'message' => 'Successfully logged out',
         ]);
     }
+
+    public function privacyPolicy(){
+        $privacy_policy = Page::where('type', 'privacy')->first();
+        return response()->json([
+        'message' => 'Get Privacy Policy Successfully',
+        'data' => $privacy_policy,
+    ], 200);
+
+    }
+
+    public function termAndCondition(){
+         $terms_and_condition = Page::where('type', 'privacy')->first();
+        return response()->json([
+        'message' => 'Get Term Condition Successfully',
+        'data' => $terms_and_condition,
+    ], 200);
+
+    }
+
+    public function blogs(){
+        $blogs = Blog::all();
+        return response()->json([
+        'message' => 'Get Blogs Successfully',
+        'data' => $blogs,
+    ], 200);
+
+    }
+
+    public function aboutus(){
+        $blogs = Blog::all();
+        return response()->json([
+        'message' => 'Get Blogs Successfully',
+        'data' => $blogs,
+    ], 200);
+
+    }
+
+    public function userProfile()
+{
+    $user = Auth::user();
+
+    if (!$user) {
+        return response()->json([
+            'message' => 'User not authenticated',
+        ], 401);
+    }
+
+    return response()->json([
+        'message' => 'Profile fetched successfully',
+        'data' => $user,
+    ], 200);
+}
+    
 }
