@@ -523,8 +523,8 @@
 
         </div>
     </section>
-<br>
-<br>
+    <br>
+    <br>
 
     <!-- testimonial -->
     <div class="ts-section">
@@ -533,10 +533,10 @@
             <h2>Your journey, our <span>guidance</span>.</h2>
             <h2>Real mentors. Real <span>success</span>.</h2>
 
-           <a href="/contactus"> <button>
-                Book a Free Consultation
-                <i class="fas fa-arrow-right"></i>
-            </button></a>
+            <a href="/contactus"> <button>
+                    Book a Free Consultation
+                    <i class="fas fa-arrow-right"></i>
+                </button></a>
         </div>
 
         <!-- Right Slider -->
@@ -720,7 +720,7 @@
 
         </div>
 
-        {{-- tstimonial --}}
+        {{-- testimonial --}}
         <script>
             const slides = document.querySelectorAll(".ts-slide");
             const dotContainer = document.getElementById("swiperDots");

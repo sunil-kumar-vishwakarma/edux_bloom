@@ -157,7 +157,7 @@
         <div class="hero-container">
             <div class="hero-left">
                 <h1>Introducing <span>EduBloom</span></h1>
-                <p class="tagline">YYour Journey to Study in North America Starts Here</p>
+                <p class="tagline">Your Journey to Study in North America Starts Here</p>
                 <p class="description">
                     Discover Edu-X: Your Full Support System from Africa to the Americas.
                     Edu-X Services guides students from early preparation to full integration
@@ -181,7 +181,7 @@
         <div class="stat-card">
             <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
             <div class="stat-info">
-                <h3>800,000+</h3>
+                <h3>80000+</h3>
                 <p>Students Helped</p>
             </div>
         </div>
@@ -189,7 +189,7 @@
         <div class="stat-card">
             <img src="{{ asset('images/envolope.png') }}" alt="Programs Offered">
             <div class="stat-info">
-                <h3>140,000+</h3>
+                <h3>14000+</h3>
                 <p>Programs Offered</p>
             </div>
         </div>
