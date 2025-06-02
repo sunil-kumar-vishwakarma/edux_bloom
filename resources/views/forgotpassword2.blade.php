@@ -202,7 +202,7 @@
                                 {{ session('error') }}
                             </div>
                         @endif
-                        
+
                       <h2>Reset Your Password</h2>
 
                         <!-- <form id="loginForm">
@@ -244,7 +244,7 @@
 
             <!-- Right: Image -->
             <div class="illustration">
-                <img src="{{ asset('images/register.svg') }}" alt="Login Illustration" />
+                <img src="{{ asset('images/login.avif') }}" alt="Login Illustration" />
             </div>
         </div>
 

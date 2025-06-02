@@ -1,6 +1,15 @@
 <style>
+    .logo-border {
+        border: 5px solid #0056b3;
+        border-radius: 50% !important;
+        padding: 6px;
+        background-color: white;
+
+    }
+
     #navbarNav {
-        margin-top: 8.5px;
+        /* margin-top: 8.5px; */
+        margin-top: -8.5px;
     }
 
     .nav-link i {
@@ -73,9 +82,11 @@
     <div class="container-fluid">
         <!-- Brand/Logo -->
         <a class="navbar-brand" href="{{ '/' }}">
-            <img src="{{ asset('images/edu-x white.png') }}" alt="Edu-X Logo" height="70" width="70">
+            <img src="{{ asset('images/edu-x white.png') }}" alt="Edu-X Logo" height="70" width="70"
+                class="logo-border">
             <div>Edu-X Services</div>
         </a>
+
 
         <!-- Toggle button for mobile screens -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -108,7 +119,8 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item {{ request()->is('blogs-pages') ? 'active' : '' }}"
                                 href="/blogs-pages">Edu-X Blog</a></li>
-                        <li><a class="dropdown-item {{ request()->is('youngleaders') ? 'active' : '' }}" href="/youngleaders">Edu-X
+                        <li><a class="dropdown-item {{ request()->is('youngleaders') ? 'active' : '' }}"
+                                href="/youngleaders">Edu-X
                                 Young Leaders</a></li>
                         <li><a class="dropdown-item {{ request()->is('events') ? 'active' : '' }}"
                                 href="/events">Parent Resources</a></li>

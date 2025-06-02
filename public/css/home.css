@@ -20,17 +20,16 @@ h2 {
 
 .navbar-brand {
   display: flex;
-  align-items: center;
-  /* gap: 15px; */
+  /* align-items: center; */
+  gap: 5px;
   text-decoration: none;
 }
 
 .navbar-brand img {
   /* height: 70px; */
   height: 60px;
-  width: 70px;
-  border-radius: 10px;
-  /* background: radial-gradient(#ffffff 30%, #fff 99%); */
+  width: 60px;
+
 }
 
 .navbar-brand div {

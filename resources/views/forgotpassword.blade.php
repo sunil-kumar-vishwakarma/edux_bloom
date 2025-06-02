@@ -267,7 +267,7 @@
         <div class="main-container">
             <!-- Left: Form -->
             <div class="card1-login">
-                    
+
 
                 <div class="login-container">
 
@@ -308,11 +308,11 @@
 
                             <input type="email" id="email" name="email" placeholder="Email" required />
 
-                           
+
                              <button class="buttn" type="submit">Send</button>
-                           
+
                         </form> -->
-                        
+
 
 
                         <form action="{{ route('forgotpassword.send') }}" method="POST">
@@ -332,12 +332,12 @@
 
             <!-- Right: Image -->
             <div class="illustration">
-                <img src="{{ asset('images/register.svg') }}" alt="Login Illustration" />
+                <img src="{{ asset('images/login.avif') }}" alt="Login Illustration" />
             </div>
         </div>
 
 
-<!-- 
+<!--
 <script>
     // Function to hide alert messages after 3 seconds
     setTimeout(() => {
