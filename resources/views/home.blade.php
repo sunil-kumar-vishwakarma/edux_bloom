@@ -806,7 +806,7 @@
         <div class="image-stack">
             <img src="https://i.ibb.co/NdWZMQbK/student-strolls-college-yard-carries-rucksack-notepads-weas-pink-shirt-knitted-vest-hoop-surrounded.jpg"
                 alt="Front Image">
-            <img src="https://i.ibb.co/ZkfQf4N/college-students-different-ethnicities-cramming.jpg" alt="Back Image">
+            <img src="https://i.ibb.co/G3vxSNBC/african-american-college-student-with-laptop-sunny-day-city-street-231208-5497.jpg" alt="Back Image">
         </div>
         <div class="text-content">
             <h2>Discover and Explore a World of Knowledge</h2>
