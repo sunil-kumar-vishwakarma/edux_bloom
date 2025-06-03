@@ -132,27 +132,6 @@
             }
         }
     </style>
-
-
-    {{-- <div class="imag-background">
-        <video autoplay muted loop playsinline>
-            <source src="{{ asset('images/studentmain.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="text-content">
-            <span class="dot study-abroad">
-                <ul>
-                    <li>YOUR STUDY ABROAD SOLUTION</li>
-                </ul>
-            </span>
-
-            <div class="cont">
-                <h2 class="study-pro">{{ __('messages.PerfectProgram') }}</h2><br>
-                <p>{{ __('messages.well_help_home') }} </p>
-            </div>
-            <button type="button" class="btn-light"><a href="/search">Start your journey</a></button>
-        </div>
-    </div> --}}
     <section class="student-hero">
         <div class="hero-container">
             <div class="hero-left">

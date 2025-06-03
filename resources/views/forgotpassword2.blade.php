@@ -19,6 +19,7 @@
             .main-container {
                 margin-top: 5%;
                 display: flex;
+                flex-direction: row-reverse;
                 min-height: 100vh;
                 align-items: center;
                 justify-content: center;
@@ -203,19 +204,19 @@
                             </div>
                         @endif
 
-                      <h2>Reset Your Password</h2>
+                        <h2>Reset Your Password</h2>
 
                         <!-- <form id="loginForm">
 
-                            <div class="password-wrapper">
-                                <input type="password" id="password" placeholder="Password" required />
-                                <span class="toggle-password" onclick="togglePassword()">
-                                    <i class="fa-solid fa-eye" id="eyeIcon"></i>
-                                </span>
-                            </div>
+                                <div class="password-wrapper">
+                                    <input type="password" id="password" placeholder="Password" required />
+                                    <span class="toggle-password" onclick="togglePassword()">
+                                        <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                                    </span>
+                                </div>
 
-                            <button class="buttn" type="button">Reset Password</button>
-                        </form> -->
+                                <button class="buttn" type="button">Reset Password</button>
+                            </form> -->
 
 
                         <form action="{{ route('password.update') }}" method="POST">
@@ -224,8 +225,8 @@
                             <input type="hidden" name="email" value="{{ $email }}">
                             <label>New Password:</label>
                             <div class="password-wrapper">
-                            <input type="password" name="password" id="password" required>
-                            <span class="toggle-password" onclick="togglePassword()">
+                                <input type="password" name="password" id="password" required>
+                                <span class="toggle-password" onclick="togglePassword()">
                                     <i class="fa-solid fa-eye" id="eyeIcon"></i>
                                 </span>
                             </div>

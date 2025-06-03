@@ -20,7 +20,7 @@ h2 {
 
 .navbar-brand {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   gap: 5px;
   text-decoration: none;
 }
@@ -37,7 +37,7 @@ h2 {
   font-style: normal;
     color: #b92151;
   font-weight: 800;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 /* NAV LINK STYLES */

@@ -78,6 +78,8 @@ Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus'
 Route::get('/student-register', [HomeController::class, 'studentRegister'])->name('student-register');
 Route::get('/student-login', [HomeController::class, 'studentLogin'])->name('student-login');
 Route::post('/student/login', [LoginController::class, 'login']);
+// Route::get('/dashboard', [LoginController::class, 'userdashboard'])->name('user.dashboard');
+
 
 Route::post('/student/register', [RegisterController::class, 'register']);
 

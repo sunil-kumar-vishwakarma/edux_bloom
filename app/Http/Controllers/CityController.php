@@ -61,26 +61,24 @@ class CityController extends Controller
     }
 
     // Delete an existing city
-   // Delete an existing city
-public function destroy($id)
-{
-    try {
-        $city = City::findOrFail($id);
-        $city->delete();
+    // Delete an existing city
+    public function destroy($id)
+    {
+        try {
+            $city = City::findOrFail($id);
+            $city->delete();
 
-        return redirect()->route('cities.index')->with('success', 'City deleted successfully!');
-    } catch (\Exception $e) {
-        return redirect()->route('cities.index')->with('error', 'Failed to delete city.');
+            return redirect()->route('cities.index')->with('success', 'City deleted successfully!');
+        } catch (\Exception $e) {
+            return redirect()->route('cities.index')->with('error', 'Failed to delete city.');
+        }
     }
-}
-
-    
-
-  public function show($id)
-{
-    $city = City::findOrFail($id); // Find the city by ID or return a 404 error
-    return response()->json($city);
-}
 
 
+
+    public function show($id)
+    {
+        $city = City::findOrFail($id); // Find the city by ID or return a 404 error
+        return response()->json($city);
+    }
 }

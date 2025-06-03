@@ -9,6 +9,7 @@ use App\Models\Page;
 use App\Models\User;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
+
 class HomeController extends Controller
 {
     //
@@ -74,37 +75,36 @@ class HomeController extends Controller
 
 
     public function sendResetLink(Request $request)
-{
-    $request->validate([
-        'email' => 'required|email',
-    ]);
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
 
-    // Manually check if email exists
-    $user = User::where('email', $request->email)->first();
+        // Manually check if email exists
+        $user = User::where('email', $request->email)->first();
 
-    if (!$user) {
-        return redirect()->route('forgotpassword')->with('error', __('Email does not exist'));
-        // return back()->withErrors(['error' => 'Email does not exist']);
-    }
+        if (!$user) {
+            return redirect()->route('forgotpassword')->with('error', __('Email does not exist'));
+            // return back()->withErrors(['error' => 'Email does not exist']);
+        }
 
-    // Send reset link
-    $status = Password::sendResetLink(
-        $request->only('email')
-    );
+        // Send reset link
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
 
-    // return $status === Password::RESET_LINK_SENT
-    //     ? back()->with(['success' => __($status)])
-    //     : back()->withErrors(['error' => __($status)]);
+        // return $status === Password::RESET_LINK_SENT
+        //     ? back()->with(['success' => __($status)])
+        //     : back()->withErrors(['error' => __($status)]);
 
-    if ($status === Password::RESET_LINK_SENT) {
+        if ($status === Password::RESET_LINK_SENT) {
             return redirect()->route('forgotpassword')->with('success', __($status));
         } else {
             return redirect()->route('forgotpassword')->with('error', __($status));
         }
+    }
 
-}
-
-public function showResetForm(Request $request, $token)
+    public function showResetForm(Request $request, $token)
     {
         return view('forgotpassword2', ['token' => $token, 'email' => $request->email]);
     }

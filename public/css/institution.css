@@ -103,6 +103,7 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
             .hero-container {
                 flex-direction: column;
                 text-align: center;
@@ -124,6 +125,7 @@
 
 /* empowering section */
    .mission-vision-modern {
+            margin-top: 5%;
             padding: 40px 20px;
             /* background: linear-gradient(to right, #e9f0ff, #f3f6ff); */
             text-align: center;
@@ -249,6 +251,9 @@
         }
 
         @media (max-width: 1024px) {
+            .mission-vision-modern {
+                margin-top: 10%;
+             }
             .mv-glass-card {
                 min-width: 300px;
                 flex: 0 0 45%;
@@ -256,6 +261,9 @@
         }
 
         @media (max-width: 768px) {
+            .mission-vision-modern {
+                margin-top: 15%;
+             }
             .mv-flex-cards {
                 flex-wrap: wrap;
             }
@@ -612,7 +620,7 @@
             transition: 0.2s;
         }
 
-      
+
 
         /* Form Title */
         .popup-title {

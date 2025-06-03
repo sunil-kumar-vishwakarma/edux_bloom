@@ -2,7 +2,7 @@
 @section('title', 'EduX | Student')
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/institution.css') }}">
-    <section class="student-hero">
+    {{-- <section class="student-hero">
         <div class="hero-container">
             <div class="hero-left">
                 <h1>Be Seen by 100,000+ <span>Students Every Month</span></h1>
@@ -18,7 +18,7 @@
                 <img src="{{ asset('images/parent-png.png') }}" alt="Parents Mockup" class="app-mockup">
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- empowering section --}}
     <section class="mission-vision-modern">

@@ -142,7 +142,7 @@
         .card-home img {
             width: 100%;
             height: 100%;
-            /* object-fit: cover; */
+            object-fit: cover;
             opacity: 0.9;
         }
 
@@ -740,13 +740,13 @@
     <!-- Cards -->
     <section class="cards-home">
         <div class="card-home">
-            <img src="https://i.ibb.co/BvXMmX4/vertical1.jpg" alt="Card 1">
+            <img src="{{ asset('images/home3.png') }}" alt="Card 1">
         </div>
         <div class="card-home">
-            <img src="https://i.ibb.co/zzRQfKG/vertical2.jpg" alt="Card 2">
+            <img src="{{ asset('images/vertical1.jpg') }}" alt="Card 2">
         </div>
         <div class="card-home">
-            <img src="https://i.ibb.co/BvXMmX4/vertical1.jpg" alt="Card 3">
+            <img src="{{ asset('images/home2.png') }}" alt="Card 3">
         </div>
     </section>
 
@@ -804,9 +804,9 @@
 
     <section class="section">
         <div class="image-stack">
-            <img src="https://i.ibb.co/NdWZMQbK/student-strolls-college-yard-carries-rucksack-notepads-weas-pink-shirt-knitted-vest-hoop-surrounded.jpg"
+            <img src="{{ asset('images/home6.png') }}"
                 alt="Front Image">
-            <img src="https://i.ibb.co/G3vxSNBC/african-american-college-student-with-laptop-sunny-day-city-street-231208-5497.jpg" alt="Back Image">
+            <img src="{{ asset('images/home2.png') }}" alt="Back Image">
         </div>
         <div class="text-content">
             <h2>Discover and Explore a World of Knowledge</h2>

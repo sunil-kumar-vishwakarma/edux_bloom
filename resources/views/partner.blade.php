@@ -457,45 +457,6 @@
         }
 
 
-
-
-        /*.navbar-nav .nav-link:hover::after {*/
-        /*    content: '';*/
-        /*    position: absolute;*/
-        /*    left: 0;*/
-        /*    right: 0;*/
-        /*    bottom: -8px;*/
-        /*    height: 2px;*/
-        /*    background-color: white;*/
-        /*    border-radius: 1px;*/
-        /*}*/
-
-        /*        .dropdown-container {*/
-        /*            position: relative;*/
-        /*        }*/
-
-        /*        .dropdown-btn {*/
-        /*            color: white;*/
-        /*            padding: 10px 10px;*/
-        /*            border: none;*/
-        /*            border-radius: 5px;*/
-        /*            cursor: pointer;*/
-        /*            display: flex;*/
-        /*            align-items: center;*/
-        /*            justify-content: space-between;*/
-        /*            gap: 10px;*/
-        /*            width: 120px;*/
-        /*            transition: background-color 0.3s ease;*/
-        /*            transform:translateY(4px);*/
-        /*        }*/
-
-        /*                .dropdown-btn i{*/
-        /*                    margin-top:3px;*/
-        /*                }*/
-
-
-
-
         .dropdown-menu {
             padding-top: -400px;
             position: absolute;
@@ -546,26 +507,6 @@
         .dropdown-btn {
             text-decoration: none;
         }
-
-        /* Buttons styling */
-        /*.btn-custom {*/
-        /*    color: white;*/
-        /*    background-color: blue;*/
-        /*    font-weight: bold;*/
-        /*    border: 0.5px solid white;*/
-        /*    padding: 8px 20px;*/
-        /*    border-radius: 7px;*/
-        /*    text-decoration: none;*/
-        /*    transition: all 0.3s ease;*/
-        /*}*/
-
-
-
-
-        /*.btn-custom:hover {*/
-        /*    background-color: white;*/
-        /*    color: black;*/
-        /*}*/
 
         .footer {
             background-color: #1652b4;
