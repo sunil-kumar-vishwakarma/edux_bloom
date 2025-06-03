@@ -19,20 +19,26 @@ class LoginController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ], 422);
         }
 
         // Find user
         $user = Users::where('email', $request->email)->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
-            return redirect()->back()->with('error', 'Invalid email or password');
+            return response()->json([
+                'status' => false,
+                'message' => 'Invalid email or password'
+            ], 401);
         }
 
-        // Optionally set session
-        session(['user' => $user]);
-
-        // Redirect to dashboard with success message
-        return redirect()->route('userdashboard')->with('success', 'Login successful!');
+        return response()->json([
+            'status' => true,
+            'message' => 'Login successful',
+            'data' => $user
+        ], 200);
     }
 }
