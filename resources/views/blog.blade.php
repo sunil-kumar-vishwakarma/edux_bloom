@@ -18,18 +18,35 @@
 
         /* Background Header Section */
         .background-img {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 40px;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .background-img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('images/blog-page.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 150px 40px;
-            text-align: center;
-            color: white;
+            filter: blur(3px);
+            z-index: -1;
         }
+
 
         .abroad h1 {
             font-size: 3rem;
             margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .abroad p {
@@ -37,6 +54,7 @@
             max-width: 750px;
             margin: 0 auto;
             line-height: 1.6;
+            margin-top: -10px;
         }
 
         /* Section Title */
