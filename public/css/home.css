@@ -1007,18 +1007,6 @@ video {
     height: 150px;
 }
 
-.custom-footer-col img {
-    max-height: 70px;
-    margin:auto;
-    margin-bottom:20px;
-  }
-
-  .custom-footer-copy p{
-     color:white;
-     text-align:center;
-     font-weight:bold;
-     opacity:.7;
-  }
 
 /* Small tablets and large phones (576px to 767px) */
 @media (max-width: 767px) {

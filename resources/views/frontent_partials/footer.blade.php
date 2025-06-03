@@ -58,13 +58,20 @@
 
 
             <!-- Column 4 -->
-            <div class="custom-footer-col">
+            <div class="custom-footer-col" id="county-flags">
                 <h3>Study In:</h3>
                 <ul>
-                    <li>United State</li>
-                    <li>Canada</li>
+                    <li>
+                        United States<img class="flag" src="https://flagcdn.com/us.svg" alt="USA Flag">
+
+                    </li>
+                    <li>
+                       Canada <img class="flag" src="https://flagcdn.com/ca.svg" alt="Canada Flag">
+
+                    </li>
                 </ul>
             </div>
+
 
         </div>
 
@@ -75,35 +82,31 @@
     </div>
 </footer>
 
-
-<!--
-<script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script> -->
-
-<!-- <script>
-function doGTranslate(langPair) {
-    if (langPair.value) langPair = langPair.value;
-    if (langPair == '') return;
-    var lang = langPair.split('|')[1];
-    var teCombo;
-
-    var attemptSetLang = function() {
-        teCombo = document.querySelector('.goog-te-combo');
-        if (teCombo) {
-            teCombo.value = lang;
-            teCombo.dispatchEvent(new Event('change'));
-        } else {
-            setTimeout(attemptSetLang, 500);
-        }
-    };
-
-    attemptSetLang();
-}
-</script> -->
-
-
 <style>
+    #county-flags ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #county-flags ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Space between flag and name */
+        font-size: 16px;
+        color: #ddd;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+
+    #county-flags ul li .flag {
+        width: 20px !important;
+        height: auto !important;
+        border-radius: 2px !important;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
     .custom-footer {
         /*background-color:#1652b4;*/
         background: linear-gradient(90deg, #0644a6, #2764c5);
@@ -127,11 +130,11 @@ function doGTranslate(langPair) {
     }
 
 
-    .custom-footer-col img {
+    /* .custom-footer-col img {
         max-height: 70px;
         margin: auto;
         margin-bottom: 20px;
-    }
+    } */
 
     .custom-footer-copy p {
         color: white;
@@ -202,10 +205,10 @@ function doGTranslate(langPair) {
     }
 
     @media (max-width: 600px) {
-         .edu-footer-social {
-        justify-content: center;
+        .edu-footer-social {
+            justify-content: center;
 
-    }
+        }
 
         .footer-social-icons {
             list-style: none;
