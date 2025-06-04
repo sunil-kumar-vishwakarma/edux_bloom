@@ -107,7 +107,7 @@
             alertDiv.style.padding = '12px 25px';
             alertDiv.style.fontSize = '18px';
             alertDiv.style.fontFamily = "'Roboto', sans-serif";
-            alertDiv.style.borderRadius = '10px 25px';
+            alertDiv.style.borderRadius = '6px';
             alertDiv.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
             alertDiv.style.zIndex = '1000';
             alertDiv.style.backgroundColor = type === 'error' ? '#b92151' : '#28a745';

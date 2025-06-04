@@ -38,7 +38,7 @@
                     <li><a href="{{ route('student') }}">Services</a></li>
                     {{-- <li><a href="{{ route('partner') }}">Partners</a></li> --}}
                     <li><a href="{{ route('search') }}">Resources</a></li>
-                    <li><a href="{{ route('webinar') }}">FAQ</a></li>
+                    <li><a href="{{ route('home') }}">FAQ</a></li>
                     <li><a href="{{ route('contactus') }}">Contact</a></li>
                     <li><a href="{{ route('blogs-pages') }}">Blogs</a></li>
                 </ul>
@@ -66,7 +66,7 @@
 
                     </li>
                     <li>
-                       Canada <img class="flag" src="https://flagcdn.com/ca.svg" alt="Canada Flag">
+                        Canada <img class="flag" src="https://flagcdn.com/ca.svg" alt="Canada Flag">
 
                     </li>
                 </ul>
@@ -76,9 +76,11 @@
         </div>
 
         <div class="custom-footer-copy">
-            <p>© 2020-2025 Edu-X. All Rights Reserved. Developed by <a
-                    href="https://softwarehousetechnology.com/">SHT</a></p>
+            <p>© 2020–2025 Edu-X. All rights reserved. Developed by
+                <a href="https://softwarehousetechnology.com/" target="_blank">SHT</a>
+            </p>
         </div>
+
     </div>
 </footer>
 
@@ -205,6 +207,10 @@
     }
 
     @media (max-width: 600px) {
+        .#county-flags ul li {
+            justify-content: center;
+
+        }
         .edu-footer-social {
             justify-content: center;
 
@@ -227,6 +233,10 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+         #county-flags ul li {
+            justify-content: center;
+
+        }
         .custom-footer-row {
             flex-direction: column;
             gap: 30px;

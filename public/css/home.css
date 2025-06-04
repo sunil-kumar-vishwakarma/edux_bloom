@@ -2377,12 +2377,12 @@ video {
     }
 
     .study-search-box {
-        background-color: white;
+        /* background-color: white; */
         /* background: linear-gradient(90deg, #0644a6, #2764c5); */
-        background: linear-gradient(135deg, #0644a6 0%, #bb0e45 100%);
+        /* background: linear-gradient(135deg, #0644a6 0%, #bb0e45 100%); */
         padding: 40px 20px;
         border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
         max-width: 800px;
         width: 100%;
         text-align: center;
@@ -2413,7 +2413,8 @@ video {
 
     .study-input-wrapper {
   position: relative;
-  width: 80%;
+  /* width: 80%; */
+  width: 100%;
 }
 
 .study-search-icon {
@@ -2797,7 +2798,7 @@ video {
       -webkit-backdrop-filter: blur(10px);
       color: #ffffff;
       padding: 14px 26px;
-      border-radius: 12px;
+      border-radius: 6px;
       font-weight: 600;
       font-size: 1rem;
       text-decoration: none;
