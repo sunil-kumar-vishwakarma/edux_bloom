@@ -178,13 +178,13 @@
                     <p>Please email us with your inquiries.</p>
                 </div>
 
-                <div class="contact-card">
+                {{-- <div class="contact-card">
                     <div class="mv-icon-circle"><i class="fas fa-comments"></i></div>
                     <h4>Live Chat<br><small>[For registered users only]</small></h4>
                     <a href="/student-login">Login</a>
                     <hr />
                     <p>Available 24/7</p>
-                </div>
+                </div> --}}
 
                 <div class="contact-card">
                     <div class="mv-icon-circle"><i class="fas fa-globe fa-fw"></i></div>
@@ -211,8 +211,8 @@
 
             <div class="social-icons">
                 <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/eduxservices/" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/edux_services/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="#" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
                 <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>

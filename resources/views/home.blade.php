@@ -15,7 +15,7 @@
             margin-top: 5%;
             background: linear-gradient(135deg, #bb0e45 0%, #0644a6 70%);
             color: #fff;
-            padding: 6rem 2rem 9rem;
+            padding: 5rem 2rem 4rem;
             /* padding: 6rem 2rem 20rem; */
             text-align: center;
             position: relative;
@@ -71,7 +71,7 @@
             justify-content: center;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .buttons-home i {
@@ -79,7 +79,8 @@
         }
 
         .btn-home {
-            padding: 0.75rem 1.5rem;
+            /* padding: 0.75rem 1.5rem; */
+            padding: 7px 1.8rem;
             font-weight: bold;
             border-radius: 8px;
             text-decoration: none;
@@ -118,7 +119,7 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 4rem 2rem;
-            /* margin-top: -20%; */
+            /* margin-top: -10%; */
             gap: 30px;
             /* background: #f2f2f2; */
         }
@@ -194,12 +195,12 @@
         }
 
         /* .practice-title {
-                                    font-size: 2.4rem;
-                                    color: #000000;
-                                    text-align: center;
-                                    margin-bottom: 50px;
-                                    font-weight: 700;
-                                } */
+                                        font-size: 2.4rem;
+                                        color: #000000;
+                                        text-align: center;
+                                        margin-bottom: 50px;
+                                        font-weight: 700;
+                                    } */
 
         .practice-grid {
             display: grid;
@@ -730,6 +731,35 @@
             <h1>Turn Your Dream of Studying in The US or Canada
                 <br> Into a Reality
             </h1>
+
+            <div class="buttons-home">
+                <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
+                    <!-- Input Field -->
+                    <div class="study-input-wrapper">
+                        <svg class="study-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="#aaa">
+                            <path
+                                d="M10 2a8 8 0 105.29 14.29l5.21 5.21 1.5-1.5-5.21-5.21A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                        </svg>
+                        <input type="text" name="keyword" class="study-search-input"
+                            placeholder="What would you like to study?">
+                    </div>
+
+                    <!-- Country Checkboxes -->
+                    <div class="country-checkboxes">
+                        <label>
+                            <input type="checkbox" name="countries[]" value="Canada">
+                            <img src="https://flagcdn.com/ca.svg" alt="Canada" class="flag-icon"> Canada
+                        </label>
+                        <label>
+                            <input type="checkbox" name="countries[]" value="United States">
+                            <img src="https://flagcdn.com/us.svg" alt="USA" class="flag-icon"> United States
+                        </label>
+                    </div>
+
+                    <!-- Search Button -->
+                    {{-- <button type="submit" class="study-search-button">Search</button> --}}
+                </form>
+            </div>
             <div class="buttons-home">
                 <a href="/search" class="btn-home btn-primary"><i class="fas fa-user-plus"></i> Join Our Program</a>
                 <a href="/contactus" class="btn-home btn-secondary">Book a Free Consultation</a>
@@ -737,7 +767,7 @@
         </div>
     </section>
 
-    <section class="study-search-section">
+    {{-- <section class="study-search-section">
         <div class="study-search-box">
             <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
                 <!-- Input Field -->
@@ -766,7 +796,7 @@
                 <button type="submit" class="study-search-button">Search</button>
             </form>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Cards -->
     <section class="cards-home">

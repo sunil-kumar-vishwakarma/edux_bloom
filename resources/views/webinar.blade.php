@@ -17,23 +17,6 @@
         }
 
 
-        .navbar-brand div {
-            font-size: 27px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            font-weight: bold;
-            margin-top: 17px;
-        }
-
-
-        .navbar-brand {
-            display: flex;
-            gap: 15px;
-        }
-
-
-
-
         .container {
             max-width: 100%;
             padding: 0;
@@ -75,7 +58,7 @@
             font-size: 40px;
             font-weight: bold;
             /* color: white; */
-            transform: translateX(316px);
+            /* transform: translateX(316px); */
 
         }
 
@@ -83,7 +66,7 @@
             max-width: 700px;
             color: white;
             font-size: 20px;
-            margin-left: 170px;
+            /* margin-left: 170px; */
 
         }
 
@@ -193,17 +176,6 @@
         }
 
 
-
-
-        /*@media (min-width: 1200px) {*/
-        /*    .card-container {*/
-        /*        flex-direction: row;*/
-        /*    }*/
-        /*    .card {*/
-        /*        width: 30%;*/
-        /*    }*/
-        /*}*/
-
         /* Tablets (Portrait & Landscape) (≥768px and <1200px) */
         @media (min-width: 768px) and (max-width: 1199px) {
             .container {
@@ -308,7 +280,7 @@
 
             .background-content h1 {
                 font-size: 24px;
-                margin-left: -506px;
+                margin-left: 120px;
 
             }
 
@@ -404,21 +376,21 @@
                 <div class="card-title">USA University Admissions 101: How to get your students' visa fast: Featuring
                     Concordia University, St. Paul</div>
                 <div class="card-date">January 13, 2024, 6:00 A.M<br>4:30 P.M IST</div>
-                <a href="web.html" class="card-link">Register here →</a>
+                {{-- <a href="web.html" class="card-link">Register here →</a> --}}
             </div>
 
             <div class="card-webinar">
                 <div class="card-header destination" id="Spotlight">Destination Spotlight</div>
                 <div class="card-title">Destination UK: What Can We Expect in 2025?</div>
                 <div class="card-date">January 14, 2024, 6:00 A.M<br>4:30 P.M IST</div>
-                <a href="web.html" class="card-link">Register here →</a>
+                {{-- <a href="web.html" class="card-link">Register here →</a> --}}
             </div>
 
             <div class="card-webinar">
                 <div class="card-header trends" id="Spotlight">Trends Report</div>
                 <div class="card-title">What's New in Edu-X</div>
                 <div class="card-date">January 15, 2024, 6:00 A.M<br>4:30 P.M IST</div>
-                <a href="web.html" class="card-link">Register here →</a>
+                {{-- <a href="web.html" class="card-link">Register here →</a> --}}
             </div>
         </div><br>
 
@@ -427,39 +399,23 @@
 
 
 
-    <!-- <div class="blue4">
-                        <div class="content1">
-                          <div>
-                            <h1>Webinars by Edu-X</h1>
-                            <p>
-                                Receive expert advice, data insights, application tips, and much more, in Edu-X’s live webinars. These are exclusively offered to empower our Recruitment Partners’ success.
-                            </p>
-                          </div>
-
-                            <div class="btn1">
-                              <a href="#"><button>See Our Upcoming Webinar</button></a>
-                            </div>
-                          </div>
-                        </div><br><br><br> -->
-
-
-
     <div class="carousel">
         <div class="carousel-track">
-            <img src="images/webinar1.webp" alt="Image 1">
-            <img src="images/webinar2.webp" alt="Image 2">
-            <img src="images/webinar3.webp" alt="Image 3">
-            <img src="images/webinar4.webp" alt="Image 4">
-            <img src="images/webinar5.webp" alt="Image 5">
-            <img src="images/webinar6.webp" alt="Image 6">
-            <img src="images/webinar7.webp" alt="Image 7">
-            <img src="images/webinar1.webp" alt="Image 1">
-            <img src="images/webinar2.webp" alt="Image 2">
-            <img src="images/webinar3.webp" alt="Image 3">
-            <img src="images/webinar4.webp" alt="Image 4">
-            <img src="images/webinar5.webp" alt="Image 5">
-            <img src="images/webinar6.webp" alt="Image 6">
-            <img src="images/webinar7.webp" alt="Image 7">
+             <img src="images/gallary1.jpg" alt="Image 1">
+                <img src="images/gallary2.jpg" alt="Image 2">
+                <img src="images/gallary3.jpg" alt="Image 3">
+                <img src="images/gallary4.jpg" alt="Image 4">
+                <img src="images/gallary5.jpg" alt="Image 5">
+                <img src="images/gallary6.jpg" alt="Image 6">
+                <img src="images/gallary7.jpg" alt="Image 7">
+                <img src="images/gallary8.jpg" alt="Image 8">
+                <img src="images/gallary9.jpg" alt="Image 9">
+                <img src="images/gallary10.jpg" alt="Image 10">
+                <img src="images/gallary11.jpg" alt="Image 11">
+                <img src="images/gallary12.jpg" alt="Image 12">
+                <img src="images/gallary13.jpg" alt="Image 13">
+                <img src="images/gallary14.jpg" alt="Image 14">
+                <img src="images/gallary15.jpg" alt="Image 15">
         </div>
     </div><br>
 
