@@ -129,13 +129,30 @@
                     </ul>
                 </li>
                 <div class="language-option">
-                    <div class="language-switcher">
+                    <!-- <div class="language-switcher">
                         <a href="{{ route('change.lang', 'en') }}"
                             class="lang-option {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
                         <span class="lang-divider">|</span>
                         <a href="{{ route('change.lang', 'fr') }}"
                             class="lang-option {{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a>
+                    </div> -->
+
+                    <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <div id="google_translate_element"></div>
+                    </li>
+                    </ul>
+
+                    <!-- <div class="language-switcher">
+                        <a href="javascript:void(0)" onclick="doGTranslate('en|en')" class="lang-option">EN</a>
+                        <span class="lang-divider">|</span>
+                        <a href="javascript:void(0)" onclick="doGTranslate('en|fr')" class="lang-option">FR</a>
                     </div>
+
+                    <div id="google_translate_element" style="display:none;"></div> -->
+
+                    
                 </div>
             </ul>
 
@@ -151,7 +168,34 @@
 
     </div>
 </nav>
-<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,fr',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    function doGTranslate(langPair) {
+        if (langPair.value) langPair = langPair.value;
+        var lang = langPair.split('|')[1];
+        var select = document.querySelector("select.goog-te-combo");
+
+        if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+        } else {
+            setTimeout(function () {
+                doGTranslate(langPair);
+            }, 500);
+        }
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -162,6 +206,21 @@
         }, 'google_translate_element');
     }
 </script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+
+
+<!-- <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,fr',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -174,3 +233,43 @@
         navbarCollapse.style.display = isExpanded ? 'none' : 'flex';
     });
 </script>
+<style>
+    .goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    display: none!important;
+}
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+    left: 0;
+    top: 0;
+    height: 39px;
+    width: 100%;
+    z-index: 10000001;
+    position: fixed;
+    border: none;
+    border-bottom: 1px solid #6B90DA;
+    margin: 0;
+    box-shadow: 0 0 8px 1px #999;
+    display: none!important;
+}
+    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    text-decoration: none;
+    /* display: none!important; */
+}
+
+    #google_translate_element {
+    margin-left: 10px;
+}
+
+.goog-te-gadget {
+    font-size: 0.9rem;
+    color: white; /* Match your navbar text */
+}
+
+.goog-te-gadget .goog-te-combo {
+    margin: 0;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+</style>
