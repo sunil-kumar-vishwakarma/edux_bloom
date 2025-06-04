@@ -2367,15 +2367,19 @@ video {
 
 
 
-     /* .study-search-section {
+     .study-search-section {
         padding: 40px 20px;
         display: flex;
+        position: relative;
+        z-index: 1;
+        margin-top: -9%;
         justify-content: center;
     }
 
     .study-search-box {
         background-color: white;
-        background: linear-gradient(90deg, #0644a6, #2764c5);
+        /* background: linear-gradient(90deg, #0644a6, #2764c5); */
+        background: linear-gradient(135deg, #0644a6 0%, #bb0e45 100%);
         padding: 40px 20px;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -2471,11 +2475,7 @@ video {
     }
 
 
-    .study-search-button:hover {
-        background-color: #033074;
-    } */
-
-    /* @media (max-width: 600px) {
+    @media (max-width: 600px) {
 
 
         .study-search-form-row {
@@ -2490,7 +2490,7 @@ video {
         .study-search-button {
             width: 100%;
         }
-    } */
+    }
 
       .support-journey-section {
         padding: 20px 20px;
