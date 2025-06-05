@@ -194,13 +194,6 @@
             margin-bottom: 40px;
         }
 
-        /* .practice-title {
-                                        font-size: 2.4rem;
-                                        color: #000000;
-                                        text-align: center;
-                                        margin-bottom: 50px;
-                                        font-weight: 700;
-                                    } */
 
         .practice-grid {
             display: grid;
