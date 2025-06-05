@@ -8,38 +8,46 @@
         </button>
     </div>
     <div class="navbar-right">
-        <!--<img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">-->
         <div class="profile-icon">
-            @if(Auth::check() && Auth::user()->profile)
-                <img src="{{ asset('/storage/' . Auth::user()->profile->profile_photo) }}" alt="Profile" class="profile-img">
+            @auth
+                @if (Auth::user()->profile && Auth::user()->profile->profile_photo)
+                    <img src="{{ asset('storage/' . Auth::user()->profile->profile_photo) }}" alt="Profile"
+                        class="profile-img">
+                @else
+                    <img src="{{ asset('image/admin logo.png') }}" alt="Default Profile" class="profile-img">
+                @endif
             @else
-                <img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">
-            @endif
+                <img src="{{ asset('image/admin logo.png') }}" alt="Default Profile" class="profile-img">
+            @endauth
         </div>
-        
-        @if(Auth::check())
-            <span class="navbar-user">{{ Auth::user()->profile->name }}</span>
-        @else
-            <span class="navbar-user">Guest</span>
-        @endif
-        
-        
+
+        <span class="navbar-user">
+            @auth
+                {{ Auth::user()->profile->name ?? Auth::user()->name }}
+            @else
+                Guest
+            @endauth
+        </span>
+
+
+
         <div class="dropdown-menu">
             {{-- <a href="{{ route('profile') }}" class="dropdown-item">Profile</a> --}}
-           
-              @if(Auth::check())
-              <!-- User is authenticated, so you can access $user->id -->
-              <a href="{{ route('profile', Auth::user()->id) }}" class="dropdown-item">View Profile</a>
-          @else
-              <!-- If the user is not authenticated -->
-              <a href="{{ route('login') }}">Login</a>
-          @endif
-    
+
+            @if (Auth::check())
+                <!-- User is authenticated, so you can access $user->id -->
+                <a href="{{ route('profile', Auth::user()->id) }}" class="dropdown-item">View Profile</a>
+            @else
+                <!-- If the user is not authenticated -->
+                <a href="{{ route('login') }}">Login</a>
+            @endif
+
             <!-- Logout Functionality -->
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-            <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+            <a href="#" class="dropdown-item"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
         </div>
     </div>
 </header>

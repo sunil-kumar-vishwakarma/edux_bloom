@@ -173,7 +173,7 @@
 <script type="text/javascript">
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
-            pageLanguage: 'en',
+            // pageLanguage: 'en',
             includedLanguages: 'en,fr',
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
             autoDisplay: false
