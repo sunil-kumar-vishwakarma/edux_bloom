@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('title', 'EduX | Blogs')
 @section('content')
-  <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Include DataTable CSS -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <!-- Include DataTable CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 
-  <!-- Include DataTable JS -->
-  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- Include DataTable JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
 
     <button class="btncreate" onclick="window.location.href='{{ route('create-blog') }}';">+ Create Blog</button>
@@ -40,7 +40,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>
-                        <img src="{{ asset('public/storage/' . $blog->image) }}" alt="Blog Image">
+                        <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image">
                     </td>
                     <td id="title">{{ $blog->title }}</td>
                     <td>{{ $blog->category }}</td>
@@ -98,17 +98,17 @@
 @endsection
 
 @section('scripts')
-<script>
-    $(document).ready(function() {
-        $('#blogTable').DataTable({
-            paging: true, // Enable pagination
-            ordering: true, // Enable column sorting
-            info: true, // Hide "Showing X of Y" info
-            searching: false, // Hide search box
-            lengthChange: false // Hide "Show X entries" dropdown
+    <script>
+        $(document).ready(function() {
+            $('#blogTable').DataTable({
+                paging: true, // Enable pagination
+                ordering: true, // Enable column sorting
+                info: true, // Hide "Showing X of Y" info
+                searching: false, // Hide search box
+                lengthChange: false // Hide "Show X entries" dropdown
+            });
         });
-    });
-</script>
+    </script>
 
     <script>
         const APP_URL = "{{ url('/') }}";

@@ -8,28 +8,22 @@
         </button>
     </div>
     <div class="navbar-right">
-     <div class="profile-icon">
-    @auth
-        @if(Auth::user()->profile && Auth::user()->profile->profile_photo)
-            <img src="{{ asset('public/storage/' . Auth::user()->profile->profile_photo) }}" alt="Profile" class="profile-img">
+        <!--<img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">-->
+        <div class="profile-icon">
+            @if(Auth::check() && Auth::user()->profile)
+                <img src="{{ asset('/storage/' . Auth::user()->profile->profile_photo) }}" alt="Profile" class="profile-img">
+            @else
+                <img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">
+            @endif
+        </div>
+
+        @if(Auth::check())
+            <span class="navbar-user">{{ Auth::user()->profile->name }}</span>
         @else
-            <img src="{{ asset('public/image/admin logo.png') }}" alt="Default Profile" class="profile-img">
+            <span class="navbar-user">Guest</span>
         @endif
-    @else
-        <img src="{{ asset('public/image/admin logo.png') }}" alt="Default Profile" class="profile-img">
-    @endauth
-</div>
 
-<span class="navbar-user">
-    @auth
-        {{ Auth::user()->profile->name ?? Auth::user()->name }}
-    @else
-        Guest
-    @endauth
-</span>
-
-
-
+        
         <div class="dropdown-menu">
             {{-- <a href="{{ route('profile') }}" class="dropdown-item">Profile</a> --}}
 

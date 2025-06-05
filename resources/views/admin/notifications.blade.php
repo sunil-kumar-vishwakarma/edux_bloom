@@ -167,7 +167,7 @@
 
 .table th, .table td {
     vertical-align: middle !important;
-    text-align: center;
+    text-align: left;
     padding: 12px;
 }
 
