@@ -242,6 +242,10 @@
 
     .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
         border: none !important;
+        margin: 0 1px;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
     }
 
     .indicator {
