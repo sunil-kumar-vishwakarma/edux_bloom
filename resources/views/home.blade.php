@@ -633,11 +633,14 @@
             }
 
             .consultation-button {
-                width: 80%;
+                width: 80% !important;
             }
         }
 
         @media (max-width: 1024px) {
+             .hero-bannerr {
+                margin-top: 15%;
+            }
             .myapp-stats-section {
                 padding: 6rem 3rem;
             }

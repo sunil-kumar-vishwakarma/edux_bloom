@@ -226,7 +226,7 @@
         font-family: "Open Sans", Sans-serif;
         background: #ffffff;
         border-radius: 6px;
-        padding: 4px 8px;
+        padding: 7px 15px;
         font-size: 16px;
         border: 1px solid #ccc;
         transition: background 0.3s ease;
