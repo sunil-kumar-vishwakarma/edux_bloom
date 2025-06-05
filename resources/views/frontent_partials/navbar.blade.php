@@ -189,7 +189,7 @@
             select.value = lang;
             select.dispatchEvent(new Event('change'));
         } else {
-            setTimeout(function () {
+            setTimeout(function() {
                 doGTranslate(langPair);
             }, 500);
         }
@@ -197,7 +197,8 @@
 </script>
 
 <!-- Google Translate API Script -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -239,6 +240,13 @@
         display: none !important;
     }
 
+    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+        border: none !important;
+    }
+
+    .indicator {
+        display: none !important;
+    }
 
     /* Dropdown styling */
     .goog-te-gadget .goog-te-combo {
