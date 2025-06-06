@@ -16,17 +16,17 @@
                 <img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">
             @endif
         </div>
-        
+
         @if(Auth::check())
             <span class="navbar-user">{{ Auth::user()->profile->name }}</span>
         @else
             <span class="navbar-user">Guest</span>
         @endif
-        
+
         
         <div class="dropdown-menu">
             {{-- <a href="{{ route('profile') }}" class="dropdown-item">Profile</a> --}}
-           
+
               @if(Auth::check())
               <!-- User is authenticated, so you can access $user->id -->
               <a href="{{ route('profile', Auth::user()->id) }}" class="dropdown-item">View Profile</a>
@@ -34,7 +34,7 @@
               <!-- If the user is not authenticated -->
               <a href="{{ route('login') }}">Login</a>
           @endif
-    
+
             <!-- Logout Functionality -->
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf

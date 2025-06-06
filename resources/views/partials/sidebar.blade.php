@@ -45,7 +45,7 @@
         <li class="menu-item">
             <a href="{{ route('partners-list') }}" class="{{ request()->routeIs('partners-list') ? 'active' : '' }}">
                 <i class="fas fa-handshake icon"></i>
-                Partner List</a>
+                Edu-x Team</a>
         </li>
 
         <li class="menu-item">

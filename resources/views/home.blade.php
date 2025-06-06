@@ -194,13 +194,6 @@
             margin-bottom: 40px;
         }
 
-        /* .practice-title {
-                                        font-size: 2.4rem;
-                                        color: #000000;
-                                        text-align: center;
-                                        margin-bottom: 50px;
-                                        font-weight: 700;
-                                    } */
 
         .practice-grid {
             display: grid;
@@ -640,11 +633,14 @@
             }
 
             .consultation-button {
-                width: 80%;
+                width: 80% !important;
             }
         }
 
         @media (max-width: 1024px) {
+             .hero-bannerr {
+                margin-top: 15%;
+            }
             .myapp-stats-section {
                 padding: 6rem 3rem;
             }

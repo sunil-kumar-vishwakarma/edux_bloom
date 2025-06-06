@@ -17,7 +17,7 @@
             <select id="audience" name="audience" required>
                 <option value="all">All Users</option>
                 <option value="admins">Admins</option>
-                <option value="partners">Partners</option>
+                <option value="partners">Edu-x Team</option>
                 <option value="users">Users</option>
             </select>
 
@@ -127,7 +127,7 @@
             background-color: #fafafa;
         }
 
-      
+
         /* Submit Button Styles */
         button[type="submit"] {
             background-color: #5cb85c;
@@ -167,7 +167,7 @@
 
 .table th, .table td {
     vertical-align: middle !important;
-    text-align: center;
+    text-align: left;
     padding: 12px;
 }
 
