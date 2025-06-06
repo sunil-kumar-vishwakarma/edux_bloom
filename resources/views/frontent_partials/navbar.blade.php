@@ -76,6 +76,7 @@
             margin-top: 0;
         }
     }
+
 </style>
 
 <nav class="navbar navbar-expand-lg">
@@ -239,6 +240,7 @@
     .goog-te-banner-frame.skiptranslate {
         display: none !important;
     }
+    
 
     .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
         border: none !important;

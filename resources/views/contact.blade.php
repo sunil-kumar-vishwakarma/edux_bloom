@@ -77,6 +77,9 @@
                 line-height: 0;
                 /* ADD THIS LINE */
             }
+            .mv-icon-circle i{
+                margin: 0px 0px;
+            }
 
 
             .contact-card h4 {
@@ -154,7 +157,7 @@
 
             @media (max-width: 64rem) {
                 .container1 {
-                    margin-top: 20%;
+                    margin-top: 15%;
                 }
             }
         </style>

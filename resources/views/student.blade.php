@@ -112,25 +112,32 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
+        @media (max-width: 1024px) {
+            .student-hero {
+                margin-top: 15%;
+                padding: 40px 40px;
+            }
             }
 
-            .hero-left,
-            .hero-right {
-                flex: 1 1 100%;
-            }
+            @media (max-width: 768px) {
+                .hero-container {
+                    flex-direction: column;
+                    text-align: center;
+                }
 
-            .hero-left h1 {
-                font-size: 2.2rem;
-            }
+                .hero-left,
+                .hero-right {
+                    flex: 1 1 100%;
+                }
 
-            .hero-left .tagline {
-                font-size: 1.1rem;
+                .hero-left h1 {
+                    font-size: 2.2rem;
+                }
+
+                .hero-left .tagline {
+                    font-size: 1.1rem;
+                }
             }
-        }
     </style>
     <section class="student-hero">
         <div class="hero-container">
@@ -190,7 +197,7 @@
         </div>
     </div>
 
-     {{-- new sections --}}
+    {{-- new sections --}}
     <section class="offer-section">
         <h2 class="offer-title"> What We Offer You ?</h2>
         <div class="offer-grid">
@@ -251,7 +258,7 @@
         </div>
     </section>
 
-      <section class="why-edux-simple">
+    <section class="why-edux-simple">
         <div class="why-edux-wrapper">
             <h2 class="why-edux-title">Why Students Trust Edu-X</h2>
             <ul class="why-edux-list">
@@ -305,7 +312,7 @@
     </section>
 
     <br>
-     {{-- ready to take first step section --}}
+    {{-- ready to take first step section --}}
     <section class="cta-section">
         <div class="cta-card">
             <h2>Ready to Take the First Step?</h2>
@@ -469,7 +476,6 @@
             An Easy-to-Use Platform Built to<br />
             <span class="accent">Deliver Quality Applications and More</span>
         </h2>
-        <br>
         <div class="services">
             <div id="webcrumbs">
                 <div class="bg-white rounded-lg ">
