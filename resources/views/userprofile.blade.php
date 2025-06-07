@@ -9,7 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            /* font-family: Arial, sans-serif; */
+            font-family: "Open Sans", Sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -112,7 +113,7 @@
         }
 
         .profile-section input::placeholder {
-            color: black;
+            color: #504c4c;
             font-size: 14px;
             font-weight: bold;
         }
@@ -155,6 +156,7 @@
             width: 100%;
             padding: 10px 5px;
             border: 1px solid #ddd;
+            color: #504c4c;
             border-radius: 5px;
             font-size: 15px;
             font-weight: bold;
@@ -165,10 +167,10 @@
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .save-btn:hover {
@@ -183,7 +185,7 @@
 
         .dropdown-container {
             margin-top: 50px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 
         }
 
@@ -270,9 +272,9 @@
                 width: 220px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 50px;
-            }
+            } */
 
             .sidebar:hover~.profile-content {
                 margin-left: 220px;
@@ -317,9 +319,9 @@
                 width: 200px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 50px;
-            }
+            } */
 
             .profile-page {
                 margin-left: 34px;
@@ -328,7 +330,7 @@
 
 
             .toggle-button {
-                max-width: 254px;
+                max-width: 268px;
             }
 
 
@@ -372,9 +374,9 @@
                 width: 180px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 45px;
-            }
+            } */
 
             .sidebar:hover~.profile-content {
                 margin-left: 180px;
@@ -420,36 +422,40 @@
 
         <ul class="menu">
             <li>
-                <a href="#" class="active">
+                <a href="{{ route('userdashboard') }}"
+                    class="{{ request()->routeIs('userdashboard') ? 'active' : '' }}">
                     <i class="fa-solid fa-house"></i>
                     <span class="menu-text">Home</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('usersearchProgram') }}">
+                <a href="{{ route('search') }}" class="{{ request()->routeIs('search') ? 'active' : '' }}">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span class="menu-text">Programs & Schools</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('userprofile') }}">
+                <a href="{{ route('userprofile') }}" class="{{ request()->routeIs('userprofile') ? 'active' : '' }}">
                     <i class="fa-solid fa-user-circle"></i>
                     <span class="menu-text">Profile</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('user_myapplication') }}">
+                <a href="{{ route('user_myapplication') }}"
+                    class="{{ request()->routeIs('user_myapplication') ? 'active' : '' }}">
                     <i class="fa-solid fa-clipboard-list"></i>
                     <span class="menu-text">My Applications</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('userpayments') }}">
+                <a href="{{ route('userpayments') }}"
+                    class="{{ request()->routeIs('userpayments') ? 'active' : '' }}">
                     <i class="fa-solid fa-wallet"></i>
                     <span class="menu-text">Payments</span>
                 </a>
             </li>
         </ul>
+
     </div>
 
     <!-- main content -->

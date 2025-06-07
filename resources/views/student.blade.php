@@ -117,27 +117,27 @@
                 margin-top: 15%;
                 padding: 40px 40px;
             }
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
             }
 
-            @media (max-width: 768px) {
-                .hero-container {
-                    flex-direction: column;
-                    text-align: center;
-                }
-
-                .hero-left,
-                .hero-right {
-                    flex: 1 1 100%;
-                }
-
-                .hero-left h1 {
-                    font-size: 2.2rem;
-                }
-
-                .hero-left .tagline {
-                    font-size: 1.1rem;
-                }
+            .hero-left,
+            .hero-right {
+                flex: 1 1 100%;
             }
+
+            .hero-left h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-left .tagline {
+                font-size: 1.1rem;
+            }
+        }
     </style>
     <section class="student-hero">
         <div class="hero-container">
@@ -583,3 +583,4 @@
         // Initial load
         showSlide(currentSlide);
     </script>
+@endsection

@@ -446,45 +446,50 @@
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="logo">
-        <a href="{{ route('userdashboard') }}" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span class="logo-text">Edu-X</span>
-        </a>
-      </div>
+        <div class="logo">
+            <a href="{{ route('userdashboard') }}"
+                style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="logo-text">Edu-X</span>
+            </a>
+        </div>
 
-      <ul class="menu">
-        <li>
-          <a href="#" class="active">
-            <i class="fa-solid fa-house"></i>
-            <span class="menu-text">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('usersearchProgram') }}">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span class="menu-text">Programs & Schools</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('userprofile') }}">
-            <i class="fa-solid fa-user-circle"></i>
-            <span class="menu-text">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('user_myapplication') }}">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <span class="menu-text">My Applications</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('userpayments') }}">
-            <i class="fa-solid fa-wallet"></i>
-            <span class="menu-text">Payments</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="menu">
+            <li>
+                <a href="{{ route('userdashboard') }}"
+                    class="{{ request()->routeIs('userdashboard') ? 'active' : '' }}">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="menu-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('search') }}" class="{{ request()->routeIs('search') ? 'active' : '' }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="menu-text">Programs & Schools</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('userprofile') }}" class="{{ request()->routeIs('userprofile') ? 'active' : '' }}">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <span class="menu-text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('user_myapplication') }}"
+                    class="{{ request()->routeIs('user_myapplication') ? 'active' : '' }}">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span class="menu-text">My Applications</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('userpayments') }}"
+                    class="{{ request()->routeIs('userpayments') ? 'active' : '' }}">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="menu-text">Payments</span>
+                </a>
+            </li>
+        </ul>
+
     </div>
 
     <!-- Main Content -->
@@ -523,74 +528,45 @@
             </div>
         </div>
 
-        <div class="content">
-            <button class="btn"><i class="ri-shopping-cart-2-fill"></i>Unpaid Applications</button>
+        <table class="employer-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Program Name</th>
+                    <th>Start Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Science</td>
+                    <td>01 Jan, 2025</td>
+                    <td>
+                        <button class="btn-unpaid">Unpaid</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>MBA</td>
+                    <td>01 Jan, 2025</td>
+                    <td>
+                        <button class="btn-paid">Paid</button>
+                    </td>
+                </tr>
 
-            <div class="heading">
-                <div class="heading1">
-                    <ul>
-                        <li><input type="checkbox" style="font-size: 30px;"></li>
-                        <li>Status</li>
-                        <li>App#</li>
-                        <li>School</li>
-                        <li>Program</li>
-                    </ul>
-                </div>
+                <!-- Add more static rows if needed -->
+            </tbody>
+        </table>
 
-                <div class="heading2">
-                    <ul>
-                        <li>ESL Start Date</li>
-                        <li> Start Date</li>
-                        <li>School</li>
-                        <li>Fees</li>
-                    </ul>
-                </div>
-            </div>
 
-            <p class="applicat">You have no unpaid applications.</p>
-
-            <div class="more-programs">
-                <a href="/usersearchProgram"><button type="button" class="btn btn-outline-primary">Find More
-                        Programs</button></a>
-                <button type="button" class="btn btn-primary" disabled><i class="ri-shopping-cart-2-fill"></i> Pay For
-                    Applications</button>
-            </div><br>
-
-            <div class="paid-application">
-                <button type="button" class="btn btn-primary"><i class="ri-check-fill"></i> Paid Applications</button>
-            </div>
-
-            <div class="heading">
-                <div class="heading1">
-                    <ul>
-
-                        <li>Status</li>
-                        <li>App#</li>
-                        <li>School</li>
-                        <li>Program</li>
-                    </ul>
-                </div>
-
-                <div class="heading2">
-                    <ul>
-                        <li>ESL Start Date</li>
-                        <li> Start Date</li>
-                        <li>Requirements</li>
-                    </ul>
-                </div>
-            </div>
-
-            <p class="applicat">You have no unpaid applications.</p>
-
-        </div>
-
-       <footer>
-        <p>&copy; 2024 Edu-X.com</p>
-        <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
-        <a href="{{ route('term.and.condition') }}">Terms & Conditions</a>
-        <a href="{{ route('user_myapplication') }}">My Application</a>
-        <a href="{{ route('blogs-pages') }}">Blog</a>
-      </footer>
+        <footer>
+            <p>&copy; 2024 Edu-X.com</p>
+            <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
+            <a href="{{ route('term.and.condition') }}">Terms & Conditions</a>
+            <a href="{{ route('user_myapplication') }}">My Application</a>
+            <a href="{{ route('blogs-pages') }}">Blog</a>
+        </footer>
     </div>
 </body>
 
