@@ -149,7 +149,7 @@ class ProgramController extends Controller
         // Handle image upload
         $imagePath = null;
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('program_images', 'public');
+            $imagePath = $request->file('image')->store('program_thumbs', 'public');
         }
 
         // Create the program
@@ -212,7 +212,7 @@ class ProgramController extends Controller
                 }
 
                 // Store new image
-                $imagePath = $request->file('image')->store('program_images', 'public');
+                $imagePath = $request->file('image')->store('program_thumbs', 'public');
                 $program->image = $imagePath;
                 $program->save();
             }

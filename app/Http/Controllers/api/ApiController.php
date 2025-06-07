@@ -121,22 +121,22 @@ class ApiController extends Controller
     //     }
     // }
 
-    public function updatePassword(Request $request)
+ public function updatePassword(Request $request)
 {
-    if (!Auth::check()) {
+    $user = Auth::guard('api')->user();
+
+    if (!$user) {
         return response()->json(['error' => 'Unauthorized access.'], 401);
     }
 
     $validator = Validator::make($request->all(), [
         'old_password' => 'required',
-        'password' => 'required|min:6|confirmed',
+        'password' => 'required|min:6|confirmed', // expects password_confirmation in request
     ]);
 
     if ($validator->fails()) {
         return response()->json(['error' => $validator->errors()->first()], 422);
     }
-
-    $user = Auth::user();
 
     if (!Hash::check($request->old_password, $user->password)) {
         return response()->json(['error' => 'Your current password is incorrect.'], 400);
