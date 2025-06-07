@@ -532,7 +532,7 @@
 
             .profile-page {
                 margin-left: 34px;
-                margin-top: -100px;
+                /* margin-top: -100px; */
             }
 
 
@@ -582,6 +582,11 @@
 
         /* Small Mobile Devices */
         @media (max-width: 480px) {
+            .topbar {
+                padding-left: 55px !important;
+
+            }
+
             .sidebar {
                 width: 45px;
             }
@@ -599,7 +604,8 @@
             }
 
             .profile-header h1 {
-                font-size: 16px;
+                font-size: 26px;
+                margin-left: 0;
             }
 
             .profile-section {
@@ -616,12 +622,14 @@
                 margin-left: 50px;
 
             }
-              .custom-switch label input[type="checkbox"] {
-            transform: translate(90px, 20px);
-        }
-        #gre input[type="checkbox"] {
-            transform: translate(90px, 20px);
-        }
+
+            .custom-switch label input[type="checkbox"] {
+                transform: translate(90px, 20px);
+            }
+
+            #gre input[type="checkbox"] {
+                transform: translate(90px, 20px);
+            }
 
             .input-row input {
                 width: 36%;
@@ -634,6 +642,11 @@
             .profile-sidebar ul li:nth-child(-n+4) {
                 order: -1;
             }
+        }
+
+        .topbar {
+            padding-left: 100px;
+            margin-top: 4px;
         }
     </style>
 </head>
@@ -685,6 +698,35 @@
             </li>
         </ul>
 
+    </div>
+    <div class="topbar">
+        <h1>Dashboard</h1>
+        <div class="profile-menu">
+            <!-- Notification Icon -->
+            <div id="notificationIcon" class="notification-icon">
+                <svg class="MuiSvgIcon-root" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- Profile Icon -->
+            <i class="fa-solid fa-user-circle profile-icon" id="profileIcon"></i>
+
+            <!-- Dropdown -->
+            <div class="dropdown" id="profileDropdown">
+                <h3>Account</h3>
+                <p>{{ Auth::user()->name ?? 'Vishnu Rajput' }}</p>
+                <p>{{ Auth::user()->email ?? 'vishnurajput847@gmail.com' }}</p>
+                <hr />
+                {{-- <a href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+            <a href="#"><i class="fa-solid fa-cog"></i> Account Settings</a>
+            <a href="#"><i class="fa-solid fa-bell"></i> Notification Settings</a>
+            <hr /> --}}
+                <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </div>
+        </div>
     </div>
 
     <!-- main content -->
