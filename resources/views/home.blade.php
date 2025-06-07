@@ -113,18 +113,19 @@
             transform: translateY(-3px);
         }
 
-        /* Cards Section */
         .cards-home {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 4rem 2rem;
-            /* margin-top: -10%; */
             gap: 30px;
-            /* background: #f2f2f2; */
+            padding: 1rem 2rem;
+            /* Enable horizontal scroll on small screens */
+            overflow-x: auto;
+            /* scroll-snap-type: x mandatory; */
+          
         }
 
         .card-home {
+            flex: 0 0 auto;
+            /* don’t shrink, don’t grow, keep width */
             width: 300px;
             height: 450px;
             border-radius: 6px;
@@ -133,11 +134,13 @@
             background: #000;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
 
-        .card-home:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            scroll-snap-align: start;
+            /* snap cards to start */
+        }
+         .card-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
         .card-home img {
@@ -147,15 +150,25 @@
             opacity: 0.9;
         }
 
-        .card-home::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        /* Optional: Hide scrollbar for webkit browsers */
+        .cards-home::-webkit-scrollbar {
+            display: none;
         }
+
+        /* On desktop, show normally as grid or flex wrap */
+        @media(min-width: 768px) {
+            .cards-home {
+                overflow-x: visible;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card-home {
+                flex: initial;
+            }
+        }
+
+
 
         @media (max-width: 768px) {
             .hero-bannerr {
@@ -166,14 +179,10 @@
                 font-size: 2rem;
             }
 
-            .card-home {
-                width: 90%;
-                max-width: 320px;
-            }
         }
 
         .practice-section {
-            padding: 10px 20px;
+            padding: 30px 20px;
             background-color: #ffffff;
             /* White background */
             font-family: 'Segoe UI', sans-serif;
@@ -343,6 +352,9 @@
 
         /* RESPONSIVE MEDIA QUERIES */
         @media (max-width: 992px) {
+            .cards-home {
+                flex-wrap: nowrap;
+            }
 
             .section,
             .section2 {
@@ -407,26 +419,67 @@
 
         @media (max-width: 576px) {
 
+
             .section,
             .section2 {
                 flex-direction: column-reverse;
                 align-items: center;
                 gap: 3rem;
-                padding: 2rem 1.5rem;
+                padding: 0rem 1.5rem;
+            }
+
+            .image-stack {
+                right: 20px;
+            }
+
+            .image-stack2 {
+                left: 80px;
             }
 
             .image-stack,
             .image-stack2 {
-                flex-direction: column;
-                width: 100%;
-                height: auto;
+                position: relative;
+                width: 280px;
+                height: 400px;
+
             }
 
             .image-stack img,
             .image-stack2 img {
-                position: static;
-                width: 100% !important;
-                margin-bottom: 1rem;
+                position: absolute;
+                border-radius: 8px;
+                object-fit: cover;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .image-stack img:nth-child(1) {
+                width: 80%;
+                z-index: 2;
+                top: 0;
+                left: 0;
+            }
+
+            .image-stack img:nth-child(2) {
+                width: 65%;
+                z-index: 1;
+                top: 40px;
+                left: 50%;
+                opacity: 0.9;
+            }
+
+            .image-stack2 img:nth-child(1) {
+                width: 65%;
+                z-index: 1;
+                top: 35px;
+                left: -38%;
+                opacity: 0.9;
+            }
+
+            .image-stack2 img:nth-child(2) {
+                width: 80%;
+                z-index: 2;
+                top: 0;
+                left: 0;
             }
 
             .text-content p {
@@ -638,16 +691,23 @@
         }
 
         @media (max-width: 1024px) {
-             .hero-bannerr {
+            .hero-bannerr {
                 margin-top: 15%;
             }
+
             .myapp-stats-section {
-                padding: 6rem 3rem;
+                padding: 3rem 3rem;
+            }
+
+            .myapp-stat-box h2 {
+                font-size: 2.5rem;
             }
 
             .consultation-button {
-                width: 30%;
+                width: 42%;
+                font-size: 13px;
             }
+
         }
 
         /* === FAQ Section === */
@@ -729,6 +789,11 @@
             </h1>
 
             <div class="buttons-home">
+                <a href="/search" class="btn-home btn-primary"><i class="fas fa-user-plus"></i> Join Our Program</a>
+                <a href="/contactus" class="btn-home btn-secondary">Book a Free Consultation</a>
+            </div>
+
+            <div class="buttons-home">
                 <form action="{{ route('search') }}" method="GET" class="study-search-form-row">
                     <!-- Input Field -->
                     <div class="study-input-wrapper">
@@ -756,10 +821,7 @@
                     {{-- <button type="submit" class="study-search-button">Search</button> --}}
                 </form>
             </div>
-            <div class="buttons-home">
-                <a href="/search" class="btn-home btn-primary"><i class="fas fa-user-plus"></i> Join Our Program</a>
-                <a href="/contactus" class="btn-home btn-secondary">Book a Free Consultation</a>
-            </div>
+
         </div>
     </section>
 

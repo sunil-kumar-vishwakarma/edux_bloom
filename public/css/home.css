@@ -2,6 +2,9 @@ h2 {
     font-size: 30px;
     /* color: black; */
 }
+  .mv-icon-circle i{
+                margin: 0px 0px;
+            }
 
 .custom-footer-col{
     text-align: justify;
@@ -43,7 +46,7 @@ h2 {
 /* NAV LINK STYLES */
 .navbar-nav {
   margin-top: 1%;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -2087,7 +2090,7 @@ video {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        /* margin-top: -110px; */
+        margin: -80px;
     }
 
     .services .one,

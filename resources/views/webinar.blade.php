@@ -83,7 +83,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 350px;
-            height: 400px;
+            height: 360px;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -161,7 +161,10 @@
         }
 
         #Spotlight {
-            border-radius: 10px;
+            border-radius: 6px;
+            padding: 5px 10px;
+            width: 60%;
+            font-size: 16px;
             width: 60%;
             font-size: 16px;
         }
@@ -373,49 +376,60 @@
         <div class="card-container">
             <div class="card-webinar">
                 <div class="card-header institution" id="Spotlight">Institution Spotlight</div>
-                <div class="card-title">USA University Admissions 101: How to get your students' visa fast: Featuring
-                    Concordia University, St. Paul</div>
-                <div class="card-date">January 13, 2024, 6:00 A.M<br>4:30 P.M IST</div>
-                {{-- <a href="web.html" class="card-link">Register here →</a> --}}
+                <div class="card-title">
+                    Navigating USA University Admissions & Fast-Tracking Your Student Visa: Featuring Concordia University,
+                    St. Paul
+                </div>
+                <div class="card-date">
+                    January 13, 2024, 6:00 A.M<br>4:30 P.M IST
+                </div>
             </div>
 
             <div class="card-webinar">
                 <div class="card-header destination" id="Spotlight">Destination Spotlight</div>
-                <div class="card-title">Destination UK: What Can We Expect in 2025?</div>
-                <div class="card-date">January 14, 2024, 6:00 A.M<br>4:30 P.M IST</div>
-                {{-- <a href="web.html" class="card-link">Register here →</a> --}}
+                <div class="card-title">
+                    Destination UK: Key Insights & Trends to Watch for the 2025 Admission Cycle
+                </div>
+                <div class="card-date">
+                    January 14, 2024, 6:00 A.M<br>4:30 P.M IST
+                </div>
             </div>
 
             <div class="card-webinar">
                 <div class="card-header trends" id="Spotlight">Trends Report</div>
-                <div class="card-title">What's New in Edu-X</div>
-                <div class="card-date">January 15, 2024, 6:00 A.M<br>4:30 P.M IST</div>
-                {{-- <a href="web.html" class="card-link">Register here →</a> --}}
+                <div class="card-title">
+                    Edu-X Global Trends: What’s Changing in International Education for 2025?
+                </div>
+                <div class="card-date">
+                    January 15, 2024, 6:00 A.M<br>4:30 P.M IST
+                </div>
             </div>
-        </div><br>
+        </div>
+        <br>
 
 
-    </div><br><br><br>
+
+    </div>
 
 
 
     <div class="carousel">
         <div class="carousel-track">
-             <img src="images/gallary1.jpg" alt="Image 1">
-                <img src="images/gallary2.jpg" alt="Image 2">
-                <img src="images/gallary3.jpg" alt="Image 3">
-                <img src="images/gallary4.jpg" alt="Image 4">
-                <img src="images/gallary5.jpg" alt="Image 5">
-                <img src="images/gallary6.jpg" alt="Image 6">
-                <img src="images/gallary7.jpg" alt="Image 7">
-                <img src="images/gallary8.jpg" alt="Image 8">
-                <img src="images/gallary9.jpg" alt="Image 9">
-                <img src="images/gallary10.jpg" alt="Image 10">
-                <img src="images/gallary11.jpg" alt="Image 11">
-                <img src="images/gallary12.jpg" alt="Image 12">
-                <img src="images/gallary13.jpg" alt="Image 13">
-                <img src="images/gallary14.jpg" alt="Image 14">
-                <img src="images/gallary15.jpg" alt="Image 15">
+            <img src="images/gallary1.jpg" alt="Image 1">
+            <img src="images/gallary2.jpg" alt="Image 2">
+            <img src="images/gallary3.jpg" alt="Image 3">
+            <img src="images/gallary4.jpg" alt="Image 4">
+            <img src="images/gallary5.jpg" alt="Image 5">
+            <img src="images/gallary6.jpg" alt="Image 6">
+            <img src="images/gallary7.jpg" alt="Image 7">
+            <img src="images/gallary8.jpg" alt="Image 8">
+            <img src="images/gallary9.jpg" alt="Image 9">
+            <img src="images/gallary10.jpg" alt="Image 10">
+            <img src="images/gallary11.jpg" alt="Image 11">
+            <img src="images/gallary12.jpg" alt="Image 12">
+            <img src="images/gallary13.jpg" alt="Image 13">
+            <img src="images/gallary14.jpg" alt="Image 14">
+            <img src="images/gallary15.jpg" alt="Image 15">
         </div>
     </div><br>
 
