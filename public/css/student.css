@@ -14,14 +14,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-/* Remove wide margin/padding on other elements */
 
-.imag-background ul,
-.imag-background h2,
-.imag-background p,
-.imag-background {
-    margin-left: 0; /* Prevent unwanted left margin */
-}
 
 .styled-logo {
     height: 70px;
@@ -46,44 +39,6 @@ color: white;
    border:1px solid white;
 }
 
-
-.imag-background {
-  position: relative;
-  height: 500px;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom:3%;
-}
-
-.imag-background video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.text-content {
-  padding-top: 160px;
-}
-
-
-
-.imag-background .dot ul{
-  border-radius: 20px;
-  background-color: white;
-  width: 17%;
-  height: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  border: 1px solid #b4b0b0;
-}
-
-.imag-background ul ,h2,p, button{
-  margin-left: 120px;
-}
 
 .dot ul li::marker {
 color: #524da8;
@@ -487,18 +442,6 @@ color: #524da8;
 
 
 
-    .imag-background h2,
-    .imag-background p,
-    .imag-background button {
-      margin: 10px auto; /* Center and reduce margin */
-      width: 90%; /* Adjust width to fit smaller screens */
-    }
-
-    .imag-background span ul{
-       margin-left: 200px;
-    }
-
-
     .dot ul {
       width: 40%; /* Adjust width for mobile */
       padding: 0;
@@ -548,25 +491,7 @@ color: #524da8;
 }
 
 
-    .imag-background h2 {
-      font-size: 20px; /* Smaller font size for mobile */
-      margin-bottom: 10px;
-    }
-
-    .imag-background p {
-      font-size: 14px; /* Readable font size for smaller screens */
-      margin-bottom: 15px;
-      text-align: justify;
-      margin-left: 20%;
-    }
-
-    .imag-background button {
-      width: auto; /* Allow button to size dynamically */
-      padding: 10px 20px; /* Add padding for better touch usability */
-      font-size: 14px; /* Adjust font size */
-      margin-left: -140px;
-    }
-
+  
     .work {
       display: flex;
       flex-wrap: wrap; /* Allow wrapping to next line */
@@ -702,10 +627,7 @@ color: #524da8;
 
 
     /* Background Image Content */
-    .imag-background {
-        text-align: center;
-        padding: -2px 10px;
-    }
+   
     .text-content{
         padding-top: 200px;
     }
@@ -719,15 +641,6 @@ color: #524da8;
                 margin-left: -551px;
     }
 
-
-    /* .btn-light{
- transform: translateX(10px);
-    } */
-
-
-    /*.imag-background .btn a {*/
-    /*    text-align:right;*/
-    /*}*/
 
     .cont h2 {
         font-size: 24px;
@@ -1160,13 +1073,6 @@ input[type="password"] {
 /* Mobile First Approach */
 @media (max-width: 768px) {
 
-  .imag-background {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 0px 32px;
-}
 
 .text-content{
     padding-top: 30px;

@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Open Sans", Sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -113,7 +113,7 @@
         }
 
         .profile-section input::placeholder {
-            color: black;
+            color: #504c4c;
             font-size: 14px;
             font-weight: bold;
         }
@@ -154,8 +154,12 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            margin-top: -5px;
+            margin-top: 15px;
 
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            top: 70%;
         }
 
         input {
@@ -164,6 +168,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 15px;
+            color: #504c4c;
             font-weight: bold;
         }
 
@@ -175,7 +180,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
             margin-left: 40px;
             margin-top: 60px;
 
@@ -193,7 +198,6 @@
 
         .dropdown-container {
             margin-top: 50px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
         }
 
@@ -275,9 +279,9 @@
     gap: 50px;
   } */
 
-        #grade {
+        /* #grade {
             margin-left: 150px;
-        }
+        } */
 
 
 
@@ -297,8 +301,8 @@
         }
 
         .radio {
-            transform: translateY(40px);
-            margin-left: -320px;
+            /* transform: translateY(40px); */
+            margin-left: 60px;
             font-size: 18px;
             display: flex;
             align-items: center;
@@ -324,21 +328,24 @@
         }
 
         button {
-            padding: 10px 10px;
-            font-size: 14px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            display: inline-block;
+            color: black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             cursor: pointer;
 
         }
 
         #attend {
             background-color: #d5e0eb;
-
             border: none;
-            border-radius: 10px;
+            border-radius: 6px;
             color: rgb(82, 82, 147);
             font-weight: bold;
-            padding: 10px;
-            font-size: 20px;
+            /* padding: 10px; */
+            font-size: 15px;
 
         }
 
@@ -346,9 +353,9 @@
             background-color: #2196F3;
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: 6px;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
         }
 
 
@@ -358,7 +365,8 @@
         }
 
         .school-fields button {
-            background-color: red;
+            /* background-color: red; */
+            background: linear-gradient(135deg, #bb0e45, #ad0039);
             /* Red background */
             color: white;
             /* White text */
@@ -478,9 +486,9 @@
                 width: 220px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 50px;
-            }
+            } */
 
             .sidebar:hover~.profile-content {
                 margin-left: 220px;
@@ -525,18 +533,18 @@
                 width: 200px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 50px;
-            }
+            } */
 
             .profile-page {
                 margin-left: 34px;
-                margin-top: -100px;
+                /* margin-top: -100px; */
             }
 
 
             .toggle-button {
-                max-width: 254px;
+                max-width: 268px;
             }
 
 
@@ -572,6 +580,11 @@
 
         /* Small Mobile Devices */
         @media (max-width: 480px) {
+            .topbar {
+                padding-left: 55px !important;
+
+            }
+
             .sidebar {
                 width: 45px;
             }
@@ -580,16 +593,17 @@
                 width: 180px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 45px;
-            }
+            } */
 
             .sidebar:hover~.profile-content {
                 margin-left: 180px;
             }
 
             .profile-header h1 {
-                font-size: 16px;
+                font-size: 26px;
+                margin-left: 0;
             }
 
             .profile-section {
@@ -601,7 +615,10 @@
             }
 
             .save-btn {
-                padding: 8px 16px;
+                padding: 13px 16px;
+                font-size: 15px;
+                margin: 0;
+
             }
 
             .profile-sidebar ul {
@@ -612,6 +629,11 @@
                 order: -1;
             }
         }
+
+        .topbar {
+            padding-left: 100px;
+            margin-top: 4px;
+        }
     </style>
 </head>
 
@@ -619,8 +641,7 @@
     <!-- sidebar -->
     <div class="sidebar">
         <div class="logo">
-            <a href="/userdashboard"
-                style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+            <a href="/userdashboard" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <span class="logo-text">Edu-X</span>
             </a>
@@ -634,7 +655,7 @@
                 </a>
             </li>
             <li>
-                <a href="usersearchProgram">
+                <a href="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span class="menu-text">Programs & Schools</span>
                 </a>
@@ -664,13 +685,42 @@
 
     </div>
 
+    <div class="topbar">
+        <h1>Dashboard</h1>
+        <div class="profile-menu">
+            <!-- Notification Icon -->
+            <div id="notificationIcon" class="notification-icon">
+                <svg class="MuiSvgIcon-root" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- Profile Icon -->
+            <i class="fa-solid fa-user-circle profile-icon" id="profileIcon"></i>
+
+            <!-- Dropdown -->
+            <div class="dropdown" id="profileDropdown">
+                <h3>Account</h3>
+                <p>{{ Auth::user()->name ?? 'Vishnu Rajput' }}</p>
+                <p>{{ Auth::user()->email ?? 'vishnurajput847@gmail.com' }}</p>
+                <hr />
+                {{-- <a href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+            <a href="#"><i class="fa-solid fa-cog"></i> Account Settings</a>
+            <a href="#"><i class="fa-solid fa-bell"></i> Notification Settings</a>
+            <hr /> --}}
+                <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </div>
+        </div>
+    </div>
     <!-- main content -->
     <div class="profile-page">
 
         <div class="profile-header">
             <h1>
                 <div class="profile-logo">
-                    <img src="Dashboard/my profile.svg" alt="My Profile Logo">
+                    {{-- <img src="Dashboard/my profile.svg" alt="My Profile Logo"> --}}
                 </div>
                 My Profile
             </h1>
@@ -719,16 +769,16 @@
                             </div>
 
 
-                            <div class="section-row">
+                            {{-- <div class="section-row">
 
                                 <div class="dropdown-container">
-                                    <select id="grade-scheme-select" style="width: 25.8%; height: 70px;"
+                                    <select id="grade-scheme-select" style="height: 70px;"
                                         placeholder="Select Grade Scheme">
                                         <option></option>
                                     </select>
                                 </div>
 
-                            </div>
+                            </div> --}}
 
 
                             <div class="section-row" id="radio-btn">
@@ -763,7 +813,7 @@
                             <!-- Dynamically added school fields will appear here -->
                         </div>
                         <div class="school">
-                            <button id="attend">+ Add Attended School</button>
+                            <button id="attend">+ Add School</button>
                             <a href="#"><button id="continue">Continue</button></a>
                         </div>
                     </div>
@@ -919,9 +969,9 @@
             schoolFields.innerHTML = `
             <h3>School Details</h3>
             <label for="schoolName">School Name:</label>
-            <input type="text" placeholder="Enter school name" />
+            <input type="text"  />
             <label for="schoolLocation">School Location:</label>
-            <input type="text" placeholder="Enter school location" />
+            <input type="text"  />
             <label for="startDate">Start Date:</label>
             <input type="date" />
             <label for="endDate">End Date:</label>
@@ -1023,5 +1073,79 @@
     }
 </script>
 <script src="path-to-your-script.js" defer></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const profileIcon = document.getElementById('profileIcon');
+        const profileDropdown = document.getElementById('profileDropdown');
+
+        profileIcon.addEventListener('click', () => {
+            // Toggle dropdown visibility
+            profileDropdown.style.display =
+                profileDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profileDropdown.contains(event.target)) {
+                profileDropdown.style.display = 'none';
+            }
+        });
+    });
+
+
+    const pageButtons = document.querySelectorAll('.page-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    let currentPage = 1;
+
+    const updatePagination = () => {
+        pageButtons.forEach((btn) => {
+            const pageNumber = parseInt(btn.innerText);
+            if (pageNumber === currentPage) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Enable/disable Prev and Next buttons
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === pageButtons.length - 2;
+    };
+
+    // Add event listeners for page buttons
+    pageButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if (!btn.classList.contains('prev-btn') && !btn.classList.contains('next-btn')) {
+                currentPage = parseInt(btn.innerText);
+                console.log(`Page ${currentPage} selected.`);
+                updatePagination();
+            }
+        });
+    });
+
+    // Event listeners for Prev and Next buttons
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage < pageButtons.length - 2) {
+            currentPage++;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    // Initial setup
+    updatePagination();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
 
 </html>

@@ -9,7 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            /* font-family: Arial, sans-serif; */
+            font-family: "Open Sans", Sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -112,7 +113,7 @@
         }
 
         .profile-section input::placeholder {
-            color: black;
+            color: #504c4c;
             font-size: 14px;
             font-weight: bold;
         }
@@ -155,6 +156,7 @@
             width: 100%;
             padding: 10px 5px;
             border: 1px solid #ddd;
+            color: #504c4c;
             border-radius: 5px;
             font-size: 15px;
             font-weight: bold;
@@ -165,10 +167,10 @@
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .save-btn:hover {
@@ -183,7 +185,7 @@
 
         .dropdown-container {
             margin-top: 50px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 
         }
 
@@ -270,9 +272,9 @@
                 width: 220px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 50px;
-            }
+            } */
 
             .sidebar:hover~.profile-content {
                 margin-left: 220px;
@@ -317,18 +319,23 @@
                 width: 200px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 50px;
-            }
+            } */
 
             .profile-page {
                 margin-left: 34px;
-                margin-top: -100px;
+                /* margin-top: -100px; */
+            }
+
+            .profile-header h1 {
+                font-size: 26px;
+                margin-left: 0;
             }
 
 
             .toggle-button {
-                max-width: 254px;
+                max-width: 268px;
             }
 
 
@@ -364,6 +371,10 @@
 
         /* Small Mobile Devices */
         @media (max-width: 480px) {
+            .topbar {
+                padding-left: 55px;
+            }
+
             .sidebar {
                 width: 45px;
             }
@@ -372,17 +383,15 @@
                 width: 180px;
             }
 
-            .profile-content {
+            /* .profile-content {
                 margin-left: 45px;
-            }
+            } */
 
             .sidebar:hover~.profile-content {
                 margin-left: 180px;
             }
 
-            .profile-header h1 {
-                font-size: 16px;
-            }
+
 
             .profile-section {
                 padding: 10px;
@@ -404,10 +413,16 @@
                 order: -1;
             }
         }
+
+        .topbar {
+            padding-left: 100px;
+            margin-top: 4px;
+        }
     </style>
 </head>
 
 <body>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
@@ -420,36 +435,69 @@
 
         <ul class="menu">
             <li>
-                <a href="#" class="active">
+                <a href="{{ route('userdashboard') }}"
+                    class="{{ request()->routeIs('userdashboard') ? 'active' : '' }}">
                     <i class="fa-solid fa-house"></i>
                     <span class="menu-text">Home</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('usersearchProgram') }}">
+                <a href="{{ route('search') }}" class="{{ request()->routeIs('search') ? 'active' : '' }}">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span class="menu-text">Programs & Schools</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('userprofile') }}">
+                <a href="{{ route('userprofile') }}" class="{{ request()->routeIs('userprofile') ? 'active' : '' }}">
                     <i class="fa-solid fa-user-circle"></i>
                     <span class="menu-text">Profile</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('user_myapplication') }}">
+                <a href="{{ route('user_myapplication') }}"
+                    class="{{ request()->routeIs('user_myapplication') ? 'active' : '' }}">
                     <i class="fa-solid fa-clipboard-list"></i>
                     <span class="menu-text">My Applications</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('userpayments') }}">
+                <a href="{{ route('userpayments') }}"
+                    class="{{ request()->routeIs('userpayments') ? 'active' : '' }}">
                     <i class="fa-solid fa-wallet"></i>
                     <span class="menu-text">Payments</span>
                 </a>
             </li>
         </ul>
+
+    </div>
+    <div class="topbar">
+        <h1>Dashboard</h1>
+        <div class="profile-menu">
+            <!-- Notification Icon -->
+            <div id="notificationIcon" class="notification-icon">
+                <svg class="MuiSvgIcon-root" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- Profile Icon -->
+            <i class="fa-solid fa-user-circle profile-icon" id="profileIcon"></i>
+
+            <!-- Dropdown -->
+            <div class="dropdown" id="profileDropdown">
+                <h3>Account</h3>
+                <p>{{ Auth::user()->name ?? 'Vishnu Rajput' }}</p>
+                <p>{{ Auth::user()->email ?? 'vishnurajput847@gmail.com' }}</p>
+                <hr />
+                {{-- <a href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+            <a href="#"><i class="fa-solid fa-cog"></i> Account Settings</a>
+            <a href="#"><i class="fa-solid fa-bell"></i> Notification Settings</a>
+            <hr /> --}}
+                <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </div>
+        </div>
     </div>
 
     <!-- main content -->
@@ -458,7 +506,7 @@
         <div class="profile-header">
             <h1>
                 <div class="profile-logo">
-                    <img src="Dashboard/my profile.svg" alt="My Profile Logo">
+                    {{-- <img src="{{ asset('Dashboard/my profile.svg') }}" alt="My Profile Logo"> --}}
                 </div>
                 My Profile
             </h1>
@@ -525,7 +573,8 @@
                                 <div>
                                     <label>Marital Status *</label>
                                     <div class="radio">
-                                        <label><input type="radio" name="maritalStatus" value="single"> Single</label>
+                                        <label><input type="radio" name="maritalStatus" value="single">
+                                            Single</label>
                                         <label><input type="radio" name="maritalStatus" value="married">
                                             Married</label>
                                     </div>
@@ -620,5 +669,78 @@
             'none';
     }
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const profileIcon = document.getElementById('profileIcon');
+        const profileDropdown = document.getElementById('profileDropdown');
 
+        profileIcon.addEventListener('click', () => {
+            // Toggle dropdown visibility
+            profileDropdown.style.display =
+                profileDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profileDropdown.contains(event.target)) {
+                profileDropdown.style.display = 'none';
+            }
+        });
+    });
+
+
+    const pageButtons = document.querySelectorAll('.page-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    let currentPage = 1;
+
+    const updatePagination = () => {
+        pageButtons.forEach((btn) => {
+            const pageNumber = parseInt(btn.innerText);
+            if (pageNumber === currentPage) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Enable/disable Prev and Next buttons
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === pageButtons.length - 2;
+    };
+
+    // Add event listeners for page buttons
+    pageButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if (!btn.classList.contains('prev-btn') && !btn.classList.contains('next-btn')) {
+                currentPage = parseInt(btn.innerText);
+                console.log(`Page ${currentPage} selected.`);
+                updatePagination();
+            }
+        });
+    });
+
+    // Event listeners for Prev and Next buttons
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage < pageButtons.length - 2) {
+            currentPage++;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    // Initial setup
+    updatePagination();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
 </html>

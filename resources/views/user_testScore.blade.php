@@ -8,12 +8,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/user.css') }}" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0XPm+L4QDsQ39Pp6pD/R8ikEo0ZXXzvD2IRsqz1d8YzU9m6d" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0XPm+L4QDsQ39Pp6pD/R8ikEo0ZXXzvD2IRsqz1d8YzU9m6d" crossorigin="anonymous">
     <link rel="stylesheet" href="path-to-your-styles.css">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            /* font-family: Arial, sans-serif; */
+            font-family: "Open Sans", Sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -115,11 +117,11 @@
             flex: 1;
         }
 
-        .profile-section input::placeholder{
-           color: black;
-           font-size: 14px;
-           font-weight: bold;
-          }
+        .profile-section input::placeholder {
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
 
         .profile-section {
@@ -153,11 +155,11 @@
 
         }
 
-        .section-row div  {
+        .section-row div {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            margin-top: -5px;
+            /* margin-top: -5px; */
 
         }
 
@@ -178,9 +180,9 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
             margin-left: 40px;
-            margin-top: 60px;
+            /* margin-top: 60px; */
 
         }
 
@@ -188,93 +190,94 @@
             background-color: #004080;
         }
 
-         input[type="radio"] {
+        /* input[type="radio"] {
             transform: translateY(20px);
+
+        } */
+
+
+        .dropdown-container {
+            margin-top: 50px;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+        }
+
+        .toggle-button {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 15px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            width: 950px;
+        }
+
+        .button-tog {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .toggle-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dropdown-icon {
+            font-size: 14px;
+            /*margin-left: 75%;*/
+
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #toggle-content {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+            /* border: 1px solid #ddd; */
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: max-height 0.5s ease;
+        }
+
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 15px 10px;
+            font-size: 17px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            width: 950px;
+
 
         }
 
 
-   .dropdown-container {
-      margin-top: 50px;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  }
-
-  .toggle-button {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    padding: 15px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    width: 950px;
-  }
-
-  .button-tog{
- display: flex;
- align-items: center;
- justify-content: space-between;
-
-  }
-
-  .toggle-button:hover {
-    background-color: #f0f0f0;
-  }
-
-  .dropdown-icon {
-    font-size: 14px;
-    /*margin-left: 75%;*/
-
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  #toggle-content {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #333;
-    /* border: 1px solid #ddd; */
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    transition: max-height 0.5s ease;
-}
+        .button1 h3 {
+            max-width: 400%;
+        }
 
 
-.button1 {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    padding: 15px 10px;
-    font-size: 17px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    width: 950px;
+        .icon {
+            font-size: 14px;
+            /*margin-left: 80.2%;*/
 
+        }
 
-  }
-
-
-.button1 h3{
-    max-width:400%;
-}
-
-
-  .icon {
-    font-size: 14px;
-    /*margin-left: 80.2%;*/
-
-  }
-        #ico{
+        #ico {
             transform: translateX(-45px);
         }
 
@@ -282,149 +285,176 @@
         /* Container for radio buttons */
         .radio-container {
             display: flex;
-            flex-direction: column;  /* Stack radio buttons vertically */
-            gap: 15px;               /* Space between each radio button */
+            flex-direction: column;
+            /* Stack radio buttons vertically */
+            gap: 15px;
+            /* Space between each radio button */
             padding: 10px;
 
-                 /* Optional padding for the container */
+            /* Optional padding for the container */
         }
 
         /* Style for each radio button */
         .radio-btn {
-            display: flex;           /* Use flex to align radio button and text */
-            align-items: center;     /* Vertically align the radio button with the text */
+            display: flex;
+            /* Use flex to align radio button and text */
+            align-items: center;
+            /* Vertically align the radio button with the text */
             gap: 20px;
-                     /* Space between the radio button and text */
+            /* Space between the radio button and text */
         }
 
         /* Text style for each radio button */
         .radio-btn span {
-            font-size: 18px;         /* Set the text font size */
+            font-size: 16px;
+            /* Set the text font size */
             color: #333;
-            padding: 10px 20px;         /* Set the text color */
+            padding: 10px 20px;
+            /* Set the text color */
 
         }
 
         /* Optional: Styling for the radio buttons */
         .radio-container input[type="radio"] {
-            width: 20px;             /* Set width of the radio button */
+            width: 20px;
+            /* Set width of the radio button */
             height: 20px;
-           transform: translateY(7px);
+            transform: translateY(4px);
 
-                    /* Set height of the radio button */
+            /* Set height of the radio button */
         }
 
         /* Label styling to make text clickable */
-        .radio-btn  label {
+        .radio-btn label {
             cursor: pointer;
 
             margin-left: 20px;
 
         }
 
-        .radio-container p{
+        .radio-container p {
             font-size: 18px;
             font-weight: 500;
         }
 
-        .switch label{
+        .switch label {
             font-size: 17px;
         }
 
-        .switch input[type="checkbox"]{
+        .switch input[type="checkbox"] {
             height: 20px;
             transform: translateY(30px);
         }
 
 
 
-/* Initially hide the dropdown content */
-.dropdown-content {
-    transform: translateY(20px);
-    display: none; /* Hide by default */
-    padding: 10px; /* Add padding to the dropdown content */
-    margin-top: 10px; /* Adds space between radio button and dropdown */
-    border: 1px solid #ccc; /* Border for dropdown */
-    background-color: #f9f9f9; /* Background color */
-    border-radius: 5px; /* Rounded corners */
-    width: 100%; /* Ensure the dropdown content has full width */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    font-size: 18px;
-}
+        /* Initially hide the dropdown content */
+        .dropdown-content {
+            transform: translateY(20px);
+            display: none;
+            /* Hide by default */
+            padding: 10px;
+            /* Add padding to the dropdown content */
+            margin-top: 10px;
+            /* Adds space between radio button and dropdown */
+            border: 1px solid #ccc;
+            /* Border for dropdown */
+            background-color: #f9f9f9;
+            /* Background color */
+            border-radius: 5px;
+            /* Rounded corners */
+            width: 100%;
+            /* Ensure the dropdown content has full width */
+            box-sizing: border-box;
+            /* Include padding in the width calculation */
+            font-size: 18px;
+        }
 
-/* Style input rows to have 2 inputs per line */
-.input-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px; /* Gap between rows */
-}
+        /* Style input rows to have 2 inputs per line */
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            /* Gap between rows */
+        }
 
-.input-row input {
-    width: 48%; /* Make each input take up 48% of the row */
-    padding: 5px;
-    font-size: 14px;
-}
+        .input-row input::placeholder {
+            color: #504c4c;
+        }
 
-.exam-date {
-    width: 48%;
-    padding: 5px;
-    font-size: 14px;
-}
+        .custom-dropdown-content input::placeholder {
+            color: #504c4c;
+        }
 
-.custom-dropdown-content {
-   transform: translateY(20px);
-        display: none;
-        padding: 15px;
-        margin-top: 10px; /* Space between checkbox and content */
-        background-color: #f9f9f9;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 18px;
-    }
+        .input-row input {
+            width: 45%;
+            /* Make each input take up 48% of the row */
+            padding: 15px 15px;
+            color: #504c4c;
+            /* font-size: 10px; */
+        }
 
-    .custom-switch label{
-        font-size: 18px;
-    }
+        .exam-date {
+            width: 48%;
+            padding: 5px;
+            font-size: 14px;
+        }
 
-    .custom-switch label input[type="checkbox"]{
-       transform: translateY(20px);
-    }
+        .custom-dropdown-content {
+            transform: translateY(20px);
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            /* Space between checkbox and content */
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
 
-    .custom-dropdown-content input {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        width: 100%;
-        padding: 8px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
+        .custom-switch label {
+            font-size: 18px;
+        }
 
-    }
+        .custom-switch label input[type="checkbox"] {
+            transform: translateY(20px);
+        }
 
-    .custom-section-row {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-    }
+        .custom-dropdown-content input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            width: 90%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
 
-    .custom-switch {
-        display: flex;
-        flex-direction: column;
-    }
+        }
 
-    /* Add a label on top of the input */
-    .custom-label-top {
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
+        .custom-section-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
 
-    #gre input[type="checkbox"] {
-         /* transform: translateX(120px);
+        .custom-switch {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Add a label on top of the input */
+        .custom-label-top {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        #gre input[type="checkbox"] {
+            /* transform: translateX(120px);
          transform: translateY(20px); */
-         transform: translateX(-10px);
-        transform: translateY(20px);
-        margin-left: -5px;
-    }
+            transform: translateX(-10px);
+            transform: translateY(20px);
+            margin-left: -5px;
+        }
 
 
 
@@ -435,205 +465,268 @@
         /* Media Queries for Responsiveness */
 
 
-    /* Tablet and Small Devices */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 50px;
-    }
+        /* Tablet and Small Devices */
+        @media (max-width: 1024px) {
+            .input-row input {
+                width: 40%;
+            }
 
-    .sidebar:hover {
-        width: 220px;
-    }
+            .sidebar {
+                width: 50px;
+            }
 
-    .profile-content {
-        margin-left: 50px;
-    }
+            .sidebar:hover {
+                width: 220px;
+            }
 
-    .sidebar:hover ~ .profile-content {
-        margin-left: 220px;
-    }
+            /* .profile-content {
+                margin-left: 50px;
+            } */
 
-    .profile-sidebar {
-        width: 100%;
-    }
+            .sidebar:hover~.profile-content {
+                margin-left: 220px;
+            }
 
-    .profile-container {
-        flex-direction: column;
+            .profile-sidebar {
+                width: 100%;
+            }
+
+            .profile-container {
+                flex-direction: column;
                 margin-left: -184px;
-    }
+            }
 
-          .button1 {
-        font-size: 16px;
-        padding: 10px 15px;
-        width: 100%;
-        max-width: 600px;
-    }
-
-
-        .toggle-button {
-        max-width: 610px;
-    }
+            .button1 {
+                font-size: 16px;
+                padding: 10px 15px;
+                width: 100%;
+                max-width: 600px;
+            }
 
 
+            .toggle-button {
+                max-width: 610px;
+            }
 
 
-}
-
-/* Mobile Devices */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 50px;
-        position: fixed;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .sidebar:hover {
-        width: 200px;
-    }
-
-    .profile-content {
-        margin-left: 50px;
-    }
-
-    .profile-page {
-    margin-left: 34px;
-    margin-top: -100px;
-}
 
 
-    .toggle-button {
-        max-width: 254px;
-    }
+        }
+
+        /* Mobile Devices */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 50px;
+                position: fixed;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .sidebar:hover {
+                width: 200px;
+            }
+
+            /* .profile-content {
+                margin-left: 50px;
+            } */
+
+            .profile-page {
+                margin-left: 34px;
+                /* margin-top: -100px; */
+            }
 
 
-    div#toggle-content {
-    font-size: 14px;
-    margin-left: -72px;
-}
+            .toggle-button {
+                max-width: 268px;
+            }
 
-    div#toggle-content1 {
-    margin-left: -50px;
-}
 
-    .button1 {
-    width: 258px;
-}
+            div#toggle-content {
+                font-size: 14px;
+                margin-left: -65px;
+            }
 
-    .sidebar:hover ~ .profile-content {
-        margin-left: 200px;
-    }
+            div#toggle-content1 {
+                margin-left: -50px;
+            }
 
-    .profile-container {
-        flex-direction: column;
-        margin-left: 0;
-    }
+            .button1 {
+                width: 258px;
+            }
 
-    .profile-sidebar ul {
-        flex-direction: column;
-    }
+            .sidebar:hover~.profile-content {
+                margin-left: 200px;
+            }
 
-    .profile-sidebar ul li {
-        text-align: left;
-    }
+            .profile-container {
+                flex-direction: column;
+                margin-left: 0;
+            }
 
-    .profile-sidebar ul li a {
-        justify-content: center;
-    }
+            .profile-sidebar ul {
+                flex-direction: column;
+            }
 
-    .profile-sidebar ul li:nth-child(-n+4) {
-        order: -1;
-    }
-}
+            .profile-sidebar ul li {
+                text-align: left;
+            }
 
-/* Small Mobile Devices */
-@media (max-width: 480px) {
-    .sidebar {
-        width: 45px;
-    }
+            .profile-sidebar ul li a {
+                justify-content: center;
+            }
 
-    .sidebar:hover {
-        width: 180px;
-    }
+            .profile-sidebar ul li:nth-child(-n+4) {
+                order: -1;
+            }
+        }
 
-    .profile-content {
-        margin-left: 45px;
-    }
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            .topbar {
+                padding-left: 55px !important;
 
-    .sidebar:hover ~ .profile-content {
-        margin-left: 180px;
-    }
+            }
 
-    .profile-header h1 {
-        font-size: 16px;
-    }
+            .sidebar {
+                width: 45px;
+            }
 
-    .profile-section {
-        padding: 10px;
-    }
+            .sidebar:hover {
+                width: 180px;
+            }
 
-    .section-row {
-        flex-direction: column;
-    }
+            /* .profile-content {
+                margin-left: 45px;
+            } */
 
-    .save-btn {
-        padding: 8px 16px;
-    }
+            .sidebar:hover~.profile-content {
+                margin-left: 180px;
+            }
 
-    .profile-sidebar ul {
-        flex-direction: column;
-    }
+            .profile-header h1 {
+                font-size: 26px;
+                margin-left: 0;
+            }
 
-    .profile-sidebar ul li:nth-child(-n+4) {
-        order: -1;
-    }
-}
+            .profile-section {
+                padding: 10px;
+            }
 
+            .section-row {
+                flex-direction: column;
+            }
+
+            .save-btn {
+                padding: 13px 16px;
+                font-size: 15px;
+                margin-left: 50px;
+
+            }
+
+            .custom-switch label input[type="checkbox"] {
+                transform: translate(90px, 20px);
+            }
+
+            #gre input[type="checkbox"] {
+                transform: translate(90px, 20px);
+            }
+
+            .input-row input {
+                width: 36%;
+            }
+
+            .profile-sidebar ul {
+                flex-direction: column;
+            }
+
+            .profile-sidebar ul li:nth-child(-n+4) {
+                order: -1;
+            }
+        }
+
+        .topbar {
+            padding-left: 100px;
+            margin-top: 4px;
+        }
     </style>
 </head>
 
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="logo">
-        <a href="{{ route('userdashboard') }}" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span class="logo-text">Edu-X</span>
-        </a>
-      </div>
+        <div class="logo">
+            <a href="{{ route('userdashboard') }}"
+                style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="logo-text">Edu-X</span>
+            </a>
+        </div>
 
-      <ul class="menu">
-        <li>
-          <a href="#" class="active">
-            <i class="fa-solid fa-house"></i>
-            <span class="menu-text">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('usersearchProgram') }}">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span class="menu-text">Programs & Schools</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('userprofile') }}">
-            <i class="fa-solid fa-user-circle"></i>
-            <span class="menu-text">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('user_myapplication') }}">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <span class="menu-text">My Applications</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('userpayments') }}">
-            <i class="fa-solid fa-wallet"></i>
-            <span class="menu-text">Payments</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="menu">
+            <li>
+                <a href="{{ route('userdashboard') }}"
+                    class="{{ request()->routeIs('userdashboard') ? 'active' : '' }}">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="menu-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('search') }}" class="{{ request()->routeIs('search') ? 'active' : '' }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="menu-text">Programs & Schools</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('userprofile') }}" class="{{ request()->routeIs('userprofile') ? 'active' : '' }}">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <span class="menu-text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('user_myapplication') }}"
+                    class="{{ request()->routeIs('user_myapplication') ? 'active' : '' }}">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span class="menu-text">My Applications</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('userpayments') }}"
+                    class="{{ request()->routeIs('userpayments') ? 'active' : '' }}">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="menu-text">Payments</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="topbar">
+        <h1>Dashboard</h1>
+        <div class="profile-menu">
+            <!-- Notification Icon -->
+            <div id="notificationIcon" class="notification-icon">
+                <svg class="MuiSvgIcon-root" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- Profile Icon -->
+            <i class="fa-solid fa-user-circle profile-icon" id="profileIcon"></i>
+
+            <!-- Dropdown -->
+            <div class="dropdown" id="profileDropdown">
+                <h3>Account</h3>
+                <p>{{ Auth::user()->name ?? 'Vishnu Rajput' }}</p>
+                <p>{{ Auth::user()->email ?? 'vishnurajput847@gmail.com' }}</p>
+                <hr />
+                {{-- <a href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+            <a href="#"><i class="fa-solid fa-cog"></i> Account Settings</a>
+            <a href="#"><i class="fa-solid fa-bell"></i> Notification Settings</a>
+            <hr /> --}}
+                <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </div>
+        </div>
     </div>
 
     <!-- main content -->
@@ -642,7 +735,7 @@
         <div class="profile-header">
             <h1>
                 <div class="profile-logo">
-                    <img src="Dashboard/my profile.svg" alt="My Profile Logo">
+                    {{-- <img src="Dashboard/my profile.svg" alt="My Profile Logo"> --}}
                 </div>
                 My Profile
             </h1>
@@ -663,112 +756,114 @@
 
                     <div class="dropdown-container">
                         <div class="toggle-button" onclick="toggleContent()">
-                       <h2>English Test Scores  <span class="dropdown-icon"><i class="fa-solid fa-chevron-down"></i></span></h2>
+                            <h2>English Test Scores <span class="dropdown-icon"><i
+                                        class="fa-solid fa-chevron-down"></i></span></h2>
 
                         </div>
                         <div id="toggle-content" class="hidden">
 
 
-                    <div class="section-row">
+                            <div class="section-row">
 
-                        <div class="radio-container">
-                            <div class="radio-btn">
-                                <input type="radio" id="radio1" name="group1">
-                                <label for="radio1"><span>TOEFL</span></label>
-                                <div class="dropdown-content" id="dropdown1">
-                                    <!-- Input fields for TOEFL -->
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Reading">
-                                        <input type="text" placeholder="Listening">
+                                <div class="radio-container">
+                                    <div class="radio-btn">
+                                        <input type="radio" id="radio1" name="group1">
+                                        <label for="radio1"><span>TOEFL</span></label>
+                                        <div class="dropdown-content" id="dropdown1">
+                                            <!-- Input fields for TOEFL -->
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Reading">
+                                                <input type="text" placeholder="Listening">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Writing">
+                                                <input type="text" placeholder="Speaking">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="date" placeholder="Exam Date" class="exam-date">
+                                            </div><br>
+                                        </div>
                                     </div><br>
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Writing">
-                                        <input type="text" placeholder="Speaking">
+
+
+                                    <div class="radio-btn">
+                                        <input type="radio" id="radio2" name="group1">
+                                        <label for="radio2"><span>OIELTS</span></label>
+
+                                        <div class="dropdown-content" id="dropdown2">
+                                            <!-- Input fields for IELTS -->
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Reading">
+                                                <input type="text" placeholder="Listening">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Writing">
+                                                <input type="text" placeholder="Speaking">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="date" placeholder="Exam Date" class="exam-date">
+                                            </div>
+                                        </div>
                                     </div><br>
-                                    <div class="input-row">
-                                        <input type="date" placeholder="Exam Date" class="exam-date">
+
+                                    <div class="radio-btn">
+                                        <input type="radio" id="radio3" name="group1">
+                                        <label for="radio3"><span>PTE</span></label>
+
+                                        <div class="dropdown-content" id="dropdown3">
+                                            <!-- Input fields for PTE -->
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Reading">
+                                                <input type="text" placeholder="Listening">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Writing">
+                                                <input type="text" placeholder="Speaking">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="date" placeholder="Exam Date" class="exam-date">
+                                            </div><br>
+                                        </div>
                                     </div><br>
+
+
+
+                                    <div class="radio-btn">
+                                        <input type="radio" id="radio4" name="group1">
+                                        <label for="radio4"><span>Duolingo</span></label>
+
+                                        <div class="dropdown-content" id="dropdown4">
+                                            <!-- Input fields for Duolingo -->
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Reading">
+                                                <input type="text" placeholder="Listening">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="text" placeholder="Writing">
+                                                <input type="text" placeholder="Speaking">
+                                            </div><br>
+                                            <div class="input-row">
+                                                <input type="date" placeholder="Exam Date" class="exam-date">
+                                            </div><br>
+                                        </div>
+                                    </div><br>
+
+                                    <div class="radio-btn">
+                                        <input type="radio" id="radio5" name="group1">
+                                        <label for="radio5"><span>I don't have this</span></label>
+                                    </div><br>
+                                    <div class="radio-btn">
+                                        <input type="radio" id="radio6" name="group1">
+                                        <label for="radio6"><span>Not yet</span></label>
+                                    </div><br>
+
+                                    <p>If you haven't taken a test yet, ApplyBoard can help you take it in the future.
+                                    </p>
                                 </div>
-                            </div><br>
 
 
-                            <div class="radio-btn">
-                                <input type="radio" id="radio2" name="group1">
-                                <label for="radio2"><span>OIELTS</span></label>
-
-                                <div class="dropdown-content" id="dropdown2">
-                                    <!-- Input fields for IELTS -->
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Reading">
-                                        <input type="text" placeholder="Listening">
-                                    </div><br>
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Writing">
-                                        <input type="text" placeholder="Speaking">
-                                    </div><br>
-                                    <div class="input-row">
-                                        <input type="date" placeholder="Exam Date" class="exam-date">
-                                    </div><br>
-                                </div>
-                            </div><br>
-
-                            <div class="radio-btn">
-                                <input type="radio" id="radio3" name="group1">
-                                <label for="radio3"><span>PTE</span></label>
-
-                                <div class="dropdown-content" id="dropdown3">
-                                    <!-- Input fields for PTE -->
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Reading">
-                                        <input type="text" placeholder="Listening">
-                                    </div><br>
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Writing">
-                                        <input type="text" placeholder="Speaking">
-                                    </div><br>
-                                    <div class="input-row">
-                                        <input type="date" placeholder="Exam Date" class="exam-date">
-                                    </div><br>
-                                </div>
-                            </div><br>
-
-
-
-                            <div class="radio-btn">
-                                <input type="radio" id="radio4" name="group1">
-                                <label for="radio4"><span>Duolingo</span></label>
-
-                                <div class="dropdown-content" id="dropdown4">
-                                    <!-- Input fields for Duolingo -->
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Reading">
-                                        <input type="text" placeholder="Listening">
-                                    </div><br>
-                                    <div class="input-row">
-                                        <input type="text" placeholder="Writing">
-                                        <input type="text" placeholder="Speaking">
-                                    </div><br>
-                                    <div class="input-row">
-                                        <input type="date" placeholder="Exam Date" class="exam-date">
-                                    </div><br>
-                                </div>
-                            </div><br>
-
-                            <div class="radio-btn">
-                                <input type="radio" id="radio5" name="group1">
-                                <label for="radio5"><span>I don't have this</span></label>
-                            </div><br>
-                            <div class="radio-btn">
-                                <input type="radio" id="radio6" name="group1">
-                                <label for="radio6"><span>Not yet, but I will in the future</span></label>
-                            </div><br>
-
-                            <p>If you haven't taken a test yet, ApplyBoard can help you take it in the future.</p>
-                        </div>
-
-
-                    </div>
-                    <button class="save-btn">Save & Continue</button>
+                            </div>
+                            <button class="save-btn">Save & Continue</button>
 
 
 
@@ -782,46 +877,50 @@
 
                 <section class="profile-section">
                     <div class="button1" onclick="toggleContent1()">
-                        <h2 style="display:inline">GRE or GMAT Scores  <span class="icon" id="ico"><i class="fa-solid fa-chevron-down"></i></span></h2>
+                        <h2 style="display:inline">GRE or GMAT Scores <span class="icon" id="ico"><i
+                                    class="fa-solid fa-chevron-down"></i></span></h2>
 
-                        </div>
-                        <div id="toggle-content1">
-                            <div class="section-row">
-                                <div class="custom-section-row">
-                                    <div class="custom-switch">
-                                        <label>
-                                            <input type="checkbox" role="switch" class="custom-switch-checkbox"> I have GMAT exam scores
-                                        </label>
-                                        <!-- Dropdown content for GMAT exam -->
-                                        <div class="custom-dropdown-content" id="custom-dropdown-content-0">
-                                            <div class="custom-label-top">GMAT Exam Scores</div>
-                                            <input type="text" placeholder="Enter GMAT score" />
-                                            <input type="text" placeholder="Enter GMAT date" />
-                                        </div>
-                                    </div>
-                                </div><br>
+                    </div>
+                    <div id="toggle-content1">
+                        <div class="section-row">
+                            <div class="custom-section-row">
+                                <div class="custom-switch">
+                                    <label>
+                                        <input type="checkbox" role="switch" class="custom-switch-checkbox"> I have
+                                        GMAT exam scores
+                                    </label>
 
-                               </div>
-
-
-                               <div class="section-row">
-                                <div class="custom-section-row">
-                                    <div class="custom-switch">
-                                        <label id="gre">
-                                            <input type="checkbox" role="switch" class="custom-switch-checkbox"> I have GRE exam scores
-                                        </label>
-                                        <!-- Dropdown content for GRE exam -->
-                                        <div class="custom-dropdown-content" id="custom-dropdown-content-1">
-                                            <div class="custom-label-top">GRE Exam Scores</div>
-                                            <input type="text" placeholder="Enter GRE score" />
-                                            <input type="text" placeholder="Enter GRE date" />
-                                        </div>
+                                    <!-- Dropdown content for GMAT exam -->
+                                    <div class="custom-dropdown-content" id="custom-dropdown-content-0">
+                                        <div class="custom-label-top">GMAT Exam Scores</div> <br>
+                                        <input type="text" placeholder="Enter GMAT score" /><br>
+                                        <input type="text" placeholder="Enter GMAT date" />
                                     </div>
                                 </div>
+                            </div><br>
+
+                        </div>
+
+
+                        <div class="section-row">
+                            <div class="custom-section-row">
+                                <div class="custom-switch">
+                                    <label id="gre">
+                                        <input type="checkbox" role="switch" class="custom-switch-checkbox"> I have
+                                        GRE exam scores
+                                    </label>
+                                    <!-- Dropdown content for GRE exam -->
+                                    <div class="custom-dropdown-content" id="custom-dropdown-content-1">
+                                        <div class="custom-label-top">GRE Exam Scores</div> <br>
+                                        <input type="text" placeholder="Enter GRE score" /> <br>
+                                        <input type="text" placeholder="Enter GRE date" />
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                         <button class="save-btn">Save & Continue</button>
-                   </div>
+                    </div>
 
                 </section>
             </main>
@@ -837,87 +936,88 @@
         </footer> -->
     </div>
 </body>
- <!-- Include jQuery -->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <!-- Include Select2 JS -->
- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <script>
-
-function toggleContent() {
-    const content = document.getElementById('toggle-content');
-    content.classList.toggle('hidden');
-  }
-
+    function toggleContent() {
+        const content = document.getElementById('toggle-content');
+        content.classList.toggle('hidden');
+    }
 
 
-  function toggleContent1() {
-    const content = document.getElementById('toggle-content1');
-    // Toggle the display property between 'none' and 'block'
-    content.style.display = content.style.display === 'none' || !content.style.display
-      ? 'block'
-      : 'none';
-  }
+
+    function toggleContent1() {
+        const content = document.getElementById('toggle-content1');
+        // Toggle the display property between 'none' and 'block'
+        content.style.display = content.style.display === 'none' || !content.style.display ?
+            'block' :
+            'none';
+    }
 
 
-        document.querySelectorAll('.switch-checkbox').forEach((checkbox) => {
-    checkbox.addEventListener('change', function () {
-        // Uncheck all other checkboxes when one is checked
-        document.querySelectorAll('.switch-checkbox').forEach((otherCheckbox) => {
-            if (otherCheckbox !== checkbox) {
-                otherCheckbox.checked = false;
-            }
+    document.querySelectorAll('.switch-checkbox').forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+            // Uncheck all other checkboxes when one is checked
+            document.querySelectorAll('.switch-checkbox').forEach((otherCheckbox) => {
+                if (otherCheckbox !== checkbox) {
+                    otherCheckbox.checked = false;
+                }
+            });
         });
     });
-});
 
 
-// Initially hide all dropdown-content elements
-document.addEventListener('DOMContentLoaded', function () {
-            const allDropdowns = document.querySelectorAll('.dropdown-content');
-            allDropdowns.forEach(dropdown => {
-                dropdown.style.display = 'none'; // Hide all by default
-            });
-
-            // Add event listener to radio buttons to show dropdown content when selected
-            document.querySelectorAll('.radio-btn input[type="radio"]').forEach(radio => {
-                radio.addEventListener('change', function () {
-                    // Hide all dropdowns when a radio button is clicked
-                    const allDropdowns = document.querySelectorAll('.dropdown-content');
-                    allDropdowns.forEach(dropdown => {
-                        dropdown.style.display = 'none';
-                    });
-
-                    // If the radio button is checked, show its corresponding dropdown
-                    if (this.checked) {
-                        const contentId = 'dropdown' + this.id.replace('radio', ''); // Create content ID based on radio button ID
-                        const content = document.getElementById(contentId);
-                        if (content) {
-                            content.style.display = 'block'; // Show the content for this radio button
-                        }
-                    }
-                });
-            });
+    // Initially hide all dropdown-content elements
+    document.addEventListener('DOMContentLoaded', function() {
+        const allDropdowns = document.querySelectorAll('.dropdown-content');
+        allDropdowns.forEach(dropdown => {
+            dropdown.style.display = 'none'; // Hide all by default
         });
 
+        // Add event listener to radio buttons to show dropdown content when selected
+        document.querySelectorAll('.radio-btn input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Hide all dropdowns when a radio button is clicked
+                const allDropdowns = document.querySelectorAll('.dropdown-content');
+                allDropdowns.forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
 
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const customcontent = document.querySelectorAll('.custom-dropdown-content');
-            customcontent.forEach(drop => {
-                drop.style.display = 'none'; // Hide all by default
+                // If the radio button is checked, show its corresponding dropdown
+                if (this.checked) {
+                    const contentId = 'dropdown' + this.id.replace('radio',
+                        ''); // Create content ID based on radio button ID
+                    const content = document.getElementById(contentId);
+                    if (content) {
+                        content.style.display =
+                            'block'; // Show the content for this radio button
+                    }
+                }
             });
-        })
+        });
+    });
 
 
 
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
+        const customcontent = document.querySelectorAll('.custom-dropdown-content');
+        customcontent.forEach(drop => {
+            drop.style.display = 'none'; // Hide all by default
+        });
+    })
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
         const customCheckboxes = document.querySelectorAll('.custom-switch-checkbox');
 
         customCheckboxes.forEach((checkbox, index) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener('change', function() {
                 const content = document.getElementById(`custom-dropdown-content-${index}`);
 
                 // Toggle visibility of the content when checkbox is checked
@@ -931,16 +1031,88 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-
-
-
-
-
 </script>
 <script src="path-to-your-script.js" defer></script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyb1c8lXmsB7xD/Rz5KpKRYol9C22k9q3dT3h43a" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0XPm+L4QDsQ39Pp6pD/R8ikEo0ZXXzvD2IRsqz1d8YzU9m6d" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyb1c8lXmsB7xD/Rz5KpKRYol9C22k9q3dT3h43a" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pzjw8f+ua7Kw1TIq0XPm+L4QDsQ39Pp6pD/R8ikEo0ZXXzvD2IRsqz1d8YzU9m6d" crossorigin="anonymous">
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const profileIcon = document.getElementById('profileIcon');
+        const profileDropdown = document.getElementById('profileDropdown');
+
+        profileIcon.addEventListener('click', () => {
+            // Toggle dropdown visibility
+            profileDropdown.style.display =
+                profileDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profileDropdown.contains(event.target)) {
+                profileDropdown.style.display = 'none';
+            }
+        });
+    });
 
 
+    const pageButtons = document.querySelectorAll('.page-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    let currentPage = 1;
+
+    const updatePagination = () => {
+        pageButtons.forEach((btn) => {
+            const pageNumber = parseInt(btn.innerText);
+            if (pageNumber === currentPage) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Enable/disable Prev and Next buttons
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === pageButtons.length - 2;
+    };
+
+    // Add event listeners for page buttons
+    pageButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if (!btn.classList.contains('prev-btn') && !btn.classList.contains('next-btn')) {
+                currentPage = parseInt(btn.innerText);
+                console.log(`Page ${currentPage} selected.`);
+                updatePagination();
+            }
+        });
+    });
+
+    // Event listeners for Prev and Next buttons
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage < pageButtons.length - 2) {
+            currentPage++;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    // Initial setup
+    updatePagination();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
 </html>

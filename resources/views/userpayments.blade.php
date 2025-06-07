@@ -16,7 +16,8 @@
 <style>
     html,
     body {
-        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /* font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        font-family: "Open Sans", Sans-serif;
         /* Use a clean, modern font for all elements */
         margin: 0;
         padding: 0;
@@ -63,7 +64,7 @@
     }
 
     .logo-text {
-        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /* font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
         margin-left: 10px;
         margin-top: 2px;
         font-size: 24px;
@@ -132,7 +133,7 @@
     }
 
     .menu-text {
-        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /* font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
         opacity: 0;
         margin: 0;
         /* Hide initially */
@@ -154,7 +155,7 @@
     /* General Content Area */
     .main-content {
         padding: 20px;
-        margin-left: 80px;
+        margin-left: 50px;
         /* Matches sidebar default width */
         transition: margin-left 0.3s ease;
     }
@@ -281,7 +282,7 @@
         background-color: #ffffff;
         text-align: center;
         padding: 0;
-        margin-left: 150px;
+        margin-left: 60px;
         max-width: 1200px;
     }
 
@@ -317,7 +318,7 @@
     .balance h3 {
         opacity: .7;
         font-weight: bold;
-        font-family: sans-serif
+        /* font-family: sans-serif */
     }
 
     .balance h6 i {
@@ -351,9 +352,12 @@
     }
 
     .order-history {
-        padding-left: 0;
         margin-top: 35px;
-        margin-left: -9%;
+        /* margin-left: -9%; */
+    }
+
+    .purchase {
+        margin-left: 95px;
     }
 
 
@@ -369,7 +373,7 @@
     .field {
         display: flex;
         gap: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         margin-right: 9px;
         margin-left: -48px;
     }
@@ -411,32 +415,7 @@
     }
 
 
-    table {
-        /* border: 1px solid rgb(165, 163, 163);
-            height: 200px;
-            width: 102%; */
-        margin-left: -50px;
-        margin-right: -30px;
 
-    }
-
-    thead th {
-        padding-left: 250px;
-        opacity: .8;
-
-    }
-
-    tbody tr {
-        transform: translateY(20px);
-    }
-
-    tbody td {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding-left: 250px;
-        padding-bottom: 18px;
-
-
-    }
 
 
     /* pagination */
@@ -501,6 +480,10 @@
 
     /* Tablet Devices (max-width: 1024px) */
     @media (max-width: 1024px) {
+
+         #searc{
+            display: none;
+        }
         .container {
             flex-direction: column;
             align-items: center;
@@ -516,10 +499,13 @@
             flex-direction: column;
             align-items: flex-start;
             /* Align to left */
-            margin-left: -70px;
-            margin-right: 190px;
+            margin-left: -30px;
+            margin-right: 60px !important;
         }
 
+          .employer-table{
+            margin-left: -40px;
+        }
         .order-history .field div {
             min-width: 100%;
         }
@@ -535,9 +521,9 @@
             /* Ensure full width */
         }
 
-        .search-result table {
+        /* .search-result table {
             width: 100%;
-        }
+        } */
 
         .balance h3 {
             font-size: 20px;
@@ -560,6 +546,12 @@
 
     /* Mobile Devices (max-width: 768px) */
     @media (max-width: 768px) {
+        #searc{
+            display: none;
+        }
+        .employer-table{
+            margin-left: -50px;
+        }
         .container {
             padding: 15px;
         }
@@ -610,15 +602,15 @@
             gap: 20px;
             margin-bottom: 20px;
             margin-right: 140px;
-            margin-left: -130px;
+            /* margin-left: -130px; */
         }
 
-        .search-result table {
+        /* .search-result table {
             width: 400px;
             margin-left: -20px;
             overflow-x: auto;
             display: block;
-        }
+        } */
 
         .search-result th,
         .search-result td {
@@ -694,50 +686,59 @@
             padding: 6px;
         }
     }
+    .employer-table th{
+        background-color: rgb(0, 51, 132);
+        color: white;
+    }
 </style>
 
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="logo">
-        <a href="{{ route('userdashboard') }}" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span class="logo-text">Edu-X</span>
-        </a>
-      </div>
+        <div class="logo">
+            <a href="{{ route('userdashboard') }}"
+                style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="logo-text">Edu-X</span>
+            </a>
+        </div>
 
-      <ul class="menu">
-        <li>
-          <a href="#" class="active">
-            <i class="fa-solid fa-house"></i>
-            <span class="menu-text">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('usersearchProgram') }}">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span class="menu-text">Programs & Schools</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('userprofile') }}">
-            <i class="fa-solid fa-user-circle"></i>
-            <span class="menu-text">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('user_myapplication') }}">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <span class="menu-text">My Applications</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('userpayments') }}">
-            <i class="fa-solid fa-wallet"></i>
-            <span class="menu-text">Payments</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="menu">
+            <li>
+                <a href="{{ route('userdashboard') }}"
+                    class="{{ request()->routeIs('userdashboard') ? 'active' : '' }}">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="menu-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('search') }}" class="{{ request()->routeIs('search') ? 'active' : '' }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="menu-text">Programs & Schools</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('userprofile') }}" class="{{ request()->routeIs('userprofile') ? 'active' : '' }}">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <span class="menu-text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('user_myapplication') }}"
+                    class="{{ request()->routeIs('user_myapplication') ? 'active' : '' }}">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span class="menu-text">My Applications</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('userpayments') }}"
+                    class="{{ request()->routeIs('userpayments') ? 'active' : '' }}">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="menu-text">Payments</span>
+                </a>
+            </li>
+        </ul>
+
     </div>
 
     <!-- Main Content -->
@@ -781,14 +782,14 @@
                 <button class="btn-purchase">Purchases</button>
             </div>
 
-            <div class="balance">
+            {{-- <div class="balance">
                 <h3>Account Balances</h3>
                 <button>
                     <h6>ApplyCredits <i class="ri-question-line"></i></h6>
                     <i class="ri-money-dollar-circle-line" id="dollar"></i>
                     <p><b>$0.00</b> USD</p>
                 </button>
-            </div>
+            </div> --}}
 
             <div class="order-history">
                 <h3>Order History</h3>
@@ -822,101 +823,40 @@
 
             </div>
 
-            <div class="search-result">
-                <table>
-
-                    <thead>
+            <table class="employer-table">
+                <thead>
+                    <tr>
                         <th>DATE</th>
                         <th>DESCRIPTION</th>
                         <th>AMOUNT</th>
-                        <hr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-                        <tr>
-                            <td>03-01-2025</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>20,000</td>
-                        </tr>
-
-
-
-
-                    </tbody>
-
-
-                </table>
-
-                <div class="pagination">
-                    <button class="page-btn prev-btn" disabled><i class="ri-arrow-left-double-line"></i></button>
-                    <button class="page-btn prev-btn" disabled><i class="ri-arrow-left-s-line"></i></button>
-                    <div class="page-numbers">
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn">4</button>
-                        <button class="page-btn">5...</button>
-
-                    </div>
-                    <button class="page-btn next-btn"><i class="ri-arrow-right-s-line"></i></button>
-                    <button class="page-btn next-btn"><i class="ri-arrow-right-double-line"></i></button>
-
-                </div>
-            </div>
-
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01 Jan, 2025</td>
+                        <td>Science Program Admission Fee</td>
+                        <td>$1,200</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>01 Jan, 2025</td>
+                        <td>MBA Program Enrollment Fee</td>
+                        <td>$2,500</td>
+                       
+                    </tr>
+                </tbody>
+            </table>
 
 
         </div>
 
         <footer>
-        <p>&copy; 2024 Edu-X.com</p>
-        <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
-        <a href="{{ route('term.and.condition') }}">Terms & Conditions</a>
-        <a href="{{ route('user_myapplication') }}">My Application</a>
-        <a href="{{ route('blogs-pages') }}">Blog</a>
-      </footer>
+            <p>&copy; 2024 Edu-X.com</p>
+            <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
+            <a href="{{ route('term.and.condition') }}">Terms & Conditions</a>
+            <a href="{{ route('user_myapplication') }}">My Application</a>
+            <a href="{{ route('blogs-pages') }}">Blog</a>
+        </footer>
     </div>
 </body>
 

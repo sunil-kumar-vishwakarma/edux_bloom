@@ -627,7 +627,7 @@
             display: flex;
             justify-content: center;
             margin: 30px 0;
-            font-family: Arial, sans-serif;
+            /* font-family: Arial, sans-serif; */
         }
 
         /* Laravel default ul element */
@@ -695,38 +695,45 @@
             </a>
         </div>
 
-        <ul class="menu">
-            <li>
-                <a href="#" class="active">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="menu-text">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('usersearchProgram') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span class="menu-text">Programs & Schools</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('userprofile') }}">
-                    <i class="fa-solid fa-user-circle"></i>
-                    <span class="menu-text">Profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('user_myapplication') }}">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <span class="menu-text">My Applications</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('userpayments') }}">
-                    <i class="fa-solid fa-wallet"></i>
-                    <span class="menu-text">Payments</span>
-                </a>
-            </li>
-        </ul>
+       <ul class="menu">
+    <li>
+        <a href="{{ route('userdashboard') }}"
+           class="{{ request()->routeIs('userdashboard') ? 'active' : '' }}">
+            <i class="fa-solid fa-house"></i>
+            <span class="menu-text">Home</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('search') }}"
+           class="{{ request()->routeIs('search') ? 'active' : '' }}">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span class="menu-text">Programs & Schools</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('userprofile') }}"
+           class="{{ request()->routeIs('userprofile') ? 'active' : '' }}">
+            <i class="fa-solid fa-user-circle"></i>
+            <span class="menu-text">Profile</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('user_myapplication') }}"
+           class="{{ request()->routeIs('user_myapplication') ? 'active' : '' }}">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="menu-text">My Applications</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('userpayments') }}"
+           class="{{ request()->routeIs('userpayments') ? 'active' : '' }}">
+            <i class="fa-solid fa-wallet"></i>
+            <span class="menu-text">Payments</span>
+        </a>
+    </li>
+</ul>
+
+
     </div>
 
     <div class="main-content">
