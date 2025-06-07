@@ -441,6 +441,23 @@
             margin-left: 0px;
         }
     }
+      .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .profile-header h1 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 2rem;
+            color: #333;
+            /* margin-left: -180px; */
+        }
+
 </style>
 
 <body>
@@ -526,6 +543,12 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+         <div class="profile-header">
+            <h1>
+                My Applications
+            </h1>
         </div>
 
         <table class="employer-table">

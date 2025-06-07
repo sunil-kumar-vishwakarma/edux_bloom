@@ -1041,5 +1041,78 @@
     integrity="sha384-pzjw8f+ua7Kw1TIq0XPm+L4QDsQ39Pp6pD/R8ikEo0ZXXzvD2IRsqz1d8YzU9m6d" crossorigin="anonymous">
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const profileIcon = document.getElementById('profileIcon');
+        const profileDropdown = document.getElementById('profileDropdown');
 
+        profileIcon.addEventListener('click', () => {
+            // Toggle dropdown visibility
+            profileDropdown.style.display =
+                profileDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profileDropdown.contains(event.target)) {
+                profileDropdown.style.display = 'none';
+            }
+        });
+    });
+
+
+    const pageButtons = document.querySelectorAll('.page-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    let currentPage = 1;
+
+    const updatePagination = () => {
+        pageButtons.forEach((btn) => {
+            const pageNumber = parseInt(btn.innerText);
+            if (pageNumber === currentPage) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Enable/disable Prev and Next buttons
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === pageButtons.length - 2;
+    };
+
+    // Add event listeners for page buttons
+    pageButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if (!btn.classList.contains('prev-btn') && !btn.classList.contains('next-btn')) {
+                currentPage = parseInt(btn.innerText);
+                console.log(`Page ${currentPage} selected.`);
+                updatePagination();
+            }
+        });
+    });
+
+    // Event listeners for Prev and Next buttons
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage < pageButtons.length - 2) {
+            currentPage++;
+            console.log(`Page ${currentPage} selected.`);
+            updatePagination();
+        }
+    });
+
+    // Initial setup
+    updatePagination();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
 </html>
