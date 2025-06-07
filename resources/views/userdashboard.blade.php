@@ -83,10 +83,11 @@
             <a href="#"><i class="fa-solid fa-cog"></i> Account Settings</a>
             <a href="#"><i class="fa-solid fa-bell"></i> Notification Settings</a>
             <hr /> --}}
-                    <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                    <a href="{{ route('logout_user') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
                 </div>
             </div>
         </div>
+
 
         <div class="content">
             <div class="css-t71jlo">

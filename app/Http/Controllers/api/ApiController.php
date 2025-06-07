@@ -346,14 +346,14 @@ public function forgotPassword(Request $request)
     ], 200);
 
     }
-
-    public function userProfile()
+public function userProfile(Request $request)
 {
-    $user = Auth::user();
-
+    $user = Auth::guard('api')->user();
+// print_r($user);die;
     if (!$user) {
         return response()->json([
-            'message' => 'User not authenticated',
+            'error' => 'Unauthorized',
+            'status' => 401,
         ], 401);
     }
 
@@ -362,5 +362,6 @@ public function forgotPassword(Request $request)
         'data' => $user,
     ], 200);
 }
+
     
 }

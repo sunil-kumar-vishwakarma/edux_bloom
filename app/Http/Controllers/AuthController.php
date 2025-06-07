@@ -37,4 +37,13 @@ class AuthController extends Controller
 
         return redirect('/admin/login'); // Redirects to the login page after logout
     }
+
+    public function userLogout(Request $request)
+    {
+        auth()->logout(); // Logs out the user
+        $request->session()->invalidate(); // Invalidates the session
+        $request->session()->regenerateToken(); // Regenerates CSRF token for security
+
+        return redirect('/student-login'); // Redirects to the login page after logout
+    }
 }

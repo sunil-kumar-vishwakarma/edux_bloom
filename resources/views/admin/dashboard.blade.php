@@ -167,7 +167,7 @@
         </section>
     </div>
 
-    <!-- <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const options = {
                 useEasing: true,
@@ -184,7 +184,7 @@
                 countUp.start();
             });
         });
-    </script> -->
+    </script>
 </body>
 </html>
 @endsection

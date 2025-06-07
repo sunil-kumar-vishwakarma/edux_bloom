@@ -116,6 +116,8 @@ Route::get('/userpayments', [UserDashController::class, 'userpayments'])->name('
 Route::get('/education_history', [UserDashController::class, 'education_history'])->name('education_history');
 Route::get('/user_testScore', [UserDashController::class, 'user_testScore'])->name('user_testScore');
 Route::get('lang/{locale}', [ProgramController::class, 'changeLanguage'])->name('change.lang');
+Route::get('/logout_user', [AuthController::class, 'userLogout'])->name('logout_user');
+
 
 
 Route::middleware(['auth'])->group(function () {
