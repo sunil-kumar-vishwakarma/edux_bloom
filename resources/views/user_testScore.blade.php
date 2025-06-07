@@ -693,7 +693,7 @@
         <div class="profile-header">
             <h1>
                 <div class="profile-logo">
-                    <img src="Dashboard/my profile.svg" alt="My Profile Logo">
+                    {{-- <img src="Dashboard/my profile.svg" alt="My Profile Logo"> --}}
                 </div>
                 My Profile
             </h1>
