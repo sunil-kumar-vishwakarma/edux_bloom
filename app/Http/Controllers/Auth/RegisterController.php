@@ -19,11 +19,7 @@ class RegisterController extends Controller
             'password' => [
                 'required',
                 'string',
-                'min:10',
-                'regex:/[a-z]/',
-                'regex:/[A-Z]/',
-                'regex:/[0-9]/',
-                'regex:/[@$!%*#?&]/'
+                'min:6'
             ],
             // 'tc' => 'required|accepted'
         ]);

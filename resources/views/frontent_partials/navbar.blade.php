@@ -9,7 +9,7 @@
 
     #navbarNav {
         /* margin-top: 8.5px; */
-        margin-top: -8.5px;
+        margin-top: -2px;
     }
 
     .nav-link i {
