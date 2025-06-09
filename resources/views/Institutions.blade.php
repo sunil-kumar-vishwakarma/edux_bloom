@@ -90,8 +90,8 @@
                 </p>
             </div>
             <div class="story-image">
-                <img src="https://img.freepik.com/free-photo/studio-portrait-elegant-black-american-male-dressed-suit-grey-vignette-background_613910-9540.jpg"
-                    alt="Djenabou Diawara" />
+                <img src="{{ asset('images/edux-ceo.jpg') }}" alt="Djenabou Diawara" />
+
             </div>
         </div>
     </section>
@@ -140,6 +140,37 @@
             </div>
         </div>
     </section>
+
+    <!-- testimonial -->
+    <div class="testimonial-section">
+        <h2 class="testimonials-heading">What Our Students & Mentors Say</h2>
+
+        <div class="testimonial-slider-wrapper">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide">
+                    <i class="fas fa-hand-holding-heart icon"></i>
+                    <p class="testimonial-text">“My mentor helped me find housing, prepare for my first class, and even
+                        navigate campus jobs. It made my transition so much smoother.”</p>
+                    <p class="testimonial-author">— Fatou, student in Ottawa</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <i class="fas fa-user-graduate icon"></i>
+                    <p class="testimonial-text">“Being a mentor is the most fulfilling thing I do. I feel like I’m
+                        giving back and building the Africa of tomorrow.”</p>
+                    <p class="testimonial-author">— Ismael, MBA graduate in Texas</p>
+                </div>
+
+                <!-- Add more slides if needed -->
+            </div>
+        </div>
+
+        <!-- Dot navigation -->
+        <div class="swiper-dots" id="swiperDots"></div>
+
+    </div>
 
     <!-- Enhanced Become a Mentor Section -->
     <section class="become-mentor-enhanced">
@@ -190,39 +221,6 @@
             </div>
         </div>
     </section>
-
-
-    <!-- testimonial -->
-    <div class="testimonial-section">
-        <h2 class="testimonials-heading">What Our Students & Mentors Say</h2>
-
-        <div class="testimonial-slider-wrapper">
-            <div class="slider-track" id="sliderTrack">
-                <!-- Slide 1 -->
-                <div class="testimonial-slide">
-                    <i class="fas fa-hand-holding-heart icon"></i>
-                    <p class="testimonial-text">“My mentor helped me find housing, prepare for my first class, and even
-                        navigate campus jobs. It made my transition so much smoother.”</p>
-                    <p class="testimonial-author">— Fatou, student in Ottawa</p>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="testimonial-slide">
-                    <i class="fas fa-user-graduate icon"></i>
-                    <p class="testimonial-text">“Being a mentor is the most fulfilling thing I do. I feel like I’m
-                        giving back and building the Africa of tomorrow.”</p>
-                    <p class="testimonial-author">— Ismael, MBA graduate in Texas</p>
-                </div>
-
-                <!-- Add more slides if needed -->
-            </div>
-        </div>
-
-        <!-- Dot navigation -->
-        <div class="swiper-dots" id="swiperDots"></div>
-
-    </div>
-    <br>
 
 
     <!-- Popup Form -->

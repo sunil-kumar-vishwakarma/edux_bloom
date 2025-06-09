@@ -123,27 +123,7 @@
                 isValid = false;
             }
 
-            // Validate password
-            const passwordCriteria = {
-                length: password.length >= 8,
-                uppercase: /[A-Z]/.test(password),
-                specialChar: /[!@#$%^&*(),.?":{}|<>]/.test(password),
-            };
-
-            if (!password) {
-                passwordError.textContent = "Password is required.";
-                isValid = false;
-            } else {
-                const missingCriteria = [];
-                if (!passwordCriteria.length) missingCriteria.push("at least 8 characters");
-                if (!passwordCriteria.uppercase) missingCriteria.push("one uppercase letter");
-                if (!passwordCriteria.specialChar) missingCriteria.push("one special character");
-
-                if (missingCriteria.length > 0) {
-                    passwordError.textContent = `Password must have ${missingCriteria.join(", ")}.`;
-                    isValid = false;
-                }
-            }
+         
 
             if (!isValid) return;
 

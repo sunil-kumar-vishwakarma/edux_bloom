@@ -1,6 +1,12 @@
 <footer class="custom-footer">
     <div class="custom-footer-container">
+
         <div class="custom-footer-row">
+            <!-- ICEF-->
+            <div class="custom-footer-col" id="icef">
+                <span id='iasBadge' data-account-id='5510'></span>
+                <script async defer crossorigin="anonymous" src="https://www-cdn.icef.com/scripts/iasbadgeid.js"></script>
+            </div>
             <!-- Column 1 -->
             <div class="custom-footer-col">
                 {{-- <a class="navbar-brand" href="/">
@@ -73,6 +79,7 @@
             </div>
 
 
+
         </div>
 
         <div class="custom-footer-copy">
@@ -85,6 +92,16 @@
 </footer>
 
 <style>
+    #icef {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-right: 2px solid #d1d1d1;
+        /* Right border */
+        padding-right: 70px;
+        margin: 20px 0;
+    }
+
     #county-flags ul {
         list-style: none;
         padding: 0;
@@ -207,10 +224,17 @@
     }
 
     @media (max-width: 600px) {
+        #icef {
+            justify-content: center;
+            border-right: none;
+            padding-right: 0;
+        }
+
         .#county-flags ul li {
             justify-content: center;
 
         }
+
         .edu-footer-social {
             justify-content: center;
 
@@ -233,10 +257,11 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-         #county-flags ul li {
+        #county-flags ul li {
             justify-content: center;
 
         }
+
         .custom-footer-row {
             flex-direction: column;
             gap: 30px;
@@ -285,5 +310,39 @@
 
     .footer-language-switcher .divider {
         color: #ffffff;
+    }
+    @media(max-width: 1024px){
+          #icef {
+            justify-content: center;
+            border-right: none;
+            padding-right: 0;
+        }
+          .edu-footer-social {
+            justify-content: center;
+
+        }
+          #county-flags ul li {
+            justify-content: center;
+
+        }
+
+        .custom-footer-row {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .custom-footer-col {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+
+        /*.custom-footer-col p{*/
+        /*    text-align:right;*/
+        /*}*/
+
+        .custom-footer-container {
+            padding: 0 10px;
+            text-align: center;
+        }
     }
 </style>

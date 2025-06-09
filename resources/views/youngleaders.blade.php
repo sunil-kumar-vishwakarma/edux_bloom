@@ -24,16 +24,16 @@
                     school, university, and beyond.
                 </p>
 
-                <a href="#application" class="btn-get-started">
+                {{-- <a href="#application" class="btn-get-started">
                     <i class="fas fa-rocket"></i> Apply Now
-                </a>
+                </a> --}}
 
 
             </div>
 
 
             <div class="hero-right">
-                <img src="https://i.ibb.co/G4YTHSXm/business-person-building-black-creative-Photoroom.png"
+                <img src="{{ asset('images\young.png') }}"
                     alt="EduBloom App Mockup" class="app-mockup" />
             </div>
         </div>
@@ -139,7 +139,7 @@
         </div>
     </section>
 
-    <section class="application-section" id="application">
+    {{-- <section class="application-section" id="application">
         <div class="application-container">
             <h2 class="application-heading" data-aos="fade-up">Apply to Edu-X Young Leaders</h2>
             <p class="application-subheading" data-aos="fade-up" data-aos-delay="100">
@@ -189,7 +189,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </section> --}}
 
 
 

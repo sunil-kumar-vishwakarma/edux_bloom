@@ -23,7 +23,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 40px;
+            gap: 150px;
         }
 
         .hero-left {

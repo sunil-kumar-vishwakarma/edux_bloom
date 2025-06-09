@@ -15,7 +15,7 @@
             margin-top: 5%;
             background: linear-gradient(135deg, #bb0e45 0%, #0644a6 70%);
             color: #fff;
-            padding: 5rem 2rem 4rem;
+            padding: 3rem 2rem 8rem;
             /* padding: 6rem 2rem 20rem; */
             text-align: center;
             position: relative;
@@ -117,6 +117,7 @@
             display: flex;
             gap: 30px;
             padding: 1rem 2rem;
+            margin-top: -6%;
             /* Enable horizontal scroll on small screens */
             overflow-x: auto;
             /* scroll-snap-type: x mandatory; */

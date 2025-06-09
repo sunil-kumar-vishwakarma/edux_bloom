@@ -59,7 +59,7 @@
                                         </tr>
                                         <tr>
                                             <td>Duration</td>
-                                            <td> {{ $value->duration }} months</td>
+                                            <td> {{ $value->duration }} </td>
                                         </tr>
                                     </tbody>
                                 </table>
