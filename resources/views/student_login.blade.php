@@ -54,8 +54,8 @@
         </div>
 
         <!-- Right: Image -->
-        <div class="illustration">
-            <img src="{{ asset('images/login.avif') }}" alt="Login Illustration" />
+        <div class="imag">
+            <img src="{{ asset('images\login.png') }}" alt="Login Illustration" />
         </div>
     </div>
 
