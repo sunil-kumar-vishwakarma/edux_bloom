@@ -13,16 +13,19 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // Validation rules
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => [
-                'required',
-                'string',
-                'min:6'
-            ],
-            // 'tc' => 'required|accepted'
-        ]);
+      $validator = Validator::make($request->all(), [
+    'name' => 'required|string|max:255',
+    'email' => 'required|email|unique:users,email',
+   'password' => [
+    'required',
+    'string',
+    'min:6', 
+    'regex:/^(?=.*[A-Z])(?=.*\d).+$/', // ensures 1 uppercase and 1 number
+],
+
+    // 'tc' => 'required|accepted'
+]);
+
 
         if ($validator->fails()) {
             return response()->json([

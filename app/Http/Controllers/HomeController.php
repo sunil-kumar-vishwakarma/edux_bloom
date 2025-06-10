@@ -57,6 +57,11 @@ class HomeController extends Controller
 
         return view('youngleaders');
     }
+    public function team_login()
+    {
+
+        return view('team_login');
+    }
     // public function sendResetLink(Request $request)
     //     {
 

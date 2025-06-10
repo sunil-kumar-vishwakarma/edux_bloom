@@ -54,13 +54,26 @@
 
                             <div class="input-icon password">
                                 <i class="fas fa-lock lock-icon"></i>
-                                <input type="password" name="password" id="password-input" placeholder="Your Password" required>
+                                <input type="password" name="password" id="password-input" placeholder="Your Password"
+                                    required>
                                 <i class="fas fa-eye eye-icon" id="toggle-password"></i>
                             </div>
 
+                            <div class="password-requirements" id="password-rules">
+                                <p><strong>Password must contain:</strong></p>
+                                <ul>
+                                    <li>At least 06 characters</li>
+                                    <li>One uppercase letter</li>
+                                    <li>One number</li>
+                                </ul>
+                            </div>
+
+
+
                             <div class="checkbox">
                                 <input type="checkbox" name="tc" id="tc" required>
-                                <label for="tc">I agree to the <a href="/term-and-condition">Terms and Conditions</a></label>
+                                <label for="tc">I agree to the <a href="/term-and-condition">Terms and
+                                        Conditions</a></label>
                             </div>
 
                             <div class="account">
@@ -85,6 +98,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+    const passwordInput = document.getElementById('password-input');
+    const passwordRules = document.getElementById('password-rules');
+
+    passwordInput.addEventListener('focus', () => {
+        passwordRules.classList.add('show');
+    });
+
+    passwordInput.addEventListener('blur', () => {
+        passwordRules.classList.remove('show');
+    });
+</script>
+
 
     <!-- JavaScript alert function -->
     <script>
@@ -158,9 +185,9 @@
                         window.location.href = '/userdashboard';
                     }, 2000);
                 } else {
-                    const errorMsg = data.errors
-                        ? Object.values(data.errors).flat().join("<br>")
-                        : data.message || "Student Registration failed";
+                    const errorMsg = data.errors ?
+                        Object.values(data.errors).flat().join("<br>") :
+                        data.message || "Student Registration failed";
                     showJsAlert('error', errorMsg);
                 }
             } catch (error) {

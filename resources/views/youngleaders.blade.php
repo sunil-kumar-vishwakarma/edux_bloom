@@ -33,7 +33,7 @@
 
 
             <div class="hero-right">
-                <img src="{{ asset('images\young.png') }}"
+                <img src="{{ asset('images\young-leader.jpg') }}"
                     alt="EduBloom App Mockup" class="app-mockup" />
             </div>
         </div>

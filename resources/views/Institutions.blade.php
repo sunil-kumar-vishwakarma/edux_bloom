@@ -192,8 +192,10 @@
                 <a href="#" class="mentor-cta" onclick="openMentorForm()">Apply to Be a Mentor</a>
             </div>
             <div class="mentor-image">
-                <img src="https://i.ibb.co/Xff2N15n/black-tutor-mentoring-schoolgirl-school-library-study-desk.jpg"
-                    alt="Mentorship">
+                {{-- <img src="https://i.ibb.co/Xff2N15n/black-tutor-mentoring-schoolgirl-school-library-study-desk.jpg"
+                    alt="Mentorship"> --}}
+                <img src="{{ asset('images\mentorship.jpg') }}" alt="Mentorship">
+
             </div>
         </div>
     </section>

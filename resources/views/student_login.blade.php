@@ -10,9 +10,8 @@
         <div class="card1-login">
             <div class="login-container">
                 <div class="card-login">
-                    <img src="{{ asset('images/edu-x white.png') }}" alt="Edu-x Logo"
-                        style="height: 70px; width: 75px; margin-left: -13px;" />
-                    <h2>Edu-X</h2>
+                    {{-- <h2>Edu-X</h2> --}}
+
 
                     {{-- Backend success/error alerts --}}
                     @include('includes.alerts')
@@ -21,6 +20,9 @@
                     <div id="js-alert-container"></div>
 
                     <form id="loginForm">
+                        <img src="{{ asset('images\old_edu-x white.png') }}" alt="Edu-x Logo"
+                            style="height: 70px; width: 75px;" />
+                        <br>
                         <input type="email" id="email" placeholder="Email" required />
                         <div id="emailError" style="color: #b92151; font-size: 12px; font-weight:bold;"></div>
 
@@ -48,14 +50,20 @@
                         <button class="btnnn"><i class="fab fa-apple"></i> Log In with Apple</button>
                         <button class="btnnn"><i class="fab fa-facebook"></i> Log In with Facebook</button>
                     </div>
-
+                    <br>
+                    <div class="register">
+                        <a href="/team-login">Login For Edu-x Team</a>
+                    </div>
+                    <div class="register">
+                        <a href="/privacy/policy">Privacy & Cookies Policy</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Right: Image -->
-        <div class="imag">
-            <img src="{{ asset('images\login.png') }}" alt="Login Illustration" />
+        <div class="login-img">
+            <img src="{{ asset('images\login-page (1).png') }}" alt="Login Illustration" />
         </div>
     </div>
 
@@ -123,7 +131,7 @@
                 isValid = false;
             }
 
-         
+
 
             if (!isValid) return;
 

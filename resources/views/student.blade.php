@@ -191,7 +191,7 @@
         <div class="stat-card">
             <img src="{{ asset('images/earth.png') }}" alt="Destination Countries">
             <div class="stat-info">
-                <h3>01</h3>
+                <h3>02</h3>
                 <p>Destination Country</p>
             </div>
         </div>
