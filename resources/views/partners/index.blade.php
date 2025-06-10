@@ -1,17 +1,17 @@
 @extends('layouts.app')
-@section('title', 'EduX | Partner list')
+@section('title', 'EduX | Team list')
 @section('content')
-    <button class="btncreate" onclick="window.location.href='{{ route('partners.create') }}';">+ Create Partner</button>
+    <button class="btncreate" onclick="window.location.href='{{ route('partners.create') }}';">+ Create Team</button>
     <table class="employer-table">
         <thead>
             <tr>
                 <th>S.No</th>
-                <th>Full Name</th>
-                <th>Company Name</th>
+                <th>Designation</th>
                 <th>Email</th>
-                <th>Contact</th>
+                <th>Password</th>
+                {{-- <th>Contact</th>
                 <th>Category</th>
-                <th>Joined Date</th>
+                <th>Joined Date</th> --}}
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
@@ -20,12 +20,12 @@
             @foreach ($partners as $partner)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $partner->full_name }}</td>
-                    <td>{{ $partner->company_name }}</td>
+                    <td>{{ $partner->designation }}</td>
                     <td>{{ $partner->email }}</td>
-                    <td>{{ $partner->contact }}</td>
+                    <td>{{ $partner->password }}</td>
+                    {{-- <td>{{ $partner->contact }}</td>
                     <td>{{ $partner->category }}</td>
-                    <td>{{ $partner->joined_date->format('d M, Y') }}</td>
+                    <td>{{ $partner->joined_date->format('d M, Y') }}</td> --}}
                     <td>
                         <button 
                             class="partner-toggle-status btn {{ $partner->status === 'Active' ? 'btn-success' : 'btn-danger' }}" 
@@ -36,7 +36,7 @@
                         </button>
                     </td>
                     <td>
-                        <button class="btnuser view-user-btn" onclick="openViewModal({{ $partner->id }})">View</button>
+                        {{-- <button class="btnuser view-user-btn" onclick="openViewModal({{ $partner->id }})">View</button> --}}
                         <a href="{{ route('partners.edit', $partner->id) }}"><button class="btnuser edit-user-btn">Edit</button></a>
                         <button class="btnuser delete-user-btn" onclick="openDeleteModal({{ $partner->id }})">Delete</button>
                         <form id="deleteForm{{ $partner->id }}" action="{{ route('partners.destroy', $partner->id) }}" method="POST" style="display:none;">
@@ -50,12 +50,12 @@
         </tbody>
     </table>
 
-    <!-- Modal for view partner details -->
+    <!-- Modal for view Team details -->
     <div id="userDetailsModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close-btn" onclick="closeViewModal()">&times;</span>
             <i class="fas fa-handshake icon"></i>
-            <h2>Partner Details</h2>
+            <h2>Team Details</h2>
             <div id="userDetails">
                 <!-- Dynamic content will be injected here -->
             </div>
@@ -67,7 +67,7 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeDeleteModal()">&times;</span>
             <i class="fa-solid fa-triangle-exclamation"></i>
-            <h3>Are you sure you want to delete this partner?</h3>
+            <h3>Are you sure you want to delete this Team Member?</h3>
             <div class="modal-buttons">
                 <button type="button" class="confirm-delete-btn" onclick="confirmDelete()">Yes, Delete</button>
             </div>
@@ -92,9 +92,9 @@
                 .then(response => response.json())
                 .then(partner => {
                     const details = `
-                        <p><strong>Full Name:</strong> ${partner.full_name}</p>
-                        <p><strong>Company Name:</strong> ${partner.company_name}</p>
+                        <p><strong>Full Name:</strong> ${partner.designation}</p>
                         <p><strong>Email:</strong> ${partner.email}</p>
+                        <p><strong>Password:</strong> ${partner.password}</p>
                         <p><strong>Contact:</strong> ${partner.contact}</p>
                         <p><strong>Category:</strong> ${partner.category}</p>
                         <p><strong>Joined Date:</strong> ${new Date(partner.joined_date).toLocaleDateString()}</p>

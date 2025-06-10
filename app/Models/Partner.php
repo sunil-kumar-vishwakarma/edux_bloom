@@ -14,13 +14,12 @@ class Partner extends Model
 
     // Define the fillable properties to prevent mass assignment vulnerabilities
     protected $fillable = [
-        'full_name',
-        'company_name', // Add company_name to fillable
+        'designation',
         'email',
-        'contact',
-        'category', // Add category to fillable
-        'status',
-        'joined_date',
+        'password', 
+        // 'contact',
+        // 'category', 
+        // 'joined_date',
     ];
 
     protected $casts = [
