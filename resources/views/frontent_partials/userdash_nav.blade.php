@@ -1,19 +1,73 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f9fc;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: #ffffff;
+        border-bottom: 1px solid #e4e9f0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .topbar h1 {
+        font-size: 1.6rem;
+        color: #2b2d42;
+        margin: 0;
+    }
+
+    .profile-menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .notification-icon {
+        position: relative;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #2b2d42;
+        transition: transform 0.3s ease;
+    }
+
+    .notification-icon:hover {
+        transform: scale(1.1);
+        color: #bb0e45;
+    }
+
+    .notification-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #bb0e45;
+        color: white;
+        font-size: 0.7rem;
+        padding: 4px 6px;
+        border-radius: 50%;
+        font-weight: bold;
+        box-shadow: 0 0 0 2px #fff;
+    }
+
     .notification-dropdown {
         display: block;
         position: absolute;
-        right: 50px;
-        top: 40px;
-        background: #ffffff;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        width: 320px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        z-index: 100;
+        right: 40px;
+        top: 60px;
+        background: #fff;
+        border-radius: 14px;
+        width: 340px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        z-index: 200;
         opacity: 0;
         transform: translateY(-20px);
         pointer-events: none;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.35s ease-in-out;
     }
 
     .notification-dropdown.active {
@@ -23,87 +77,99 @@
     }
 
     .notification-dropdown h4 {
-        padding: 14px 20px;
+        padding: 16px 22px;
         margin: 0;
-        border-bottom: 1px solid #eee;
         font-size: 1rem;
         font-weight: 600;
-        background: #f9f9f9;
-        color: #333;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        border-bottom: 1px solid #eaeaea;
+        background: #f8f8f8;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        color: #1c1c1e;
     }
 
     .notification-dropdown ul {
         list-style: none;
         margin: 0;
         padding: 0;
-        max-height: 260px;
+        max-height: 300px;
         overflow-y: auto;
     }
 
     .notification-dropdown ul li {
-        padding: 14px 20px;
-        border-bottom: 1px solid #f1f1f1;
-        font-size: 0.92rem;
-        color: #444;
-        transition: background 0.2s ease;
+        padding: 15px 22px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.95rem;
+        color: #2b2d42;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        transition: background 0.2s ease;
+        cursor: pointer;
     }
 
     .notification-dropdown ul li:hover {
-        background: #f5f7fa;
+        background: #f1f5f9;
     }
 
-    .notification-icon {
-        position: relative;
+    .notification-dropdown ul li i {
+        color: #bb0e45;
+        font-size: 1.1rem;
+    }
+
+    .profile-icon {
+        font-size: 1.8rem;
+        color: #2b2d42;
         cursor: pointer;
-        transition: transform 0.2s ease;
+        transition: color 0.3s ease;
     }
 
-    .notification-icon:hover {
-        transform: scale(1.05);
+    .profile-icon:hover {
+        color: #bb0e45;
     }
 
-    .notification-badge {
-        position: absolute;
-        top: -6px;
-        right: -6px;
-        background-color: #bb0e45;
-        color: white;
-        font-size: 0.7rem;
-        padding: 3px 6px;
-        border-radius: 50%;
-        font-weight: bold;
-        box-shadow: 0 0 0 2px #fff;
+    @media (max-width: 768px) {
+        .notification-dropdown {
+            right: 0px;
+            left: auto;
+            width: calc(100vw - 20px);
+            max-width: 340px;
+            box-sizing: border-box;
+        }
+
+        .topbar {
+            /* flex-direction: column; */
+            align-items: flex-start;
+            gap: 70px;
+            padding: 15px;
+        }
+
+        .profile-menu {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 </style>
-
 
 <div class="topbar">
     <h1>Dashboard</h1>
     <div class="profile-menu">
         <!-- Notification Icon -->
-        <div id="notificationIcon" class="notification-icon">
-            <svg class="MuiSvgIcon-root" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                    d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
-                </path>
-            </svg>
+        <div id="notificationIcon" class="notification-icon" aria-label="Notifications" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fas fa-bell"></i>
             <span class="notification-badge">3</span>
         </div>
 
         <!-- Notification Dropdown -->
-        <div class="notification-dropdown" id="notificationDropdown">
+        <div class="notification-dropdown" id="notificationDropdown" role="menu" aria-labelledby="notificationIcon">
             <h4>Notifications</h4>
             <ul>
-                <li>New user registered</li>
-                <li>New order placed</li>
-                <li>Your profile was viewed</li>
-                <li>Payment received</li>
-                <li>System update available</li>
+                <li tabindex="0"><i class="fas fa-user-plus"></i> New user registered</li>
+                <li tabindex="0"><i class="fas fa-shopping-cart"></i> New order placed</li>
+                <li tabindex="0"><i class="fas fa-eye"></i> Your profile was viewed</li>
+                <li tabindex="0"><i class="fas fa-check-circle"></i> Payment received</li>
+                <li tabindex="0"><i class="fas fa-sync-alt"></i> System update available</li>
             </ul>
         </div>
 
@@ -122,16 +188,28 @@
         </div>
     </div>
 </div>
+
 <script>
     const notificationIcon = document.getElementById('notificationIcon');
     const notificationDropdown = document.getElementById('notificationDropdown');
 
-    document.addEventListener('click', function (e) {
-        // Toggle dropdown when icon is clicked
-        if (notificationIcon.contains(e.target)) {
+    document.addEventListener('click', function(e) {
+        const isIconClicked = notificationIcon.contains(e.target);
+        const isDropdownClicked = notificationDropdown.contains(e.target);
+
+        if (isIconClicked) {
             notificationDropdown.classList.toggle('active');
-        } else {
+            notificationIcon.setAttribute('aria-expanded', notificationDropdown.classList.contains('active'));
+        } else if (!isDropdownClicked) {
             notificationDropdown.classList.remove('active');
+            notificationIcon.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            notificationDropdown.classList.remove('active');
+            notificationIcon.setAttribute('aria-expanded', 'false');
         }
     });
 </script>

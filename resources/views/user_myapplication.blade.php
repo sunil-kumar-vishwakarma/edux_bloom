@@ -339,7 +339,10 @@
     }
 
 
-
+.employer-table th {
+    background-color: rgb(0, 51, 132);
+    color: white;
+}
 
 
 
