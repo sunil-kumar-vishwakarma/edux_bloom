@@ -138,20 +138,20 @@
                             class="lang-option {{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a>
                     </div> -->
 
-                    <ul class="navbar-nav ml-auto">
+                    {{-- <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
                             <div id="google_translate_element"></div>
                         </li>
-                    </ul>
+                    </ul> --}}
 
-                    <!-- <div class="language-switcher">
+                     <div class="language-switcher">
                         <a href="javascript:void(0)" onclick="doGTranslate('en|en')" class="lang-option">EN</a>
                         <span class="lang-divider">|</span>
                         <a href="javascript:void(0)" onclick="doGTranslate('en|fr')" class="lang-option">FR</a>
                     </div>
 
-                    <div id="google_translate_element" style="display:none;"></div> -->
+                    <div id="google_translate_element" style="display:none;"></div>
 
 
                 </div>
