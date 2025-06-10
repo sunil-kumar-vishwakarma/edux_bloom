@@ -8,7 +8,9 @@
         <!-- Left side image -->
         <div class="imag">
             {{-- <img src="https://i.ibb.co/9HR2LXNs/6310507.jpg" alt="Register Image" /> --}}
-            <img src="images\login.png" alt="Register Image" />
+            {{-- <img src="images\login.png" alt="Register Image" /> --}}
+            {{-- <img src="images\registerpage.png" alt="Register Image" /> --}}
+            <img src="images\registerpage-Photoroom.png" alt="Register Image" />
         </div>
 
         <!-- Right side card -->
