@@ -159,7 +159,7 @@
 
 
 
-    <section class="myapp-stats-section">
+    {{-- <section class="myapp-stats-section">
         <div class="myapp-stat-box">
             <h2>8000+</h2>
             <p>Students Helped</p>
@@ -176,7 +176,40 @@
             <h2>02</h2>
             <p>Destination Country</p>
         </div>
-    </section>
+    </section> --}}
+       <div class="stats-container">
+        <div class="stat-card">
+            <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
+            <div class="stat-info">
+                <h3>80000+</h3>
+                <p>Students Helped</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <img src="{{ asset('images/envolope.png') }}" alt="Programs Offered">
+            <div class="stat-info">
+                <h3>14000+</h3>
+                <p>Programs Offered</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <img src="{{ asset('images/home.png') }}" alt="Institutions">
+            <div class="stat-info">
+                <h3>50+</h3>
+                <p>Institutions</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <img src="{{ asset('images/earth.png') }}" alt="Destination Countries">
+            <div class="stat-info">
+                <h3>02</h3>
+                <p>Destination Country</p>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Testimonial Section -->

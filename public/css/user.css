@@ -244,7 +244,7 @@ html, body {
 }
 
 .dropdown a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .dropdown hr {

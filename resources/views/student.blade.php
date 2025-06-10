@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <div class="stats-container">
+    {{-- <div class="stats-container">
         <div class="stat-card">
             <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
             <div class="stat-info">
@@ -195,7 +195,7 @@
                 <p>Destination Country</p>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- new sections --}}
     <section class="offer-section">
