@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- <h1>Student List</h1> --}}
 <button class="btncreate" onclick="window.location.href='{{ route('students.create') }}';">+ Create Student</button>
 <table class="employer-table">
     <thead>

@@ -1,7 +1,9 @@
 @extends('frontent.layouts.app')
 @section('title', 'EduX | Student')
 @section('content')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/institution.css') }}">
+
     {{-- <section class="student-hero">
         <div class="hero-container">
             <div class="hero-left">
@@ -225,12 +227,15 @@
     </section>
 
 
+    {{-- JS dynamic alert container --}}
+    <div id="js-alert-container"></div>
+
     <!-- Popup Form -->
     <div id="mentorFormPopup" class="popup-overlay">
         <div class="popup-form">
             <span class="close-btn" onclick="closeMentorForm()">&times;</span>
             <h2 class="popup-title">Mentor Application</h2>
-            <form>
+            <form id="mentorApplicationForm">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -260,6 +265,89 @@
             </form>
         </div>
     </div>
+
+    <!-- Custom JS Alert -->
+    <script>
+        function showJsAlert(type, message) {
+            const container = document.getElementById('js-alert-container');
+            if (!container) return;
+
+            container.innerHTML = ''; // Clear previous alert
+
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'}`;
+            alertDiv.innerHTML = `
+            <i class="fas ${type === 'error' ? 'fa-times-circle' : 'fa-check-circle'}"></i>
+            ${message}
+        `;
+
+            // Inline styling
+            Object.assign(alertDiv.style, {
+                position: 'fixed',
+                top: '20px',
+                left: '40%',
+                transform: 'translateX(-50%)',
+                padding: '12px 25px',
+                fontSize: '16px',
+                fontFamily: "'Roboto', sans-serif",
+                borderRadius: '6px',
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+                zIndex: '1000',
+                backgroundColor: type === 'error' ? '#b92151' : '#28a745',
+                color: 'white',
+                transition: 'opacity 0.6s ease',
+                opacity: 1,
+            });
+
+            container.appendChild(alertDiv);
+
+            setTimeout(() => {
+                alertDiv.style.opacity = 0;
+                setTimeout(() => alertDiv.remove(), 600);
+            }, 3000);
+        }
+    </script>
+
+    <!-- Form Submission -->
+    <script>
+        document.getElementById('mentorApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                school: document.getElementById('school').value,
+                country: document.getElementById('country').value,
+            };
+
+            const csrfToken = document.querySelector('meta[name="csrf-token"]');
+            if (!csrfToken) {
+                showJsAlert('error', 'CSRF token missing.');
+                return;
+            }
+
+            fetch("/mentor/apply", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": csrfToken.getAttribute("content")
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    showJsAlert('success', data.message || 'Application submitted!');
+                    document.getElementById("mentorApplicationForm").reset();
+                    closeMentorForm();
+                })
+                .catch(error => {
+                    showJsAlert('error', 'There was an error submitting the form.');
+                    console.error(error);
+                });
+        });
+    </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {

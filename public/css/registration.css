@@ -94,6 +94,7 @@ html {
     display: flex;
     min-height: 100vh;
     overflow: hidden;
+    padding: 0px 90px;
     margin-top: 6%;
 }
 
@@ -331,6 +332,7 @@ small {
 @media (max-width: 991px) {
     .page {
         margin-top: 5%;
+        padding: 0;
     }
 
     .imag {
@@ -351,6 +353,7 @@ small {
 @media (max-width: 480px) {
     .page {
         margin-top: 20%;
+        padding: 0;
     }
 
     .card-student {

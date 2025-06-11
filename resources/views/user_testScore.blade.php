@@ -645,7 +645,7 @@
         }
 
         .topbar {
-            padding-left: 100px;
+            margin-left: 80px;
             margin-top: 4px;
         }
     </style>

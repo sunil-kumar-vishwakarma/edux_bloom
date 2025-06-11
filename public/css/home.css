@@ -13,7 +13,7 @@ h2 {
 .navbar {
   /*background-color: #1652b4;*/
   background-color: white;
-  padding: 10px 20px;
+  padding: 5px 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,8 +30,8 @@ h2 {
 
 .navbar-brand img {
   /* height: 70px; */
-  height: 75px;
-  width: 75px;
+  height: 70px;
+  width: 70px;
 
 }
 
@@ -40,12 +40,12 @@ h2 {
   font-style: normal;
     color: #b92151;
   font-weight: 800;
-  /* margin-top: 10px; */
+  margin-top: -5px;
 }
 
 /* NAV LINK STYLES */
 .navbar-nav {
-  margin-top: 1%;
+  /* margin-top: 1%; */
   gap: 5px;
   align-items: center;
 }
@@ -1511,6 +1511,7 @@ video {
 
     .navbar-collapse.show {
         display: block;
+        flex-direction: column;
         /* background: #1652b4; */
 
     }

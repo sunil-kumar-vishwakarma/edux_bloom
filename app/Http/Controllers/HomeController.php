@@ -62,6 +62,11 @@ class HomeController extends Controller
 
         return view('team_login');
     }
+    public function blogdetails()
+    {
+
+        return view('blogdetails');
+    }
     // public function sendResetLink(Request $request)
     //     {
 

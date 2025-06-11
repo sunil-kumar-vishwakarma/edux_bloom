@@ -1,5 +1,5 @@
 @extends('frontent.layouts.app')
-@section('title', 'EduX | Student')
+@section('title', 'EduX | blog')
 @section('content')
 
 
@@ -137,7 +137,40 @@
             font-size: 1rem;
             line-height: 1.5;
             flex-grow: 1;
+            
         }
+
+        .read-more-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #007bff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .read-more-link:hover {
+            color: #0056b3;
+            padding-right: 6px;
+        }
+
+        .read-more-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        .read-more-link:hover::after {
+            width: 10%;
+        }
+
 
         /* Responsive Adjustments for Tablets */
         @media (max-width: 768px) {
@@ -240,13 +273,16 @@
                             <img src="{{ asset('/images/Canada-Study.png') }}" alt="University Logo" class="program-logo" />
 
                             <div class="card-body-blog">
-                                {{ \Carbon\Carbon::parse($blog->published_date)->format('F d, Y') }}</p>
-                                <br>
                                 <h5>{{ $blog->title }}</h5>
+                               <p> {{ \Carbon\Carbon::parse($blog->published_date)->format('F d, Y') }}</p>
                                 <br>
                                 {{-- <p><strong>Category:</strong> {{ $blog->category }}</p> --}}
 
-                                <p>{{ Str::limit($blog->description, 250, '...') }}</p>
+                                {{-- <p>{{ Str::limit($blog->description, 250, '...') }}</p> --}}
+                                
+                                {{-- <a href="{{ route('blog.show', $blog->id) }}" class="read-more-link">Read More →</a> --}}
+                                <a href="/blogdetails" class="read-more-link">Read More →</a>
+
 
                             </div>
                         </div>
@@ -260,5 +296,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    
- @endsection
+
+@endsection
