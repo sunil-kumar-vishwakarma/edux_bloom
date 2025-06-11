@@ -8,14 +8,16 @@ use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 // class User extends Authenticatable
-class User extends Authenticatable implements JWTSubject
+class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 {
+    use Notifiable;
+    
     public function profile()
     {
         return $this->hasOne(Profile::class);
     }
 
-    use Notifiable;
+    
 
     /**
      * The attributes that are mass assignable.

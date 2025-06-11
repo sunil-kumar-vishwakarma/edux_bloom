@@ -17,12 +17,15 @@
             @endif
         </div>
 
-        @if(Auth::check())
-            <span class="navbar-user">{{ Auth::user()->profile->name }}</span>
-        @else
-            <span class="navbar-user">Guest</span>
-        @endif
+     
 
+        <li>
+    @if(auth()->check())
+        {{ auth()->user()->name?? null }}
+    @else
+        Guest
+    @endif
+</li>
         
         <div class="dropdown-menu">
             {{-- <a href="{{ route('profile') }}" class="dropdown-item">Profile</a> --}}

@@ -27,8 +27,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UserDashController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-
-
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\Auth\VerifyEmailController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -84,6 +84,62 @@ Route::post('/student/login', [LoginController::class, 'login']);
 
 Route::post('/student/register', [RegisterController::class, 'register']);
 
+// 1️⃣ Verification Notice (shown after registration)
+// Route::get('/email/verify', function () {
+//     return view('auth.verify-email'); // Create this view if it doesn't exist
+// })->middleware('auth')->name('verification.notice');
+
+
+
+
+// Verification notice
+Route::get('/email/verify', [VerifyEmailController::class, 'notice'])
+    ->middleware('auth')
+    ->name('verification.notice');
+
+// Handle email verification link
+// Route::get('/email/verify/{id}/{hash}', [VerifyEmailController::class, 'verify'])
+//     ->middleware(['auth', 'signed'])
+//     ->name('verification.verify');
+
+// Resend link
+// Route::post('/email/verification-notification', [VerifyEmailController::class, 'resend'])
+//     ->middleware(['auth', 'throttle:6,1'])
+//     ->name('verification.send');
+
+
+
+// 2️⃣ Email Verification Link Callback
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    // Email verify kar do
+    // print_r($request);die;
+    // $request->fulfill();
+    if (! $request->user()->hasVerifiedEmail()) {
+        $request->user()->markEmailAsVerified();
+        event(new Verified($request->user()));
+    }
+
+    // Redirect after verification
+    return redirect('/userdashboard')->with('verified', true);
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+
+// 3️⃣ Resend Verification Link
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+// 4️⃣ Protected Dashboard Route (Only for verified users)
+Route::get('/userdashboard', [UserDashController::class, 'userdashboard'])
+    ->middleware(['auth', 'verified'])
+    ->name('userdashboard');
+// Route::get('/profile', function () {
+
+    // Only verified users may access this route...
+// })->middleware(['auth', 'verified']);
+
 Route::get('/forgotpassword', [HomeController::class, 'forgotpassword'])->name('forgotpassword');
 Route::post('/forgotpassword2', [HomeController::class, 'forgotpassword2'])->name('forgotpassword2');
 Route::post('/sendResetLink', [HomeController::class, 'sendResetLink'])->name('forgotpassword.send');
@@ -109,7 +165,7 @@ Route::get('/privacy/policy', [HomeController::class, 'privacyPolicy'])->name('p
 Route::get('/edux-Fees', [HomeController::class, 'eduxFees'])->name('eduxfees');
 Route::get('/term-and-condition', [HomeController::class, 'termAndCondition'])->name('term.and.condition');
 
-Route::get('/userdashboard', [UserDashController::class, 'userdashboard'])->name('userdashboard');
+// Route::get('/userdashboard', [UserDashController::class, 'userdashboard'])->name('userdashboard');
 Route::get('/usersearchProgram', [UserDashController::class, 'usersearchProgram'])->name('usersearchProgram');
 Route::get('/userprofile', [UserDashController::class, 'userprofile'])->name('userprofile');
 Route::get('/user_myapplication', [UserDashController::class, 'user_myapplication'])->name('user_myapplication');
@@ -119,7 +175,14 @@ Route::get('/user_testScore', [UserDashController::class, 'user_testScore'])->na
 Route::get('lang/{locale}', [ProgramController::class, 'changeLanguage'])->name('change.lang');
 Route::get('/logout_user', [AuthController::class, 'userLogout'])->name('logout_user');
 
+// google login
+Route::get('auth/google', [RegisterController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [RegisterController::class, 'handleGoogleCallback']);
 
+// facebook login
+
+Route::get('/auth/facebook', [RegisterController::class, 'redirectToFacebook']);
+Route::get('/auth/facebook/callback', [RegisterController::class, 'handleFacebookCallback']);
 
 Route::middleware(['auth'])->group(function () {
 

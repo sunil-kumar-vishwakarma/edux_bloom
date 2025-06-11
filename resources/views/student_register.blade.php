@@ -28,17 +28,19 @@
 
                         <div class="buttons">
                             <button>
-                                <a href="#" aria-label="Facebook" target="_blank">
+                                <a href="{{ url('/auth/facebook') }}" aria-label="Facebook" target="_blank">
                                     <i class="fab fa-facebook"></i>
                                 </a>
                                 Facebook
                             </button>
                             <button>
-                                <a href="#" aria-label="Google" target="_blank" id="google">
+                                <a href="{{ route('google.login') }}" aria-label="Google" target="_blank" id="google">
                                     <i class="fab fa-google"></i>
                                 </a>
                                 Google
                             </button>
+                           
+
                         </div>
 
                         <small class="txt">Or Sign up with email</small>
@@ -181,7 +183,7 @@
                 const data = await response.json();
 
                 if (response.ok) {
-                    showJsAlert('success', "Student Registration successful !");
+                    showJsAlert('success', "Registration successful! Please check your email to verify your account !");
                     form.reset();
                     setTimeout(() => {
                         window.location.href = '/userdashboard';

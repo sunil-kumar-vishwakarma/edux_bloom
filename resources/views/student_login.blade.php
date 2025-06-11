@@ -46,10 +46,13 @@
                     </div>
 
                     <div class="social-buttons">
-                        <button class="btnnn"><i class="fab fa-google"></i> Log In with Google</button>
+                        <button class="btnnn"><a href="{{ route('google.login') }}" aria-label="Google" target="_blank" id="google">
+                                    <i class="fab fa-google"></i>
+                                Log In with Google</a></button>
                         <button class="btnnn"><i class="fab fa-apple"></i> Log In with Apple</button>
-                        <button class="btnnn"><i class="fab fa-facebook"></i> Log In with Facebook</button>
+                        <button class="btnnn"><a href="{{ url('/auth/facebook') }}" aria-label="Google" target="_blank" id="google"><i class="fab fa-facebook"></i> Log In with Facebook </a></button>
                     </div>
+                    
                     <br>
                     <div class="register">
                         <a href="/team-login">Login For Edu-x Team</a>

@@ -184,7 +184,7 @@
             <hr />
             {{-- <a href="{{ route('userprofile') }}"><i class="fa-solid fa-user"></i> My Profile</a> --}}
             {{-- <hr /> --}}
-            <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            <a href="{{ route('logout_user') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
         </div>
     </div>
 </div>
