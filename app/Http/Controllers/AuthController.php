@@ -46,4 +46,5 @@ class AuthController extends Controller
 
         return redirect('/student-login'); // Redirects to the login page after logout
     }
+  
 }

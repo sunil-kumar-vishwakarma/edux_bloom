@@ -68,6 +68,7 @@
 
     .lang-divider {
         color: #aaa;
+        /* color: #bb0e45; */
     }
 
     @media (max-width: 768px) {
@@ -76,8 +77,203 @@
             margin-top: 0;
         }
     }
-
 </style>
+
+<style>
+    .auth-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .profile-dropdown {
+        position: relative;
+    }
+
+    .profile-toggle {
+        margin-top: -5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 12px;
+        background-color: #f9f9f9;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .profile-toggle:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-icon {
+        font-size: 24px;
+        color: #b92151;
+    }
+
+    .profile-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        white-space: nowrap;
+    }
+
+    .dropdown-arrow {
+        font-size: 12px;
+        color: #777;
+        transition: transform 0.3s ease;
+    }
+
+    /* Optional: rotate arrow when dropdown is open */
+    .profile-toggle.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        min-width: 150px;
+        z-index: 1000;
+    }
+
+    .dropdown-menu li {
+        list-style: none;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+        transition: background 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .auth-buttons {
+        margin-top: -10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .login-link {
+        background-color: white !important;
+        border-radius: 6px;
+        padding: 7px 15px;
+        border: 0.5px solid #292E3E;
+        color: #b92151 !important;
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+        color: black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .login-link:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .register-button {
+        background: linear-gradient(135deg, #bb0e45, #ad0039);
+        border-radius: 6px;
+        padding: 7px 15px;
+        border: 2px solid #b92151;
+        margin-top: 10px;
+        display: inline-block;
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .register-button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+        top: 0px !important;
+        margin-top: 0px !important;
+        position: relative !important;
+    }
+
+    /* Translate Widget Styling */
+    #google_translate_element {
+        /* margin-left: 20px; */
+        font-family: "Open Sans", Sans-serif;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 7px 15px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        transition: background 0.3s ease;
+    }
+
+
+    /* Remove unwanted branding and images */
+    .goog-te-gadget img,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+
+
+    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+        border: none !important;
+        margin: 0 1px;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .indicator {
+        display: none !important;
+    }
+
+    /* Dropdown styling */
+    .goog-te-gadget .goog-te-combo {
+        background-color: white;
+        color: #222;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 6px 10px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .goog-te-gadget .goog-te-combo:hover {
+        border-color: #ad0039;
+    }
+
+    .goog-te-gadget-simple {
+        background-color: #FFF;
+        border: none;
+        font-size: 10pt;
+        display: inline-block;
+        padding-top: 1px;
+        cursor: pointer
+    }
+</style>
+
 
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -145,7 +341,7 @@
                         </li>
                     </ul> --}}
 
-                     <div class="language-switcher">
+                    <div class="language-switcher">
                         <a href="javascript:void(0)" onclick="doGTranslate('en|en')" class="lang-option">EN</a>
                         <span class="lang-divider">|</span>
                         <a href="javascript:void(0)" onclick="doGTranslate('en|fr')" class="lang-option">FR</a>
@@ -159,13 +355,40 @@
 
 
 
-            <div class="d-flex">
+            {{-- <div class="d-flex">
                 <a href="{{ route('student-login') }}" id="loginn"
                     class="{{ Route::is('student-login') ? 'active' : '' }}">Login</a>
                 <a href="{{ route('student-register') }}"
                     class="btn-custom {{ Route::is('student-register') ? 'active' : '' }}">Register</a>
+            </div> --}}
+
+            <div class="auth-section">
+                @if (Auth::check())
+                    {{-- Show user profile dropdown --}}
+                    <div class="profile-dropdown">
+                        <a href="#" class="profile-toggle" onclick="toggleDropdown(event)">
+                            {{-- <img src="{{ asset('images/profile-icon.png') }}" class="profile-img" /> --}}
+                            <i class="fa-solid fa-user-circle profile-icon"></i>
+                            <span class="profile-name">{{ Auth::user()->name }}</span>
+                            <i class="fa fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu" id="dropdownMenu">
+                            <li><a href="{{ route('userdashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ route('logout_user') }}">Logout</a></li>
+                        </ul>
+                    </div>
+                @else
+                    {{-- Show Login & Register buttons --}}
+                    <div class="auth-buttons">
+                        <a href="{{ route('student-login') }}" class="login-link">Login</a>
+                        <a href="{{ route('student-register') }}" class="register-button">Register</a>
+                    </div>
+                @endif
             </div>
+
         </div>
+
+
 
     </div>
 </nav>
@@ -214,70 +437,20 @@
         navbarCollapse.style.display = isExpanded ? 'none' : 'flex';
     });
 </script>
-<style>
-    body {
-        top: 0px !important;
-        margin-top: 0px !important;
-        position: relative !important;
+
+<script>
+    function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = document.getElementById('dropdownMenu');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     }
 
-    /* Translate Widget Styling */
-    #google_translate_element {
-        /* margin-left: 20px; */
-        font-family: "Open Sans", Sans-serif;
-        background: #ffffff;
-        border-radius: 6px;
-        padding: 7px 15px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        transition: background 0.3s ease;
-    }
-
-
-    /* Remove unwanted branding and images */
-    .goog-te-gadget img,
-    .VIpgJd-ZVi9od-ORHb-OEVmcd,
-    .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-    }
-    
-
-    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
-        border: none !important;
-        margin: 0 1px;
-        font-size: 16px;
-        color: #333;
-        font-weight: 600;
-    }
-
-    .indicator {
-        display: none !important;
-    }
-
-    /* Dropdown styling */
-    .goog-te-gadget .goog-te-combo {
-        background-color: white;
-        color: #222;
-        font-weight: 600;
-        font-size: 0.9rem;
-        padding: 6px 10px;
-        border: 1px solid #bbb;
-        border-radius: 4px;
-        outline: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .goog-te-gadget .goog-te-combo:hover {
-        border-color: #ad0039;
-    }
-
-    .goog-te-gadget-simple {
-        background-color: #FFF;
-        border: none;
-        font-size: 10pt;
-        display: inline-block;
-        padding-top: 1px;
-        cursor: pointer
-    }
-</style>
+    // Optional: Close dropdown if clicking outside
+    window.addEventListener('click', function(e) {
+        const toggle = document.querySelector('.profile-toggle');
+        const dropdown = document.getElementById('dropdownMenu');
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
+</script>

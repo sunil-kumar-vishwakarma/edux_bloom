@@ -138,7 +138,7 @@ html, body {
 /* main content */
 /* General Content Area */
 .main-content {
-    padding: 20px;
+    padding: 15px 0;
     margin-left: 80px;
     /* Matches sidebar default width */
     transition: margin-left 0.3s ease;
@@ -276,7 +276,7 @@ html, body {
     /* justify-content:flex-start; */
     gap: 10px;
     margin-bottom: 35px;
-    margin-left: 312px;
+    margin-left: 255px;
 
 }
 

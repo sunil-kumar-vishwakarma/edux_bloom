@@ -153,12 +153,7 @@
 
     /* main content */
     /* General Content Area */
-    .main-content {
-        padding: 20px;
-        margin-left: 50px;
-        /* Matches sidebar default width */
-        transition: margin-left 0.3s ease;
-    }
+   
 
     .sidebar:hover+.main-content {
         margin-left: 80px;
@@ -279,10 +274,10 @@
 
     .container {
         margin-top: 80px;
-        background-color: #ffffff;
+        /* background-color: #ffffff; */
         text-align: center;
         padding: 0;
-        margin-left: 60px;
+        /* margin-left: 60px; */
         max-width: 1200px;
     }
 
@@ -293,6 +288,7 @@
         color: #0d6efd;
         font-size: 20px;
         height: 50px;
+        cursor:;
         width: 140px;
         border: .2px solid rgb(200, 220, 254);
         background-color: rgb(200, 220, 254);
@@ -301,11 +297,11 @@
 
     }
 
-    .btn-purchase:hover {
+    /* .btn-purchase:hover {
         background-color: white;
         border: none;
         border-bottom: 6px solid blue;
-    }
+    } */
 
     .balance {
         margin-top: 20px;
@@ -357,7 +353,7 @@
     }
 
     .purchase {
-        margin-left: 95px;
+        margin-left: 105px;
     }
 
 

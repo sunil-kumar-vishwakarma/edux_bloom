@@ -151,14 +151,7 @@
         /* Reset transform */
     }
 
-    /* main content */
-    /* General Content Area */
-    .main-content {
-        padding: 20px;
-        margin-left: 80px;
-        /* Matches sidebar default width */
-        transition: margin-left 0.3s ease;
-    }
+  
 
     .sidebar:hover+.main-content {
         margin-left: 80px;
@@ -339,10 +332,10 @@
     }
 
 
-.employer-table th {
-    background-color: rgb(0, 51, 132);
-    color: white;
-}
+    .employer-table th {
+        background-color: rgb(0, 51, 132);
+        color: white;
+    }
 
 
 
@@ -444,33 +437,33 @@
             margin-left: 0px;
         }
     }
-      .profile-header {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
 
-        .profile-header h1 {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            font-size: 2rem;
-            color: #333;
-            /* margin-left: -180px; */
-        }
+    .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
 
+    .profile-header h1 {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-size: 2rem;
+        color: #333;
+        /* margin-left: -180px; */
+    }
 </style>
 
 <body>
-  @include('frontent_partials.userdash_sidebar')
+    @include('frontent_partials.userdash_sidebar')
 
     <!-- Main Content -->
     <div class="main-content">
-      @include('frontent_partials.userdash_nav')
+        @include('frontent_partials.userdash_nav')
 
-         <div class="profile-header">
+        <div class="profile-header">
             <h1>
                 My Applications
             </h1>

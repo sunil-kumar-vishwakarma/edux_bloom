@@ -17,19 +17,17 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // Validation rules
-      $validator = Validator::make($request->all(), [
-    'name' => 'required|string|max:255',
-    'email' => 'required|email|unique:users,email',
-   'password' => [
-    'required',
-    'string',
-    'min:6', 
-    'regex:/^(?=.*[A-Z])(?=.*\d).+$/', // ensures 1 uppercase and 1 number
-],
-
-    // 'tc' => 'required|accepted'
-]);
-
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => [
+                'required',
+                'string',
+                'min:6',
+                'regex:/^(?=.*[A-Z])(?=.*\d).+$/', // at least one uppercase and one number
+            ],
+            // 'tc' => 'required|accepted' // optional: terms and conditions
+        ]);
 
         if ($validator->fails()) {
             return response()->json([
@@ -40,8 +38,8 @@ class RegisterController extends Controller
 
         // Create user
         $user = Users::create([
-            'name' => $request->name,
-            'email' => $request->email,
+            'name'     => $request->name,
+            'email'    => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
@@ -118,5 +116,5 @@ class RegisterController extends Controller
 
         return redirect('/userdashboard'); // or wherever you want
     }
-    
+
 }

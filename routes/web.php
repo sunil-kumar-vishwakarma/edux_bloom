@@ -29,6 +29,10 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\MentorController;
+
+
+
 
 // Route::get('/', function () {
 //     return view('home');
@@ -152,7 +156,10 @@ Route::get('/explr/school/programs', [HomeController::class, 'explrSchoolProgram
 Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('/institutions', [HomeController::class, 'institutions'])->name('institutions');
 Route::get('/events', [HomeController::class, 'events'])->name('events');
+
 Route::get('/blogs-pages', [HomeController::class, 'blogs'])->name('blogs-pages');
+Route::get('/blogdetails', [HomeController::class, 'blogdetails'])->name('blogdetails');
+
 Route::get('/youngleaders', [HomeController::class, 'youngleaders'])->name('youngleaders');
 // Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/search', [ProgramController::class, 'search'])->name('search');
@@ -258,6 +265,11 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/students/{student}', [StudentController::class, 'destroy'])->name('students.destroy');
     Route::post('/students/{id}/toggle-status', [StudentController::class, 'toggleStatus']);
 
+    // Mentor Application
+    Route::post('/mentor/apply', [MentorController::class, 'store']);
+    Route::get('/admin/mentors', [MentorController::class, 'index'])->name('admin.mentors');
+    Route::delete('/admin/mentors/{id}', [MentorController::class, 'destroy'])->name('mentors.destroy');
+
 
 
     // discover_program Routes
@@ -307,6 +319,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     Route::post('/blogs/{blog}/toggle-status', [BlogController::class, 'toggleStatus'])->name('blogs.toggle-status');
     Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('blogs.show');
+    // Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
+
 
     // Subscription Routes
     Route::get('/subscriptions', [SubscriptionController::class, 'index'])->name('subscriptions.index');

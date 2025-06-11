@@ -5,25 +5,16 @@
     <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
 
     <div class="page">
-        <!-- Left side image -->
         <div class="imag">
-            {{-- <img src="https://i.ibb.co/9HR2LXNs/6310507.jpg" alt="Register Image" /> --}}
-            {{-- <img src="images\login.png" alt="Register Image" /> --}}
-            {{-- <img src="images\registerpage.png" alt="Register Image" /> --}}
-            <img src="images\registerpage-Photoroom.png" alt="Register Image" />
+            <img src="{{ asset('images/registerpage-Photoroom.png') }}" alt="Register Image" />
         </div>
 
-        <!-- Right side card -->
         <div class="conten">
             <div class="card1-student">
                 <div class="card-student">
                     <small class="txt">Sign up with</small>
                     <div class="card-body-student">
 
-                        {{-- Backend success/error alerts --}}
-                        @include('includes.alerts')
-
-                        {{-- JS dynamic alert container --}}
                         <div id="js-alert-container"></div>
 
                         <div class="buttons">
@@ -46,6 +37,8 @@
                         <small class="txt">Or Sign up with email</small>
 
                         <form id="student-register-form">
+                            @csrf
+
                             <div class="input-icon">
                                 <i class="fas fa-user"></i>
                                 <input type="text" name="name" placeholder="Your Name" required>
@@ -66,17 +59,15 @@
                             <div class="password-requirements" id="password-rules">
                                 <p><strong>Password must contain:</strong></p>
                                 <ul>
-                                    <li>At least 06 characters</li>
+                                    <li>At least 6 characters</li>
                                     <li>One uppercase letter</li>
                                     <li>One number</li>
                                 </ul>
                             </div>
 
-
-
                             <div class="checkbox">
                                 <input type="checkbox" name="tc" id="tc" required>
-                                <label for="tc">I agree to the <a href="/term-and-condition">Terms and
+                                <label for="tc">I agree to the <a href="/term-and-condition" target="_blank">Terms and
                                         Conditions</a></label>
                             </div>
 
@@ -89,10 +80,8 @@
                             <p>Already have an account? <a href="/student-login">Login</a></p>
                         </div>
 
-                        <small>
-                            *If you are a minor in your jurisdiction, your parent or legal guardian must agree to the above
-                            terms.
-                        </small>
+                        <small>*If you are a minor in your jurisdiction, your parent or legal guardian must agree to the
+                            above terms.</small>
 
                         <div class="register">
                             <a href="/privacy/policy">Privacy & Cookies Policy</a>
@@ -104,21 +93,19 @@
     </div>
 
     <script>
-    const passwordInput = document.getElementById('password-input');
-    const passwordRules = document.getElementById('password-rules');
+        const passwordInput = document.getElementById('password-input');
+        const passwordRules = document.getElementById('password-rules');
 
-    passwordInput.addEventListener('focus', () => {
-        passwordRules.classList.add('show');
-    });
+        passwordInput.addEventListener('focus', () => passwordRules.classList.add('show'));
+        passwordInput.addEventListener('blur', () => passwordRules.classList.remove('show'));
 
-    passwordInput.addEventListener('blur', () => {
-        passwordRules.classList.remove('show');
-    });
-</script>
+        document.getElementById("toggle-password").addEventListener("click", function() {
+            const input = document.getElementById("password-input");
+            input.type = input.type === "password" ? "text" : "password";
+            this.classList.toggle("fa-eye");
+            this.classList.toggle("fa-eye-slash");
+        });
 
-
-    <!-- JavaScript alert function -->
-    <script>
         function showJsAlert(type, message) {
             const container = document.getElementById('js-alert-container');
             if (!container) return;
@@ -127,41 +114,31 @@
 
             const alertDiv = document.createElement('div');
             alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'}`;
-            alertDiv.innerHTML = `
-                <i class="fas ${type === 'error' ? 'fa-times-circle' : 'fa-check-circle'}"></i>
-                ${message}
-            `;
-
-            alertDiv.style.position = 'fixed';
-            alertDiv.style.top = '20px';
-            alertDiv.style.left = '40%';
-            alertDiv.style.transform = 'translateX(-50%)';
-            alertDiv.style.padding = '12px 25px';
-            alertDiv.style.fontSize = '18px';
-            alertDiv.style.fontFamily = "'Roboto', sans-serif";
-            alertDiv.style.borderRadius = '6px';
-            alertDiv.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
-            alertDiv.style.zIndex = '1000';
-            alertDiv.style.backgroundColor = type === 'error' ? '#b92151' : '#28a745';
-            alertDiv.style.color = 'white';
-            alertDiv.style.animation = 'slideIn 0.6s ease-out forwards';
+            alertDiv.innerHTML =
+                `<i class="fas ${type === 'error' ? 'fa-times-circle' : 'fa-check-circle'}"></i> ${message}`;
+            alertDiv.style = `
+            position: fixed;
+            top: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            padding: 12px 25px;
+            font-size: 18px; font-family: 'Roboto', sans-serif;
+            border-radius: 6px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            background-color: ${type === 'error' ? '#b92151' : '#28a745'};
+            color: white;
+            animation: slideIn 0.6s ease-out forwards;
+        `;
 
             container.appendChild(alertDiv);
-
             setTimeout(() => {
                 alertDiv.style.animation = 'fadeOut 0.6s ease forwards';
-                setTimeout(() => {
-                    alertDiv.remove();
-                }, 600);
+                setTimeout(() => alertDiv.remove(), 600);
             }, 3000);
         }
-    </script>
 
-    <!-- Register form submission -->
-    <script>
         document.getElementById('student-register-form').addEventListener('submit', async function(e) {
             e.preventDefault();
-
             const form = e.target;
             const formData = {
                 name: form.name.value,
@@ -171,11 +148,12 @@
             };
 
             try {
-                const response = await fetch('/api/student/register', {
+                const response = await fetch('{{ url('/student/register') }}', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json'
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     },
                     body: JSON.stringify(formData)
                 });
@@ -186,31 +164,16 @@
                     showJsAlert('success', "Registration successful! Please check your email to verify your account !");
                     form.reset();
                     setTimeout(() => {
-                        window.location.href = '/userdashboard';
+                        window.location.href = data.redirect_url || '/userdashboard';
                     }, 2000);
                 } else {
-                    const errorMsg = data.errors ?
-                        Object.values(data.errors).flat().join("<br>") :
-                        data.message || "Student Registration failed";
+                    const errorMsg = data.errors ? Object.values(data.errors).flat().join("<br>") : data
+                        .message || "Registration failed";
                     showJsAlert('error', errorMsg);
                 }
             } catch (error) {
                 showJsAlert('error', "Something went wrong!");
                 console.error(error);
-            }
-        });
-
-        // Toggle password visibility
-        document.getElementById("toggle-password").addEventListener("click", function() {
-            const passwordInput = document.getElementById("password-input");
-            const icon = this;
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                icon.classList.replace("fa-eye", "fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                icon.classList.replace("fa-eye-slash", "fa-eye");
             }
         });
     </script>

@@ -352,7 +352,7 @@
       text-align: center;
       text-decoration: none;
       margin: 20px 30px;
-      display: inline-block;
+      /* display: inline-block; */
       float: right;
   }
 
@@ -1337,10 +1337,7 @@
   }
 
   /* Button Hover Effect */
-  .btn-emp:hover {
-      /* opacity: 0.8; */
-  }
-
+ 
 
   /* Subscription Page */
   /* Main Content */

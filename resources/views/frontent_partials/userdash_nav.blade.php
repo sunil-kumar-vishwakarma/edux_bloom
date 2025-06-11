@@ -177,18 +177,36 @@
         <i class="fa-solid fa-user-circle profile-icon" id="profileIcon"></i>
 
         <!-- Profile Dropdown -->
+        <!-- Profile Dropdown -->
         <div class="dropdown" id="profileDropdown">
             <h3>Account</h3>
-            <p>{{ Auth::user()->name ?? 'Vishnu Rajput' }}</p>
-            <p>{{ Auth::user()->email ?? 'vishnurajput847@gmail.com' }}</p>
+            <p id="displayName">User</p>
+            <p id="displayEmail">example@mail.com</p>
             <hr />
             {{-- <a href="{{ route('userprofile') }}"><i class="fa-solid fa-user"></i> My Profile</a> --}}
             {{-- <hr /> --}}
             <a href="{{ route('logout_user') }}"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
         </div>
+
+
+
     </div>
 </div>
+<!-- LocalStorage injection -->
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const name = localStorage.getItem("studentName");
+        const email = localStorage.getItem("studentEmail");
 
+        if (name && email) {
+            const nameElem = document.getElementById("displayName");
+            const emailElem = document.getElementById("displayEmail");
+
+            if (nameElem) nameElem.textContent = name;
+            if (emailElem) emailElem.textContent = email;
+        }
+    });
+</script>
 <script>
     const notificationIcon = document.getElementById('notificationIcon');
     const notificationDropdown = document.getElementById('notificationDropdown');
