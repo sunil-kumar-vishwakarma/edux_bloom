@@ -31,8 +31,29 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\MentorController;
 
+use Illuminate\Http\Request; // ✅ यह जरूरी है
+// use OpenAI\Laravel\Facades\OpenAI;
+use OpenAI\Client;
 
+Route::post('/translate-api', function (Request $request) {
+    $client = OpenAI::client(env('OPENAI_API_KEY'));
 
+    $text = $request->input('text');
+
+    $response = $client->chat()->create([
+        'model' => 'gpt-3.5-turbo',
+        'messages' => [
+            [
+                'role' => 'user',
+                'content' => "Translate the following English text to French:\n\n{$text}",
+            ],
+        ],
+    ]);
+
+    return response()->json([
+        'translated' => $response->choices[0]->message->content,
+    ]);
+});
 
 // Route::get('/', function () {
 //     return view('home');

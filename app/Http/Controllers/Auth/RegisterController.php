@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Exception;
+use Illuminate\Support\Str;
 class RegisterController extends Controller
 {
     public function register(Request $request)
@@ -74,14 +75,14 @@ class RegisterController extends Controller
 
     public function handleGoogleCallback()
     {
-        try {
+        // try {
             $googleUser = Socialite::driver('google')->stateless()->user();
 
             $user = User::updateOrCreate(
                 ['email' => $googleUser->getEmail()],
                 [
                     'name' => $googleUser->getName(),
-                    'password' => bcrypt(uniqid()), // optional if needed
+                    'password' => bcrypt('google123'), // optional if needed
                     'email_verified_at' => now(),   // assume verified via Google
                 ]
             );
@@ -89,9 +90,9 @@ class RegisterController extends Controller
             Auth::login($user);
 
             return redirect('/userdashboard');
-        } catch (Exception $e) {
-            return redirect('/login')->withErrors('Unable to login with Google.');
-        }
+        // } catch (Exception $e) {
+        //     return redirect('/student-login')->withErrors('Unable to login with Google.');
+        // }
     }
 
     public function redirectToFacebook()
