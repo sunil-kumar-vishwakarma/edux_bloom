@@ -5,7 +5,7 @@
                             <div class="program-header">
                               <!-- <img src="{{ asset('images/edu-x white.png') }}" alt="University Logo" class="program-logo" /> -->
 
-                                 <img src="{{ asset('../storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
+                                 <img src="{{ asset('/public/storage/' . $value->image) }}?v={{ $value->updated_at->timestamp }}"
                                     alt="University Logo" class="program-logo" />
                                 <a href="#">
                                     <h3>{{ $value->university_name }}</h3>
