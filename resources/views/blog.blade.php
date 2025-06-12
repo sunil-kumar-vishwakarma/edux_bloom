@@ -269,7 +269,7 @@
                 @foreach ($blogs as $blog)
                     <div class="col">
                         <div class="card-blog">
-                            <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top" alt="Blog Image">
+                            <img src="{{ asset('../storage/' . $blog->image) }}" class="card-img-top" alt="Blog Image">
 
                             {{-- <img src="{{ asset('/images/Canada-Study.png') }}" alt="University Logo" class="program-logo" /> --}}
 

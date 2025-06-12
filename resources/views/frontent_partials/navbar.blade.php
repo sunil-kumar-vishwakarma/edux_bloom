@@ -431,8 +431,8 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const translateBtn = document.createElement('button');
-    translateBtn.innerText = 'Translate to French';
-    translateBtn.style = 'position:fixed;top:20px;right:20px;z-index:9999;padding:10px;background:#008CBA;color:#fff;border:none;border-radius:5px;';
+    // translateBtn.innerText = 'Translate to French';
+    // translateBtn.style = 'position:fixed;top:20px;right:20px;z-index:9999;padding:10px;background:#008CBA;color:#fff;border:none;border-radius:5px;';
     document.body.appendChild(translateBtn);
 
     translateBtn.addEventListener('click', async () => {
