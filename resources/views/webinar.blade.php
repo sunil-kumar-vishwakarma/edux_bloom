@@ -29,7 +29,7 @@
             padding: 20px;
             width: 100%;
             background-image: url(images/webinarr.avif);
-            margin-top: 100px;
+            margin-top: 5%;
             height: 570px;
 
             background-size: cover;
@@ -362,18 +362,19 @@
                 These are exclusively offered for Edu-X recruitment partners to empower your success.
             </p>
         </div>
-    </div><br><br><br>
+    </div><br>
 
 
 
 
     <div class="upcoming">
         <div class="head" style="text-align: center;">
-            <h1>Our Upcoming Webinars</h1><br>
-            <p>Register for one, or all of them.</p>
-        </div><br><br>
+            <h1>Our Upcoming Webinars</h1>
+            <p>Discover exciting topics and insights from global education experts.</p>
+        </div><br>
 
-        <div class="card-container">
+
+        {{-- <div class="card-container">
             <div class="card-webinar">
                 <div class="card-header institution" id="Spotlight">Institution Spotlight</div>
                 <div class="card-title">
@@ -404,7 +405,28 @@
                     January 15, 2024, 6:00 A.M<br>4:30 P.M IST
                 </div>
             </div>
+        </div> --}}
+
+        <div class="card-container">
+            @foreach ($webinars as $webinar)
+                <div class="card-webinar">
+                    <div class="card-header trends" id="Spotlight">{{ $webinar->type }}</div>
+                    <div class="card-title">
+                        {{ $webinar->title }}
+                    </div>
+                    <div class="card-date">
+                        @if ($webinar->date)
+                            {{ \Carbon\Carbon::parse($webinar->date)->format('F d, Y') }}<br>
+                        @endif
+
+                        @if ($webinar->time)
+                            {{ \Carbon\Carbon::parse($webinar->time)->format('g:i A') }} IST
+                        @endif
+                    </div>
+                </div>
+            @endforeach
         </div>
+
         <br>
 
 

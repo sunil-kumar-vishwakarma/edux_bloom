@@ -42,7 +42,7 @@
         </section>
 
         <!-- === Consultation Banner === -->
-        <section class="consultation-banner">
+        {{-- <section class="consultation-banner">
             <div class="consultation-overlay">
                 <div class="consultation-text">
                     <h2>Edu-X Services—to bridge the gap for students.</h2>
@@ -51,7 +51,7 @@
                 </div>
                 <a href="/contactus" class="consultation-button">Schedule a consultation</a>
             </div>
-        </section>
+        </section> --}}
 
         <br>
         <br>

@@ -57,7 +57,7 @@
                     <li><a href="{{ route('search') }}"> Programs</a></li>
                     <li><a href="{{ route('institutions') }}"> Schools</a></li>
                     <li><a href="{{ route('student-register') }}">Register</a></li>
-                    <li><a href="{{ route('webinar') }}">Careers</a></li>
+                    <li><a href="/webinar">Careers</a></li>
                 </ul>
             </div>
 

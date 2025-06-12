@@ -73,9 +73,8 @@
             </div>
         </div>
     </div>
-@endsection
 
-@section('scripts')
+
     <script src="{{ asset('js/script.js') }}"></script>
     <script>
         const APP_URL = "{{ url('/') }}";
@@ -151,7 +150,7 @@
             .catch(error => console.error('Error toggling status:', error));
         }
     </script>
-@endsection
+
 
 <style>
     .confirm-delete-btn {
@@ -190,3 +189,4 @@
         100% { transform: rotate(360deg); }
     }
 </style>
+@endsection

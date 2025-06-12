@@ -115,7 +115,7 @@
         @media (max-width: 1024px) {
             .student-hero {
                 margin-top: 15%;
-                padding: 40px 40px;
+                padding: 60px 40px;
             }
         }
 
