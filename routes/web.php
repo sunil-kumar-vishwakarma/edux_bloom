@@ -30,6 +30,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\MentorController;
+use App\Http\Controllers\WebinarController;
 
 use Illuminate\Http\Request; // ✅ यह जरूरी है
 // use OpenAI\Laravel\Facades\OpenAI;
@@ -179,14 +180,19 @@ Route::get('/institutions', [HomeController::class, 'institutions'])->name('inst
 Route::get('/events', [HomeController::class, 'events'])->name('events');
 
 Route::get('/blogs-pages', [HomeController::class, 'blogs'])->name('blogs-pages');
-Route::get('/blogdetails', [HomeController::class, 'blogdetails'])->name('blogdetails');
+// Route::get('/blogdetails', [HomeController::class, 'blogdetails'])->name('blogdetails');
+Route::get('/blogdetails/{id}', [BlogController::class, 'blogDetail'])->name('blog.detail');
+
+
 
 Route::get('/youngleaders', [HomeController::class, 'youngleaders'])->name('youngleaders');
 // Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/search', [ProgramController::class, 'search'])->name('search');
 
 Route::get('/web', [HomeController::class, 'web'])->name('web');
-Route::get('/webinar', [HomeController::class, 'webinar'])->name('webinar');
+// Route::get('/webinar', [HomeController::class, 'webinar'])->name('webinar');
+Route::get('/webinar', [WebinarController::class, 'showWebinars']);
+
 Route::get('/webinar/learnmore', [HomeController::class, 'webinarLearnmore'])->name('webinar.learnmore');
 Route::get('/webinar/readmore', [HomeController::class, 'webinarReadmore'])->name('webinar.readmore');
 Route::get('/privacy/policy', [HomeController::class, 'privacyPolicy'])->name('privacy.policy');
@@ -291,6 +297,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/mentors', [MentorController::class, 'index'])->name('admin.mentors');
     Route::delete('/admin/mentors/{id}', [MentorController::class, 'destroy'])->name('mentors.destroy');
 
+    // webinar
+ Route::get('/admin/webinars', [WebinarController::class, 'index'])->name('webinars.index');
+Route::get('/admin/webinars/create', [WebinarController::class, 'create'])->name('webinars.create');
+Route::post('/admin/webinars', [WebinarController::class, 'store'])->name('webinars.store');
+Route::get('/admin/webinars/{id}/edit', [WebinarController::class, 'edit'])->name('webinars.edit');
+Route::put('/admin/webinars/{id}', [WebinarController::class, 'update'])->name('webinars.update');
+Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->name('webinars.destroy');
 
 
     // discover_program Routes

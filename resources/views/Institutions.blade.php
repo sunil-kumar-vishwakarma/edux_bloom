@@ -335,18 +335,29 @@
                     },
                     body: JSON.stringify(formData)
                 })
-                .then(response => response.json())
-                .then(data => {
+                .then(async (response) => {
+                    const contentType = response.headers.get("content-type");
+                    if (!response.ok) {
+                        if (contentType && contentType.includes("application/json")) {
+                            const errorData = await response.json();
+                            throw new Error(errorData.message || "Validation failed.");
+                        } else {
+                            throw new Error("Unexpected response format.");
+                        }
+                    }
+
+                    const data = await response.json();
                     showJsAlert('success', data.message || 'Application submitted!');
                     document.getElementById("mentorApplicationForm").reset();
                     closeMentorForm();
                 })
                 .catch(error => {
-                    showJsAlert('error', 'There was an error submitting the form.');
+                    showJsAlert('error', error.message || 'There was an error submitting the form.');
                     console.error(error);
                 });
         });
     </script>
+
 
 
     <script>

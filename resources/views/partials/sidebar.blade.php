@@ -39,6 +39,11 @@
                 <i class="fas fa-graduation-cap icon"></i>
                 Mentor Applications</a>
         </li>
+        <li class="menu-item">
+            <a href="{{ route('webinars.index') }}" class="{{ request()->routeIs('webinars.index') ? 'active' : '' }}">
+                <i class="fas fa-graduation-cap icon"></i>
+                Webinar's list</a>
+        </li>
 
         <li class="menu-item">
             <a href="{{ route('discover_program-list') }}" class="{{ request()->routeIs('discover_program-list') ? 'active' : '' }}">

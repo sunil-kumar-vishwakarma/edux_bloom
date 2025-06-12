@@ -9,9 +9,7 @@
             </div>
             <!-- Column 1 -->
             <div class="custom-footer-col">
-                {{-- <a class="navbar-brand" href="/">
-                    <img src="{{ asset('images/edu-x white.png') }}" alt="Edu-X Logo" height="70">
-                </a> --}}
+                
                 <p>US Address: 3337 Salem Cove Drive SE,N2H 6R3</p>
                 <p>Africa Office Addresses: </p>
                 <p>Senegal: Cite de l'emergence, Immeuble 10,<br> unit 21, Dakar Plateau </p>
@@ -41,12 +39,12 @@
             <div class="custom-footer-col">
                 <h3>About</h3>
                 <ul>
-                    <li><a href="{{ route('student') }}">Services</a></li>
-                    {{-- <li><a href="{{ route('partner') }}">Partners</a></li> --}}
-                    <li><a href="{{ route('search') }}">Resources</a></li>
-                    {{-- <li><a href="{{ route('home') }}">FAQ</a></li> --}}
-                    <li><a href="{{ route('contactus') }}">Contact</a></li>
-                    <li><a href="{{ route('blogs-pages') }}">Blogs</a></li>
+                    <li><a href="<?php echo e(route('student')); ?>">Services</a></li>
+                    
+                    <li><a href="<?php echo e(route('search')); ?>">Resources</a></li>
+                    
+                    <li><a href="<?php echo e(route('contactus')); ?>">Contact</a></li>
+                    <li><a href="<?php echo e(route('blogs-pages')); ?>">Blogs</a></li>
                 </ul>
             </div>
 
@@ -54,9 +52,9 @@
             <div class="custom-footer-col">
                 <h3>Discover</h3>
                 <ul>
-                    <li><a href="{{ route('search') }}"> Programs</a></li>
-                    <li><a href="{{ route('institutions') }}"> Schools</a></li>
-                    <li><a href="{{ route('student-register') }}">Register</a></li>
+                    <li><a href="<?php echo e(route('search')); ?>"> Programs</a></li>
+                    <li><a href="<?php echo e(route('institutions')); ?>"> Schools</a></li>
+                    <li><a href="<?php echo e(route('student-register')); ?>">Register</a></li>
                     <li><a href="/webinar">Careers</a></li>
                 </ul>
             </div>
@@ -346,3 +344,4 @@
         }
     }
 </style>
+<?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/frontent_partials/footer.blade.php ENDPATH**/ ?>

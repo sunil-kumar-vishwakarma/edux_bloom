@@ -1,6 +1,6 @@
-@extends('frontent.layouts.app')
-@section('title', 'EduX | blog')
-@section('content')
+
+<?php $__env->startSection('title', 'EduX | blog'); ?>
+<?php $__env->startSection('content'); ?>
 
 
     <style>
@@ -266,31 +266,31 @@
 
         <div class="card18">
             <div id=blogs-cards>
-                @foreach ($blogs as $blog)
+                <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col">
                         <div class="card-blog">
-                            <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top" alt="Blog Image">
+                            <img src="<?php echo e(asset('storage/' . $blog->image)); ?>" class="card-img-top" alt="Blog Image">
 
-                            {{-- <img src="{{ asset('/images/Canada-Study.png') }}" alt="University Logo" class="program-logo" /> --}}
+                            
 
                             <div class="card-body-blog">
-                                <h5>{{ $blog->title }}</h5>
-                                <p> {{ \Carbon\Carbon::parse($blog->published_date)->format('F d, Y') }}</p>
+                                <h5><?php echo e($blog->title); ?></h5>
+                                <p> <?php echo e(\Carbon\Carbon::parse($blog->published_date)->format('F d, Y')); ?></p>
                                 <br>
-                                {{-- <p><strong>Category:</strong> {{ $blog->category }}</p> --}}
+                                
 
-                                {{-- <p>{{ Str::limit($blog->description, 250, '...') }}</p> --}}
+                                
 
-                                {{-- <a href="{{ route('blog.show', $blog->id) }}" class="read-more-link">Read More →</a> --}}
-                                {{-- <a href="/blogdetails" class="read-more-link">Read More →</a> --}}
-                                <a href="{{ route('blog.detail', $blog->id) }}" class="read-more-link">Read More →</a>
+                                
+                                
+                                <a href="<?php echo e(route('blog.detail', $blog->id)); ?>" class="read-more-link">Read More →</a>
 
 
 
                             </div>
                         </div>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
 
@@ -300,4 +300,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontent.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/blog.blade.php ENDPATH**/ ?>

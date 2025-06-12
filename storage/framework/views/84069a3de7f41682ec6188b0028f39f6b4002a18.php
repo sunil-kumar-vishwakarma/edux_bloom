@@ -1,9 +1,9 @@
-@extends('frontent.layouts.app')
-@section('title', 'EduX | Student')
-@section('content')
 
-    <link rel="stylesheet" href="{{ asset('css/student2.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/student.css') }}">
+<?php $__env->startSection('title', 'EduX | Student'); ?>
+<?php $__env->startSection('content'); ?>
+
+    <link rel="stylesheet" href="<?php echo e(asset('css/student2.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/student.css')); ?>">
     <style>
         /* CSS */
         .student-hero {
@@ -99,7 +99,7 @@
             animation: float 4s ease-in-out infinite;
         }
 
-        @keyframes float {
+        @keyframes  float {
 
             0%,
             100% {
@@ -163,41 +163,9 @@
         </div>
     </section>
 
-    {{-- <div class="stats-container">
-        <div class="stat-card">
-            <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
-            <div class="stat-info">
-                <h3>80000+</h3>
-                <p>Students Helped</p>
-            </div>
-        </div>
+    
 
-        <div class="stat-card">
-            <img src="{{ asset('images/envolope.png') }}" alt="Programs Offered">
-            <div class="stat-info">
-                <h3>14000+</h3>
-                <p>Programs Offered</p>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <img src="{{ asset('images/home.png') }}" alt="Institutions">
-            <div class="stat-info">
-                <h3>50+</h3>
-                <p>Institutions</p>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <img src="{{ asset('images/earth.png') }}" alt="Destination Countries">
-            <div class="stat-info">
-                <h3>02</h3>
-                <p>Destination Country</p>
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- new sections --}}
+    
     <section class="offer-section">
         <h2 class="offer-title"> What We Offer You ?</h2>
         <div class="offer-grid">
@@ -312,7 +280,7 @@
     </section>
 
     <br>
-    {{-- ready to take first step section --}}
+    
     <section class="cta-section">
         <div class="cta-card">
             <h2>Ready to Take the First Step?</h2>
@@ -329,148 +297,17 @@
 
 
 
-    {{-- <div class="dropdwn">
-        <img src="{{ asset('images/happy-student-girl_.avif') }}" style="height: 500px; width: 400px;">
-
-
-        <div class="dropdown-container">
-            <h2>The Easiest Way to Study Abroad</h2>
-
-            <div class="dropdown">
-                <div class="dropdown-line" onclick="toggleDropdown(this)">
-                    <span>1. Answer a few questions</span>
-                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="dropdown-content">
-                    We'll find the best study programs tailored to you. Just take 3 minutes to answer a few questions about
-                    your education goals, interests, preferred countries, and academic background. The more we know, the
-                    better we can match you.
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropdown-line" onclick="toggleDropdown(this)">
-                    <span>2. Select a program</span>
-                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="dropdown-content">
-                    Explore hundreds of universities and colleges around the world. Filter by program type, tuition cost,
-                    location, and language of instruction. EduX makes comparison easy so you can confidently choose your
-                    ideal program.
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropdown-line" onclick="toggleDropdown(this)">
-                    <span>3. Submit your best application</span>
-                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="dropdown-content">
-                    We'll review your documents to ensure nothing is missing. Our system checks your application quality and
-                    completeness before submission. If we notice any gaps or errors, you’ll get notified right away.
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropdown-line" onclick="toggleDropdown(this)">
-                    <span>4. Financial assistance</span>
-                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="dropdown-content">
-                    Access financial tools like Guaranteed Investment Certificates (GICs) or apply for an EduX Student Loan.
-                    We help you understand costs and connect you with resources to reduce your financial burden while
-                    studying abroad.
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropdown-line" onclick="toggleDropdown(this)">
-                    <span>5. Payment processing support</span>
-                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="dropdown-content">
-                    With Flywire, you can pay tuition and other fees quickly, securely, and in your local currency. You'll
-                    get verification and peace of mind that your funds are delivered correctly and on time to the
-                    institution.
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropdown-line" onclick="toggleDropdown(this)">
-                    <span>6. Visa support</span>
-                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="dropdown-content">
-                    Going through visa applications can be overwhelming. EduX and our trusted partner One Vasco provide
-                    end-to-end support for submitting visa documents, scheduling interviews, and preparing for your journey
-                    abroad.
-                </div>
-            </div>
-        </div>
-
-
-
-    </div><br> --}}
+    
 
 
     <!-- Dream Destination Section -->
-    {{-- <section class="destinations-section">
-        <h2>Find Your Study Program Here!</h2>
-    </section> --}}
+    
 
 
 
-    {{-- <div class="card-bottom">
-        <div class="card-students">
-            <img class="card-img-tops" src="{{ asset('images/institutions.jpg') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Bachelor’s Degree Programs</h5>
-                <p class="card-text-student">
-                    Explore undergraduate courses that provide strong academic skills and prepare you for future success in
-                    various fields.
-                </p>
-                <a href="/search" class="btn">Find a Bachelor degree</a>
-            </div>
-        </div>
+    
 
-        <div class="card-students">
-            <img class="card-img-tops" src="{{ asset('images/partner.jpg') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Master’s Degree Programs</h5>
-                <p class="card-text-student">
-                    Enhance your career with graduate-level programs designed to develop expertise and leadership in your
-                    field of interest.
-                </p>
-                <a href="/search" class="btn">Find a Master's degree</a>
-            </div>
-        </div>
-
-        <div class="card-students">
-            <img class="card-img-tops" src="{{ asset('images/student.jpg') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Online Study Opportunities</h5>
-                <p class="card-text-student">
-                    Discover flexible and accredited programs that let you learn from home while gaining valuable knowledge
-                    and credentials.
-                </p>
-                <a href="/search" class="btn">Find an online degree</a>
-            </div>
-        </div>
-
-        <div class="card-students">
-            <img class="card-img-tops" src="{{ asset('images/partner1.jpg') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">PhD Research Programs</h5>
-                <p class="card-text-student">
-                    Engage in rigorous doctoral research supported by faculty experts and resources to contribute to
-                    innovation and progress.
-                </p>
-                <a href="/search" class="btn">Find a PhD program</a>
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- new sections --}}
+    
     <section class="offer-section">
         <h2 class="mv-main-heading" style="text-align: center">
             An Easy-to-Use Platform Built to<br />
@@ -481,37 +318,37 @@
                 <div class="bg-white rounded-lg ">
                     <div class="grid grid-cols-3 gap-10">
                         <div class="flex flex-col items-center text-center">
-                            <img src="{{ asset('images/Platform.webp') }}" alt="Find Programs Faster" />
+                            <img src="<?php echo e(asset('images/Platform.webp')); ?>" alt="Find Programs Faster" />
                             <h4 class="text-neutral-900 font-medium mt-4">
                                 Find Programs Faster
                             </h4>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <img src="{{ asset('images/helpfull-team.png') }}" alt="Dedicated Support Team" />
+                            <img src="<?php echo e(asset('images/helpfull-team.png')); ?>" alt="Dedicated Support Team" />
                             <h4 class="text-neutral-900 font-medium mt-4">
                                 Helpful and Dedicated Support Team
                             </h4>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <img src="{{ asset('images/Studen-Loan.webp') }}" alt="Exclusive Scholarships" />
+                            <img src="<?php echo e(asset('images/Studen-Loan.webp')); ?>" alt="Exclusive Scholarships" />
                             <h4 class="text-neutral-900 font-medium mt-4">
                                 Access to Exclusive Scholarships
                             </h4>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <img src="{{ asset('images/Platform-check.webp') }}" alt="Exclusive Scholarships" />
+                            <img src="<?php echo e(asset('images/Platform-check.webp')); ?>" alt="Exclusive Scholarships" />
                             <h4 class="text-neutral-900 font-medium mt-4">
                                 One Easy Application Platform
                             </h4>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <img src="{{ asset('images/Support.webp') }}" alt="Exclusive Scholarships" />
+                            <img src="<?php echo e(asset('images/Support.webp')); ?>" alt="Exclusive Scholarships" />
                             <h4 class="text-neutral-900 font-medium mt-4">
                                 Knowledgeable Support Team
                             </h4>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <img src="{{ asset('images/Chart-3.webp') }}" alt="Exclusive Scholarships" />
+                            <img src="<?php echo e(asset('images/Chart-3.webp')); ?>" alt="Exclusive Scholarships" />
                             <h4 class="text-neutral-900 font-medium mt-4">
                                 Data Driven Insights
                             </h4>
@@ -583,4 +420,6 @@
         // Initial load
         showSlide(currentSlide);
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontent.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/student.blade.php ENDPATH**/ ?>

@@ -1,7 +1,7 @@
-@extends('frontent.layouts.app')
-@section('title', 'EduX | Student')
-@section('content')
-    <link rel="stylesheet" href="{{ asset('css/events.css') }}">
+
+<?php $__env->startSection('title', 'EduX | Student'); ?>
+<?php $__env->startSection('content'); ?>
+    <link rel="stylesheet" href="<?php echo e(asset('css/events.css')); ?>">
     <div class="mainnn">
         <section class="student-hero">
             <div class="hero-container">
@@ -42,16 +42,7 @@
         </section>
 
         <!-- === Consultation Banner === -->
-        {{-- <section class="consultation-banner">
-            <div class="consultation-overlay">
-                <div class="consultation-text">
-                    <h2>Edu-X Services—to bridge the gap for students.</h2>
-                    <p>Easy-to-Use · Find Programs
-                        Faster · Data Driven Insights</p>
-                </div>
-                <a href="/contactus" class="consultation-button">Schedule a consultation</a>
-            </div>
-        </section> --}}
+        
 
         <br>
         <br>
@@ -94,3 +85,5 @@
             font-weight: bold;
         }
     </style>
+
+<?php echo $__env->make('frontent.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/events.blade.php ENDPATH**/ ?>

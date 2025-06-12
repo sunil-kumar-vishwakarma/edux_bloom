@@ -4,38 +4,50 @@ namespace App\Http\Controllers;
 
 use App\Models\Mentor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MentorController extends Controller
 {
-   public function store(Request $request)
-{
-    $validated = $request->validate([
-        'name' => 'required|string',
-        'email' => 'required|email|unique:mentors',
-        'phone' => 'required|string',
-        'school' => 'required|string',
-        'country' => 'required|string',
-    ]);
+    // Store mentor application
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string',
+            'email' => 'required|email|unique:mentors',
+            'phone' => 'required|string',
+            'school' => 'required|string',
+            'country' => 'required|string',
+        ]);
 
-    \App\Models\Mentor::create($validated);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors(),
+                'message' => 'Validation failed.',
+            ], 422);
+        }
 
-    return response()->json(['message' => 'Application submitted successfully !']);
-}
+        Mentor::create($validator->validated());
 
+        return response()->json([
+            'status' => true,
+            'message' => 'Application submitted successfully!',
+        ]);
+    }
 
-  public function index()
-{
-    $mentors = \App\Models\Mentor::latest()->get();
-    return view('admin.mentors', compact('mentors'));
-}
+    // Admin view of mentor applications
+    public function index()
+    {
+        $mentors = Mentor::latest()->get();
+        return view('admin.mentors', compact('mentors'));
+    }
 
-public function destroy($id)
-{
-    $mentor = Mentor::findOrFail($id);
-    $mentor->delete();
+    // Delete a mentor application
+    public function destroy($id)
+    {
+        $mentor = Mentor::findOrFail($id);
+        $mentor->delete();
 
-    return redirect()->back()->with('success', 'Mentor application deleted successfully.');
-}
-
-
+        return redirect()->back()->with('success', 'Mentor application deleted successfully.');
+    }
 }

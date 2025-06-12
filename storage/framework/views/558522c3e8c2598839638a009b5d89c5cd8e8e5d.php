@@ -1,6 +1,6 @@
-@extends('layouts.app')
-@section('title', 'EduX | Blogs')
-@section('content')
+
+<?php $__env->startSection('title', 'EduX | Blogs'); ?>
+<?php $__env->startSection('content'); ?>
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -11,7 +11,7 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
 
-    <button class="btncreate" onclick="window.location.href='{{ route('create-blog') }}';">+ Create Blog</button>
+    <button class="btncreate" onclick="window.location.href='<?php echo e(route('create-blog')); ?>';">+ Create Blog</button>
     <table class="employer-table" id="blogTable">
         <colgroup>
             <col style="width: 7%;"> <!-- S No. -->
@@ -36,33 +36,34 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($blogs as $blog)
+            <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td><?php echo e($loop->iteration); ?></td>
                     <td>
-                        <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image">
+                        <img src="<?php echo e(asset('storage/' . $blog->image)); ?>" alt="Blog Image">
                     </td>
-                    <td id="title">{{ $blog->title }}</td>
-                    <td>{{ $blog->category }}</td>
-                    <td>{{ $blog->published_date->format('d M, Y') }}</td>
-                    <td id="description">{{ Str::limit($blog->description, 100, '...') }}</td>
+                    <td id="title"><?php echo e($blog->title); ?></td>
+                    <td><?php echo e($blog->category); ?></td>
+                    <td><?php echo e($blog->published_date->format('d M, Y')); ?></td>
+                    <td id="description"><?php echo e(Str::limit($blog->description, 100, '...')); ?></td>
                     <td>
                         <button
-                            class="btnuser status-btn toggle-status {{ $blog->status == 'Published' ? 'active' : 'inactive' }}"
-                            data-id="{{ $blog->id }}" data-status="{{ $blog->status }}"
-                            onclick="toggleStatus({{ $blog->id }}, '{{ $blog->status }}')">
-                            {{ ucfirst($blog->status) }}
+                            class="btnuser status-btn toggle-status <?php echo e($blog->status == 'Published' ? 'active' : 'inactive'); ?>"
+                            data-id="<?php echo e($blog->id); ?>" data-status="<?php echo e($blog->status); ?>"
+                            onclick="toggleStatus(<?php echo e($blog->id); ?>, '<?php echo e($blog->status); ?>')">
+                            <?php echo e(ucfirst($blog->status)); ?>
+
                         </button>
                     </td>
                     <td>
-                        <button class="btnuser view-user-btn" onclick="openViewModal({{ $blog->id }})">View</button>
-                        <a href="{{ route('edit-blog', $blog->id) }}"><button
+                        <button class="btnuser view-user-btn" onclick="openViewModal(<?php echo e($blog->id); ?>)">View</button>
+                        <a href="<?php echo e(route('edit-blog', $blog->id)); ?>"><button
                                 class="btnuser edit-user-btn">Edit</button></a>
                         <button class="btnuser delete-user-btn"
-                            onclick="openDeleteModal({{ $blog->id }})">Delete</button>
+                            onclick="openDeleteModal(<?php echo e($blog->id); ?>)">Delete</button>
                     </td>
                 </tr>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
     </table>
 
@@ -88,16 +89,16 @@
             <h3>Are you sure you want to delete this blog?</h3>
             <div class="modal-buttons">
                 <form id="deleteForm" method="POST">
-                    @csrf
-                    @method('DELETE')
+                    <?php echo csrf_field(); ?>
+                    <?php echo method_field('DELETE'); ?>
                     <button type="submit" class="confirm-delete-btn">Yes, Delete</button>
                 </form>
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
     <script>
         $(document).ready(function() {
             $('#blogTable').DataTable({
@@ -111,7 +112,7 @@
     </script>
 
     <script>
-        const APP_URL = "{{ url('/') }}";
+        const APP_URL = "<?php echo e(url('/')); ?>";
 
         // Open View Modal and Fetch Blog Details
         function openViewModal(blogId) {
@@ -194,7 +195,7 @@
                 .catch(error => console.error('Error toggling status:', error));
         }
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
 
 <style>
     table {
@@ -305,7 +306,7 @@
         animation: spin 1s linear infinite;
     }
 
-    @keyframes spin {
+    @keyframes  spin {
         from {
             transform: rotate(0deg);
         }
@@ -315,3 +316,5 @@
         }
     }
 </style>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/blogs/index.blade.php ENDPATH**/ ?>
