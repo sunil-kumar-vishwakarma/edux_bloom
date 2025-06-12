@@ -1,8 +1,8 @@
-@extends('frontent.layouts.app')
-@section('title', 'EduX | Student')
-@section('content')
 
-    <link rel="stylesheet" href="{{ asset('css/events.css') }}">
+<?php $__env->startSection('title', 'EduX | Student'); ?>
+<?php $__env->startSection('content'); ?>
+
+    <link rel="stylesheet" href="<?php echo e(asset('css/events.css')); ?>">
     <style>
         body {
             font-family: sans-serif;
@@ -386,57 +386,27 @@
         </div><br>
 
 
-        {{-- <div class="card-container">
-            <div class="card-webinar">
-                <div class="card-header institution" id="Spotlight">Institution Spotlight</div>
-                <div class="card-title">
-                    Navigating USA University Admissions & Fast-Tracking Your Student Visa: Featuring Concordia University,
-                    St. Paul
-                </div>
-                <div class="card-date">
-                    January 13, 2024, 6:00 A.M<br>4:30 P.M IST
-                </div>
-            </div>
-
-            <div class="card-webinar">
-                <div class="card-header destination" id="Spotlight">Destination Spotlight</div>
-                <div class="card-title">
-                    Destination UK: Key Insights & Trends to Watch for the 2025 Admission Cycle
-                </div>
-                <div class="card-date">
-                    January 14, 2024, 6:00 A.M<br>4:30 P.M IST
-                </div>
-            </div>
-
-            <div class="card-webinar">
-                <div class="card-header trends" id="Spotlight">Trends Report</div>
-                <div class="card-title">
-                    Edu-X Global Trends: What’s Changing in International Education for 2025?
-                </div>
-                <div class="card-date">
-                    January 15, 2024, 6:00 A.M<br>4:30 P.M IST
-                </div>
-            </div>
-        </div> --}}
+        
 
         <div class="card-container">
-            @foreach ($webinars as $webinar)
+            <?php $__currentLoopData = $webinars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $webinar): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="card-webinar">
-                    <div class="card-header trends" id="Spotlight">{{ $webinar->type }}</div>
+                    <div class="card-header trends" id="Spotlight"><?php echo e($webinar->type); ?></div>
                     <div class="card-title">
-                        {{ $webinar->title }}
+                        <?php echo e($webinar->title); ?>
+
                     </div>
                     <div class="card-date">
-                        @if ($webinar->date)
-                            {{ \Carbon\Carbon::parse($webinar->date)->format('F d, Y') }}<br>
-                        @endif
+                        <?php if($webinar->date): ?>
+                            <?php echo e(\Carbon\Carbon::parse($webinar->date)->format('F d, Y')); ?><br>
+                        <?php endif; ?>
 
-                        @if ($webinar->time)
-                            {{ \Carbon\Carbon::parse($webinar->time)->format('g:i A') }} IST
-                        @endif
+                        <?php if($webinar->time): ?>
+                            <?php echo e(\Carbon\Carbon::parse($webinar->time)->format('g:i A')); ?> IST
+                        <?php endif; ?>
                     </div>
                 </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
 
         <br>
@@ -478,3 +448,5 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<?php echo $__env->make('frontent.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/webinar.blade.php ENDPATH**/ ?>
