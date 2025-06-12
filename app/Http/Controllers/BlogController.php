@@ -125,11 +125,5 @@ class BlogController extends Controller
 
     return view('blog', compact('blogs'));
 }
-public function blogDetail($id)
-{
-    $blog = Blog::findOrFail($id);
-    return view('blogdetails', compact('blog'));
-}
-
 
 }
