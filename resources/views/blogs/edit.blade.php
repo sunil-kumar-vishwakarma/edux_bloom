@@ -36,7 +36,7 @@
         @if ($blog->image)
             <div class="form-group">
                 <label for="old-image">Current Image</label>
-                <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image" class="img-thumbnail" style="max-width: 200px;">
+                <img src="{{ asset('/public/storage/' . $blog->image) }}" alt="Blog Image" class="img-thumbnail" style="max-width: 200px;">
             </div>
         @endif
 

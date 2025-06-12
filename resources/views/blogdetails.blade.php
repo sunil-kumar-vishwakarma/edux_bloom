@@ -149,7 +149,7 @@
 
             <!-- Image -->
             <div class="blog-image-wrapper">
-                <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image">
+                <img src="{{ asset('/public/storage/' . $blog->image) }}" alt="Blog Image">
             </div>
 
             <!-- Date -->
