@@ -6,6 +6,7 @@
     <table class="employer-table">
         <thead>
             <tr>
+                <th>No.</th>
                 <th>Type</th>
                 <th>Title</th>
                 <th>Date</th>
@@ -16,6 +17,7 @@
         <tbody>
             @foreach($webinars as $webinar)
                 <tr>
+                     <td>{{ $loop->iteration }}</td> 
                     <td>{{ $webinar->type }}</td>
                     <td>{{ $webinar->title }}</td>
                     <td>{{ $webinar->date }}</td>
