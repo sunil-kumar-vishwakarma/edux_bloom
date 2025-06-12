@@ -159,7 +159,10 @@ Route::get('/institutions', [HomeController::class, 'institutions'])->name('inst
 Route::get('/events', [HomeController::class, 'events'])->name('events');
 
 Route::get('/blogs-pages', [HomeController::class, 'blogs'])->name('blogs-pages');
-Route::get('/blogdetails', [HomeController::class, 'blogdetails'])->name('blogdetails');
+// Route::get('/blogdetails', [HomeController::class, 'blogdetails'])->name('blogdetails');
+Route::get('/blogdetails/{id}', [BlogController::class, 'blogDetail'])->name('blog.detail');
+
+
 
 Route::get('/youngleaders', [HomeController::class, 'youngleaders'])->name('youngleaders');
 // Route::get('/search', [HomeController::class, 'search'])->name('search');

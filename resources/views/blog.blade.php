@@ -137,7 +137,7 @@
             font-size: 1rem;
             line-height: 1.5;
             flex-grow: 1;
-            
+
         }
 
         .read-more-link {
@@ -269,19 +269,22 @@
                 @foreach ($blogs as $blog)
                     <div class="col">
                         <div class="card-blog">
-                            {{-- <img src="{{ asset('public/storage/' . $blog->image) }}" class="card-img-top" alt="Blog Image"> --}}
-                            <img src="{{ asset('/images/Canada-Study.png') }}" alt="University Logo" class="program-logo" />
+                            <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top" alt="Blog Image">
+
+                            {{-- <img src="{{ asset('/images/Canada-Study.png') }}" alt="University Logo" class="program-logo" /> --}}
 
                             <div class="card-body-blog">
                                 <h5>{{ $blog->title }}</h5>
-                               <p> {{ \Carbon\Carbon::parse($blog->published_date)->format('F d, Y') }}</p>
+                                <p> {{ \Carbon\Carbon::parse($blog->published_date)->format('F d, Y') }}</p>
                                 <br>
                                 {{-- <p><strong>Category:</strong> {{ $blog->category }}</p> --}}
 
                                 {{-- <p>{{ Str::limit($blog->description, 250, '...') }}</p> --}}
-                                
+
                                 {{-- <a href="{{ route('blog.show', $blog->id) }}" class="read-more-link">Read More →</a> --}}
-                                <a href="/blogdetails" class="read-more-link">Read More →</a>
+                                {{-- <a href="/blogdetails" class="read-more-link">Read More →</a> --}}
+                                <a href="{{ route('blog.detail', $blog->id) }}" class="read-more-link">Read More →</a>
+
 
 
                             </div>
