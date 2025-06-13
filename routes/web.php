@@ -32,6 +32,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\WebinarController;
 use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\RolePermissionController;
 
 
 
@@ -314,6 +315,11 @@ Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->na
 // contact-info
   Route::resource('contact-infos', ContactInfoController::class);
   
+//   Role Permission
+  Route::get('/roles-permission', [RolePermissionController::class, 'index'])->name('roles_permission.index');
+
+
+
 
     // discover_program Routes
     Route::get('/discover_program-list', [ProgramController::class, 'index'])->name('discover_program-list');

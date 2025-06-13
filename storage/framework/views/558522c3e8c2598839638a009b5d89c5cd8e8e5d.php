@@ -40,7 +40,7 @@
                 <tr>
                     <td><?php echo e($loop->iteration); ?></td>
                     <td>
-                        <img src="<?php echo e(asset('storage/' . $blog->image)); ?>" alt="Blog Image">
+                        <img src="<?php echo e(asset('/public/storage/' . $blog->image)); ?>" alt="Blog Image">
                     </td>
                     <td id="title"><?php echo e($blog->title); ?></td>
                     <td><?php echo e($blog->category); ?></td>

@@ -1,7 +1,7 @@
 
 
 <?php $__env->startSection('content'); ?>
-<button class="btncreate" onclick="window.location.href='<?php echo e(route('students.create')); ?>';">+ Create Student</button>
+
 <table class="employer-table">
     <thead>
         <tr>

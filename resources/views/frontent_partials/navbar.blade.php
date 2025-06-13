@@ -72,11 +72,22 @@
     }
 
     @media (max-width: 768px) {
+        #navbarNav{
+            flex-direction: column;
+        }
         .language-option {
             margin-left: 0;
             margin-top: 0;
         }
+        .dropdown-menu{
+            right: -60px;
+        }
     }
+      @media (max-width: 1024px) {
+        .language-option{
+            margin-left: 0px;
+        }
+      }
 </style>
 
 <style>
