@@ -1,18 +1,18 @@
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="settings-container">
        
          <header class="edit-student-header">
            <h1>Create Webinar</h1>
-            <a href="{{ route('webinars.index') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Webinar
+            <a href="<?php echo e(route('webinars.index')); ?>" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Webinar
                 List</a>
         </header>
         <br>
         <br>
         
-        <form action="{{ route('webinars.store') }}" method="POST">
-            @csrf
+        <form action="<?php echo e(route('webinars.store')); ?>" method="POST">
+            <?php echo csrf_field(); ?>
 
             <div class="form-group">
                 <label>Type</label>
@@ -38,4 +38,6 @@
             <button class="btn btn-success">Submit</button>
         </form>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/webinars/create.blade.php ENDPATH**/ ?>
