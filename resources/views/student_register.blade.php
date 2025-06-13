@@ -18,13 +18,13 @@
                         <div id="js-alert-container"></div>
 
                         <div class="buttons">
-                            <button>
+                            <button id="facebookk">
                                 <a href="{{ url('/auth/facebook') }}" aria-label="Facebook" target="_blank">
                                     <i class="fab fa-facebook"></i>
                                 </a>
                                 Facebook
                             </button>
-                            <button>
+                            <button id="google-logo">
                                 <a href="{{ route('google.login') }}" aria-label="Google" target="_blank" id="google">
                                     <i class="fab fa-google"></i>
                                 </a>
