@@ -6,7 +6,7 @@
         <h1>Contact Us</h1>
         <p class="contact-data">
             Our dedicated team is always ready to support you. Whether you have a question, need guidance, or just want
-            to say hello, feel free to connect with us anytime.
+            to say hello, feel free to connect with us anytime. 
         </p>
 
         {{-- <div class="card-container">
