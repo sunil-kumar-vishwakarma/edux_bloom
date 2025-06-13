@@ -1,7 +1,7 @@
-@extends('frontent.layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="{{ asset('css/contactus.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('css/contactus.css')); ?>">
     <div class="container1">
         <h1>Contact Us</h1>
         <p class="contact-data">
@@ -9,62 +9,29 @@
             to say hello, feel free to connect with us anytime.
         </p>
 
-        {{-- <div class="card-container">
-            <div class="contact-card">
-                <div class="mv-icon-circle"><i class="fas fa-envelope"></i></div>
-                <h4>Email</h4>
-                <a href="mailto:help@Edu-X.com">help@Edu-X.com</a>
-                <hr />
-                <p>Please email us with your inquiries.</p>
-            </div>
-
-            <div class="contact-card">
-                <div class="mv-icon-circle"><i class="fas fa-comments"></i></div>
-                <h4>Live Chat<br><small>[For registered users only]</small></h4>
-                <a href="/student-login">Login</a>
-                <hr />
-                <p>Available 24/7</p>
-            </div>
-
-            <div class="contact-card">
-                <div class="mv-icon-circle"><i class="fas fa-globe fa-fw"></i></div>
-                <h4>Canada</h4>
-                <p class="highlight">Toll Free: <a href="tel:18449727759">1-844-972-7759</a></p>
-                <hr />
-                <p>Monday–Friday<br>9 AM–5:30 PM EST</p>
-            </div>
-
-            <div class="contact-card">
-                <div class="mv-icon-circle"><i class="fas fa-phone-alt"></i></div>
-                <h4>India</h4>
-                <p class="highlight">Toll Free: <a href="tel:18002083444">1-800-208-3444</a></p>
-                <hr />
-                <p>Available 24/7</p>
-            </div>
-        </div> --}}
+        
 
 
-        @if ($contacts->isEmpty())
+        <?php if($contacts->isEmpty()): ?>
             <h1>No contact information available.</h1><br>
-        @else
+        <?php else: ?>
             <div class="card-container">
-                @foreach ($contacts as $contact)
+                <?php $__currentLoopData = $contacts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $contact): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="contact-card">
-                        <div class="mv-icon-circle"><i class="{{ $contact->icon_class }}"></i></div>
-                        <h4>{{ $contact->title }}
-                            {{-- @if ($contact->subtitle)
-                                <br><small>[{{ $contact->subtitle }}]</small>
-                            @endif --}}
+                        <div class="mv-icon-circle"><i class="<?php echo e($contact->icon_class); ?>"></i></div>
+                        <h4><?php echo e($contact->title); ?>
+
+                            
                         </h4>
-                        @if ($contact->link && $contact->link_text)
-                            <p class="highlight"><a href="{{ $contact->link }}">{{ $contact->link_text }}</a></p>
-                        @endif
+                        <?php if($contact->link && $contact->link_text): ?>
+                            <p class="highlight"><a href="<?php echo e($contact->link); ?>"><?php echo e($contact->link_text); ?></a></p>
+                        <?php endif; ?>
                         <hr />
-                        <p>{{ $contact->description }}</p>
+                        <p><?php echo e($contact->description); ?></p>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-        @endif
+        <?php endif; ?>
 
 
 
@@ -98,4 +65,6 @@
 
 
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontent.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/contact.blade.php ENDPATH**/ ?>

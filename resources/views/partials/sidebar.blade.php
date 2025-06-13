@@ -44,6 +44,11 @@
                 <i class="fas fa-graduation-cap icon"></i>
                 Webinar's list</a>
         </li>
+        <li class="menu-item">
+            <a href="{{ route('contact-infos.index') }}" class="{{ request()->routeIs('contact-infos.index') ? 'active' : '' }}">
+                <i class="fas fa-address-card"></i>
+               Contact Info</a>
+        </li>
 
         <li class="menu-item">
             <a href="{{ route('discover_program-list') }}" class="{{ request()->routeIs('discover_program-list') ? 'active' : '' }}">

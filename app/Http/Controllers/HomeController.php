@@ -7,6 +7,7 @@ use App\Models\Home;
 use App\Models\Blog;
 use App\Models\Page;
 use App\Models\User;
+use App\Models\ContactInfo;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
 
@@ -27,11 +28,13 @@ class HomeController extends Controller
         return view('home', compact('home'));
     }
 
-    public function contactus()
-    {
-        $home = Home::all();
-        return view('contact', compact('home'));
-    }
+   public function contactus()
+{
+    $home = Home::all(); // (If you're using this data in the view)
+    $contacts = ContactInfo::all(); // Fetch dynamic contact info cards
+    
+    return view('contact', compact('home', 'contacts'));
+}
 
     public function studentRegister()
     {

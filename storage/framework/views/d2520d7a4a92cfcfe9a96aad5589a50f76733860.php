@@ -269,7 +269,7 @@
                 <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col">
                         <div class="card-blog">
-                            <img src="<?php echo e(asset('storage/' . $blog->image)); ?>" class="card-img-top" alt="Blog Image">
+                            <img src="<?php echo e(asset('/public/storage/' . $blog->image)); ?>" class="card-img-top" alt="Blog Image">
 
                             
 

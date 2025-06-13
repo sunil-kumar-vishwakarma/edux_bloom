@@ -44,6 +44,11 @@
                 <i class="fas fa-graduation-cap icon"></i>
                 Webinar's list</a>
         </li>
+        <li class="menu-item">
+            <a href="<?php echo e(route('contact-infos.index')); ?>" class="<?php echo e(request()->routeIs('contact-infos.index') ? 'active' : ''); ?>">
+                <i class="fas fa-address-card"></i>
+               Contact Info</a>
+        </li>
 
         <li class="menu-item">
             <a href="<?php echo e(route('discover_program-list')); ?>" class="<?php echo e(request()->routeIs('discover_program-list') ? 'active' : ''); ?>">

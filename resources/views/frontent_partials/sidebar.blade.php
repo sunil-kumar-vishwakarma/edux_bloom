@@ -48,7 +48,7 @@
 
         </li>
 
-        <li class="menu-item dropdown">
+        {{-- <li class="menu-item dropdown">
             <i class="fas fa-wrench icon"></i> Manage ▼
             <ul class="submenu">
                 <li class="submenu-item"><a href="{{ route('manage-home') }}"
@@ -58,7 +58,7 @@
                 <li class="submenu-item"><a href="{{ route('manage-contact') }}"
                         class="{{ request()->routeIs('manage-contact') ? 'active' : '' }}">Manage Contact</a></li>
             </ul>
-        </li>
+        </li> --}}
 
         <li class="menu-item">
             <a href="{{ route('blog.index') }}" class="{{ request()->routeIs('blog.index') ? 'active' : '' }}">
@@ -90,12 +90,12 @@
                 <i class="fas fa-bell icon"></i>
                 Notification</a>
         </li>
-            <li class="menu-item">
-                <a href="{{ route('settings.index') }}"
-                    class="{{ request()->routeIs('settings.index') ? 'active' : '' }}">
-                    <i class="fas fa-cogs icon"></i>
-                    Settings</a>
-            </li>
+        <li class="menu-item">
+            <a href="{{ route('settings.index') }}"
+                class="{{ request()->routeIs('settings.index') ? 'active' : '' }}">
+                <i class="fas fa-cogs icon"></i>
+                Settings</a>
+        </li>
 
     </ul>
 </aside>

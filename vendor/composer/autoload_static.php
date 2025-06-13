@@ -611,6 +611,7 @@ class ComposerStaticInitb29e9dba6789026e47a83c243544503f
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\City' => __DIR__ . '/../..' . '/app/Models/City.php',
         'App\\Models\\College' => __DIR__ . '/../..' . '/app/Models/College.php',
+        'App\\Models\\ContactInfo' => __DIR__ . '/../..' . '/app/Models/ContactInfo.php',
         'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\Dashboard' => __DIR__ . '/../..' . '/app/Models/Dashboard.php',

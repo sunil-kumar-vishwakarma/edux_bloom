@@ -43,7 +43,7 @@
                     
                     <li><a href="<?php echo e(route('search')); ?>">Resources</a></li>
                     
-                    <li><a href="<?php echo e(route('contactus')); ?>">Contact</a></li>
+                    <li><a href="/contactus">Contact</a></li>
                     <li><a href="<?php echo e(route('blogs-pages')); ?>">Blogs</a></li>
                 </ul>
             </div>

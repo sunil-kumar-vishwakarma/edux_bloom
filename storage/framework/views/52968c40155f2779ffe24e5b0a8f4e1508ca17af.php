@@ -274,6 +274,30 @@
     }
 </style>
 
+<style>
+    .language-switcher {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .lang-option {
+        font-weight: bold;
+        color: #007BFF;
+        text-decoration: none;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .lang-option:hover {
+        text-decoration: underline;
+    }
+
+    .lang-divider {
+        margin: 0 5px;
+    }
+</style>
+
 
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -336,10 +360,21 @@
 
                     
 
-                    <div class="language-switcher">
+                    <!-- <div class="language-switcher">
                         <a href="javascript:void(0)" onclick="doGTranslate('en|en')" class="lang-option">EN</a>
                         <span class="lang-divider">|</span>
                         <a href="javascript:void(0)" onclick="doGTranslate('en|fr')" class="lang-option">FR</a>
+                    </div> -->
+                    <!-- <div class="language-switcher">
+                        <a href="javascript:void(0)" onclick="translatePage('en', 'en')" class="lang-option">EN</a>
+                        <span class="lang-divider">|</span>
+                        <a href="javascript:void(0)" onclick="translatePage('en', 'fr')" class="lang-option">FR</a>
+                    </div> -->
+
+                    <div class="language-switcher">
+                        <a href="javascript:void(0)" onclick="translatePage('en', 'en')" class="lang-option">EN</a>
+                        <span class="lang-divider">|</span>
+                        <a href="javascript:void(0)" onclick="translatePage('en', 'fr')" class="lang-option">FR</a>
                     </div>
 
                     <div id="google_translate_element" style="display:none;"></div>
@@ -383,6 +418,111 @@
     </div>
 </nav>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // const translateBtn = document.createElement('button');
+        // translateBtn.innerText = 'Translate to French';
+        // translateBtn.style = 'position:fixed;top:20px;right:20px;z-index:9999;padding:10px;background:#008CBA;color:#fff;border:none;border-radius:5px;';
+        document.body.appendChild(translateBtn);
+
+        translateBtn.addEventListener('click', async () => {
+            const elements = document.querySelectorAll(
+                'body *:not(script):not(style):not(noscript)');
+            let textMap = [];
+
+            // Step 1: collect only text nodes (not html tags)
+            elements.forEach((el) => {
+                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                    const text = el.innerText.trim();
+                    if (text.length > 0) {
+                        textMap.push({
+                            el,
+                            text
+                        });
+                    }
+                }
+            });
+
+            const joinedText = textMap.map(item => item.text).join(' ||| ');
+
+            // Step 2: send to Laravel backend
+            const response = await fetch('/translate-api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '<?php echo e(csrf_token()); ?>',
+                },
+                body: JSON.stringify({
+                    text: joinedText
+                }),
+            });
+
+            const data = await response.json();
+            const translatedTexts = data.translated.split(' ||| ');
+
+            // Step 3: replace original text with translated text
+            translatedTexts.forEach((fr, i) => {
+                textMap[i].el.innerText = fr.trim();
+            });
+        });
+    });
+</script>
+
+<script>
+    async function translatePage(fromLang, toLang) {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode: function(node) {
+                const parent = node.parentNode;
+                return (
+                    node.textContent.trim() !== '' &&
+                    !parent.closest('.language-switcher') && // skip language switcher
+                    !['SCRIPT', 'STYLE', 'NOSCRIPT', 'IFRAME'].includes(parent
+                        .nodeName) // ignore code/script
+                ) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            }
+        });
+
+        const nodes = [];
+        let node;
+        while ((node = walker.nextNode())) {
+            nodes.push(node);
+        }
+
+        const originalTexts = nodes.map(n => n.textContent.trim());
+        const joinedText = originalTexts.join(' ||| ');
+
+        try {
+            const response = await fetch('/translate-api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    text: joinedText,
+                    from: fromLang,
+                    to: toLang
+                })
+            });
+
+            const data = await response.json();
+            const translatedParts = data.translated.split(' ||| ');
+
+            nodes.forEach((n, i) => {
+                if (translatedParts[i]) {
+                    n.textContent = translatedParts[i];
+                }
+            });
+        } catch (error) {
+            console.error("Translation failed:", error);
+            alert("Translation failed. Check OpenAI API quota or server.");
+        }
+    }
+</script>
+
+
+
+
+
 <!-- Google Translate Init Script -->
 <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -420,6 +560,10 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
     rel="stylesheet">
+
+
+
+
 <script>
     document.querySelector('.navbar-toggler').addEventListener('click', function() {
         const navbarCollapse = document.querySelector('.navbar-collapse');

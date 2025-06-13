@@ -31,8 +31,14 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\WebinarController;
+use App\Http\Controllers\ContactInfoController;
 
-use Illuminate\Http\Request; // ✅ यह जरूरी है
+
+
+
+
+
+use Illuminate\Http\Request; 
 // use OpenAI\Laravel\Facades\OpenAI;
 use OpenAI\Client;
 
@@ -305,6 +311,9 @@ Route::get('/admin/webinars/{id}/edit', [WebinarController::class, 'edit'])->nam
 Route::put('/admin/webinars/{id}', [WebinarController::class, 'update'])->name('webinars.update');
 Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->name('webinars.destroy');
 
+// contact-info
+  Route::resource('contact-infos', ContactInfoController::class);
+  
 
     // discover_program Routes
     Route::get('/discover_program-list', [ProgramController::class, 'index'])->name('discover_program-list');

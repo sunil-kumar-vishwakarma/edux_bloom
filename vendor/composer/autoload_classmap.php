@@ -49,6 +49,7 @@ return array(
     'App\\Models\\Blog' => $baseDir . '/app/Models/Blog.php',
     'App\\Models\\City' => $baseDir . '/app/Models/City.php',
     'App\\Models\\College' => $baseDir . '/app/Models/College.php',
+    'App\\Models\\ContactInfo' => $baseDir . '/app/Models/ContactInfo.php',
     'App\\Models\\Country' => $baseDir . '/app/Models/Country.php',
     'App\\Models\\Course' => $baseDir . '/app/Models/Course.php',
     'App\\Models\\Dashboard' => $baseDir . '/app/Models/Dashboard.php',
