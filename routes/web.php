@@ -183,7 +183,10 @@ Route::post('/reset-password', [HomeController::class, 'reset'])->name('password
 Route::get('/student', [HomeController::class, 'student'])->name('student');
 Route::get('/explr/school/programs', [HomeController::class, 'explrSchoolPrograms'])->name('explr_school_Programs');
 Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
+
 Route::get('/institutions', [HomeController::class, 'institutions'])->name('institutions');
+Route::post('/mentor/apply', [MentorController::class, 'store']);
+
 Route::get('/events', [HomeController::class, 'events'])->name('events');
 
 Route::get('/blogs-pages', [HomeController::class, 'blogs'])->name('blogs-pages');
@@ -300,7 +303,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/students/{id}/toggle-status', [StudentController::class, 'toggleStatus']);
 
     // Mentor Application
-    Route::post('/mentor/apply', [MentorController::class, 'store']);
     Route::get('/admin/mentors', [MentorController::class, 'index'])->name('admin.mentors');
     Route::delete('/admin/mentors/{id}', [MentorController::class, 'destroy'])->name('mentors.destroy');
 

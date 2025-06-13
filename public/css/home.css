@@ -2023,7 +2023,7 @@ video {
         transform: translateX(-290px);
     }
 
-    /* Fix content2 card issues */
+
     .content2 .card {
         width: 100%;
         /* Card takes full width on mobile */
@@ -2090,7 +2090,7 @@ video {
     }
 
 
-    /* Fix visibility of images */
+
     .card1 img {
         display: block;
         margin: 0 auto;
