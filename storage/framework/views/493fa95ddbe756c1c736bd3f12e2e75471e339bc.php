@@ -1,7 +1,7 @@
 
 <?php $__env->startSection('title', 'EduX | Student'); ?>
 <?php $__env->startSection('content'); ?>
-    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+<meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/institution.css')); ?>">
 
     

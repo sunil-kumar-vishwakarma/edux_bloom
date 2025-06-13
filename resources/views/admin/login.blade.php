@@ -15,7 +15,7 @@
                 <h2>Admin<span class="dash-highlight">DASH</span></h2>
             </div>
             <div class="icon-container">
-                <img src="{{ asset('image/edu-x white.png') }}" alt="Admin Logo" class="logo-img">
+                <img src="{{ asset('image/edux.png') }}" alt="Admin Logo" class="logo-img">
             </div>
             <h3 class="login-title">Sign In</h3>
             <p class="login-subtitle">You need to sign in to continue your request</p>
