@@ -5,84 +5,49 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
 
+    <main class="main-content-user">
+        <section class="user-list-section">
+            <!-- Create Button (Top) -->
+            <button class="btncreate" onclick="window.location.href='{{ route('roles_permission.create') }}'">+ Create New Role</button>
 
-    <div class="role-wrapper">
-        <div class="role-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Create New Role</h1>
-            <a href="{{ route('roles_permission.edit') }}" class="edit-btn">Edit Role</a> {{-- Replace 1 with dynamic role ID if needed --}}
-        </div>
+            <table id="city-list" class="user-list-table">
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>Role Name</th>
+                        <th>Created Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(isset($roles) && count($roles))
+                    @foreach ($roles as $role)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td> <!-- Serial Number -->
+                            <td>{{ $role->name }}</td>
+                            <td>{{ $role->created_at }}</td>
+                            
+                            <td>
+                                 <a href="{{ route('roles_permission.edit', $role->id) }}">
+                                    <button class="btnuser edit-user-btn">Edit</button>
+                                </a>
+                                <button class="btnuser delete-user-btn" onclick="openDeleteModal({{ $school->id }})">Delete</button>
+                                <form id="deleteForm{{ $role->id }}" action="{{ route('roles_permission.destroy', $role->id) }}" method="POST" style="display:none;">
+                                    @csrf
+                                    @method('DELETE')
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                    @else
+                        <!-- <p>No roles found.</p> -->
+                    @endif
+                </tbody>
+            </table>
+        </section>
+    </main>
 
 
-        <div class="input-block">
-            <label for="role-name">Role Name</label>
-            <input type="text" id="role-name" placeholder="Enter role name" />
-        </div>
-
-        <div class="permissions-area">
-            <div class="perm-title-row">
-                <h3>Permissions</h3>
-                <input type="text" class="search-input" placeholder="Search permissions..." />
-            </div>
-
-            <div class="perm-grid">
-                <!-- Example Permission Box -->
-                <div class="perm-box theme-blue">
-                    <div class="perm-header">
-                        <span>Team<span class="perm-count">17</span></span>
-                        <a onclick="selectAll(this)">Select All</a>
-                    </div>
-                    <ul>
-                        <li><input type="checkbox" />View Dashboard</li>
-                        <li><input type="checkbox" />View Institute</li>
-                        <li><input type="checkbox" />View Student List</li>
-                        <li><input type="checkbox" />View Mentor Applications</li>
-                        <li><input type="checkbox" />View Webinar's List</li>
-                        <li><input type="checkbox" />View Roles Permission</li>
-                        <li><input type="checkbox" />View Contact Info</li>
-                        <li><input type="checkbox" />View Program List</li>
-                        <li><input type="checkbox" />View Edu-x Team</li>
-                        <li><input type="checkbox" />View Enquiry List</li>
-                        <li><input type="checkbox" />View Privacy Policy</li>
-                        <li><input type="checkbox" />View Term and Condition</li>
-                        <li><input type="checkbox" />View Blog List</li>
-                        <li><input type="checkbox" />View Subscription</li>
-                        <li><input type="checkbox" />View Payment</li>
-                        <li><input type="checkbox" />View Notification</li>
-                        <li><input type="checkbox" />View Settings</li>
-                    </ul>
-
-                </div>
-                <div class="perm-box theme-blue">
-                    <div class="perm-header">
-                        <span>Team<span class="perm-count">17</span></span>
-                        <a onclick="selectAll(this)">Select All</a>
-                    </div>
-                    <ul>
-                        <li><input type="checkbox" />View Dashboard</li>
-                        <li><input type="checkbox" />View Institute</li>
-                        <li><input type="checkbox" />View Student List</li>
-                        <li><input type="checkbox" />View Mentor Applications</li>
-                        <li><input type="checkbox" />View Webinar's List</li>
-                        <li><input type="checkbox" />View Roles Permission</li>
-                        <li><input type="checkbox" />View Contact Info</li>
-                        <li><input type="checkbox" />View Program List</li>
-                        <li><input type="checkbox" />View Edu-x Team</li>
-                        <li><input type="checkbox" />View Enquiry List</li>
-                        <li><input type="checkbox" />View Privacy Policy</li>
-                        <li><input type="checkbox" />View Term and Condition</li>
-                        <li><input type="checkbox" />View Blog List</li>
-                        <li><input type="checkbox" />View Subscription</li>
-                        <li><input type="checkbox" />View Payment</li>
-                        <li><input type="checkbox" />View Notification</li>
-                        <li><input type="checkbox" />View Settings</li>
-                    </ul>
-
-                </div>
-
-                <!-- Add more perm-box sections here -->
-            </div>
-        </div>
-    </div>
 
     <script>
         function selectAll(button) {

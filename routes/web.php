@@ -324,7 +324,9 @@ Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->na
   
 //   Role Permission
   Route::get('/roles-permission', [RolePermissionController::class, 'index'])->name('roles_permission.index');
-  Route::get('/roles-permission/edit', [RolePermissionController::class, 'edit'])->name('roles_permission.edit');
+  Route::get('/create', [RolePermissionController::class, 'create'])->name('roles_permission.create');
+  Route::get('/roles-permission/edit/{id}', [RolePermissionController::class, 'edit'])->name('roles_permission.edit');
+  Route::delete('/roles-permission/delete/{id}', [RolePermissionController::class, 'destroy'])->name('roles_permission.destroy');
 
 
     // home page -states 

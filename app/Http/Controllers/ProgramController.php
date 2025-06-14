@@ -22,9 +22,9 @@ class ProgramController extends Controller
 
         // Paginate programs with sorting
         if(!empty($request->all())){
-        $programs = Program::orderBy($sortField, $sortOrder)->paginate(10);
+        $programs = Program::orderBy($sortField, $sortOrder)->paginate(12);
         }else{
-        $programs = Program::orderBy('id','desc')->paginate(10);
+        $programs = Program::orderBy('id','desc')->paginate(12);
         }
         
 
