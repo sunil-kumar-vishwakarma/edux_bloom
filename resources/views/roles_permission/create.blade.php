@@ -24,7 +24,7 @@
                 <!-- Example Permission Box -->
                 <div class="perm-box theme-blue">
                     <div class="perm-header">
-                        <span>Team<span class="perm-count">17</span></span>
+                        <span>Dashboar<span class="perm-count">17</span></span>
                         <a onclick="selectAll(this)">Select All</a>
                     </div>
                     <ul>
