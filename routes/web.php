@@ -98,6 +98,7 @@ Route::get('/admin/login', function () {
 })->name('login');
 
 Route::post('/admin/login', [AuthController::class, 'login'])->name('login.submit');
+Route::post('/team/login', [AuthController::class, 'teamLlogin'])->name('team.login');
 
 // Route::get('forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 // Route::post('forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
@@ -113,7 +114,7 @@ Route::get('/student-register', [HomeController::class, 'studentRegister'])->nam
 Route::get('/student-login', [HomeController::class, 'studentLogin'])->name('student-login');
 Route::get('/team-login', [HomeController::class, 'team_login'])->name('team_login');
 Route::post('/student/login', [LoginController::class, 'login']);
-Route::post('/team/login', [LoginController::class, 'teamLlogin'])->name('team.login');
+// Route::post('/team/login', [LoginController::class, 'teamLlogin'])->name('team.login');
 // Route::get('/dashboard', [LoginController::class, 'userdashboard'])->name('user.dashboard');
 
 

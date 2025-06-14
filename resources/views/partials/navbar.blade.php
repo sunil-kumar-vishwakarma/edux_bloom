@@ -8,12 +8,12 @@
         </button>
     </div>
     <div class="navbar-right">
-        <img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">
+        <img src="{{ asset('public/image/admin logo.png') }}" alt="Profile" class="profile-img">
         {{-- <div class="profile-icon">
             @if (Auth::check() && Auth::user()->profile)
-                <img src="{{ asset('/storage/' . Auth::user()->profile->profile_photo) }}" alt="Profile" class="profile-img">
+                <img src="{{ asset('public/storage/' . Auth::user()->profile->profile_photo) }}" alt="Profile" class="profile-img">
             @else
-                <img src="{{ asset('image/admin logo.png') }}" alt="Profile" class="profile-img">
+                <img src="{{ asset('public/image/admin logo.png') }}" alt="Profile" class="profile-img">
             @endif
         </div> --}}
 

@@ -68,6 +68,7 @@ class LoginController extends Controller
 
  public function teamLlogin(Request $request)
 {
+    // print_r($request->all());die;
     $request->validate([
         'email' => 'required|email',
         'password' => 'required',

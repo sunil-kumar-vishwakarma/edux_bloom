@@ -20,23 +20,23 @@
                     {{-- JS dynamic alert container --}}
                     <div id="js-alert-container"></div>
 
-                    <form  action="{{ route('team.login') }}" method="POST">
+                    <form action="{{ route('team.login') }}" method="POST">
                     @csrf
                          <img src="{{ asset('images\old_edu-x white.png') }}" alt="Edu-x Logo"
                             style="height: 70px; width: 75px;" />
                         <br>
-                        <input type="email" id="email" placeholder="Email" required />
+                        <input type="email" id="email" name="email" placeholder="Email" required />
                         <div id="emailError" style="color: #b92151; font-size: 12px; font-weight:bold;"></div>
 
                         <div class="password-wrapper">
-                            <input type="password" id="password" placeholder="Password" required />
+                            <input type="password" name="password" id="password" placeholder="Password" required />
                             <span class="toggle-password" onclick="togglePassword()">
                                 <i class="fa-solid fa-eye" id="eyeIcon"></i>
                             </span>
                         </div>
                         <div id="passwordError" style="color: #b92151; font-size: 12px; font-weight:bold;"></div>
 
-                        <button class="buttn" type="button" id="loginButton">Log In</button>
+                        <button class="buttn" type="submit" id="loginButton">Log In</button>
                     </form>
 
                     {{-- <div class="anchr">
