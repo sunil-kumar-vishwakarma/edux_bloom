@@ -20,7 +20,8 @@
                     {{-- JS dynamic alert container --}}
                     <div id="js-alert-container"></div>
 
-                    <form id="loginForm">
+                    <form  action="{{ route('team.login') }}" method="POST">
+                    @csrf
                          <img src="{{ asset('images\old_edu-x white.png') }}" alt="Edu-x Logo"
                             style="height: 70px; width: 75px;" />
                         <br>

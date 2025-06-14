@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Partner;
+use App\Models\Users;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
+use DB;
 class PartnerController extends Controller
 {
     // Show the list of partners
@@ -24,20 +27,60 @@ class PartnerController extends Controller
     // Store a newly created partner in the database
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'full_name' => 'required|string|max:255',
+        $validator = Validator::make($request->all(), [
+            'designation' => 'required|string|max:255',
             'email' => 'required|email|unique:partners',
             'contact' => 'required|string|max:15',
-            'company_name' => 'required|string|max:255',
             'category' => 'required|string',
             'joined_date' => 'required|date',
             'status' => 'required|string|in:Active,Inactive',
         ]);
-    
-        Partner::create($validated);
-    
-        return redirect()->route('partners.index')->with('success', 'Partner created successfully.');
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
+        if (Users::where('email', $request->email)->exists()) {
+            return response()->json([
+                'status' => false,
+                'errors' => ['email' => ['The email is already registered in users table.']]
+            ], 422);
+        }
+
+        DB::beginTransaction();
+
+        try {
+            $user = Users::create([
+                'name'     => $request->designation,
+                'email'    => $request->email,
+                'password' => Hash::make($request->password),
+                'role_id' => 2,
+            ]);
+
+            $lastInsertedId = $user->id;
+
+            Partner::create([
+                'user_id' => $lastInsertedId,
+                'email' => $request->email,
+                'contact' => $request->contact,
+                'designation' => $request->designation ?? '',
+                'category' => $request->category,
+                'joined_date' => $request->joined_date,
+                'status' => $request->status,
+            ]);
+
+            DB::commit();
+
+            return redirect()->route('partners.index')->with('success', 'Partner created successfully.');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
+
     
     // Show a specific partner
     public function show($id)

@@ -56,13 +56,36 @@ class LoginController extends Controller
         return back()->withErrors(['email' => 'Invalid credentials']);
     }
 
-    if (! $user->hasVerifiedEmail()) {
-        return redirect()->route('verification.notice')->withErrors(['email' => 'Please verify your email.']);
-    }
+    // if (! $user->hasVerifiedEmail()) {
+    //     return redirect()->route('verification.notice')->withErrors(['email' => 'Please verify your email.']);
+    // }
 
     // Auth::login($user);
 
     return redirect()->route('userdashboard');
+}
+
+
+ public function teamLlogin(Request $request)
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
+
+    $user = Users::where('email', $request->email)->first();
+
+    if (! $user || ! Hash::check($request->password, $user->password)) {
+        return back()->withErrors(['email' => 'Invalid credentials']);
+    }
+
+    // if (! $user->hasVerifiedEmail()) {
+    //     return redirect()->route('verification.notice')->withErrors(['email' => 'Please verify your email.']);
+    // }
+
+    // Auth::login($user);
+
+    return redirect()->route('dashboard');
 }
 
 }
