@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stat extends Model
 {
-    use HasFactory;
+   protected $fillable = [
+    'students_helped',
+    'programs_offered',
+    'institutions',
+    'countries',
+];
+
 }

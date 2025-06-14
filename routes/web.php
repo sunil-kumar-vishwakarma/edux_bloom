@@ -327,10 +327,13 @@ Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->na
   Route::get('/roles-permission/edit', [RolePermissionController::class, 'edit'])->name('roles_permission.edit');
 
 
-// home page -states 
-Route::get('/admin/stats', [StatController::class, 'index'])->name('stats.index');
-Route::get('/admin/stats/{id}/edit', [StatController::class, 'edit'])->name('stats.edit');
-Route::put('/admin/stats/{id}', [StatController::class, 'update'])->name('stats.update');
+    // home page -states 
+    Route::get('/stats', [StatController::class, 'index'])->name('stats.index');
+    Route::get('/stats/{id}/edit', [StatController::class, 'edit'])->name('stats.edit');
+    Route::put('/stats/{id}', [StatController::class, 'update'])->name('stats.update');
+    Route::get('/admin/stats/create', [StatController::class, 'create'])->name('stats.create');
+    Route::post('/stats', [StatController::class, 'store'])->name('stats.store'); 
+
 
 
     // discover_program Routes

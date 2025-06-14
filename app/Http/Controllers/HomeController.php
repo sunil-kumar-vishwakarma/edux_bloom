@@ -7,6 +7,7 @@ use App\Models\Home;
 use App\Models\Blog;
 use App\Models\Page;
 use App\Models\User;
+use App\Models\Stat;
 use App\Models\ContactInfo;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
@@ -22,11 +23,13 @@ class HomeController extends Controller
 
     // }
 
-    public function homePage()
-    {
-        $home = Home::all();
-        return view('home', compact('home'));
-    }
+   public function homePage()
+{
+    $home = Home::all();
+    $stat = Stat::first(); // Assuming single row holds stats
+
+    return view('home', compact('home', 'stat'));
+}
 
    public function contactus()
 {

@@ -31,8 +31,7 @@
 
 
             <div class="hero-right">
-                <img src="<?php echo e(asset('images\young-leader.jpg')); ?>"
-                    alt="EduBloom App Mockup" class="app-mockup" />
+                <img src="<?php echo e(asset('images\young-leader.jpg')); ?>" alt="EduBloom App Mockup" class="app-mockup" />
             </div>
         </div>
     </section>
@@ -105,6 +104,13 @@
                 </div>
                 <h3>EduBloom App</h3>
                 <p>Use the EduBloom app to track progress, connect with mentors, and explore opportunities.</p>
+            </div>
+            <div class="card123" data-aos="zoom-in" data-aos-delay="500">
+                <div class="mv-icon-circle">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Community Impact</h3>
+                <p>Participate in initiatives that give back to society and build social responsibility.</p>
             </div>
         </div>
     </section>
