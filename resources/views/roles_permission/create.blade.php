@@ -25,7 +25,7 @@
 
                 <div class="perm-box theme-blue">
                     <div class="perm-header">
-                        <span>Dashboard<span class="perm-count">01</span></span>
+                        <span>Team<span class="perm-count">17</span></span>
                         <a onclick="selectAll(this)">Select All</a>
                     </div>
                     <ul>
