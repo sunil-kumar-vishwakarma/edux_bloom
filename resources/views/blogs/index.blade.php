@@ -125,12 +125,12 @@
     `;
 
             // Fetch the blog data from the server
-            fetch(`${APP_URL}/blogs/${blogId}`)
+            fetch(`/blogs/${blogId}`)
                 .then(response => response.json())
                 .then(blog => {
                     // Once blog data is fetched, update the modal content
                     const details = `
-                <img src="/storage/${blog.image}" alt="Blog Image">
+                <img src="/public/storage/${blog.image}" alt="Blog Image">
                 <p><strong>Title:</strong> ${blog.title}</p>
                 <p><strong>Category:</strong> ${blog.category}</p>
                 <p><strong>Published Date:</strong> ${new Date(blog.published_date).toLocaleDateString()}</p>
