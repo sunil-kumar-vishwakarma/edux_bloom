@@ -114,7 +114,7 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
 
         // Ensure image URL is returned correctly
-        $blog->image = $blog->image ? asset('storage/' . $blog->image) : asset('images/default.png');
+        $blog->image = $blog->image ? asset('public/storage/' . $blog->image) : asset('public/images/default.png');
 
         return response()->json($blog);
     }

@@ -130,7 +130,7 @@
                 .then(blog => {
                     // Once blog data is fetched, update the modal content
                     const details = `
-                <img src="/public/storage/${blog.image}" alt="Blog Image">
+                <img src="${blog.image}" alt="Blog Image">
                 <p><strong>Title:</strong> ${blog.title}</p>
                 <p><strong>Category:</strong> ${blog.category}</p>
                 <p><strong>Published Date:</strong> ${new Date(blog.published_date).toLocaleDateString()}</p>
