@@ -178,48 +178,36 @@
         </div>
     </section> --}}
 
- @php
-    $stat = \App\Models\Stat::first();
-@endphp
-
-@if($stat)
-<div class="stats-container">
-    <div class="stat-card">
-        <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
-        <div class="stat-info">
-            <h3>{{ number_format($stat->students_helped) }}+</h3>
-            <p>Students Helped</p>
+    <div class="stats-container">
+        <div class="stat-card">
+            <img src="{{ asset('images/girl.png') }}" alt="Students Helped">
+            <div class="stat-info">
+                <h3>{{ $stat->students_helped ?? '0' }}+</h3>
+                <p>Students Helped</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <img src="{{ asset('images/envolope.png') }}" alt="Programs Offered">
+            <div class="stat-info">
+                <h3>{{ $stat->programs_offered ?? '0' }}+</h3>
+                <p>Programs Offered</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <img src="{{ asset('images/home.png') }}" alt="Institutions">
+            <div class="stat-info">
+                <h3>{{ $stat->institutions ?? '0' }}+</h3>
+                <p>Institutions</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <img src="{{ asset('images/earth.png') }}" alt="Destination Countries">
+            <div class="stat-info">
+                <h3>{{ $stat->countries ?? '0' }}</h3>
+                <p>Destination Country</p>
+            </div>
         </div>
     </div>
-
-    <div class="stat-card">
-        <img src="{{ asset('images/envolope.png') }}" alt="Programs Offered">
-        <div class="stat-info">
-            <h3>{{ number_format($stat->programs_offered) }}+</h3>
-            <p>Programs Offered</p>
-        </div>
-    </div>
-
-    <div class="stat-card">
-        <img src="{{ asset('images/home.png') }}" alt="Institutions">
-        <div class="stat-info">
-            <h3>{{ $stat->institutions }}+</h3>
-            <p>Institutions</p>
-        </div>
-    </div>
-
-    <div class="stat-card">
-        <img src="{{ asset('images/earth.png') }}" alt="Destination Countries">
-        <div class="stat-info">
-            <h3>{{ str_pad($stat->countries, 2, '0', STR_PAD_LEFT) }}</h3>
-            <p>Destination Country</p>
-        </div>
-    </div>
-</div>
-@else
-    <h1>No stats available yet.</h1>
-@endif
-
 
 
 

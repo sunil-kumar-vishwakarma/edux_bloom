@@ -48,7 +48,7 @@
         </li>
         <li class="menu-item">
             <a href="{{ route('stats.index') }}" class="{{ request()->routeIs('stats.index') ? 'active' : '' }}">
-                <i class="fas fa-envelope icon"></i>State's
+                <i class="fas fa-chart-line icon"></i>State's
             </a>
         </li>
         <li class="menu-item">
@@ -61,11 +61,11 @@
                 <i class="fas fa-users icon"></i> Edu-x Team
             </a>
         </li>
-        <li class="menu-item">
+        {{-- <li class="menu-item">
             <a href="{{ route('enquiries-list') }}" class="{{ request()->routeIs('enquiries-list') ? 'active' : '' }}">
                 <i class="fas fa-question-circle icon"></i> Enquiry List
             </a>
-        </li>
+        </li> --}}
         <li class="menu-item">
             <a href="{{ route('pages.edit_privacy') }}" class="{{ request()->routeIs('pages.edit_privacy') ? 'active' : '' }}">
                 <i class="fas fa-user-secret icon"></i> Privacy Policy

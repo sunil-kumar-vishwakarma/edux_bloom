@@ -11,18 +11,17 @@ class CreateStatsTable extends Migration
      *
      * @return void
      */
- public function up()
+    public function up()
 {
     Schema::create('stats', function (Blueprint $table) {
         $table->id();
-        $table->integer('students_helped')->default(0);
-        $table->integer('programs_offered')->default(0);
-        $table->integer('institutions')->default(0);
-        $table->integer('countries')->default(0);
+        $table->integer('students_helped')->nullable();
+        $table->integer('programs_offered')->nullable();
+        $table->integer('institutions')->nullable();
+        $table->integer('countries')->nullable();
         $table->timestamps();
     });
 }
-
 
 
     /**

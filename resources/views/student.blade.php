@@ -150,14 +150,14 @@
                     in the U.S. and Canadian education systems.
                 </p>
                 <div class="store-buttons">
-                    <a href="#"><img src="https://i.ibb.co/gLTRy52t/6547ffcb91effeb5a000f921-App-Store-p-500.png"
+                    <a href="#"><img src="{{ asset('images/appstore.png') }}"
                             alt="Download on App Store"></a>
-                    <a href="#"><img src="https://i.ibb.co/hR1vwsmF/6547ffbc035d486b57f04077-Google-Play-p-500.png"
+                    <a href="#"><img src="{{ asset('images/googleplay.png') }}"
                             alt="Get it on Google Play"></a>
                 </div>
             </div>
             <div class="hero-right">
-                <img src="https://i.ibb.co/LdMLgmZX/png-clipart-graduation-ceremony-square-academic-cap-hat-hat-Photoroom.png"
+              <img src="{{ asset('images/student-mockup.png') }}"
                     alt="EduBloom App Mockup" class="app-mockup">
             </div>
         </div>
