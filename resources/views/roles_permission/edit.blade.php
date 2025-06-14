@@ -28,57 +28,207 @@
 
             <div class="perm-grid">
                 <!-- Example Permission Box -->
+
                 <div class="perm-box theme-blue">
                     <div class="perm-header">
-                        <span>Team<span class="perm-count">17</span></span>
+                        <span>Dashboard<span class="perm-count">01</span></span>
                         <a onclick="selectAll(this)">Select All</a>
                     </div>
                     <ul>
                         <li><input type="checkbox" />View Dashboard</li>
-                        <li><input type="checkbox" />View Institute</li>
-                        <li><input type="checkbox" />View Student List</li>
-                        <li><input type="checkbox" />View Mentor Applications</li>
-                        <li><input type="checkbox" />View Webinar's List</li>
-                        <li><input type="checkbox" />View Roles Permission</li>
-                        <li><input type="checkbox" />View Contact Info</li>
-                        <li><input type="checkbox" />View Program List</li>
-                        <li><input type="checkbox" />View Edu-x Team</li>
-                        <li><input type="checkbox" />View Enquiry List</li>
-                        <li><input type="checkbox" />View Privacy Policy</li>
-                        <li><input type="checkbox" />View Term and Condition</li>
-                        <li><input type="checkbox" />View Blog List</li>
-                        <li><input type="checkbox" />View Subscription</li>
-                        <li><input type="checkbox" />View Payment</li>
-                        <li><input type="checkbox" />View Notification</li>
-                        <li><input type="checkbox" />View Settings</li>
                     </ul>
-
                 </div>
+
                 <div class="perm-box theme-blue">
                     <div class="perm-header">
-                        <span>Team<span class="perm-count">17</span></span>
+                        <span>Institute<span class="perm-count">03</span></span>
                         <a onclick="selectAll(this)">Select All</a>
                     </div>
                     <ul>
-                        <li><input type="checkbox" />View Dashboard</li>
-                        <li><input type="checkbox" />View Institute</li>
-                        <li><input type="checkbox" />View Student List</li>
-                        <li><input type="checkbox" />View Mentor Applications</li>
-                        <li><input type="checkbox" />View Webinar's List</li>
-                        <li><input type="checkbox" />View Roles Permission</li>
-                        <li><input type="checkbox" />View Contact Info</li>
-                        <li><input type="checkbox" />View Program List</li>
-                        <li><input type="checkbox" />View Edu-x Team</li>
-                        <li><input type="checkbox" />View Enquiry List</li>
-                        <li><input type="checkbox" />View Privacy Policy</li>
-                        <li><input type="checkbox" />View Term and Condition</li>
-                        <li><input type="checkbox" />View Blog List</li>
-                        <li><input type="checkbox" />View Subscription</li>
-                        <li><input type="checkbox" />View Payment</li>
-                        <li><input type="checkbox" />View Notification</li>
-                        <li><input type="checkbox" />View Settings</li>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
                     </ul>
+                </div>
 
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Student List<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Mentor Applications<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Webinar's List<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Roles Permission<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Contact Info<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Program List<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Edu-x Team<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Enquiry List<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Privacy Policy<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Term and Condition<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Blog List<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Subscription<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Payment<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Notification<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
+                </div>
+
+                <div class="perm-box theme-blue">
+                    <div class="perm-header">
+                        <span>Settings<span class="perm-count">03</span></span>
+                        <a onclick="selectAll(this)">Select All</a>
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" />View button</li>
+                        <li><input type="checkbox" />create button</li>
+                        <li><input type="checkbox" />edit button</li>
+                    </ul>
                 </div>
 
                 <!-- Add more perm-box sections here -->
