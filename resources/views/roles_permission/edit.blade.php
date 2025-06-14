@@ -1,15 +1,17 @@
+@extends('layouts.app')
 
-
-<?php $__env->startSection('content'); ?>
-    <link rel="stylesheet" href="<?php echo e(asset('css/roles&permission.css')); ?>">
+@section('content')
+    <link rel="stylesheet" href="{{ asset('css/roles&permission.css') }}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
 
 
     <div class="role-wrapper">
+        <br>
         <div class="role-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Create New Role</h1>
-            <a href="<?php echo e(route('roles_permission.edit')); ?>" class="edit-btn">Edit Role</a> 
+            <h2>Edit</h2>
+            <a href="{{ route('roles_permission.index') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back
+            </a>
         </div>
 
 
@@ -93,6 +95,4 @@
             button.textContent = allChecked ? 'Select All' : 'Unselect All';
         }
     </script>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/roles_permission/index.blade.php ENDPATH**/ ?>
+@endsection

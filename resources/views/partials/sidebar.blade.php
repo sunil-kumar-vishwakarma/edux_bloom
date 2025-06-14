@@ -47,6 +47,11 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="{{ route('stats.index') }}" class="{{ request()->routeIs('stats.index') ? 'active' : '' }}">
+                <i class="fas fa-envelope icon"></i>State's
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="{{ route('discover_program-list') }}" class="{{ request()->routeIs('discover_program-list') ? 'active' : '' }}">
                 <i class="fas fa-book-reader icon"></i> Program List
             </a>

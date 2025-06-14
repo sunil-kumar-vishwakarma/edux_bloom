@@ -33,6 +33,7 @@ use App\Http\Controllers\MentorController;
 use App\Http\Controllers\WebinarController;
 use App\Http\Controllers\ContactInfoController;
 use App\Http\Controllers\RolePermissionController;
+use App\Http\Controllers\StatController;
 
 
 
@@ -321,8 +322,13 @@ Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->na
   
 //   Role Permission
   Route::get('/roles-permission', [RolePermissionController::class, 'index'])->name('roles_permission.index');
+  Route::get('/roles-permission/edit', [RolePermissionController::class, 'edit'])->name('roles_permission.edit');
 
 
+// home page -states 
+Route::get('/admin/stats', [StatController::class, 'index'])->name('stats.index');
+Route::get('/admin/stats/{id}/edit', [StatController::class, 'edit'])->name('stats.edit');
+Route::put('/admin/stats/{id}', [StatController::class, 'update'])->name('stats.update');
 
 
     // discover_program Routes

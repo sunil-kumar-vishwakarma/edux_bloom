@@ -7,9 +7,11 @@
 
 
     <div class="role-wrapper">
+        <br>
         <div class="role-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Create New Role</h1>
-            <a href="<?php echo e(route('roles_permission.edit')); ?>" class="edit-btn">Edit Role</a> 
+            <h2>Edit</h2>
+            <a href="<?php echo e(route('roles_permission.index')); ?>" class="back-btn"><i class="fas fa-arrow-left"></i> Back
+            </a>
         </div>
 
 
@@ -95,4 +97,4 @@
     </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/roles_permission/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\DELL\Documents\GitHub\edux_bloom\resources\views/roles_permission/edit.blade.php ENDPATH**/ ?>

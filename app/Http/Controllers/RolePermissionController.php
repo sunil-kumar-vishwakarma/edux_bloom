@@ -10,5 +10,9 @@ class RolePermissionController extends Controller
     {
         return view('roles_permission.index');
     }
+    public function edit()
+    {
+        return view('roles_permission.edit');
+    }
    
 }

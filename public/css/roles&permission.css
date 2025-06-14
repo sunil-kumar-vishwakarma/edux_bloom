@@ -86,6 +86,21 @@
     gap: 24px;
 }
 
+.edit-btn {
+    padding: 8px 16px;
+    background-color: #1760afc2;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #357ab8;
+}
+
+
 .perm-box {
     background: #f9f9fc;
     padding: 20px;

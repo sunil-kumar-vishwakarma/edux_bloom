@@ -7,9 +7,11 @@
 
 
     <div class="role-wrapper">
-        <div class="role-header">
+        <div class="role-header" style="display: flex; justify-content: space-between; align-items: center;">
             <h1>Create New Role</h1>
+            <a href="{{ route('roles_permission.edit') }}" class="edit-btn">Edit Role</a> {{-- Replace 1 with dynamic role ID if needed --}}
         </div>
+
 
         <div class="input-block">
             <label for="role-name">Role Name</label>
