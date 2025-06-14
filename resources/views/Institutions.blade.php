@@ -1,7 +1,7 @@
 @extends('frontent.layouts.app')
 @section('title', 'EduX | Student')
 @section('content')
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/institution.css') }}">
 
     {{-- <section class="student-hero">
@@ -358,45 +358,6 @@
         });
     </script>
 
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const buttons = document.querySelectorAll('.country-btn');
-            const imageSets = document.querySelectorAll('.images');
-
-            function showImages(countryId) {
-                imageSets.forEach(images => {
-                    images.classList.remove('active');
-                    images.style.display = 'none';
-                });
-
-                const selectedImages = document.getElementById(countryId);
-                if (selectedImages) {
-                    selectedImages.style.display = 'flex';
-                    setTimeout(() => selectedImages.classList.add('active'), 10);
-                }
-            }
-
-            // Set initial view based on active button
-            const initialButton = document.querySelector('.country-btn.active');
-            if (initialButton) {
-                const initialCountryId = initialButton.getAttribute('data-country');
-                showImages(initialCountryId);
-            }
-
-            // Handle button clicks
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    buttons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-
-                    const countryId = button.getAttribute('data-country');
-                    showImages(countryId);
-                });
-            });
-        });
-    </script>
 
     <script>
         const slides = document.querySelectorAll(".testimonial-slide");

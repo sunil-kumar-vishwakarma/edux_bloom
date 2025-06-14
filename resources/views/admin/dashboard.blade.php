@@ -17,7 +17,6 @@
             margin: 0;
             padding: 0;
             /* background: radial-gradient(circle, #141E30, #243B55); */
-            color: #fff;
             overflow-x: hidden;
         }
 

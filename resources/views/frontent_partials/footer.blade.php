@@ -45,7 +45,7 @@
                     {{-- <li><a href="{{ route('partner') }}">Partners</a></li> --}}
                     <li><a href="{{ route('search') }}">Resources</a></li>
                     {{-- <li><a href="{{ route('home') }}">FAQ</a></li> --}}
-                    <li><a href="{{ route('contactus') }}">Contact</a></li>
+                    <li><a href="/contactus">Contact</a></li>
                     <li><a href="{{ route('blogs-pages') }}">Blogs</a></li>
                 </ul>
             </div>

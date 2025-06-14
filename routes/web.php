@@ -31,8 +31,16 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\WebinarController;
+use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\RolePermissionController;
+use App\Http\Controllers\StatController;
 
-use Illuminate\Http\Request; // ✅ यह जरूरी है
+
+
+
+
+
+use Illuminate\Http\Request; 
 // use OpenAI\Laravel\Facades\OpenAI;
 use OpenAI\Client;
 
@@ -177,12 +185,17 @@ Route::post('/reset-password', [HomeController::class, 'reset'])->name('password
 Route::get('/student', [HomeController::class, 'student'])->name('student');
 Route::get('/explr/school/programs', [HomeController::class, 'explrSchoolPrograms'])->name('explr_school_Programs');
 Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
+
 Route::get('/institutions', [HomeController::class, 'institutions'])->name('institutions');
+Route::post('/mentor/apply', [MentorController::class, 'store']);
+
 Route::get('/events', [HomeController::class, 'events'])->name('events');
 
 Route::get('/blogs-pages', [HomeController::class, 'blogs'])->name('blogs-pages');
 // Route::get('/blogdetails', [HomeController::class, 'blogdetails'])->name('blogdetails');
+// Route::get('/blogdetails/{id}', [BlogController::class, 'blogDetail'])->name('blog.detail');
 Route::get('/blogdetails/{id}', [BlogController::class, 'blogDetail'])->name('blog.detail');
+
 
 
 
@@ -294,7 +307,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/students/{id}/toggle-status', [StudentController::class, 'toggleStatus']);
 
     // Mentor Application
-    Route::post('/mentor/apply', [MentorController::class, 'store']);
     Route::get('/admin/mentors', [MentorController::class, 'index'])->name('admin.mentors');
     Route::delete('/admin/mentors/{id}', [MentorController::class, 'destroy'])->name('mentors.destroy');
 
@@ -305,6 +317,19 @@ Route::post('/admin/webinars', [WebinarController::class, 'store'])->name('webin
 Route::get('/admin/webinars/{id}/edit', [WebinarController::class, 'edit'])->name('webinars.edit');
 Route::put('/admin/webinars/{id}', [WebinarController::class, 'update'])->name('webinars.update');
 Route::delete('/admin/webinars/{id}', [WebinarController::class, 'destroy'])->name('webinars.destroy');
+
+// contact-info
+  Route::resource('contact-infos', ContactInfoController::class);
+  
+//   Role Permission
+  Route::get('/roles-permission', [RolePermissionController::class, 'index'])->name('roles_permission.index');
+  Route::get('/roles-permission/edit', [RolePermissionController::class, 'edit'])->name('roles_permission.edit');
+
+
+// home page -states 
+Route::get('/admin/stats', [StatController::class, 'index'])->name('stats.index');
+Route::get('/admin/stats/{id}/edit', [StatController::class, 'edit'])->name('stats.edit');
+Route::put('/admin/stats/{id}', [StatController::class, 'update'])->name('stats.update');
 
 
     // discover_program Routes

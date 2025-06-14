@@ -50,7 +50,7 @@
         </div>
     </section>
 
- 
+
 
     <!-- Cards -->
     <section class="cards-home">
@@ -160,39 +160,50 @@
 
 
     
-       <div class="stats-container">
-        <div class="stat-card">
-            <img src="<?php echo e(asset('images/girl.png')); ?>" alt="Students Helped">
-            <div class="stat-info">
-                <h3>80000+</h3>
-                <p>Students Helped</p>
-            </div>
-        </div>
 
-        <div class="stat-card">
-            <img src="<?php echo e(asset('images/envolope.png')); ?>" alt="Programs Offered">
-            <div class="stat-info">
-                <h3>14000+</h3>
-                <p>Programs Offered</p>
-            </div>
-        </div>
+ <?php
+    $stat = \App\Models\Stat::first();
+?>
 
-        <div class="stat-card">
-            <img src="<?php echo e(asset('images/home.png')); ?>" alt="Institutions">
-            <div class="stat-info">
-                <h3>50+</h3>
-                <p>Institutions</p>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <img src="<?php echo e(asset('images/earth.png')); ?>" alt="Destination Countries">
-            <div class="stat-info">
-                <h3>02</h3>
-                <p>Destination Country</p>
-            </div>
+<?php if($stat): ?>
+<div class="stats-container">
+    <div class="stat-card">
+        <img src="<?php echo e(asset('images/girl.png')); ?>" alt="Students Helped">
+        <div class="stat-info">
+            <h3><?php echo e(number_format($stat->students_helped)); ?>+</h3>
+            <p>Students Helped</p>
         </div>
     </div>
+
+    <div class="stat-card">
+        <img src="<?php echo e(asset('images/envolope.png')); ?>" alt="Programs Offered">
+        <div class="stat-info">
+            <h3><?php echo e(number_format($stat->programs_offered)); ?>+</h3>
+            <p>Programs Offered</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <img src="<?php echo e(asset('images/home.png')); ?>" alt="Institutions">
+        <div class="stat-info">
+            <h3><?php echo e($stat->institutions); ?>+</h3>
+            <p>Institutions</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <img src="<?php echo e(asset('images/earth.png')); ?>" alt="Destination Countries">
+        <div class="stat-info">
+            <h3><?php echo e(str_pad($stat->countries, 2, '0', STR_PAD_LEFT)); ?></h3>
+            <p>Destination Country</p>
+        </div>
+    </div>
+</div>
+<?php else: ?>
+    <h1>No stats available yet.</h1>
+<?php endif; ?>
+
+
 
 
     <!-- Testimonial Section -->

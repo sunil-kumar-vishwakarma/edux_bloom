@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="settings-container">
-        <h2>Edit Webinar</h2>
+         <header class="edit-student-header">
+           <h1>Edit Webinar</h1>
+            <a href="{{ route('webinars.index') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Webinar
+                List</a>
+        </header>
+        <br>
+        <br>
         <form action="{{ route('webinars.update', $webinar->id) }}" method="POST">
             @csrf 
             @method('PUT')

@@ -10,7 +10,7 @@
         <div class="card1-login">
             <div class="login-container">
                 <div class="card-login">
-                    
+
                     
                     <?php echo $__env->make('includes.alerts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
@@ -18,7 +18,8 @@
                     <div id="js-alert-container"></div>
 
                     <form id="loginForm" aria-label="Student Login Form">
-                        <img src="<?php echo e(asset('images/old_edu-x white.png')); ?>" alt="Edu-X Logo" height="70" width="75" />
+                        <img src="<?php echo e(asset('images/old_edu-x white.png')); ?>" alt="Edu-X Logo" height="70"
+                            width="75" />
                         <br>
 
                         
@@ -28,7 +29,8 @@
                         
                         <div class="password-wrapper">
                             <input type="password" id="password" placeholder="Password" required aria-label="Password">
-                            <span class="toggle-password" onclick="togglePassword()" role="button" aria-label="Toggle password visibility">
+                            <span class="toggle-password" onclick="togglePassword()" role="button"
+                                aria-label="Toggle password visibility">
                                 <i class="fa-solid fa-eye" id="eyeIcon"></i>
                             </span>
                         </div>
@@ -50,13 +52,21 @@
 
                     
                     <div class="social-buttons">
-                        <button class="btnnn"><a href="<?php echo e(route('google.login')); ?>" aria-label="Google" target="_blank" id="google">
-                                    <i class="fab fa-google"></i>
-                                Log In with Google</a></button>
-                        <button class="btnnn"><i class="fab fa-apple"></i> Log In with Apple</button>
-                        <button class="btnnn"><a href="<?php echo e(url('/auth/facebook')); ?>" aria-label="Google" target="_blank" id="google"><i class="fab fa-facebook"></i> Log In with Facebook </a></button>
+                        <a href="<?php echo e(route('google.login')); ?>" class="btnnn google" target="_blank">
+                            <i class="fab fa-google"></i>
+                            <span>Log In with Google</span>
+                        </a>
+                        <a href="#" class="btnnn apple">
+                            <i class="fab fa-apple"></i>
+                            <span>Log In with Apple</span>
+                        </a>
+                        <a href="<?php echo e(url('/auth/facebook')); ?>" class="btnnn facebook" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>Log In with Facebook</span>
+                        </a>
                     </div>
-                    
+
+
                     <br>
                     <div class="register">
                         <a href="/team-login">Login For Edu-X Team</a>
@@ -97,7 +107,8 @@
 
             const alertDiv = document.createElement('div');
             alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'}`;
-            alertDiv.innerHTML = `<i class="fas ${type === 'error' ? 'fa-times-circle' : 'fa-check-circle'}"></i> ${message}`;
+            alertDiv.innerHTML =
+                `<i class="fas ${type === 'error' ? 'fa-times-circle' : 'fa-check-circle'}"></i> ${message}`;
             alertDiv.style = `
                 position: fixed;
                 top: 20px;
@@ -123,7 +134,7 @@
         }
 
         // Login Button Click
-        document.getElementById("loginButton").addEventListener("click", async function () {
+        document.getElementById("loginButton").addEventListener("click", async function() {
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
@@ -153,7 +164,10 @@
                         "Content-Type": "application/json",
                         "Accept": "application/json",
                     },
-                    body: JSON.stringify({ email, password }),
+                    body: JSON.stringify({
+                        email,
+                        password
+                    }),
                 });
 
                 const data = await response.json();
