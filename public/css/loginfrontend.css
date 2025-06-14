@@ -100,19 +100,50 @@ body {
 .social-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
+    max-width: 360px;
+    margin: auto;
 }
 
-.social-buttons .btnnn {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #f3f3f3;
-    cursor: pointer;
+.btnnn {
     display: flex;
     align-items: center;
-    /* gap: 10px; */
     justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    height: 48px;
+    line-height: 1;
+    transition: background 0.3s ease;
+}
+
+.google {
+    background-color: #db4437;
+}
+
+.apple {
+    background-color: #000000;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.btnnn i {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btnnn span {
+    display: inline-flex;
+    align-items: center;
 }
 
 .anchr,

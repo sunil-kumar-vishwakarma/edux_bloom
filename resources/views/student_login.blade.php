@@ -52,15 +52,20 @@
 
                     {{-- Social Buttons --}}
                     <div class="social-buttons">
-                        <button id="google-logo" class="btnnn"><a href="{{ route('google.login') }}" aria-label="Google"
-                                target="_blank" id="google">
-                                <i class="fab fa-google"></i>
-                                Log In with Google</a></button>
-                        <button id="apple" class="btnnn"><i class="fab fa-apple"></i> Log In with Apple</button>
-                        <button id="facebookk" class="btnnn"><a href="{{ url('/auth/facebook') }}" aria-label="Google"
-                                target="_blank" id="google"><i class="fab fa-facebook"></i> Log In with Facebook
-                            </a></button>
+                        <a href="{{ route('google.login') }}" class="btnnn google" target="_blank">
+                            <i class="fab fa-google"></i>
+                            <span>Log In with Google</span>
+                        </a>
+                        <a href="#" class="btnnn apple">
+                            <i class="fab fa-apple"></i>
+                            <span>Log In with Apple</span>
+                        </a>
+                        <a href="{{ url('/auth/facebook') }}" class="btnnn facebook" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>Log In with Facebook</span>
+                        </a>
                     </div>
+
 
                     <br>
                     <div class="register">
