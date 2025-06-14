@@ -105,6 +105,7 @@ Route::get('/student-register', [HomeController::class, 'studentRegister'])->nam
 Route::get('/student-login', [HomeController::class, 'studentLogin'])->name('student-login');
 Route::get('/team-login', [HomeController::class, 'team_login'])->name('team_login');
 Route::post('/student/login', [LoginController::class, 'login']);
+Route::post('/team/login', [LoginController::class, 'teamLlogin'])->name('team.login');
 // Route::get('/dashboard', [LoginController::class, 'userdashboard'])->name('user.dashboard');
 
 
