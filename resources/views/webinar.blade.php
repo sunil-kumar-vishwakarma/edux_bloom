@@ -429,7 +429,7 @@
             @media (max-width: 1024px) {
             .edu-webinar-section {
                 height: 350px;
-                margin-top: 15%;
+                margin-top: 15%; 
             }
             }
     </style>
