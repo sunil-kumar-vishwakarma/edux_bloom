@@ -7,7 +7,7 @@
             margin-top: 5%;
             width: 100%;
             padding: 60px 25px;
-            background: #f5f8fc;
+            /* background: #f5f8fc; */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
